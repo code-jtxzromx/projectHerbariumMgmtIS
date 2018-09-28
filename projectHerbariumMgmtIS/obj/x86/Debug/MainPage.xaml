@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="projectHerbariumMgmtIS.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:SpringCreators="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 6)"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ResourceDictionary>
+            <AcrylicBrush x:Key="CustomAcrylic" BackgroundSource="Backdrop" TintOpacity="0.1" />
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background.png"/>
+        </Grid.Background>
+        <NavigationView x:ConnectionId='2' x:Name="navMainMenu" SpringCreators:PaneTitle="Herbarium Management" 
+                                                                       
+                        Background="{ThemeResource CustomAcrylic}" OpenPaneLength="300">
+            <NavigationView.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock VerticalAlignment="Center" Margin="10 5" Text="{Binding}" />
+                </DataTemplate>
+            </NavigationView.HeaderTemplate>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Home" Tag="HomePage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE80F;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Maintenance" Tag="MaintenancePage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEDA2;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Transaction" Tag="TransactionPage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEC0A;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Management Tools" Tag="UtilitiesPage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEC7A;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Queries" Tag="QueriesPage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEADF;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Reports" Tag="ReportsPage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE956;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:ConnectionId='4' x:Name="frmPageContent" Margin="15"/>
+        </NavigationView>
+    </Grid>
+</Page>
+

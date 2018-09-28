@@ -1,0 +1,55 @@
+﻿<ContentDialog
+    x:Class="projectHerbariumMgmtIS.Dialogs.AccountForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="{x:Bind TransactionForm, Mode=OneWay}"
+    PrimaryButtonText="Save"
+    SecondaryButtonText="Clear"
+    CloseButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="txfAccountID" Header="Account ID:" HeaderTemplate="{StaticResource HeaderTemplate}"
+                 Text="{x:Bind AccountData.AccountID, Mode=TwoWay}"
+                 Grid.Column="0" Grid.Row="0" Margin="5" IsEnabled="False" />
+        <ComboBox x:Name="cbxStaffName" Header="Staff Name: *" HeaderTemplate="{StaticResource HeaderTemplate}"
+                  SelectedItem="{x:Bind AccountData.Staff, Mode=TwoWay}" PlaceholderText="Select Staff"
+                 Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch" />
+        <TextBlock x:Name="msgStaffName" Grid.Column="1" Grid.Row="1" Margin="5 -2" FlowDirection="RightToLeft"
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+
+        <TextBox x:Name="txfUsername" Header="Username:" HeaderTemplate="{StaticResource HeaderTemplate}"
+                 Text="{x:Bind AccountData.Username, Mode=TwoWay}" PlaceholderText="Enter Username"
+                 Grid.Column="0" Grid.Row="2" Margin="5" />
+        <PasswordBox x:Name="txfPassword" Header="Password:" HeaderTemplate="{StaticResource HeaderTemplate}"
+                     Password="{x:Bind AccountData.Password, Mode=TwoWay}" PlaceholderText="Enter Password"
+                     Grid.Column="1" Grid.Row="2" Margin="5" />
+        <TextBlock x:Name="msgUsername" Grid.Column="0" Grid.Row="3" Margin="5 -2" FlowDirection="RightToLeft"
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+        <TextBlock x:Name="msgPassword" Grid.Column="1" Grid.Row="3" Margin="5 -2" FlowDirection="RightToLeft" 
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+    </Grid>
+</ContentDialog>

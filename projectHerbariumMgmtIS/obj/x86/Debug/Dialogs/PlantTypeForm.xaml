@@ -1,0 +1,52 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="projectHerbariumMgmtIS.Dialogs.PlantTypeForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+                                                 
+    PrimaryButtonText="Save"
+    SecondaryButtonText="Clear"
+    CloseButtonText="Cancel"
+                                                         
+                                                             >
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:ConnectionId='3' x:Name="txfPlantTypeID" Header="Plant Type ID:" HeaderTemplate="{StaticResource HeaderTemplate}"
+                                                                       
+                 Grid.Column="0" Grid.Row="0" Margin="5" IsEnabled="False" />
+
+        <TextBox x:ConnectionId='4' x:Name="txfPlantCode" Header="Code: *" HeaderTemplate="{StaticResource HeaderTemplate}"
+                                                                 PlaceholderText="Enter Type Code"
+                 Grid.Column="0" Grid.Row="1" Margin="5" />
+        <TextBox x:ConnectionId='5' x:Name="txfPlantType" Header="Plant Type: *" HeaderTemplate="{StaticResource HeaderTemplate}"
+                                                                 PlaceholderText="Enter Plant Type"
+                 Grid.Column="1" Grid.Row="1" Margin="5" />
+        <TextBlock x:ConnectionId='6' x:Name="msgPlantCode" Grid.Column="0" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft"
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+        <TextBlock x:ConnectionId='7' x:Name="msgPlantType" Grid.Column="1" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft" 
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+    </Grid>
+</ContentDialog>
+

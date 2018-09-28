@@ -1,0 +1,61 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="projectHerbariumMgmtIS.Dialogs.PhylumForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+                                                 
+    PrimaryButtonText="Save"
+    SecondaryButtonText="Clear"
+    CloseButtonText="Cancel"
+                                                         
+                                                             >
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:ConnectionId='3' x:Name="txfPhylumID" Header="Phylum ID:" HeaderTemplate="{StaticResource HeaderTemplate}" 
+                                                                 
+                 Grid.Column="0" Grid.Row="0" Margin="5" IsEnabled="False" />
+        <CheckBox x:ConnectionId='4' x:Name="chkIsKingdomPlant" VerticalAlignment="Bottom"
+                                                                                                     
+                  Grid.Column="1" Grid.Row="0" Margin="5" Content="Under the Plant Category" />
+
+        <TextBox x:ConnectionId='5' x:Name="txfDomainName" Header="Domain Name: *" HeaderTemplate="{StaticResource HeaderTemplate}" 
+                                                                    PlaceholderText="Enter Domain Name"
+                 Grid.Column="0" Grid.Row="1" Margin="5" />
+        <TextBox x:ConnectionId='6' x:Name="txfKingdomName" Header="Kingdom Name: *" HeaderTemplate="{StaticResource HeaderTemplate}" 
+                                                                     PlaceholderText="Enter Kingdom Name"
+                 Grid.Column="1" Grid.Row="1" Margin="5" />
+        <TextBlock x:ConnectionId='7' x:Name="msgDomainName" Grid.Column="0" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft"
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+        <TextBlock x:ConnectionId='8' x:Name="msgKingdomName" Grid.Column="1" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft" 
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+
+        <TextBox x:ConnectionId='9' x:Name="txfPhylumName" Header="Phylum Name: *" HeaderTemplate="{StaticResource HeaderTemplate}"  
+                                                                    PlaceholderText="Enter Phylum Name"
+                 Grid.Column="0" Grid.Row="3" Margin="5" />
+        <TextBlock x:ConnectionId='10' x:Name="msgPhylumName" Grid.Column="0" Grid.Row="4" Margin="5 -2" FlowDirection="RightToLeft"
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+    </Grid>
+</ContentDialog>
+

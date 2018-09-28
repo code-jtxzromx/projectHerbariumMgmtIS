@@ -1,0 +1,40 @@
+﻿<Page 
+    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    x:Class="projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Maintenance"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Taxon Phylum" Margin="5 0" VerticalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <CommandBar Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent">
+                <AppBarButton x:Name="btnAddPhylum" Click="btnAddPhylum_Click" Icon="Add" Label="Add Phylum" />
+                <AppBarButton x:Name="btnEditPhylum" Click="btnEditPhylum_Click" Icon="Edit" Label="Edit Phylum" />
+            </CommandBar>
+        </Grid>
+
+        <toolkit:DataGrid x:Name="dgrPhylumTable" Grid.Row="1" Margin="5" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+            <toolkit:DataGrid.Columns>
+                <toolkit:DataGridTextColumn Header="Phylum ID" Binding="{Binding PhylumID}" Width="150" />
+                <toolkit:DataGridTextColumn Header="Domain Name" Binding="{Binding DomainName}" Width="*" />
+                <toolkit:DataGridTextColumn Header="Kingdom Name" Binding="{Binding KingdomName}" Width="*" />
+                <toolkit:DataGridTextColumn Header="Phylum Name" Binding="{Binding PhylumName}" Width="*" />
+            </toolkit:DataGrid.Columns>
+        </toolkit:DataGrid>
+    </Grid>
+</Page>

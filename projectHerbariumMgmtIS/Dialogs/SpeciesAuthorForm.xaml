@@ -1,0 +1,49 @@
+﻿<ContentDialog
+    x:Class="projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="{x:Bind TransactionForm, Mode=OneWay}"
+    PrimaryButtonText="Save"
+    SecondaryButtonText="Clear"
+    CloseButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="txfAuthorID" Header="Author ID:" HeaderTemplate="{StaticResource HeaderTemplate}"
+                 Text="{x:Bind AuthorData.AuthorID, Mode=TwoWay}"
+                 Grid.Column="0" Grid.Row="0" Margin="5" IsEnabled="False" />
+
+        <TextBox x:Name="txfAuthorsName" Header="Author's Name: *" HeaderTemplate="{StaticResource HeaderTemplate}"
+                 Text="{x:Bind AuthorData.AuthorName, Mode=TwoWay}" PlaceholderText="Enter Author's Name"
+                 Grid.Column="0" Grid.Row="1" Margin="5" />
+        <TextBox x:Name="txfAuthorsSuffix" Header="Author's Species Suffix: *" HeaderTemplate="{StaticResource HeaderTemplate}"
+                 Text="{x:Bind AuthorData.AuthorSuffix, Mode=TwoWay}" PlaceholderText="Enter Author's Suffix"
+                 Grid.Column="1" Grid.Row="1" Margin="5" />
+        <TextBlock x:Name="msgAuthorsName" Grid.Column="0" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft"
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+        <TextBlock x:Name="msgAuthorsSuffix" Grid.Column="1" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft" 
+                   Text="This Field is Required" FontSize="10" Foreground="Red" />
+    </Grid>
+</ContentDialog>
