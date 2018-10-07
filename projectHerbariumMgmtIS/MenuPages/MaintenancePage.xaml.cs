@@ -43,7 +43,13 @@ namespace projectHerbariumMgmtIS.MenuPages
         public MaintenancePage()
         {
             this.InitializeComponent();
-            lstMaintenanceMenu.ItemsSource = MaintenanceMenu;
+            this.InitializePage();
+        }
+
+        private void InitializePage()
+        {
+            lstMaintenanceMenu.ItemsSource = MaintenanceMenu; 
+            frmPageContent.Navigate(typeof(TaxonomicHierarchyPage));
         }
 
         private void lstMaintenanceMenu_ItemClick(object sender, ItemClickEventArgs e) => frmPageContent.Navigate((e.ClickedItem as SubMenu).Page);

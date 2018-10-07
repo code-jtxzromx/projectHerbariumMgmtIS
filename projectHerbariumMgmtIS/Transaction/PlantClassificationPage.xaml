@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="projectHerbariumMgmtIS.Transaction.PlantClassificationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Transaction"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Verified Herbarium Sheets" Margin="5 0" VerticalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}" />
+                <CommandBar Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent">
+                    <AppBarButton x:Name="btnClassify" Click="btnClassify_Click" Icon="Accept" Label="Classify &amp; Store Herbarium Sheet" />
+                </CommandBar>
+            </Grid>
+
+            <toolkit:DataGrid x:Name="dgrVerifiedSheetTable" Grid.Row="1" Margin="5" CanUserSortColumns="True"
+                              AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+                <toolkit:DataGrid.Columns>
+                    <toolkit:DataGridTextColumn Width="*" Header="Accession Number" Binding="{Binding AccessionNumber}"/>
+                    <toolkit:DataGridTextColumn Width="1.5*" Header="Scientific Name" Binding="{Binding ScientificName}"/>
+                    <toolkit:DataGridTextColumn Width="*" Header="Date Verified" Binding="{Binding DateValidated}"/>
+                    <toolkit:DataGridTextColumn Width="*" Header="Collector" Binding="{Binding Collector}"/>
+                </toolkit:DataGrid.Columns>
+            </toolkit:DataGrid>
+        </Grid>
+    </Grid>
+</Page>

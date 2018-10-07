@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="projectHerbariumMgmtIS.Transaction.PlantDepositPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Transaction"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot>
+            <PivotItem Header="New Deposit">
+                <local:DepositTransactionPage IsExisting="False" />
+            </PivotItem>
+            <PivotItem Header="Existing Deposit">
+                <local:DepositTransactionPage IsExisting="True" />
+            </PivotItem>
+            <!--<PivotItem Header="Excel Upload">
+                <local:ExcelDepositPage />
+            </PivotItem>-->
+        </Pivot>
+    </Grid>
+</Page>
+

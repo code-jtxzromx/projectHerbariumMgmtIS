@@ -2,6 +2,9 @@
     x:Class="projectHerbariumMgmtIS.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:projectHerbariumMgmtIS">
-
+    xmlns:local="using:projectHerbariumMgmtIS"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <x:Double x:Key="ContentDialogMaxWidth">848</x:Double>
+    </Application.Resources>
 </Application>

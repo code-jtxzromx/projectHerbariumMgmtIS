@@ -1,4 +1,6 @@
-﻿using System;
+﻿using projectHerbariumMgmtIS.Model;
+using projectHerbariumMgmtIS.Transaction;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +24,29 @@ namespace projectHerbariumMgmtIS.MenuPages
     /// </summary>
     public sealed partial class TransactionPage : Page
     {
+        private List<SubMenu> MaintenanceMenu = new List<SubMenu>()
+        {
+            new SubMenu() { MenuItem = "Plant Deposit",             Page = typeof(PlantDepositPage) },
+            new SubMenu() { MenuItem = "Plant Receiving",           Page = typeof(PlantReceivingPage) },
+            new SubMenu() { MenuItem = "Plant Resubmission",        Page = typeof(PlantResubmissionPage) },
+            new SubMenu() { MenuItem = "Plant Verification",        Page = typeof(PlantVerificationPage) },
+            new SubMenu() { MenuItem = "Plant Classification",      Page = typeof(PlantClassificationPage) },
+            new SubMenu() { MenuItem = "Plant Loaning",             Page = typeof(PlantLoaningPage) },
+            new SubMenu() { MenuItem = "Plant Loan Returns",        Page = typeof(PlantLoanReturnPage) },
+        };
+        
         public TransactionPage()
         {
             this.InitializeComponent();
+            this.InitializePage();
         }
+
+        private void InitializePage()
+        {
+            lstTransactionMenu.ItemsSource = MaintenanceMenu;
+            frmPageContent.Navigate(typeof(PlantDepositPage));
+        }
+
+        private void lstTransactionMenu_ItemClick(object sender, ItemClickEventArgs e) => frmPageContent.Navigate((e.ClickedItem as SubMenu).Page);
     }
 }

@@ -5,10 +5,32 @@
     xmlns:local="using:projectHerbariumMgmtIS.MenuPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="SubMenuItemTemplate" x:DataType="model:SubMenu">
+            <TextBlock Text="{Binding MenuItem}" FontSize="14" />
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
-        <TextBlock Text="Management Tools"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="MasterColumn" Width="200" />
+                <ColumnDefinition x:Name="DetailColumn" Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lstUtilitiesMenu" Grid.Column="0" IsItemClickEnabled="True" ItemClick="lstUtilitiesMenu_ItemClick"
+                      ItemTemplate="{StaticResource SubMenuItemTemplate}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinHeight" Value="0"/>
+                        <Setter Property="Padding" Value="10 7"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <Frame x:Name="frmPageContent" Grid.Column="1" />
+        </Grid>
     </Grid>
 </Page>

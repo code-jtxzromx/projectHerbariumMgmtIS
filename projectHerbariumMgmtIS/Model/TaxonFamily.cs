@@ -12,6 +12,7 @@ namespace projectHerbariumMgmtIS.Model
     {
         // Properties
         public string FamilyID { get; set; }
+        public bool IsChecked { get; set; }
         public string OrderName { get; set; }
         public string FamilyName { get; set; }
 
@@ -39,6 +40,7 @@ namespace projectHerbariumMgmtIS.Model
                 families.Add(new TaxonFamily()
                 {
                     FamilyID = sqlData[0].ToString(),
+                    IsChecked = false,
                     OrderName = sqlData[1].ToString(),
                     FamilyName = sqlData[2].ToString()
                 });

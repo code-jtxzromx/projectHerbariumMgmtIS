@@ -1,4 +1,6 @@
-﻿using System;
+﻿using projectHerbariumMgmtIS.ManagementTools;
+using projectHerbariumMgmtIS.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +24,25 @@ namespace projectHerbariumMgmtIS.MenuPages
     /// </summary>
     public sealed partial class UtilitiesPage : Page
     {
+        private List<SubMenu> MaintenanceMenu = new List<SubMenu>()
+        {
+            new SubMenu() { MenuItem = "Herbarium Inventory",       Page = typeof(HerbariumInventoryPage) },
+            new SubMenu() { MenuItem = "Sheet Tracking",            Page = typeof(SheetTrackingPage) },
+            new SubMenu() { MenuItem = "Audit Trailing",            Page = typeof(AuditTrailingPage) }
+        };
+
         public UtilitiesPage()
         {
             this.InitializeComponent();
+            this.InitializePage();
         }
+
+        private void InitializePage()
+        {
+            lstUtilitiesMenu.ItemsSource = MaintenanceMenu;
+            frmPageContent.Navigate(typeof(HerbariumInventoryPage));
+        }
+
+        private void lstUtilitiesMenu_ItemClick(object sender, ItemClickEventArgs e) => frmPageContent.Navigate((e.ClickedItem as SubMenu).Page);
     }
 }

@@ -12,6 +12,7 @@ namespace projectHerbariumMgmtIS.Model
     {
         // Properties
         public string GenusID { get; set; }
+        public bool IsChecked { get; set; }
         public string FamilyName { get; set; }
         public string GenusName { get; set; }
 
@@ -39,6 +40,7 @@ namespace projectHerbariumMgmtIS.Model
                 genera.Add(new TaxonGenus()
                 {
                     GenusID = sqlData[0].ToString(),
+                    IsChecked = false,
                     FamilyName = sqlData[1].ToString(),
                     GenusName = sqlData[2].ToString()
                 });

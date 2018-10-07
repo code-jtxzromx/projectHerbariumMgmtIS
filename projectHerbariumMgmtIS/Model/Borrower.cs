@@ -48,6 +48,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.setQuery("SELECT intBorrowerID, strFirstname, strMiddlename, strLastname, strMiddleInitial, strNameSuffix, " +
                                     "strHomeAddress, strContactNumber, strEmailAddress, strFullName, strAffiliation  " +
                                 "FROM viewBorrower " +
+                                "WHERE boolIsCollector = 0 " +
                                 "ORDER BY strLastname, strFirstname");
             SqlDataReader sqlData = connection.executeResult();
 

@@ -4,61 +4,171 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:projectHerbariumMgmtIS"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
     xmlns:SpringCreators="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 6)"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
         <ResourceDictionary>
-            <AcrylicBrush x:Key="CustomAcrylic" BackgroundSource="Backdrop" TintOpacity="0.1" />
+            <AcrylicBrush x:Key="BackgroundAcrylic" BackgroundSource="Backdrop" TintOpacity="0.5" TintColor="#FFAAFFAA" FallbackColor="#DFFFFFFF" />
+            <AcrylicBrush x:Key="LoginAcrylic" BackgroundSource="Backdrop" TintOpacity="0.5" FallbackColor="#9FFFFFFF" />
         </ResourceDictionary>
     </Page.Resources>
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/background.png"/>
+            <ImageBrush ImageSource="Assets/background-1.png" Stretch="Fill"/>
         </Grid.Background>
-        <NavigationView x:Name="navMainMenu" SpringCreators:PaneTitle="Herbarium Management" 
-                        SelectionChanged="navMainMenu_SelectionChanged"
-                        Background="{ThemeResource CustomAcrylic}" OpenPaneLength="300">
-            <NavigationView.HeaderTemplate>
-                <DataTemplate>
-                    <TextBlock VerticalAlignment="Center" Margin="10 5" Text="{Binding}" />
-                </DataTemplate>
-            </NavigationView.HeaderTemplate>
-            <NavigationView.MenuItems>
-                <NavigationViewItem Content="Home" Tag="HomePage">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE80F;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Maintenance" Tag="MaintenancePage">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEDA2;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Transaction" Tag="TransactionPage">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEC0A;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Management Tools" Tag="UtilitiesPage">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEC7A;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Queries" Tag="QueriesPage">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xEADF;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-                <NavigationViewItem Content="Reports" Tag="ReportsPage">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE956;" />
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
-            </NavigationView.MenuItems>
-            <Frame x:Name="frmPageContent" Margin="15"/>
-        </NavigationView>
+
+        <Grid x:Name="LoginScreen" Visibility="Visible">
+            <FlipView x:Name="flvBackgrounds" BorderBrush="Transparent">
+                <animations:Implicit.ShowAnimations>
+                    <animations:TranslationAnimation Duration="0:0:1" From="200, 0, 0" To="0" ></animations:TranslationAnimation>
+                    <animations:OpacityAnimation Duration="0:0:1" From="0" To="1.0"></animations:OpacityAnimation>
+                </animations:Implicit.ShowAnimations>
+
+                <animations:Implicit.HideAnimations>
+                    <animations:ScalarAnimation Target="Opacity" Duration="0:0:1" To="0.0"></animations:ScalarAnimation>
+                    <animations:ScalarAnimation Target="Translation.X" Duration="0:0:1" To="200">
+                        <animations:ScalarKeyFrame Key="0.1" Value="30"></animations:ScalarKeyFrame>
+                        <animations:ScalarKeyFrame Key="0.5" Value="0.0"></animations:ScalarKeyFrame>
+                    </animations:ScalarAnimation>
+                </animations:Implicit.HideAnimations>
+
+
+                <Image Source="Assets/background-1.png" Stretch="UniformToFill" />
+                <Image Source="Assets/background-2.jpg" Stretch="UniformToFill" />
+                <Image Source="Assets/background-3.jpg" Stretch="UniformToFill" />
+                <Image Source="Assets/background-4.jpg" Stretch="UniformToFill" />
+                <Image Source="Assets/background-5.jpg" Stretch="UniformToFill" />
+            </FlipView>
+            <Grid>
+                <animations:Implicit.ShowAnimations>
+                    <animations:TranslationAnimation Duration="0:0:1" From="-200, 0, 0" To="0" ></animations:TranslationAnimation>
+                    <animations:OpacityAnimation Duration="0:0:1" From="0" To="1.0"></animations:OpacityAnimation>
+                </animations:Implicit.ShowAnimations>
+
+                <animations:Implicit.HideAnimations>
+                    <animations:ScalarAnimation Target="Opacity" Duration="0:0:1" To="0.0"></animations:ScalarAnimation>
+                    <animations:ScalarAnimation Target="Translation.X" Duration="0:0:1" To="-200">
+                        <animations:ScalarKeyFrame Key="0.1" Value="30"></animations:ScalarKeyFrame>
+                        <animations:ScalarKeyFrame Key="0.5" Value="0.0"></animations:ScalarKeyFrame>
+                    </animations:ScalarAnimation>
+                </animations:Implicit.HideAnimations>
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Background="{ThemeResource LoginAcrylic}">
+                    <StackPanel VerticalAlignment="Top">
+                        <Image Source="Assets/herbarium_banner_white.png" Height="75" Margin="10 50 10 10" />
+                        <TextBlock Margin="30 10 30 30" TextWrapping="WrapWholeWords" TextAlignment="Center" FontSize="14">
+                            HERBARIUM MANAGEMENT INFORMATION SYSTEM
+                        </TextBlock>
+
+                        <Border x:Name="lblLoginError" Background="#BF800000" Margin="0 0 0 10" Visibility="Collapsed">
+                            <TextBlock Margin="10 5" TextAlignment="Center" Text="Invalid Username or Password" />
+                        </Border>
+
+                        <TextBox x:Name="txfUsername" Margin="20 5" Header="Username:" PlaceholderText="Enter Username"/>
+                        <PasswordBox x:Name="txfPassword" Margin="20 5" Header="Password:" PlaceholderText="Enter Password"/>
+
+                        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+                            <Button x:Name="btnLogin" Click="btnLogin_Click" Content="Login" Width="75" Margin="20 20 5 20" />
+                            <Button x:Name="btnClear" Click="btnClear_Click" Content="Clear" Width="75" Margin="5 20 20 20" />
+                        </StackPanel>
+
+                        <ProgressRing x:Name="pgrLogin" IsActive="False" Width="50" Height="50" />
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="MainNavigation" Visibility="Visible">
+            <animations:Implicit.ShowAnimations>
+                <animations:TranslationAnimation Duration="0:0:1" From="-200, -0, 0" To="0" ></animations:TranslationAnimation>
+                <animations:OpacityAnimation Duration="0:0:1" From="0" To="1.0"></animations:OpacityAnimation>
+            </animations:Implicit.ShowAnimations>
+
+            <animations:Implicit.HideAnimations>
+                <animations:ScalarAnimation Target="Opacity" Duration="0:0:1" To="0.0"></animations:ScalarAnimation>
+                <animations:ScalarAnimation Target="Translation.X" Duration="0:0:1" To="-200">
+                    <animations:ScalarKeyFrame Key="0.1" Value="30"></animations:ScalarKeyFrame>
+                    <animations:ScalarKeyFrame Key="0.5" Value="0.0"></animations:ScalarKeyFrame>
+                </animations:ScalarAnimation>
+            </animations:Implicit.HideAnimations>
+
+            <NavigationView x:Name="navMainMenu" SpringCreators:PaneTitle="Herbarium Management" 
+                            SelectionChanged="navMainMenu_SelectionChanged" 
+                            IsSettingsVisible="False" SpringCreators:IsBackButtonVisible="Collapsed"
+                            Background="{ThemeResource BackgroundAcrylic}" OpenPaneLength="320">
+                <NavigationView.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock VerticalAlignment="Center" Margin="10 5" Text="{Binding}" />
+                    </DataTemplate>
+                </NavigationView.HeaderTemplate>
+                <NavigationView.MenuItems>
+                    <NavigationViewItem Content="Home" Tag="HomePage">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE80F;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Maintenance" Tag="MaintenancePage">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEDA2;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Transaction" Tag="TransactionPage">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEC0A;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Management Tools" Tag="UtilitiesPage">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEC7A;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Queries" Tag="QueriesPage">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xEADF;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem Content="Reports" Tag="ReportsPage">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE956;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                </NavigationView.MenuItems>
+                <NavigationView.PaneFooter>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="50" />
+                        </Grid.ColumnDefinitions>
+                        <NavigationViewItem Icon="Contact" VerticalAlignment="Stretch" 
+                                            Content="{x:Bind StaffName, Mode=OneWay}"  />
+                        <CommandBar Grid.Column="1" Background="Transparent">
+                            <AppBarButton x:Name="btnAbout" Click="btnAbout_Click" Label="About Us">
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="&#xE946;" />
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                            <AppBarButton x:Name="btnLogout" Click="btnLogout_Click" Label="Log-out">
+                                <AppBarButton.Icon>
+                                    <FontIcon Glyph="&#xE8D7;" />
+                                </AppBarButton.Icon>
+                            </AppBarButton>
+                        </CommandBar>
+                    </Grid>
+                </NavigationView.PaneFooter>
+                <Frame x:Name="frmPageContent" Margin="15" />
+            </NavigationView>
+        </Grid>        
     </Grid>
+
 </Page>

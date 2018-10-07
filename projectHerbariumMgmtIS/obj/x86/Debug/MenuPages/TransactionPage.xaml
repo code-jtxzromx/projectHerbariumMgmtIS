@@ -5,11 +5,33 @@
     xmlns:local="using:projectHerbariumMgmtIS.MenuPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="SubMenuItemTemplate"                           >
+            <TextBlock Text="{Binding MenuItem}" FontSize="14" />
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
-        <TextBlock Text="Herbarium Transactions"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:ConnectionId='3' x:Name="MasterColumn" Width="200" />
+                <ColumnDefinition x:ConnectionId='4' x:Name="DetailColumn" Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:ConnectionId='5' x:Name="lstTransactionMenu" Grid.Column="0" IsItemClickEnabled="True"                                         
+                  ItemTemplate="{StaticResource SubMenuItemTemplate}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="MinHeight" Value="0"/>
+                        <Setter Property="Padding" Value="10 7"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <Frame x:ConnectionId='6' x:Name="frmPageContent" Grid.Column="1" />
+        </Grid>
     </Grid>
 </Page>
 

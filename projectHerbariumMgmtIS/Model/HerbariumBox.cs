@@ -14,6 +14,7 @@ namespace projectHerbariumMgmtIS.Model
         public string BoxNumber { get; set; }
         public string Family { get; set; }
         public int BoxLimit { get; set; }
+        public int CurrentNo { get; set; }
         public string Location { get; set; }
         public int RackNumber { get; set; }
         public int RackRow { get; set; }
@@ -26,6 +27,7 @@ namespace projectHerbariumMgmtIS.Model
             this.BoxNumber = "";
             this.Family = "";
             this.BoxLimit = 10;
+            this.CurrentNo = 0;
             this.Location = "";
             this.RackNumber = 1;
             this.RackRow = 1;
@@ -57,6 +59,30 @@ namespace projectHerbariumMgmtIS.Model
                     RackColumn = Convert.ToInt32(sqlData[5]),
                     Location = "Rack #" + sqlData[3].ToString() + " (R:" + sqlData[4].ToString() + ", C:" + sqlData[5].ToString() + ")",
                     Status = (Convert.ToInt32(sqlData[2]) == Convert.ToInt32(sqlData[6]) ? "Full" : "Available")
+                });
+            }
+            connection.closeResult();
+            return familyBoxes;
+        }
+
+        public List<HerbariumBox> GetAvailableBoxes()
+        {
+            List<HerbariumBox> familyBoxes = new List<HerbariumBox>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT FB.strBoxNumber, FB.strFamilyName, FB.intBoxLimit, FB.intBoxLimit - COUNT(HI.intStoredSheetID) " +
+                                "FROM viewFamilyBox FB LEFT JOIN viewHerbariumInventory HI ON FB.strFamilyName = HI.strFamilyName " +
+                                "GROUP BY FB.strBoxNumber, FB.strFamilyName, FB.intBoxLimit");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                familyBoxes.Add(new HerbariumBox()
+                {
+                    BoxNumber = sqlData[0].ToString(),
+                    Family = sqlData[1].ToString(),
+                    BoxLimit = Convert.ToInt32(sqlData[2]),
+                    CurrentNo = Convert.ToInt32(sqlData[3])
                 });
             }
             connection.closeResult();

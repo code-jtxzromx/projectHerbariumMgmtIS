@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace projectHerbariumMgmtIS.Model
 {
@@ -12,12 +13,16 @@ namespace projectHerbariumMgmtIS.Model
     {
         // Properties
         public string SpeciesID { get; set; }
+        public bool IsChecked { get; set; }
+        public string FamilyName { get; set; }
         public string GenusName { get; set; }
         public string SpeciesName { get; set; }
         public string CommonName { get; set; }
         public string ScientificName { get; set; }
         public string SpeciesAuthor { get; set; }
         public bool IdentifiedStatus { get; set; }
+        public int Specimens { get; set; }
+        public int Copies { get; set; }
 
         // Constructor
         public TaxonSpecies()
@@ -54,6 +59,33 @@ namespace projectHerbariumMgmtIS.Model
                     ScientificName = sqlData[4].ToString(),
                     SpeciesAuthor = sqlData[5].ToString(),
                     IdentifiedStatus = Convert.ToBoolean(sqlData[6])
+                });
+            }
+            connection.closeResult();
+            return species;
+        }
+
+        public List<TaxonSpecies> GetSpeciesWithCheck()
+        {
+            List<TaxonSpecies> species = new List<TaxonSpecies>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT SI.strFamilyName, SI.strGenusName, SI.strScientificName, " +
+                                    "SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) " +
+                                "FROM viewSpeciesInventory SI " +
+                                    "LEFT JOIN viewSpeciesLoanCount SL ON SI.strScientificName = SL.strScientificName ");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                species.Add(new TaxonSpecies()
+                {
+                    IsChecked = false,
+                    FamilyName = sqlData[0].ToString(),
+                    GenusName = sqlData[1].ToString(),
+                    ScientificName = sqlData[2].ToString(),
+                    Specimens = Convert.ToInt32(sqlData[3]),
+                    Copies = 0
                 });
             }
             connection.closeResult();
@@ -108,6 +140,20 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@isVerified", SqlDbType.Bit, IdentifiedStatus);
             status = connection.executeProcedure();
 
+            return status;
+        }
+
+        public int LoanSpecies(string loannumber)
+        {
+            int status;
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setStoredProc("dbo.procLoanPlants");
+            connection.addProcParameter("@loanNumber", SqlDbType.VarChar, loannumber);
+            connection.addProcParameter("@taxonName", SqlDbType.VarChar, ScientificName);
+            connection.addProcParameter("@copies", SqlDbType.Int, Copies);
+            status = connection.executeProcedure();
+            
             return status;
         }
     }

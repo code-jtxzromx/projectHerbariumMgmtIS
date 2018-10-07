@@ -1,0 +1,80 @@
+﻿<ContentDialog
+    x:Class="projectHerbariumMgmtIS.Dialogs.VerifyDepositForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Verify Plant Deposit"
+    PrimaryButtonText="Verify this Deposit"
+    SecondaryButtonText="Further Verify this Deposit"
+    CloseButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="420" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Width="240" Height="320" Margin="5 10" Background="#0F000000" VerticalAlignment="Top">
+            <Image x:Name="picHerbariumSheet" Source="{x:Bind HerbariumSheet, Mode=OneWay}" />
+        </Border>
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Height="320">
+            <Grid Margin="10 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" Text="Scientific Name: " />
+                <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" Text="Accession Number: " />
+                <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Reference Accession: " 
+                           Visibility="{Binding ElementName=chkSameAccession, Path=IsChecked}"/>
+                <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Date Collected: " />
+                <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Date Deposited: " />
+                <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Location: " />
+                <TextBlock Grid.Column="0" Grid.Row="9" Margin="5" Text="Collector: " />
+                <TextBlock Grid.Column="0" Grid.Row="10" Margin="5" Text="Description: " />
+
+                <ComboBox x:Name="cbxTaxonName" Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"
+                          SelectionChanged="cbxTaxonName_SelectionChanged"/>
+                <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.AccessionNumber, Mode=OneWay}" />
+                <TextBlock x:Name="msgTaxonName" Grid.Column="1" Grid.Row="2" Margin="5 -2" TextAlignment="Right" 
+                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
+                <CheckBox x:Name="chkSameAccession" Grid.Column="1" Grid.Row="3" Margin="5"
+                          Content="Duplicate Herbarium Sheet" />
+                <ComboBox x:Name="cbxReferenceAccession" Grid.Column="1" Grid.Row="4" Margin="5" HorizontalAlignment="Stretch"
+                          Visibility="{Binding ElementName=chkSameAccession, Path=IsChecked}" />
+                <TextBlock x:Name="msgReferenceAccession" Grid.Column="1" Grid.Row="5" Margin="5 -2" TextAlignment="Right" 
+                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
+                <TextBlock Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.DateCollected, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.DateDeposited, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="8" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.Locality, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="9" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.Collector, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="10" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.Description, Mode=OneWay}" />
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</ContentDialog>

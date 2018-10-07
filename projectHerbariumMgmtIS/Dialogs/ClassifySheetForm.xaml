@@ -1,0 +1,93 @@
+﻿<ContentDialog 
+    xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    x:Class="projectHerbariumMgmtIS.Dialogs.ClassifySheetForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Classify and Store Herbarium Sheet"
+    PrimaryButtonText="Store to Box"
+    CloseButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="420" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Width="240" Height="320" Margin="5 10" Background="#0F000000" VerticalAlignment="Top">
+            <Image x:Name="picHerbariumSheet" Source="{x:Bind HerbariumSheet, Mode=OneWay}" />
+        </Border>
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Height="320">
+            <Grid Margin="10 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" Text="Store to: " />
+                <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" Text="Accession Number: " />
+                <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" Text="Reference Accession: "/>
+                <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Scientific Name: "/>
+                <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" Text="Known as: "/>
+                <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Date Collected: " />
+                <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Date Deposited: " />
+                <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Date Verified: " />
+                <TextBlock Grid.Column="0" Grid.Row="9" Margin="5" Text="Location: " />
+                <TextBlock Grid.Column="0" Grid.Row="10" Margin="5" Text="Collector: " />
+                <TextBlock Grid.Column="0" Grid.Row="11" Margin="5" Text="Validated by: " />
+                <TextBlock Grid.Column="0" Grid.Row="12" Margin="5" Text="Description: " />
+
+                <control:WrapPanel Grid.Column="1" Grid.Row="0" Margin="5">
+                    <TextBlock x:Name="lblBoxNumber" TextWrapping="WrapWholeWords" />
+                    <TextBlock Text=" [" />
+                    <TextBlock TextWrapping="WrapWholeWords" Text="{x:Bind VerifiedSheetData.FamilyName, Mode=OneWay}" />
+                    <TextBlock Text="]" />
+                </control:WrapPanel>
+                <ToggleSwitch Grid.Column="1" Grid.Row="1" Margin="5 0" 
+                              OnContent="Available for Loaning" OffContent="Not Available for Loaning" 
+                              IsOn="{x:Bind VerifiedSheetData.IsAvailable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.AccessionNumber, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.ReferenceNumber, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.ScientificName, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="5" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.TaxonNomenclature, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.DateCollected, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.DateDeposited, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="8" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.DateValidated, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="9" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.Locality, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="10" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.Collector, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="11" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.Validator, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="12" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifiedSheetData.Description, Mode=OneWay}" />
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</ContentDialog>

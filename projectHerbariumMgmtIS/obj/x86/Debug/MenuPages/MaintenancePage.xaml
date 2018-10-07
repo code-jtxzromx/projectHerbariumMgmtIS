@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:projectHerbariumMgmtIS.MenuPages"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:model="using:projectHerbariumMgmtIS.Model"
@@ -16,7 +17,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition x:ConnectionId='3' x:Name="MasterColumn" Width="250" />
+            <ColumnDefinition x:ConnectionId='3' x:Name="MasterColumn" Width="200" />
             <ColumnDefinition x:ConnectionId='4' x:Name="DetailColumn" Width="*" />
         </Grid.ColumnDefinitions>
 

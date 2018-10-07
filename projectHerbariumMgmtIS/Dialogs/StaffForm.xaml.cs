@@ -21,7 +21,7 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class StaffForm : ContentDialog
     {
         public int TransactionResult;
-        private List<string> Role = new List<string> { "ADMISTRATOR", "CURATOR", "STUDENT-ASSISTANT" }; 
+        private List<string> Role = new List<string> { "ADMINISTRATOR", "CURATOR", "STUDENT ASSISTANT" }; 
 
         // Properties
         public string TransactionForm

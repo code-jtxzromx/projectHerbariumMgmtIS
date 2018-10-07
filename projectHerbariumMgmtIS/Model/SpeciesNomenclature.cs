@@ -33,6 +33,7 @@ namespace projectHerbariumMgmtIS.Model
             
             connection.setQuery("SELECT intAltNameID, strScientificName, strLanguage, strAlternateName " +
                                 "FROM viewSpeciesAlternate " +
+                                "WHERE intAltNameID IS NOT NULL " +
                                 "ORDER BY strScientificName, strLanguage");
             SqlDataReader sqlData = connection.executeResult();
 

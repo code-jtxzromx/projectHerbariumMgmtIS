@@ -15,6 +15,22 @@ GO
 
 -------------- TABLE CREATION --------------
 
+-- Herbarium Menu
+IF OBJECT_ID('tblSystemMenu', 'U') IS NOT NULL
+	DROP TABLE tblSystemMenu
+GO
+CREATE TABLE tblSystemMenu
+(
+	intMenuID INT IDENTITY(1, 1) NOT NULL,
+	strLevel CHAR NOT NULL,
+	strMainMenu VARCHAR(255) NOT NULL,
+	strSubMenu VARCHAR(255),
+	strPageLocation VARCHAR(255) NOT NULL,
+	strAccessLevel VARCHAR(255) NOT NULL
+	CONSTRAINT pk_tblSystemMenu PRIMARY KEY(intMenuID)
+)
+GO
+
 -- Taxonomic Hierarchy : Phylum
 IF OBJECT_ID('tblPhylum', 'U') IS NOT NULL
 	DROP TABLE tblPhylum
@@ -312,6 +328,7 @@ CREATE TABLE tblBorrower
 	strContactNumber VARCHAR(15) NOT NULL,
 	strEmailAddress VARCHAR(255) NOT NULL,
 	strAffiliation VARCHAR(100) NOT NULL,
+	boolIsCollector BIT NOT NULL
 	CONSTRAINT pk_tblBorrower PRIMARY KEY(intBorrowerID)
 )
 GO
@@ -429,7 +446,6 @@ CREATE TABLE tblPlantDeposit
 	intAccessionNumber INT NOT NULL,
 	intPlantTypeID INT NOT NULL,
 	intFormatID INT NOT NULL,
-	picHerbariumSheet VARBINARY(MAX),
 	intCollectorID INT NOT NULL,
 	intLocalityID INT NOT NULL,
 	intStaffID INT NOT NULL,
@@ -448,6 +464,22 @@ CREATE TABLE tblPlantDeposit
 		REFERENCES tblLocality(intLocalityID),
 	CONSTRAINT fk_tblPlantDeposit_tblHerbariumStaff FOREIGN KEY(intStaffID)
 		REFERENCES tblHerbariumStaff(intStaffID)
+)
+GO
+
+-- Herbarium Sheet Picture
+IF OBJECT_ID('tblHerbariumSheetPicture', 'U') IS NOT NULL
+	DROP TABLE tblHerbariumSheetPicture
+GO
+CREATE TABLE tblHerbariumSheetPicture
+(
+	intPictureID INT IDENTITY(1, 1) NOT NULL,
+	intPlantDepositID INT NOT NULL,
+	picHerbariumSheet VARBINARY(MAX),
+	strTagDescription VARCHAR(255),
+	CONSTRAINT pk_tblHerbariumSheetPicture PRIMARY KEY(intPictureID),
+	CONSTRAINT fk_tblHerbariumSheetPicture_tblPlantDeposit FOREIGN KEY(intPlantDepositID)
+		REFERENCES tblPlantDeposit(intPlantDepositID)
 )
 GO
 
@@ -704,9 +736,35 @@ GO
 CREATE VIEW viewSpeciesAlternate
 AS
 (
-	SELECT SAN.intAltNameID, TS.strScientificName, SAN.strLanguage, SAN.strAlternateName
+	SELECT SAN.intAltNameID, TS.intSpeciesID, TS.strScientificName, TS.strCommonName, SAN.strLanguage, SAN.strAlternateName
 	FROM tblSpeciesAlternateName SAN
-		INNER JOIN viewTaxonSpecies TS ON SAN.intSpeciesID = TS.intSpeciesID 
+		RIGHT JOIN viewTaxonSpecies TS ON SAN.intSpeciesID = TS.intSpeciesID 
+)
+GO
+
+-- Species Alternate Collapsed
+IF OBJECT_ID('viewSpeciesFullAlternate', 'V') IS NOT NULL
+	DROP VIEW viewSpeciesFullAlternate
+GO
+CREATE VIEW viewSpeciesFullAlternate
+AS
+(
+	SELECT intSpeciesID, strScientificName,
+		'Common Name: ' + strCommonName + 
+			ISNULL
+			(
+				CONCAT(';', 
+						RTRIM
+							(LTRIM
+								(STUFF(( SELECT DISTINCT ';' + strLanguage + ': ' + strAlternateName FROM viewSpeciesAlternate a2 
+										  WHERE a2.strScientificName = a1.strScientificName FOR XML PATH('')), 1, 1, '')
+								)
+							)
+					   ), ''
+			)
+			 as strFullNomenclature
+	FROM viewSpeciesAlternate a1
+	GROUP BY intSpeciesID, strScientificName, strCommonName
 )
 GO
 
@@ -765,7 +823,7 @@ CREATE VIEW viewBorrower
 AS
 (
 	SELECT Bo.intBorrowerID, Bo.strFirstname, Bo.strMiddlename, Bo.strLastname, Bo.strMiddleInitial, Bo.strNameSuffix, Bo.strHomeAddress, Bo.strContactNumber,
-		Bo.strEmailAddress, RTRIM(LTRIM(CONCAT(Bo.strFirstname, ' ', Bo.strLastname, ' ', Bo.strNameSuffix))) strFullName, Bo.strAffiliation
+		Bo.strEmailAddress, RTRIM(LTRIM(CONCAT(Bo.strFirstname, ' ', Bo.strLastname, ' ', Bo.strNameSuffix))) strFullName, Bo.strAffiliation, Bo.boolIsCollector
 	FROM tblBorrower Bo
 )
 GO
@@ -840,7 +898,7 @@ AS
 	SELECT PD.intPlantDepositID, 
 			CONCAT(AF.strInstitutionCode,'-', PT.strPlantTypeCode, '-', FORMAT(PD.intAccessionNumber, AF.strAccessionFormat), '-', 
 			FORMAT(YEAR(PD.dateDeposited) % POWER(10, LEN(AF.strYearFormat)), AF.strYearFormat)) strAccessionNumber, 
-			PD.intAccessionNumber, PD.picHerbariumSheet, Co.strFullName AS strCollector, Lo.strFullLocality,
+			PD.intAccessionNumber, Co.strFullName AS strCollector, Lo.strFullLocality,
 			St.strFullName AS strStaff, PD.dateCollected, PD.dateDeposited, PD.strDescription, PD.strStatus
 	FROM tblPlantDeposit PD
 		INNER JOIN tblPlantType PT ON PD.intPlantTypeID = PT.intPlantTypeID
@@ -851,6 +909,19 @@ AS
 )
 GO
 
+-- Herbarium Sheet Picture View
+IF OBJECT_ID('viewHerbariumPicture', 'V') IS NOT NULL
+	DROP VIEW viewHerbariumPicture
+GO
+CREATE VIEW viewHerbariumPicture
+AS
+(
+	SELECT HP.intPictureID, PD.strAccessionNumber, HP.picHerbariumSheet, HP.strTagDescription
+	FROM tblHerbariumSheetPicture HP
+		INNER JOIN viewPlantDeposit PD ON HP.intPlantDepositID = PD.intPlantDepositID
+)
+GO
+
 -- Externally Verifying Plant Deposit View
 IF OBJECT_ID('viewVerifyingDeposit', 'V') IS NOT NULL
 	DROP VIEW viewVerifyingDeposit
@@ -858,7 +929,7 @@ GO
 CREATE VIEW viewVerifyingDeposit
 AS
 (
-	SELECT PD_A.intPlantDepositID, PD_A.strAccessionNumber, PD_B.strAccessionNumber AS strReferenceAccession, PD_A.picHerbariumSheet, 
+	SELECT PD_A.intPlantDepositID, PD_A.strAccessionNumber, PD_B.strAccessionNumber AS strReferenceAccession, 
 		TS.strFamilyName, TS.strScientificName, TS.strCommonName, PD_A.strCollector, PD_A.strFullLocality, PD_A.strStaff,  
 		PD_A.dateCollected, PD_A.dateDeposited, PD_A.strDescription, PD_A.strStatus
 	FROM tblVerifyingDeposit VD
@@ -878,13 +949,14 @@ AS
 (
 	SELECT HS.intHerbariumSheetID, HS.intPlantDepositID, PD_A.strAccessionNumber, 
 			HS.intPlantReferenceID, PD_B.strAccessionNumber AS strReferenceAccession, 
-			PD_A.picHerbariumSheet, TS.strFamilyName, TS.strScientificName, TS.strCommonName, PD_A.strCollector, 
+			TS.strFamilyName, TS.strScientificName, FA.strFullNomenclature, PD_A.strCollector, 
 			PD_A.strFullLocality, PD_A.strStaff, PD_A.dateCollected, PD_A.dateDeposited, HS.dateVerified,
 			PD_A.strDescription, Va.strFullName AS strValidator, PD_A.strStatus
 	FROM tblHerbariumSheet HS
 		INNER JOIN viewPlantDeposit PD_A ON HS.intPlantDepositID = PD_A.intPlantDepositID
 		INNER JOIN viewPlantDeposit PD_B ON HS.intPlantReferenceID = PD_B.intPlantDepositID
 		INNER JOIN viewTaxonSpecies TS ON HS.intSpeciesID = TS.intSpeciesID
+		INNER JOIN viewSpeciesFullAlternate FA ON TS.intSpeciesID = FA.intSpeciesID
 		INNER JOIN viewValidator Va ON HS.intValidatorID = Va.intValidatorID
 )
 GO
@@ -896,8 +968,8 @@ GO
 CREATE VIEW viewHerbariumInventory
 AS
 (
-	SELECT SH.intStoredSheetID, HS.strAccessionNumber, HS.strReferenceAccession, HS.picHerbariumSheet, 
-		HS.strFamilyName, HS.strScientificName, HS.strCommonName, HS.strCollector, HS.strFullLocality, HS.strStaff, 
+	SELECT SH.intStoredSheetID, HS.strAccessionNumber, HS.strReferenceAccession, 
+		HS.strFamilyName, HS.strScientificName, HS.strFullNomenclature, HS.strCollector, HS.strFullLocality, HS.strStaff, 
 		HS.dateCollected, HS.dateDeposited, HS.strDescription, HS.strStatus, HS.strValidator, 
 		HS.dateVerified, FB.strBoxNumber, SH.boolLoanAvailable
 	FROM tblStoredHerbarium SH
@@ -962,7 +1034,42 @@ AS
 GO
 
 --------- STATIC DATA INSERTION ---------
+-- Do not Overwrite!
+
 SET NOCOUNT ON
+
+-- System Menu
+INSERT INTO tblSystemMenu(strLevel, strMainMenu, strSubMenu, strPageLocation, strAccessLevel)
+VALUES ('A', 'Home',				NULL, 'HomePage',			'STUDENT ASSISTANT'),
+	   ('A', 'Maintenance',			NULL, 'MaintenancePage',	'STUDENT ASSISTANT'),
+	   ('A', 'Transaction',			NULL, 'TransactionPage',	'STUDENT ASSISTANT'),
+	   ('A', 'Management Tools',	NULL, 'UtilitiesPage',		'STUDENT ASSISTANT'),
+	   ('A', 'Queries',				NULL, 'QueriesPage',		'CURATOR'),
+	   ('A', 'Reports',				NULL, 'ReportsPage',		'CURATOR')
+GO
+INSERT INTO tblSystemMenu(strLevel, strMainMenu, strSubMenu, strPageLocation, strAccessLevel)
+VALUES ('B', 'Maintenance',			'Taxonomic Hierarchy',	'TaxonomicHierarchyPage',	'CURATOR'),
+       ('B', 'Maintenance',			'Species Author',		'SpeciesAuthorPage',		'CURATOR'),
+       ('B', 'Maintenance',			'Species Nomenclature',	'SpeciesNomenclaturePage',	'CURATOR'),
+       ('B', 'Maintenance',			'Plant Types',			'PlantTypePage',			'CURATOR'),
+       ('B', 'Maintenance',			'Herbarium Boxes',		'HerbariumBoxPage',			'STUDENT ASSISTANT'),
+       ('B', 'Maintenance',			'Plant Locality',		'PlantLocalityPage',		'STUDENT ASSISTANT'),
+       ('B', 'Maintenance',			'Collector',			'CollectorPage',			'STUDENT ASSISTANT'),
+       ('B', 'Maintenance',			'Borrower',				'BorrowerPage',				'STUDENT ASSISTANT'),
+       ('B', 'Maintenance',			'External Validator',	'ExternalValidatorPage',	'CURATOR'),
+       ('B', 'Maintenance',			'Herbarium Staff',		'HerbariumStaffPage',		'ADMINISTRATOR'),
+       ('B', 'Maintenance',			'Access Accounts',		'AccessAccountsPage',		'ADMINISTRATOR'),
+       ('B', 'Transaction',			'Plant Deposit',		'PlantDepositPage',			'STUDENT ASSISTANT'),
+       ('B', 'Transaction',			'Plant Receiving',		'PlantReceivingPage',		'CURATOR'),
+       ('B', 'Transaction',			'Plant Resubmission',	'PlantResubmissionPage',	'STUDENT ASSISTANT'),
+       ('B', 'Transaction',			'Plant Verification',	'PlantVerificationPage',	'CURATOR'),
+       ('B', 'Transaction',			'Plant Classification',	'PlantClassificationPage',	'STUDENT ASSISTANT'),
+       ('B', 'Transaction',			'Plant Loaning',		'PlantLoaningPage',			'STUDENT ASSISTANT'),
+       ('B', 'Transaction',			'Plant Loan Returns',	'PlantLoanReturnPage',		'CURATOR'),
+       ('B', 'Management Tools',	'Herbarium Inventory',	'HerbariumInventoryPage',	'STUDENT ASSISTANT'),
+       ('B', 'Management Tools',	'Sheet Tracking',		'SheetTrackingPage',		'CURATOR'),
+       ('B', 'Management Tools',	'Audit Trailing',		'AuditTrailingPage',		'CURATOR')
+GO
 
 -- Countries
 INSERT INTO tblCountry(strCountry)

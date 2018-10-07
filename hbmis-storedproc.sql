@@ -1113,6 +1113,16 @@ BEGIN
 			INSERT INTO tblCollector (strFirstname, strMiddlename, strLastname, strMiddleInitial, strNameSuffix, strHomeAddress, 
 										strContactNumber, strEmailAddress, strAffiliation)
 			VALUES (@firstname, @middlename, @lastname, @middleinitial, @namesuffix, @address, @contactno, @email, @affiliation);
+
+			IF NOT EXISTS (SELECT intBorrowerID FROM tblBorrower 
+						   WHERE strFirstname = @firstname AND strMiddlename = @middlename AND strLastname = @lastname
+								AND strMiddleInitial = @middleinitial AND strNameSuffix = @namesuffix AND strHomeAddress = @address
+								AND strContactNumber = @contactno AND strEmailAddress = @email)
+			BEGIN
+				INSERT INTO tblBorrower(strFirstname, strMiddlename, strLastname, strMiddleInitial, strNameSuffix, strHomeAddress, 
+											strContactNumber, strEmailAddress, strAffiliation, boolIsCollector)
+				VALUES (@firstname, @middlename, @lastname, @middleinitial, @namesuffix, @address, @contactno, @email, @affiliation, 1);				
+			END
 		END
 		ELSE
 		BEGIN
@@ -1154,6 +1164,15 @@ BEGIN
 	BEGIN TRANSACTION
 	
 	BEGIN TRY
+		DECLARE @borrowerID INT
+		SET @borrowerID = (SELECT intBorrowerID 
+						   FROM tblBorrower
+						   WHERE strFirstname = (SELECT strFirstname FROM tblCollector WHERE intCollectorID = @collectorID)
+								AND strMiddlename = (SELECT strMiddlename FROM tblCollector WHERE intCollectorID = @collectorID)
+								AND strLastname = (SELECT strLastname FROM tblCollector WHERE intCollectorID = @collectorID)
+								AND strMiddleInitial = (SELECT strMiddleInitial FROM tblCollector WHERE intCollectorID = @collectorID)
+								AND strNameSuffix = (SELECT strNameSuffix FROM tblCollector WHERE intCollectorID = @collectorID))
+
 		UPDATE tblCollector
 		SET strFirstname = @firstname,
 			strMiddlename = @middlename,
@@ -1165,6 +1184,18 @@ BEGIN
 			strEmailAddress = @email,
 			strAffiliation = @affiliation
 		WHERE intCollectorID = @collectorID
+
+		UPDATE tblBorrower
+		SET strFirstname = @firstname,
+			strMiddlename = @middlename,
+			strLastname = @lastname,
+			strMiddleInitial = @middleinitial,
+			strNameSuffix = @namesuffix,
+			strHomeAddress = @address,
+			strContactNumber = @contactno,
+			strEmailAddress = @email,
+			strAffiliation = @affiliation
+		WHERE intBorrowerID = @borrowerID
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION
@@ -1207,8 +1238,8 @@ BEGIN
 							AND strContactNumber = @contactno AND strEmailAddress = @email AND strAffiliation = @affiliation)
 		BEGIN
 			INSERT INTO tblBorrower(strFirstname, strMiddlename, strLastname, strMiddleInitial, strNameSuffix, strHomeAddress, 
-										strContactNumber, strEmailAddress, strAffiliation)
-			VALUES (@firstname, @middlename, @lastname, @middleinitial, @namesuffix, @address, @contactno, @email, @affiliation);
+										strContactNumber, strEmailAddress, strAffiliation, boolIsCollector)
+			VALUES (@firstname, @middlename, @lastname, @middleinitial, @namesuffix, @address, @contactno, @email, @affiliation, 0);
 		END
 		ELSE
 		BEGIN
@@ -1455,8 +1486,11 @@ BEGIN
 		SET @prevRole = (SELECT strRole FROM tblHerbariumStaff WHERE intStaffID = @staffID)
 		SET @validatorID = (SELECT intValidatorID 
 							FROM tblValidator 
-							WHERE strFirstname = @firstname AND strMiddlename = @middlename AND strLastname = @lastname
-									AND strMiddleInitial = @middleinitial AND strNameSuffix = @namesuffix)
+							WHERE strFirstname = (SELECT strFirstname FROM tblHerbariumStaff WHERE intStaffID = @staffID)
+								AND strMiddlename = (SELECT strMiddlename FROM tblHerbariumStaff WHERE intStaffID = @staffID)
+								AND strLastname = (SELECT strLastname FROM tblHerbariumStaff WHERE intStaffID = @staffID)
+								AND strMiddleInitial = (SELECT strMiddleInitial FROM tblHerbariumStaff WHERE intStaffID = @staffID)
+								AND strNameSuffix = (SELECT strNameSuffix FROM tblHerbariumStaff WHERE intStaffID = @staffID))
 
 		UPDATE tblHerbariumStaff
 		SET strFirstname = @firstname,
@@ -1472,20 +1506,26 @@ BEGIN
 		
 		IF (@prevRole <> @role) AND (@role IN ('CURATOR', 'ADMINISTRATOR'))
 		BEGIN 
-			SET @validatorID = (SELECT intValidatorID FROM tblValidator 
-								WHERE strFirstname = @firstname AND
-										strMiddlename = @middlename AND
-										strLastname = @lastname AND
-										strMiddleInitial = @middleinitial AND
-										strNameSuffix = @namesuffix);
-
-			IF @validatorID IS NULL
+			IF NOT EXISTS(SELECT intValidatorID FROM tblValidator 
+						  WHERE strFirstname = @firstname AND strMiddlename = @middlename AND strLastname = @lastname AND
+								strMiddleInitial = @middleinitial AND strNameSuffix = @namesuffix)
 			BEGIN
 				INSERT INTO tblValidator (strFirstname, strMiddlename, strLastname, strMiddleInitial, strNameSuffix, strContactNumber, strEmailAddress, strInstitution, strValidatorType)
 				VALUES (@firstname, @middlename, @lastname, @middleinitial, @namesuffix, @contactno, @email, 'Polytechnic University of the Philippines', 'Internal');
 			END
 		END
-
+		ELSE IF (@prevRole = @role) AND (@role IN ('CURATOR', 'ADMINISTRATOR'))
+		BEGIN
+			UPDATE tblValidator
+			SET strFirstname = @firstname,
+				strMiddlename = @middlename,
+				strLastname = @lastname,
+				strMiddleInitial = @middleinitial,
+				strNameSuffix = @namesuffix,
+				strContactNumber = @contactno,
+				strEmailAddress = @email
+			WHERE intValidatorID = @validatorID
+		END
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION
@@ -1633,9 +1673,11 @@ BEGIN
 		END
 		ELSE
 		BEGIN
-			INSERT INTO tblPlantDeposit(intAccessionNumber, intPlantTypeID, intFormatID, picHerbariumSheet, intCollectorID, intLocalityID, 
-										intStaffID, dateCollected, dateDeposited, strDescription, strStatus)
-			VALUES(@accessionDigits, @plantTypeID, 1, @herbariumSheet, @collectorID, @localityID, @staffID, @dateCollected, @dateDeposited, @description, 'For Verification')
+			INSERT INTO tblPlantDeposit(intAccessionNumber, intPlantTypeID, intFormatID, intCollectorID, intLocalityID, intStaffID, dateCollected, dateDeposited, strDescription, strStatus)
+			VALUES(@accessionDigits, @plantTypeID, 1, @collectorID, @localityID, @staffID, @dateCollected, @dateDeposited, @description, 'For Verification')
+
+			INSERT INTO tblHerbariumSheetPicture(intPlantDepositID, picHerbariumSheet, strTagDescription)
+			VALUES (SCOPE_IDENTITY(), @herbariumSheet, 'Main Herbarium Sheet')
 		END
 	END TRY
 	BEGIN CATCH
@@ -1655,7 +1697,7 @@ IF OBJECT_ID('procConfirmDeposit', 'P') IS NOT NULL
 	DROP PROCEDURE procConfirmDeposit
 GO
 CREATE PROCEDURE procConfirmDeposit
-	@depositID			VARCHAR(50),
+	@depositNumber		VARCHAR(50),
 	@receiveStatus		VARCHAR(50)
 AS
 BEGIN
@@ -1666,7 +1708,11 @@ BEGIN
 
 	BEGIN TRY
 		DECLARE @accessionNumber INT
+		DECLARE @depositID INT
+		DECLARE @newDepositID INT
+
 		SET @accessionNumber = (SELECT TOP 1 intAccessionNumber FROM tblPlantDeposit ORDER BY intAccessionNumber DESC)
+		SET @depositID = (SELECT intDepositID FROM viewReceivedDeposit WHERE strDepositNumber = @depositNumber);
 
 		UPDATE tblReceivedDeposits
 		SET strStatus = @receiveStatus
@@ -1679,11 +1725,17 @@ BEGIN
 			ELSE
 				SET @accessionNumber += 1
 
-			INSERT INTO tblPlantDeposit(intAccessionNumber, intPlantTypeID, intFormatID, picHerbariumSheet, intCollectorID, intLocalityID, 
-										intStaffID, dateCollected, dateDeposited, strDescription, strStatus)
-			SELECT @accessionNumber, intPlantTypeID, 1, picHerbariumSheet, intCollectorID, intLocalityID, intStaffID, dateCollected, dateDeposited, strDescription, 'For Verification'
-			FROM tblReceivedDeposits
-			WHERE intDepositID = @depositID	
+			INSERT INTO tblPlantDeposit(intAccessionNumber, intPlantTypeID, intFormatID, intCollectorID, intLocalityID, intStaffID, dateCollected, dateDeposited, strDescription, strStatus)
+				SELECT @accessionNumber, intPlantTypeID, 1, intCollectorID, intLocalityID, intStaffID, dateCollected, dateDeposited, strDescription, 'For Verification'
+				FROM tblReceivedDeposits
+				WHERE intDepositID = @depositID	
+
+			SET @newDepositID = SCOPE_IDENTITY();
+
+			INSERT INTO tblHerbariumSheetPicture(intPlantDepositID, picHerbariumSheet, strTagDescription)
+				SELECT @newDepositID, picHerbariumSheet, 'Main Herbarium Sheet'
+				FROM tblReceivedDeposits
+				WHERE intDepositID = @depositID	
 		END
 	END TRY
 	BEGIN CATCH
@@ -1704,7 +1756,7 @@ IF OBJECT_ID('procPlantResubmission', 'P') IS NOT NULL
 GO
 CREATE PROCEDURE procPlantResubmission
 	@isIDBase			BIT,
-	@depositID			INT,
+	@depositNumber		VARCHAR(50),
 	@herbariumSheet		VARBINARY(MAX) = NULL,
 	@locality			VARCHAR(MAX),
 	@staff				VARCHAR(255),
@@ -1721,6 +1773,7 @@ BEGIN
 		DECLARE @plantTypeID INT
 		DECLARE @localityID INT
 		DECLARE @staffID INT
+		DECLARE @depositID INT
 
 		SET @plantTypeID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @plantType
@@ -1728,12 +1781,13 @@ BEGIN
 							END)
 		SET @localityID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @locality
-								ELSE (SELECT intLocalityID FROM viewLocality WHERE strFullLocality = @locality)
+								ELSE (SELECT intLocalityID FROM viewLocality WHERE strShortLocation = @locality)
 							END)
 		SET @staffID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @staff
 								ELSE (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 							END)
+		SET @depositID = (SELECT intDepositID FROM viewReceivedDeposit WHERE strDepositNumber = @depositNumber);
 
 		UPDATE tblReceivedDeposits
 		SET picHerbariumSheet = @herbariumSheet,
@@ -1973,6 +2027,56 @@ BEGIN
 END
 GO
 
+-- Update Herbarium Sheet
+IF OBJECT_ID('procUpdateHerbariumSheet', 'P') IS NOT NULL
+	DROP PROCEDURE procUpdateHerbariumSheet
+GO
+CREATE PROCEDURE procUpdateHerbariumSheet
+	@isIDBase			BIT,
+	@accessionNumber	VARCHAR(50),
+	@boxNumber			VARCHAR(50),
+	@description		VARCHAR(255),
+	@loanAvailability	BIT
+AS
+BEGIN
+	SET NOCOUNT ON;
+	DECLARE @Result INT = 0
+
+	BEGIN TRANSACTION
+		
+	BEGIN TRY
+		DECLARE @boxID INT;
+		DECLARE @sheetID INT;
+		DECLARE @depositID INT;
+
+		SET @boxID =  (SELECT CASE
+							WHEN @isIDBase = 1 THEN @boxNumber
+							ELSE (SELECT intBoxID FROM viewFamilyBox WHERE strBoxNumber = @boxNumber)
+						END);
+		SET @sheetID = (SELECT intStoredSheetID FROM viewHerbariumInventory WHERE strAccessionNumber = @accessionNumber);
+		SET @depositID = (SELECT intPlantDepositID FROM viewPlantDeposit WHERE strAccessionNumber = @accessionNumber)
+
+		UPDATE tblPlantDeposit
+		SET strDescription = @description
+		WHERE intPlantDepositID = @depositID
+
+		UPDATE tblStoredHerbarium
+		SET intBoxID = @boxID,
+			boolLoanAvailable = @loanAvailability
+		WHERE intStoredSheetID = @sheetID
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRANSACTION
+		SET @Result = 1		
+	END CATCH
+
+	IF XACT_STATE() = 1
+		COMMIT TRANSACTION
+
+	RETURN @Result
+END
+GO
+
 -- Process Loan
 IF OBJECT_ID('procProcessLoan', 'P') IS NOT NULL
 	DROP PROCEDURE procProcessLoan
@@ -2086,7 +2190,7 @@ GO
 
 -------------- SAMPLE DATA INITIALIZATION --------------
 
-EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Manila, City of', 'Polytechnic University of the Philippines - Sta. Mesa (Main) Campus', 'PUP Main Campus, Sta. Mesa, Manila', '', '14°35''52.44" N', '121°0''38.88" E'
+EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Manila, City of', 'Polytechnic University of the Philippines - Sta. Mesa (Main) Campus', 'PUP Main Campus, Sta. Mesa, Manila', '', '014° 35'' 52.44" N', '121° 00'' 38.88" E'
 EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Manila, City of', 'University of Sto. Tomas - Espana', 'UST Espana, Sampaloc, Manila', '', '', ''
 EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Quezon City', 'University of the Philippines - Diliman Campus', 'UP Diliman, Diliman, Quezon City', '', '', ''
 
@@ -2132,7 +2236,6 @@ EXECUTE procInsertPlantType 'F', 'Flowering'
 EXECUTE procInsertPlantType 'A', 'Algae'
 
 --SELECT * FROM tblLocality
---SELECT * FROM tblPerson
 --SELECT * FROM tblCollector
 --SELECT * FROM tblBorrower
 --SELECT * FROM tblValidator
@@ -2146,9 +2249,22 @@ EXECUTE procInsertPlantType 'A', 'Algae'
 --SELECT * FROM viewTaxonGenus
 --SELECT * FROM viewTaxonSpecies
 
+--SELECT * FROM tblSystemMenu
+--SELECT * FROM tblAccessionFormat
+
+--SELECT * FROM tblCountry
+--SELECT * FROM tblRegion
+--SELECT * FROM tblProvince
+--SELECT * FROM tblCity
+
 --SELECT * FROM tblAuthor
 --SELECT * FROM tblSpeciesAuthor
 --SELECT * FROM tblSpeciesAlternateName
+
+--SELECT * FROM tblHerbariumSheetPicture
+
+--SELECT * FROM viewPlantDeposit
+--SELECT * FROM viewHerbariumPicture
 
 --SELECT FB.strBoxNumber, FB.strFamilyName, FB.intBoxLimit, FB.intRackNo, FB.intRackRow, FB.intRackColumn, COUNT(HI.intStoredSheetID) 
 --FROM viewFamilyBox FB LEFT JOIN viewHerbariumInventory HI ON FB.strBoxNumber = HI.strBoxNumber
