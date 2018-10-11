@@ -98,6 +98,9 @@
     <Compile Include="Dialogs\AccountForm.xaml.cs">
       <DependentUpon>AccountForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\ApproveLoanForm.xaml.cs">
+      <DependentUpon>ApproveLoanForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\BorrowerForm.xaml.cs">
       <DependentUpon>BorrowerForm.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,9 @@
     </Compile>
     <Compile Include="Dialogs\VerifyDepositForm.xaml.cs">
       <DependentUpon>VerifyDepositForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ViewLoanForm.xaml.cs">
+      <DependentUpon>ViewLoanForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\ViewSheetForm.xaml.cs">
       <DependentUpon>ViewSheetForm.xaml</DependentUpon>
@@ -253,10 +259,13 @@
     </Compile>
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Borrower.cs" />
+    <Compile Include="Model\CheckBoxList.cs" />
     <Compile Include="Model\Collector.cs" />
     <Compile Include="Model\DatabaseConnection.cs" />
+    <Compile Include="Model\GridViewList.cs" />
     <Compile Include="Model\HerbariumImage.cs" />
     <Compile Include="Model\HerbariumSheet.cs" />
+    <Compile Include="Model\MainMenu.cs" />
     <Compile Include="Model\PlantDeposit.cs" />
     <Compile Include="Model\PlantLoan.cs" />
     <Compile Include="Model\Staff.cs" />
@@ -275,6 +284,18 @@
     <Compile Include="Model\TaxonPhylum.cs" />
     <Compile Include="Model\TaxonSpecies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\QueryHerbariumSheetPage.xaml.cs">
+      <DependentUpon>QueryHerbariumSheetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\QuerySpeciesPage.xaml.cs">
+      <DependentUpon>QuerySpeciesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DocumentNewDeposit.xaml.cs">
+      <DependentUpon>DocumentNewDeposit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportNewDeposit.xaml.cs">
+      <DependentUpon>ReportNewDeposit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\DepositTransactionPage.xaml.cs">
       <DependentUpon>DepositTransactionPage.xaml</DependentUpon>
     </Compile>
@@ -289,9 +310,6 @@
     </Compile>
     <Compile Include="Transaction\PlantLoaningPage.xaml.cs">
       <DependentUpon>PlantLoaningPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\PlantLoanReturnPage.xaml.cs">
-      <DependentUpon>PlantLoanReturnPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Transaction\PlantReceivingPage.xaml.cs">
       <DependentUpon>PlantReceivingPage.xaml</DependentUpon>
@@ -315,6 +333,7 @@
     <Content Include="Assets\background-3.jpg" />
     <Content Include="Assets\background-4.jpg" />
     <Content Include="Assets\background-5.jpg" />
+    <Content Include="Assets\herbarium_banner.png" />
     <Content Include="Assets\herbarium_icon.png" />
     <Content Include="Assets\herbarium_banner_white.png" />
     <Content Include="Assets\herbarium_banner_white_padded.png" />
@@ -333,6 +352,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Dialogs\AccountForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ApproveLoanForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -421,6 +444,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dialogs\VerifyDepositForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ViewLoanForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -540,6 +567,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Queries\QueryHerbariumSheetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Queries\QuerySpeciesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\DocumentNewDeposit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\ReportNewDeposit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Transaction\DepositTransactionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -557,10 +600,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Transaction\PlantLoaningPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Transaction\PlantLoanReturnPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -597,10 +636,7 @@
       <Version>4.0.0</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Queries\" />
-    <Folder Include="Reports\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

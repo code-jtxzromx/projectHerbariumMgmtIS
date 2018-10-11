@@ -14,6 +14,11 @@ namespace projectHerbariumMgmtIS.Model
         // Properties
         public string SpeciesID { get; set; }
         public bool IsChecked { get; set; }
+        public string DomainName { get; set; }
+        public string KingdomName { get; set; }
+        public string PhylumName { get; set; }
+        public string ClassName { get; set; }
+        public string OrderName { get; set; }
         public string FamilyName { get; set; }
         public string GenusName { get; set; }
         public string SpeciesName { get; set; }
@@ -65,6 +70,31 @@ namespace projectHerbariumMgmtIS.Model
             return species;
         }
 
+        public List<TaxonSpecies> GetLoanedSpecies(string loanNumber)
+        {
+            List<TaxonSpecies> species = new List<TaxonSpecies>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strFamilyName, strScientificName, intCopies " +
+                                "FROM viewLoanedSpecies " +
+                                "WHERE strLoanNumber = @loanNumber " +
+                                "ORDER BY strFamilyName, strScientificName ASC");
+            connection.addQueryParameter("@loanNumber", SqlDbType.VarChar, loanNumber);
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                species.Add(new TaxonSpecies()
+                {
+                    FamilyName = sqlData[0].ToString(),
+                    ScientificName = sqlData[1].ToString(),
+                    Copies = Convert.ToInt32(sqlData[2])
+                });
+            }
+            connection.closeResult();
+            return species;
+        }
+
         public List<TaxonSpecies> GetSpeciesWithCheck()
         {
             List<TaxonSpecies> species = new List<TaxonSpecies>();
@@ -86,6 +116,45 @@ namespace projectHerbariumMgmtIS.Model
                     ScientificName = sqlData[2].ToString(),
                     Specimens = Convert.ToInt32(sqlData[3]),
                     Copies = 0
+                });
+            }
+            connection.closeResult();
+            return species;
+        }
+
+        public List<TaxonSpecies> GetSpeciesQuery()
+        {
+            List<TaxonSpecies> species = new List<TaxonSpecies>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT TS.strSpeciesNo, TS.strDomainName, TS.strKingdomName, TS.strPhylumName, TS.strClassName, TS.strOrderName, " +
+                                       "TS.strFamilyName, TS.strGenusName, TS.strSpeciesName, TS.strScientificName, TS.strCommonName, " +
+                                       "TS.strAuthorsName, TS.boolSpeciesIdentified, COUNT(HS.intHerbariumSheetID) as intSpecimenCount " +
+                                "FROM viewTaxonSpecies TS " +
+                                    "LEFT JOIN viewHerbariumSheet HS ON TS.strScientificName = HS.strScientificName " +
+                                "GROUP BY TS.strSpeciesNo, TS.strDomainName, TS.strKingdomName, TS.strPhylumName, TS.strClassName, TS.strOrderName, " +
+                                         "TS.strFamilyName, TS.strGenusName, TS.strSpeciesName, TS.strScientificName, TS.strCommonName, " +
+                                         "TS.strAuthorsName, TS.boolSpeciesIdentified");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                species.Add(new TaxonSpecies()
+                {
+                    SpeciesID = sqlData[0].ToString(),
+                    DomainName = sqlData[1].ToString(),
+                    KingdomName = sqlData[2].ToString(),
+                    PhylumName = sqlData[3].ToString(),
+                    ClassName = sqlData[4].ToString(),
+                    OrderName = sqlData[5].ToString(),
+                    FamilyName = sqlData[6].ToString(),
+                    GenusName = sqlData[7].ToString(),
+                    SpeciesName = sqlData[8].ToString(),
+                    ScientificName = sqlData[9].ToString(),
+                    CommonName = sqlData[10].ToString(),
+                    SpeciesAuthor = sqlData[11].ToString(),
+                    IdentifiedStatus = Convert.ToBoolean(sqlData[12]),
+                    Specimens = Convert.ToInt32(sqlData[13])
                 });
             }
             connection.closeResult();

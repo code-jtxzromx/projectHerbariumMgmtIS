@@ -27,6 +27,11 @@
                     <AppBarButton x:Name="btnNewLoan" Click="btnNewLoan_Click" Icon="Add" Label="New Loan Transaction" />
                     <AppBarButton x:Name="btnViewLoan" Click="btnViewLoan_Click" Icon="View" Label="View Loan Transaction" />
                     <AppBarButton x:Name="btnApprove" Click="btnApprove_Click" Icon="Accept" Label="Approve Loan Transaction" />
+                    <AppBarButton x:Name="btnReturn" Click="btnReturn_Click" Label="Return Loaned Specimens">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE944;" />
+                        </AppBarButton.Icon>
+                    </AppBarButton>
                 </CommandBar>
             </Grid>
 

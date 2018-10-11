@@ -213,315 +213,327 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[153];
+            _typeNameTable = new string[159];
             _typeNameTable[0] = "projectHerbariumMgmtIS.Dialogs.AccountForm";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentDialog";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.ContentControl";
             _typeNameTable[3] = "String";
             _typeNameTable[4] = "projectHerbariumMgmtIS.Model.Account";
             _typeNameTable[5] = "Object";
-            _typeNameTable[6] = "projectHerbariumMgmtIS.Dialogs.BorrowerForm";
-            _typeNameTable[7] = "projectHerbariumMgmtIS.Model.Borrower";
-            _typeNameTable[8] = "projectHerbariumMgmtIS.Dialogs.ClassForm";
-            _typeNameTable[9] = "projectHerbariumMgmtIS.Model.TaxonClass";
-            _typeNameTable[10] = "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel";
-            _typeNameTable[11] = "Windows.UI.Xaml.Controls.Panel";
-            _typeNameTable[12] = "Double";
-            _typeNameTable[13] = "Windows.UI.Xaml.Controls.Orientation";
-            _typeNameTable[14] = "Windows.UI.Xaml.Thickness";
-            _typeNameTable[15] = "projectHerbariumMgmtIS.Dialogs.ClassifySheetForm";
-            _typeNameTable[16] = "projectHerbariumMgmtIS.Model.HerbariumSheet";
-            _typeNameTable[17] = "Windows.UI.Xaml.Media.Imaging.BitmapImage";
-            _typeNameTable[18] = "projectHerbariumMgmtIS.Dialogs.CollectorForm";
-            _typeNameTable[19] = "projectHerbariumMgmtIS.Model.Collector";
-            _typeNameTable[20] = "projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm";
-            _typeNameTable[21] = "projectHerbariumMgmtIS.Model.PlantDeposit";
-            _typeNameTable[22] = "projectHerbariumMgmtIS.Dialogs.EditSheetForm";
-            _typeNameTable[23] = "System.Collections.Generic.List`1<projectHerbariumMgmtIS.Model.HerbariumImage>";
-            _typeNameTable[24] = "projectHerbariumMgmtIS.Model.HerbariumImage";
-            _typeNameTable[25] = "projectHerbariumMgmtIS.Dialogs.FamilyForm";
-            _typeNameTable[26] = "projectHerbariumMgmtIS.Model.TaxonFamily";
-            _typeNameTable[27] = "projectHerbariumMgmtIS.Dialogs.GenusForm";
-            _typeNameTable[28] = "projectHerbariumMgmtIS.Model.TaxonGenus";
-            _typeNameTable[29] = "projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm";
-            _typeNameTable[30] = "projectHerbariumMgmtIS.Model.HerbariumBox";
-            _typeNameTable[31] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask";
-            _typeNameTable[32] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[33] = "projectHerbariumMgmtIS.Dialogs.LocalityForm";
-            _typeNameTable[34] = "projectHerbariumMgmtIS.Model.PlantLocality";
-            _typeNameTable[35] = "projectHerbariumMgmtIS.Dialogs.NomenclatureForm";
-            _typeNameTable[36] = "projectHerbariumMgmtIS.Model.SpeciesNomenclature";
-            _typeNameTable[37] = "projectHerbariumMgmtIS.Dialogs.PhylumForm";
-            _typeNameTable[38] = "projectHerbariumMgmtIS.Model.TaxonPhylum";
-            _typeNameTable[39] = "projectHerbariumMgmtIS.Dialogs.PlantTypeForm";
-            _typeNameTable[40] = "projectHerbariumMgmtIS.Model.PlantType";
-            _typeNameTable[41] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid";
-            _typeNameTable[42] = "Windows.UI.Xaml.Controls.Control";
-            _typeNameTable[43] = "Boolean";
-            _typeNameTable[44] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode";
-            _typeNameTable[45] = "System.Enum";
-            _typeNameTable[46] = "System.ValueType";
-            _typeNameTable[47] = "System.Collections.ObjectModel.ObservableCollection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>";
-            _typeNameTable[48] = "System.Collections.ObjectModel.Collection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>";
-            _typeNameTable[49] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn";
-            _typeNameTable[50] = "Windows.UI.Xaml.Style";
-            _typeNameTable[51] = "Windows.UI.Xaml.Data.Binding";
-            _typeNameTable[52] = "Int32";
-            _typeNameTable[53] = "System.Nullable`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>";
-            _typeNameTable[54] = "Windows.UI.Xaml.Visibility";
-            _typeNameTable[55] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength";
-            _typeNameTable[56] = "Windows.UI.Xaml.Media.Brush";
-            _typeNameTable[57] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode";
-            _typeNameTable[58] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility";
-            _typeNameTable[59] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility";
-            _typeNameTable[60] = "Windows.UI.Xaml.Controls.ScrollBarVisibility";
-            _typeNameTable[61] = "System.Collections.IEnumerable";
-            _typeNameTable[62] = "Windows.UI.Xaml.DataTemplate";
-            _typeNameTable[63] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode";
-            _typeNameTable[64] = "System.Collections.ObjectModel.ObservableCollection`1<Windows.UI.Xaml.Style>";
-            _typeNameTable[65] = "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.Style>";
-            _typeNameTable[66] = "System.Collections.IList";
-            _typeNameTable[67] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn";
-            _typeNameTable[68] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn";
-            _typeNameTable[69] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn";
-            _typeNameTable[70] = "Windows.UI.Xaml.Media.FontFamily";
-            _typeNameTable[71] = "Windows.UI.Text.FontStyle";
-            _typeNameTable[72] = "Windows.UI.Text.FontWeight";
-            _typeNameTable[73] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn";
-            _typeNameTable[74] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex";
-            _typeNameTable[75] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType";
-            _typeNameTable[76] = "Windows.UI.Xaml.Controls.TextBox";
-            _typeNameTable[77] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode";
-            _typeNameTable[78] = "projectHerbariumMgmtIS.Dialogs.RequestLoanForm";
-            _typeNameTable[79] = "projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm";
-            _typeNameTable[80] = "projectHerbariumMgmtIS.Dialogs.ResultDialog";
-            _typeNameTable[81] = "projectHerbariumMgmtIS.Dialogs.SampleDialog";
-            _typeNameTable[82] = "projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm";
-            _typeNameTable[83] = "projectHerbariumMgmtIS.Model.SpeciesAuthor";
-            _typeNameTable[84] = "projectHerbariumMgmtIS.Dialogs.SpeciesForm";
-            _typeNameTable[85] = "projectHerbariumMgmtIS.Model.TaxonSpecies";
-            _typeNameTable[86] = "projectHerbariumMgmtIS.Dialogs.StaffForm";
-            _typeNameTable[87] = "projectHerbariumMgmtIS.Model.Staff";
-            _typeNameTable[88] = "projectHerbariumMgmtIS.Dialogs.ValidatorForm";
-            _typeNameTable[89] = "projectHerbariumMgmtIS.Model.Validator";
-            _typeNameTable[90] = "projectHerbariumMgmtIS.Dialogs.VerifyDepositForm";
-            _typeNameTable[91] = "projectHerbariumMgmtIS.Dialogs.ViewSheetForm";
-            _typeNameTable[92] = "Microsoft.Toolkit.Uwp.UI.Animations.Implicit";
-            _typeNameTable[93] = "Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection";
-            _typeNameTable[94] = "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase";
-            _typeNameTable[95] = "Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection";
-            _typeNameTable[96] = "System.Collections.Generic.List`1<Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>";
-            _typeNameTable[97] = "Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame";
-            _typeNameTable[98] = "TimeSpan";
-            _typeNameTable[99] = "Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation";
-            _typeNameTable[100] = "Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation";
-            _typeNameTable[101] = "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>";
-            _typeNameTable[102] = "Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation";
-            _typeNameTable[103] = "Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation";
-            _typeNameTable[104] = "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>";
-            _typeNameTable[105] = "Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame";
-            _typeNameTable[106] = "Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame`1<Double>";
-            _typeNameTable[107] = "projectHerbariumMgmtIS.MainPage";
-            _typeNameTable[108] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[109] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[110] = "projectHerbariumMgmtIS.Dialogs.OrderForm";
-            _typeNameTable[111] = "projectHerbariumMgmtIS.Model.TaxonOrder";
-            _typeNameTable[112] = "projectHerbariumMgmtIS.Maintenance.AccessAccountsPage";
-            _typeNameTable[113] = "projectHerbariumMgmtIS.Maintenance.BorrowerPage";
-            _typeNameTable[114] = "projectHerbariumMgmtIS.Maintenance.CollectorPage";
-            _typeNameTable[115] = "projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage";
-            _typeNameTable[116] = "projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage";
-            _typeNameTable[117] = "projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage";
-            _typeNameTable[118] = "projectHerbariumMgmtIS.Maintenance.PlantLocalityPage";
-            _typeNameTable[119] = "projectHerbariumMgmtIS.Maintenance.PlantTypePage";
-            _typeNameTable[120] = "projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage";
-            _typeNameTable[121] = "projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage";
-            _typeNameTable[122] = "projectHerbariumMgmtIS.Maintenance.TaxonClassPage";
-            _typeNameTable[123] = "projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage";
-            _typeNameTable[124] = "projectHerbariumMgmtIS.Maintenance.TaxonGenusPage";
-            _typeNameTable[125] = "projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage";
-            _typeNameTable[126] = "projectHerbariumMgmtIS.Maintenance.TaxonOrderPage";
-            _typeNameTable[127] = "projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage";
-            _typeNameTable[128] = "projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage";
-            _typeNameTable[129] = "projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage";
-            _typeNameTable[130] = "projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage";
-            _typeNameTable[131] = "projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage";
-            _typeNameTable[132] = "projectHerbariumMgmtIS.MenuPages.HomePage";
-            _typeNameTable[133] = "projectHerbariumMgmtIS.MenuPages.MaintenancePage";
-            _typeNameTable[134] = "projectHerbariumMgmtIS.MenuPages.QueriesPage";
-            _typeNameTable[135] = "projectHerbariumMgmtIS.MenuPages.ReportsPage";
-            _typeNameTable[136] = "projectHerbariumMgmtIS.MenuPages.TransactionPage";
-            _typeNameTable[137] = "projectHerbariumMgmtIS.MenuPages.UtilitiesPage";
-            _typeNameTable[138] = "projectHerbariumMgmtIS.Transaction.DepositTransactionPage";
-            _typeNameTable[139] = "projectHerbariumMgmtIS.Transaction.ExcelDepositPage";
-            _typeNameTable[140] = "projectHerbariumMgmtIS.Transaction.PlantClassificationPage";
-            _typeNameTable[141] = "projectHerbariumMgmtIS.Transaction.PlantDepositPage";
-            _typeNameTable[142] = "projectHerbariumMgmtIS.Transaction.PlantLoaningPage";
-            _typeNameTable[143] = "projectHerbariumMgmtIS.Transaction.PlantLoanReturnPage";
-            _typeNameTable[144] = "projectHerbariumMgmtIS.Transaction.PlantReceivingPage";
-            _typeNameTable[145] = "projectHerbariumMgmtIS.Transaction.PlantResubmissionPage";
-            _typeNameTable[146] = "projectHerbariumMgmtIS.Transaction.PlantVerificationPage";
-            _typeNameTable[147] = "Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid";
-            _typeNameTable[148] = "Windows.UI.Xaml.Controls.Grid";
-            _typeNameTable[149] = "System.Nullable`1<Boolean>";
-            _typeNameTable[150] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[151] = "Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool";
-            _typeNameTable[152] = "Windows.UI.Xaml.Markup.MarkupExtension";
+            _typeNameTable[6] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid";
+            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Control";
+            _typeNameTable[8] = "Boolean";
+            _typeNameTable[9] = "System.Collections.ObjectModel.ObservableCollection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>";
+            _typeNameTable[10] = "System.Collections.ObjectModel.Collection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>";
+            _typeNameTable[11] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn";
+            _typeNameTable[12] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[13] = "Double";
+            _typeNameTable[14] = "Windows.UI.Xaml.Style";
+            _typeNameTable[15] = "Windows.UI.Xaml.Data.Binding";
+            _typeNameTable[16] = "Int32";
+            _typeNameTable[17] = "System.Nullable`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>";
+            _typeNameTable[18] = "System.ValueType";
+            _typeNameTable[19] = "Windows.UI.Xaml.Visibility";
+            _typeNameTable[20] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength";
+            _typeNameTable[21] = "Windows.UI.Xaml.Media.Brush";
+            _typeNameTable[22] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode";
+            _typeNameTable[23] = "System.Enum";
+            _typeNameTable[24] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility";
+            _typeNameTable[25] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility";
+            _typeNameTable[26] = "Windows.UI.Xaml.Controls.ScrollBarVisibility";
+            _typeNameTable[27] = "System.Collections.IEnumerable";
+            _typeNameTable[28] = "Windows.UI.Xaml.DataTemplate";
+            _typeNameTable[29] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode";
+            _typeNameTable[30] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode";
+            _typeNameTable[31] = "System.Collections.ObjectModel.ObservableCollection`1<Windows.UI.Xaml.Style>";
+            _typeNameTable[32] = "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.Style>";
+            _typeNameTable[33] = "System.Collections.IList";
+            _typeNameTable[34] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn";
+            _typeNameTable[35] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn";
+            _typeNameTable[36] = "Windows.UI.Xaml.Media.FontFamily";
+            _typeNameTable[37] = "Windows.UI.Text.FontStyle";
+            _typeNameTable[38] = "Windows.UI.Text.FontWeight";
+            _typeNameTable[39] = "projectHerbariumMgmtIS.Dialogs.ApproveLoanForm";
+            _typeNameTable[40] = "projectHerbariumMgmtIS.Model.PlantLoan";
+            _typeNameTable[41] = "projectHerbariumMgmtIS.Dialogs.BorrowerForm";
+            _typeNameTable[42] = "projectHerbariumMgmtIS.Model.Borrower";
+            _typeNameTable[43] = "projectHerbariumMgmtIS.Dialogs.ClassForm";
+            _typeNameTable[44] = "projectHerbariumMgmtIS.Model.TaxonClass";
+            _typeNameTable[45] = "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel";
+            _typeNameTable[46] = "Windows.UI.Xaml.Controls.Panel";
+            _typeNameTable[47] = "Windows.UI.Xaml.Controls.Orientation";
+            _typeNameTable[48] = "Windows.UI.Xaml.Thickness";
+            _typeNameTable[49] = "projectHerbariumMgmtIS.Dialogs.ClassifySheetForm";
+            _typeNameTable[50] = "projectHerbariumMgmtIS.Model.HerbariumSheet";
+            _typeNameTable[51] = "Windows.UI.Xaml.Media.Imaging.BitmapImage";
+            _typeNameTable[52] = "projectHerbariumMgmtIS.Dialogs.CollectorForm";
+            _typeNameTable[53] = "projectHerbariumMgmtIS.Model.Collector";
+            _typeNameTable[54] = "projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm";
+            _typeNameTable[55] = "projectHerbariumMgmtIS.Model.PlantDeposit";
+            _typeNameTable[56] = "projectHerbariumMgmtIS.Dialogs.EditSheetForm";
+            _typeNameTable[57] = "System.Collections.Generic.List`1<projectHerbariumMgmtIS.Model.HerbariumImage>";
+            _typeNameTable[58] = "projectHerbariumMgmtIS.Model.HerbariumImage";
+            _typeNameTable[59] = "projectHerbariumMgmtIS.Dialogs.FamilyForm";
+            _typeNameTable[60] = "projectHerbariumMgmtIS.Model.TaxonFamily";
+            _typeNameTable[61] = "projectHerbariumMgmtIS.Dialogs.GenusForm";
+            _typeNameTable[62] = "projectHerbariumMgmtIS.Model.TaxonGenus";
+            _typeNameTable[63] = "projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm";
+            _typeNameTable[64] = "projectHerbariumMgmtIS.Model.HerbariumBox";
+            _typeNameTable[65] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask";
+            _typeNameTable[66] = "projectHerbariumMgmtIS.Dialogs.LocalityForm";
+            _typeNameTable[67] = "projectHerbariumMgmtIS.Model.PlantLocality";
+            _typeNameTable[68] = "projectHerbariumMgmtIS.Dialogs.NomenclatureForm";
+            _typeNameTable[69] = "projectHerbariumMgmtIS.Model.SpeciesNomenclature";
+            _typeNameTable[70] = "projectHerbariumMgmtIS.Dialogs.PhylumForm";
+            _typeNameTable[71] = "projectHerbariumMgmtIS.Model.TaxonPhylum";
+            _typeNameTable[72] = "projectHerbariumMgmtIS.Dialogs.PlantTypeForm";
+            _typeNameTable[73] = "projectHerbariumMgmtIS.Model.PlantType";
+            _typeNameTable[74] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn";
+            _typeNameTable[75] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn";
+            _typeNameTable[76] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex";
+            _typeNameTable[77] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType";
+            _typeNameTable[78] = "Windows.UI.Xaml.Controls.TextBox";
+            _typeNameTable[79] = "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode";
+            _typeNameTable[80] = "projectHerbariumMgmtIS.Dialogs.RequestLoanForm";
+            _typeNameTable[81] = "projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm";
+            _typeNameTable[82] = "projectHerbariumMgmtIS.Dialogs.ResultDialog";
+            _typeNameTable[83] = "projectHerbariumMgmtIS.Dialogs.SampleDialog";
+            _typeNameTable[84] = "projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm";
+            _typeNameTable[85] = "projectHerbariumMgmtIS.Model.SpeciesAuthor";
+            _typeNameTable[86] = "projectHerbariumMgmtIS.Dialogs.SpeciesForm";
+            _typeNameTable[87] = "projectHerbariumMgmtIS.Model.TaxonSpecies";
+            _typeNameTable[88] = "projectHerbariumMgmtIS.Dialogs.StaffForm";
+            _typeNameTable[89] = "projectHerbariumMgmtIS.Model.Staff";
+            _typeNameTable[90] = "projectHerbariumMgmtIS.Dialogs.ValidatorForm";
+            _typeNameTable[91] = "projectHerbariumMgmtIS.Model.Validator";
+            _typeNameTable[92] = "projectHerbariumMgmtIS.Dialogs.VerifyDepositForm";
+            _typeNameTable[93] = "projectHerbariumMgmtIS.Dialogs.ViewLoanForm";
+            _typeNameTable[94] = "projectHerbariumMgmtIS.Dialogs.ViewSheetForm";
+            _typeNameTable[95] = "Microsoft.Toolkit.Uwp.UI.Animations.Implicit";
+            _typeNameTable[96] = "Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection";
+            _typeNameTable[97] = "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase";
+            _typeNameTable[98] = "Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection";
+            _typeNameTable[99] = "System.Collections.Generic.List`1<Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>";
+            _typeNameTable[100] = "Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame";
+            _typeNameTable[101] = "TimeSpan";
+            _typeNameTable[102] = "Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation";
+            _typeNameTable[103] = "Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation";
+            _typeNameTable[104] = "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>";
+            _typeNameTable[105] = "Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation";
+            _typeNameTable[106] = "Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation";
+            _typeNameTable[107] = "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>";
+            _typeNameTable[108] = "Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame";
+            _typeNameTable[109] = "Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame`1<Double>";
+            _typeNameTable[110] = "projectHerbariumMgmtIS.MainPage";
+            _typeNameTable[111] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[112] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[113] = "projectHerbariumMgmtIS.Dialogs.OrderForm";
+            _typeNameTable[114] = "projectHerbariumMgmtIS.Model.TaxonOrder";
+            _typeNameTable[115] = "projectHerbariumMgmtIS.Maintenance.AccessAccountsPage";
+            _typeNameTable[116] = "projectHerbariumMgmtIS.Maintenance.BorrowerPage";
+            _typeNameTable[117] = "projectHerbariumMgmtIS.Maintenance.CollectorPage";
+            _typeNameTable[118] = "projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage";
+            _typeNameTable[119] = "projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage";
+            _typeNameTable[120] = "projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage";
+            _typeNameTable[121] = "projectHerbariumMgmtIS.Maintenance.PlantLocalityPage";
+            _typeNameTable[122] = "projectHerbariumMgmtIS.Maintenance.PlantTypePage";
+            _typeNameTable[123] = "projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage";
+            _typeNameTable[124] = "projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage";
+            _typeNameTable[125] = "projectHerbariumMgmtIS.Maintenance.TaxonClassPage";
+            _typeNameTable[126] = "projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage";
+            _typeNameTable[127] = "projectHerbariumMgmtIS.Maintenance.TaxonGenusPage";
+            _typeNameTable[128] = "projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage";
+            _typeNameTable[129] = "projectHerbariumMgmtIS.Maintenance.TaxonOrderPage";
+            _typeNameTable[130] = "projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage";
+            _typeNameTable[131] = "projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage";
+            _typeNameTable[132] = "projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage";
+            _typeNameTable[133] = "projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage";
+            _typeNameTable[134] = "projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage";
+            _typeNameTable[135] = "projectHerbariumMgmtIS.MenuPages.HomePage";
+            _typeNameTable[136] = "projectHerbariumMgmtIS.MenuPages.MaintenancePage";
+            _typeNameTable[137] = "projectHerbariumMgmtIS.Queries.QuerySpeciesPage";
+            _typeNameTable[138] = "projectHerbariumMgmtIS.MenuPages.QueriesPage";
+            _typeNameTable[139] = "projectHerbariumMgmtIS.MenuPages.ReportsPage";
+            _typeNameTable[140] = "projectHerbariumMgmtIS.MenuPages.TransactionPage";
+            _typeNameTable[141] = "projectHerbariumMgmtIS.MenuPages.UtilitiesPage";
+            _typeNameTable[142] = "projectHerbariumMgmtIS.Queries.QueryHerbariumSheetPage";
+            _typeNameTable[143] = "projectHerbariumMgmtIS.Reports.DocumentNewDeposit";
+            _typeNameTable[144] = "projectHerbariumMgmtIS.Reports.ReportNewDeposit";
+            _typeNameTable[145] = "projectHerbariumMgmtIS.Transaction.DepositTransactionPage";
+            _typeNameTable[146] = "projectHerbariumMgmtIS.Transaction.ExcelDepositPage";
+            _typeNameTable[147] = "projectHerbariumMgmtIS.Transaction.PlantClassificationPage";
+            _typeNameTable[148] = "projectHerbariumMgmtIS.Transaction.PlantDepositPage";
+            _typeNameTable[149] = "projectHerbariumMgmtIS.Transaction.PlantLoaningPage";
+            _typeNameTable[150] = "projectHerbariumMgmtIS.Transaction.PlantReceivingPage";
+            _typeNameTable[151] = "projectHerbariumMgmtIS.Transaction.PlantResubmissionPage";
+            _typeNameTable[152] = "projectHerbariumMgmtIS.Transaction.PlantVerificationPage";
+            _typeNameTable[153] = "Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid";
+            _typeNameTable[154] = "Windows.UI.Xaml.Controls.Grid";
+            _typeNameTable[155] = "System.Nullable`1<Boolean>";
+            _typeNameTable[156] = "Windows.UI.Xaml.FrameworkElement";
+            _typeNameTable[157] = "Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool";
+            _typeNameTable[158] = "Windows.UI.Xaml.Markup.MarkupExtension";
 
-            _typeTable = new global::System.Type[153];
+            _typeTable = new global::System.Type[159];
             _typeTable[0] = typeof(global::projectHerbariumMgmtIS.Dialogs.AccountForm);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
             _typeTable[3] = typeof(global::System.String);
             _typeTable[4] = typeof(global::projectHerbariumMgmtIS.Model.Account);
             _typeTable[5] = typeof(global::System.Object);
-            _typeTable[6] = typeof(global::projectHerbariumMgmtIS.Dialogs.BorrowerForm);
-            _typeTable[7] = typeof(global::projectHerbariumMgmtIS.Model.Borrower);
-            _typeTable[8] = typeof(global::projectHerbariumMgmtIS.Dialogs.ClassForm);
-            _typeTable[9] = typeof(global::projectHerbariumMgmtIS.Model.TaxonClass);
-            _typeTable[10] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel);
-            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.Panel);
-            _typeTable[12] = typeof(global::System.Double);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.Orientation);
-            _typeTable[14] = typeof(global::Windows.UI.Xaml.Thickness);
-            _typeTable[15] = typeof(global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm);
-            _typeTable[16] = typeof(global::projectHerbariumMgmtIS.Model.HerbariumSheet);
-            _typeTable[17] = typeof(global::Windows.UI.Xaml.Media.Imaging.BitmapImage);
-            _typeTable[18] = typeof(global::projectHerbariumMgmtIS.Dialogs.CollectorForm);
-            _typeTable[19] = typeof(global::projectHerbariumMgmtIS.Model.Collector);
-            _typeTable[20] = typeof(global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm);
-            _typeTable[21] = typeof(global::projectHerbariumMgmtIS.Model.PlantDeposit);
-            _typeTable[22] = typeof(global::projectHerbariumMgmtIS.Dialogs.EditSheetForm);
-            _typeTable[23] = typeof(global::System.Collections.Generic.List<global::projectHerbariumMgmtIS.Model.HerbariumImage>);
-            _typeTable[24] = typeof(global::projectHerbariumMgmtIS.Model.HerbariumImage);
-            _typeTable[25] = typeof(global::projectHerbariumMgmtIS.Dialogs.FamilyForm);
-            _typeTable[26] = typeof(global::projectHerbariumMgmtIS.Model.TaxonFamily);
-            _typeTable[27] = typeof(global::projectHerbariumMgmtIS.Dialogs.GenusForm);
-            _typeTable[28] = typeof(global::projectHerbariumMgmtIS.Model.TaxonGenus);
-            _typeTable[29] = typeof(global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm);
-            _typeTable[30] = typeof(global::projectHerbariumMgmtIS.Model.HerbariumBox);
-            _typeTable[31] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask);
-            _typeTable[32] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[33] = typeof(global::projectHerbariumMgmtIS.Dialogs.LocalityForm);
-            _typeTable[34] = typeof(global::projectHerbariumMgmtIS.Model.PlantLocality);
-            _typeTable[35] = typeof(global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm);
-            _typeTable[36] = typeof(global::projectHerbariumMgmtIS.Model.SpeciesNomenclature);
-            _typeTable[37] = typeof(global::projectHerbariumMgmtIS.Dialogs.PhylumForm);
-            _typeTable[38] = typeof(global::projectHerbariumMgmtIS.Model.TaxonPhylum);
-            _typeTable[39] = typeof(global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm);
-            _typeTable[40] = typeof(global::projectHerbariumMgmtIS.Model.PlantType);
-            _typeTable[41] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid);
-            _typeTable[42] = typeof(global::Windows.UI.Xaml.Controls.Control);
-            _typeTable[43] = typeof(global::System.Boolean);
-            _typeTable[44] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode);
-            _typeTable[45] = typeof(global::System.Enum);
-            _typeTable[46] = typeof(global::System.ValueType);
-            _typeTable[47] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>);
-            _typeTable[48] = typeof(global::System.Collections.ObjectModel.Collection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>);
-            _typeTable[49] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn);
-            _typeTable[50] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[51] = typeof(global::Windows.UI.Xaml.Data.Binding);
-            _typeTable[52] = typeof(global::System.Int32);
-            _typeTable[53] = typeof(global::System.Nullable<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>);
-            _typeTable[54] = typeof(global::Windows.UI.Xaml.Visibility);
-            _typeTable[55] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength);
-            _typeTable[56] = typeof(global::Windows.UI.Xaml.Media.Brush);
-            _typeTable[57] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode);
-            _typeTable[58] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility);
-            _typeTable[59] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility);
-            _typeTable[60] = typeof(global::Windows.UI.Xaml.Controls.ScrollBarVisibility);
-            _typeTable[61] = typeof(global::System.Collections.IEnumerable);
-            _typeTable[62] = typeof(global::Windows.UI.Xaml.DataTemplate);
-            _typeTable[63] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode);
-            _typeTable[64] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>);
-            _typeTable[65] = typeof(global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>);
-            _typeTable[66] = typeof(global::System.Collections.IList);
-            _typeTable[67] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn);
-            _typeTable[68] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn);
-            _typeTable[69] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn);
-            _typeTable[70] = typeof(global::Windows.UI.Xaml.Media.FontFamily);
-            _typeTable[71] = typeof(global::Windows.UI.Text.FontStyle);
-            _typeTable[72] = typeof(global::Windows.UI.Text.FontWeight);
-            _typeTable[73] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn);
-            _typeTable[74] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex);
-            _typeTable[75] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType);
-            _typeTable[76] = typeof(global::Windows.UI.Xaml.Controls.TextBox);
-            _typeTable[77] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode);
-            _typeTable[78] = typeof(global::projectHerbariumMgmtIS.Dialogs.RequestLoanForm);
-            _typeTable[79] = typeof(global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm);
-            _typeTable[80] = typeof(global::projectHerbariumMgmtIS.Dialogs.ResultDialog);
-            _typeTable[81] = typeof(global::projectHerbariumMgmtIS.Dialogs.SampleDialog);
-            _typeTable[82] = typeof(global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm);
-            _typeTable[83] = typeof(global::projectHerbariumMgmtIS.Model.SpeciesAuthor);
-            _typeTable[84] = typeof(global::projectHerbariumMgmtIS.Dialogs.SpeciesForm);
-            _typeTable[85] = typeof(global::projectHerbariumMgmtIS.Model.TaxonSpecies);
-            _typeTable[86] = typeof(global::projectHerbariumMgmtIS.Dialogs.StaffForm);
-            _typeTable[87] = typeof(global::projectHerbariumMgmtIS.Model.Staff);
-            _typeTable[88] = typeof(global::projectHerbariumMgmtIS.Dialogs.ValidatorForm);
-            _typeTable[89] = typeof(global::projectHerbariumMgmtIS.Model.Validator);
-            _typeTable[90] = typeof(global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm);
-            _typeTable[91] = typeof(global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm);
-            _typeTable[92] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit);
-            _typeTable[93] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection);
-            _typeTable[94] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase);
-            _typeTable[95] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection);
-            _typeTable[96] = typeof(global::System.Collections.Generic.List<global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>);
-            _typeTable[97] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame);
-            _typeTable[98] = typeof(global::System.TimeSpan);
-            _typeTable[99] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation);
-            _typeTable[100] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation);
-            _typeTable[101] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>);
-            _typeTable[102] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation);
-            _typeTable[103] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation);
-            _typeTable[104] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>);
-            _typeTable[105] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame);
-            _typeTable[106] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame<global::System.Double>);
-            _typeTable[107] = typeof(global::projectHerbariumMgmtIS.MainPage);
-            _typeTable[108] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[109] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[110] = typeof(global::projectHerbariumMgmtIS.Dialogs.OrderForm);
-            _typeTable[111] = typeof(global::projectHerbariumMgmtIS.Model.TaxonOrder);
-            _typeTable[112] = typeof(global::projectHerbariumMgmtIS.Maintenance.AccessAccountsPage);
-            _typeTable[113] = typeof(global::projectHerbariumMgmtIS.Maintenance.BorrowerPage);
-            _typeTable[114] = typeof(global::projectHerbariumMgmtIS.Maintenance.CollectorPage);
-            _typeTable[115] = typeof(global::projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage);
-            _typeTable[116] = typeof(global::projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage);
-            _typeTable[117] = typeof(global::projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage);
-            _typeTable[118] = typeof(global::projectHerbariumMgmtIS.Maintenance.PlantLocalityPage);
-            _typeTable[119] = typeof(global::projectHerbariumMgmtIS.Maintenance.PlantTypePage);
-            _typeTable[120] = typeof(global::projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage);
-            _typeTable[121] = typeof(global::projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage);
-            _typeTable[122] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonClassPage);
-            _typeTable[123] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage);
-            _typeTable[124] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonGenusPage);
-            _typeTable[125] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage);
-            _typeTable[126] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonOrderPage);
-            _typeTable[127] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage);
-            _typeTable[128] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage);
-            _typeTable[129] = typeof(global::projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage);
-            _typeTable[130] = typeof(global::projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage);
-            _typeTable[131] = typeof(global::projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage);
-            _typeTable[132] = typeof(global::projectHerbariumMgmtIS.MenuPages.HomePage);
-            _typeTable[133] = typeof(global::projectHerbariumMgmtIS.MenuPages.MaintenancePage);
-            _typeTable[134] = typeof(global::projectHerbariumMgmtIS.MenuPages.QueriesPage);
-            _typeTable[135] = typeof(global::projectHerbariumMgmtIS.MenuPages.ReportsPage);
-            _typeTable[136] = typeof(global::projectHerbariumMgmtIS.MenuPages.TransactionPage);
-            _typeTable[137] = typeof(global::projectHerbariumMgmtIS.MenuPages.UtilitiesPage);
-            _typeTable[138] = typeof(global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage);
-            _typeTable[139] = typeof(global::projectHerbariumMgmtIS.Transaction.ExcelDepositPage);
-            _typeTable[140] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantClassificationPage);
-            _typeTable[141] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantDepositPage);
-            _typeTable[142] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantLoaningPage);
-            _typeTable[143] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantLoanReturnPage);
-            _typeTable[144] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantReceivingPage);
-            _typeTable[145] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantResubmissionPage);
-            _typeTable[146] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantVerificationPage);
-            _typeTable[147] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid);
-            _typeTable[148] = typeof(global::Windows.UI.Xaml.Controls.Grid);
-            _typeTable[149] = typeof(global::System.Nullable<global::System.Boolean>);
-            _typeTable[150] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[151] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool);
-            _typeTable[152] = typeof(global::Windows.UI.Xaml.Markup.MarkupExtension);
+            _typeTable[6] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Control);
+            _typeTable[8] = typeof(global::System.Boolean);
+            _typeTable[9] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>);
+            _typeTable[10] = typeof(global::System.Collections.ObjectModel.Collection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>);
+            _typeTable[11] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn);
+            _typeTable[12] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[13] = typeof(global::System.Double);
+            _typeTable[14] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.Data.Binding);
+            _typeTable[16] = typeof(global::System.Int32);
+            _typeTable[17] = typeof(global::System.Nullable<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>);
+            _typeTable[18] = typeof(global::System.ValueType);
+            _typeTable[19] = typeof(global::Windows.UI.Xaml.Visibility);
+            _typeTable[20] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength);
+            _typeTable[21] = typeof(global::Windows.UI.Xaml.Media.Brush);
+            _typeTable[22] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode);
+            _typeTable[23] = typeof(global::System.Enum);
+            _typeTable[24] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility);
+            _typeTable[25] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility);
+            _typeTable[26] = typeof(global::Windows.UI.Xaml.Controls.ScrollBarVisibility);
+            _typeTable[27] = typeof(global::System.Collections.IEnumerable);
+            _typeTable[28] = typeof(global::Windows.UI.Xaml.DataTemplate);
+            _typeTable[29] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode);
+            _typeTable[30] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode);
+            _typeTable[31] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>);
+            _typeTable[32] = typeof(global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>);
+            _typeTable[33] = typeof(global::System.Collections.IList);
+            _typeTable[34] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn);
+            _typeTable[35] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn);
+            _typeTable[36] = typeof(global::Windows.UI.Xaml.Media.FontFamily);
+            _typeTable[37] = typeof(global::Windows.UI.Text.FontStyle);
+            _typeTable[38] = typeof(global::Windows.UI.Text.FontWeight);
+            _typeTable[39] = typeof(global::projectHerbariumMgmtIS.Dialogs.ApproveLoanForm);
+            _typeTable[40] = typeof(global::projectHerbariumMgmtIS.Model.PlantLoan);
+            _typeTable[41] = typeof(global::projectHerbariumMgmtIS.Dialogs.BorrowerForm);
+            _typeTable[42] = typeof(global::projectHerbariumMgmtIS.Model.Borrower);
+            _typeTable[43] = typeof(global::projectHerbariumMgmtIS.Dialogs.ClassForm);
+            _typeTable[44] = typeof(global::projectHerbariumMgmtIS.Model.TaxonClass);
+            _typeTable[45] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel);
+            _typeTable[46] = typeof(global::Windows.UI.Xaml.Controls.Panel);
+            _typeTable[47] = typeof(global::Windows.UI.Xaml.Controls.Orientation);
+            _typeTable[48] = typeof(global::Windows.UI.Xaml.Thickness);
+            _typeTable[49] = typeof(global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm);
+            _typeTable[50] = typeof(global::projectHerbariumMgmtIS.Model.HerbariumSheet);
+            _typeTable[51] = typeof(global::Windows.UI.Xaml.Media.Imaging.BitmapImage);
+            _typeTable[52] = typeof(global::projectHerbariumMgmtIS.Dialogs.CollectorForm);
+            _typeTable[53] = typeof(global::projectHerbariumMgmtIS.Model.Collector);
+            _typeTable[54] = typeof(global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm);
+            _typeTable[55] = typeof(global::projectHerbariumMgmtIS.Model.PlantDeposit);
+            _typeTable[56] = typeof(global::projectHerbariumMgmtIS.Dialogs.EditSheetForm);
+            _typeTable[57] = typeof(global::System.Collections.Generic.List<global::projectHerbariumMgmtIS.Model.HerbariumImage>);
+            _typeTable[58] = typeof(global::projectHerbariumMgmtIS.Model.HerbariumImage);
+            _typeTable[59] = typeof(global::projectHerbariumMgmtIS.Dialogs.FamilyForm);
+            _typeTable[60] = typeof(global::projectHerbariumMgmtIS.Model.TaxonFamily);
+            _typeTable[61] = typeof(global::projectHerbariumMgmtIS.Dialogs.GenusForm);
+            _typeTable[62] = typeof(global::projectHerbariumMgmtIS.Model.TaxonGenus);
+            _typeTable[63] = typeof(global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm);
+            _typeTable[64] = typeof(global::projectHerbariumMgmtIS.Model.HerbariumBox);
+            _typeTable[65] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask);
+            _typeTable[66] = typeof(global::projectHerbariumMgmtIS.Dialogs.LocalityForm);
+            _typeTable[67] = typeof(global::projectHerbariumMgmtIS.Model.PlantLocality);
+            _typeTable[68] = typeof(global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm);
+            _typeTable[69] = typeof(global::projectHerbariumMgmtIS.Model.SpeciesNomenclature);
+            _typeTable[70] = typeof(global::projectHerbariumMgmtIS.Dialogs.PhylumForm);
+            _typeTable[71] = typeof(global::projectHerbariumMgmtIS.Model.TaxonPhylum);
+            _typeTable[72] = typeof(global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm);
+            _typeTable[73] = typeof(global::projectHerbariumMgmtIS.Model.PlantType);
+            _typeTable[74] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn);
+            _typeTable[75] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn);
+            _typeTable[76] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex);
+            _typeTable[77] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType);
+            _typeTable[78] = typeof(global::Windows.UI.Xaml.Controls.TextBox);
+            _typeTable[79] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode);
+            _typeTable[80] = typeof(global::projectHerbariumMgmtIS.Dialogs.RequestLoanForm);
+            _typeTable[81] = typeof(global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm);
+            _typeTable[82] = typeof(global::projectHerbariumMgmtIS.Dialogs.ResultDialog);
+            _typeTable[83] = typeof(global::projectHerbariumMgmtIS.Dialogs.SampleDialog);
+            _typeTable[84] = typeof(global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm);
+            _typeTable[85] = typeof(global::projectHerbariumMgmtIS.Model.SpeciesAuthor);
+            _typeTable[86] = typeof(global::projectHerbariumMgmtIS.Dialogs.SpeciesForm);
+            _typeTable[87] = typeof(global::projectHerbariumMgmtIS.Model.TaxonSpecies);
+            _typeTable[88] = typeof(global::projectHerbariumMgmtIS.Dialogs.StaffForm);
+            _typeTable[89] = typeof(global::projectHerbariumMgmtIS.Model.Staff);
+            _typeTable[90] = typeof(global::projectHerbariumMgmtIS.Dialogs.ValidatorForm);
+            _typeTable[91] = typeof(global::projectHerbariumMgmtIS.Model.Validator);
+            _typeTable[92] = typeof(global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm);
+            _typeTable[93] = typeof(global::projectHerbariumMgmtIS.Dialogs.ViewLoanForm);
+            _typeTable[94] = typeof(global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm);
+            _typeTable[95] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit);
+            _typeTable[96] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection);
+            _typeTable[97] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase);
+            _typeTable[98] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection);
+            _typeTable[99] = typeof(global::System.Collections.Generic.List<global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>);
+            _typeTable[100] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame);
+            _typeTable[101] = typeof(global::System.TimeSpan);
+            _typeTable[102] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation);
+            _typeTable[103] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation);
+            _typeTable[104] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>);
+            _typeTable[105] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation);
+            _typeTable[106] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation);
+            _typeTable[107] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>);
+            _typeTable[108] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame);
+            _typeTable[109] = typeof(global::Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame<global::System.Double>);
+            _typeTable[110] = typeof(global::projectHerbariumMgmtIS.MainPage);
+            _typeTable[111] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[112] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[113] = typeof(global::projectHerbariumMgmtIS.Dialogs.OrderForm);
+            _typeTable[114] = typeof(global::projectHerbariumMgmtIS.Model.TaxonOrder);
+            _typeTable[115] = typeof(global::projectHerbariumMgmtIS.Maintenance.AccessAccountsPage);
+            _typeTable[116] = typeof(global::projectHerbariumMgmtIS.Maintenance.BorrowerPage);
+            _typeTable[117] = typeof(global::projectHerbariumMgmtIS.Maintenance.CollectorPage);
+            _typeTable[118] = typeof(global::projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage);
+            _typeTable[119] = typeof(global::projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage);
+            _typeTable[120] = typeof(global::projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage);
+            _typeTable[121] = typeof(global::projectHerbariumMgmtIS.Maintenance.PlantLocalityPage);
+            _typeTable[122] = typeof(global::projectHerbariumMgmtIS.Maintenance.PlantTypePage);
+            _typeTable[123] = typeof(global::projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage);
+            _typeTable[124] = typeof(global::projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage);
+            _typeTable[125] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonClassPage);
+            _typeTable[126] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage);
+            _typeTable[127] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonGenusPage);
+            _typeTable[128] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage);
+            _typeTable[129] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonOrderPage);
+            _typeTable[130] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage);
+            _typeTable[131] = typeof(global::projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage);
+            _typeTable[132] = typeof(global::projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage);
+            _typeTable[133] = typeof(global::projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage);
+            _typeTable[134] = typeof(global::projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage);
+            _typeTable[135] = typeof(global::projectHerbariumMgmtIS.MenuPages.HomePage);
+            _typeTable[136] = typeof(global::projectHerbariumMgmtIS.MenuPages.MaintenancePage);
+            _typeTable[137] = typeof(global::projectHerbariumMgmtIS.Queries.QuerySpeciesPage);
+            _typeTable[138] = typeof(global::projectHerbariumMgmtIS.MenuPages.QueriesPage);
+            _typeTable[139] = typeof(global::projectHerbariumMgmtIS.MenuPages.ReportsPage);
+            _typeTable[140] = typeof(global::projectHerbariumMgmtIS.MenuPages.TransactionPage);
+            _typeTable[141] = typeof(global::projectHerbariumMgmtIS.MenuPages.UtilitiesPage);
+            _typeTable[142] = typeof(global::projectHerbariumMgmtIS.Queries.QueryHerbariumSheetPage);
+            _typeTable[143] = typeof(global::projectHerbariumMgmtIS.Reports.DocumentNewDeposit);
+            _typeTable[144] = typeof(global::projectHerbariumMgmtIS.Reports.ReportNewDeposit);
+            _typeTable[145] = typeof(global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage);
+            _typeTable[146] = typeof(global::projectHerbariumMgmtIS.Transaction.ExcelDepositPage);
+            _typeTable[147] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantClassificationPage);
+            _typeTable[148] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantDepositPage);
+            _typeTable[149] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantLoaningPage);
+            _typeTable[150] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantReceivingPage);
+            _typeTable[151] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantResubmissionPage);
+            _typeTable[152] = typeof(global::projectHerbariumMgmtIS.Transaction.PlantVerificationPage);
+            _typeTable[153] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid);
+            _typeTable[154] = typeof(global::Windows.UI.Xaml.Controls.Grid);
+            _typeTable[155] = typeof(global::System.Nullable<global::System.Boolean>);
+            _typeTable[156] = typeof(global::Windows.UI.Xaml.FrameworkElement);
+            _typeTable[157] = typeof(global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool);
+            _typeTable[158] = typeof(global::Windows.UI.Xaml.Markup.MarkupExtension);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -558,150 +570,156 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
 
         private object Activate_0_AccountForm() { return new global::projectHerbariumMgmtIS.Dialogs.AccountForm(); }
         private object Activate_4_Account() { return new global::projectHerbariumMgmtIS.Model.Account(); }
-        private object Activate_6_BorrowerForm() { return new global::projectHerbariumMgmtIS.Dialogs.BorrowerForm(); }
-        private object Activate_7_Borrower() { return new global::projectHerbariumMgmtIS.Model.Borrower(); }
-        private object Activate_8_ClassForm() { return new global::projectHerbariumMgmtIS.Dialogs.ClassForm(); }
-        private object Activate_9_TaxonClass() { return new global::projectHerbariumMgmtIS.Model.TaxonClass(); }
-        private object Activate_10_WrapPanel() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel(); }
-        private object Activate_15_ClassifySheetForm() { return new global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm(); }
-        private object Activate_16_HerbariumSheet() { return new global::projectHerbariumMgmtIS.Model.HerbariumSheet(); }
-        private object Activate_18_CollectorForm() { return new global::projectHerbariumMgmtIS.Dialogs.CollectorForm(); }
-        private object Activate_19_Collector() { return new global::projectHerbariumMgmtIS.Model.Collector(); }
-        private object Activate_20_ConfirmDepositForm() { return new global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm(); }
-        private object Activate_21_PlantDeposit() { return new global::projectHerbariumMgmtIS.Model.PlantDeposit(); }
-        private object Activate_22_EditSheetForm() { return new global::projectHerbariumMgmtIS.Dialogs.EditSheetForm(); }
-        private object Activate_23_List() { return new global::System.Collections.Generic.List<global::projectHerbariumMgmtIS.Model.HerbariumImage>(); }
-        private object Activate_24_HerbariumImage() { return new global::projectHerbariumMgmtIS.Model.HerbariumImage(); }
-        private object Activate_25_FamilyForm() { return new global::projectHerbariumMgmtIS.Dialogs.FamilyForm(); }
-        private object Activate_26_TaxonFamily() { return new global::projectHerbariumMgmtIS.Model.TaxonFamily(); }
-        private object Activate_27_GenusForm() { return new global::projectHerbariumMgmtIS.Dialogs.GenusForm(); }
-        private object Activate_28_TaxonGenus() { return new global::projectHerbariumMgmtIS.Model.TaxonGenus(); }
-        private object Activate_29_HerbariumBoxForm() { return new global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm(); }
-        private object Activate_30_HerbariumBox() { return new global::projectHerbariumMgmtIS.Model.HerbariumBox(); }
-        private object Activate_31_TextBoxMask() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask(); }
-        private object Activate_33_LocalityForm() { return new global::projectHerbariumMgmtIS.Dialogs.LocalityForm(); }
-        private object Activate_34_PlantLocality() { return new global::projectHerbariumMgmtIS.Model.PlantLocality(); }
-        private object Activate_35_NomenclatureForm() { return new global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm(); }
-        private object Activate_36_SpeciesNomenclature() { return new global::projectHerbariumMgmtIS.Model.SpeciesNomenclature(); }
-        private object Activate_37_PhylumForm() { return new global::projectHerbariumMgmtIS.Dialogs.PhylumForm(); }
-        private object Activate_38_TaxonPhylum() { return new global::projectHerbariumMgmtIS.Model.TaxonPhylum(); }
-        private object Activate_39_PlantTypeForm() { return new global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm(); }
-        private object Activate_40_PlantType() { return new global::projectHerbariumMgmtIS.Model.PlantType(); }
-        private object Activate_41_DataGrid() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid(); }
-        private object Activate_47_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>(); }
-        private object Activate_48_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>(); }
-        private object Activate_64_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>(); }
-        private object Activate_65_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>(); }
-        private object Activate_67_DataGridCheckBoxColumn() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn(); }
-        private object Activate_69_DataGridTextColumn() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn(); }
-        private object Activate_73_DataGridTemplateColumn() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn(); }
-        private object Activate_74_TextBoxRegex() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex(); }
-        private object Activate_78_RequestLoanForm() { return new global::projectHerbariumMgmtIS.Dialogs.RequestLoanForm(); }
-        private object Activate_79_ResubmitDepositForm() { return new global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm(); }
-        private object Activate_80_ResultDialog() { return new global::projectHerbariumMgmtIS.Dialogs.ResultDialog(); }
-        private object Activate_81_SampleDialog() { return new global::projectHerbariumMgmtIS.Dialogs.SampleDialog(); }
-        private object Activate_82_SpeciesAuthorForm() { return new global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm(); }
-        private object Activate_83_SpeciesAuthor() { return new global::projectHerbariumMgmtIS.Model.SpeciesAuthor(); }
-        private object Activate_84_SpeciesForm() { return new global::projectHerbariumMgmtIS.Dialogs.SpeciesForm(); }
-        private object Activate_85_TaxonSpecies() { return new global::projectHerbariumMgmtIS.Model.TaxonSpecies(); }
-        private object Activate_86_StaffForm() { return new global::projectHerbariumMgmtIS.Dialogs.StaffForm(); }
-        private object Activate_87_Staff() { return new global::projectHerbariumMgmtIS.Model.Staff(); }
-        private object Activate_88_ValidatorForm() { return new global::projectHerbariumMgmtIS.Dialogs.ValidatorForm(); }
-        private object Activate_89_Validator() { return new global::projectHerbariumMgmtIS.Model.Validator(); }
-        private object Activate_90_VerifyDepositForm() { return new global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm(); }
-        private object Activate_91_ViewSheetForm() { return new global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm(); }
-        private object Activate_92_Implicit() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit(); }
-        private object Activate_93_AnimationCollection() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection(); }
-        private object Activate_95_KeyFrameCollection() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection(); }
-        private object Activate_96_List() { return new global::System.Collections.Generic.List<global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>(); }
-        private object Activate_99_TranslationAnimation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation(); }
-        private object Activate_100_Vector3Animation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation(); }
-        private object Activate_102_OpacityAnimation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation(); }
-        private object Activate_103_ScalarAnimation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation(); }
-        private object Activate_105_ScalarKeyFrame() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame(); }
-        private object Activate_107_MainPage() { return new global::projectHerbariumMgmtIS.MainPage(); }
-        private object Activate_110_OrderForm() { return new global::projectHerbariumMgmtIS.Dialogs.OrderForm(); }
-        private object Activate_111_TaxonOrder() { return new global::projectHerbariumMgmtIS.Model.TaxonOrder(); }
-        private object Activate_112_AccessAccountsPage() { return new global::projectHerbariumMgmtIS.Maintenance.AccessAccountsPage(); }
-        private object Activate_113_BorrowerPage() { return new global::projectHerbariumMgmtIS.Maintenance.BorrowerPage(); }
-        private object Activate_114_CollectorPage() { return new global::projectHerbariumMgmtIS.Maintenance.CollectorPage(); }
-        private object Activate_115_ExternalValidatorPage() { return new global::projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage(); }
-        private object Activate_116_HerbariumBoxPage() { return new global::projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage(); }
-        private object Activate_117_HerbariumStaffPage() { return new global::projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage(); }
-        private object Activate_118_PlantLocalityPage() { return new global::projectHerbariumMgmtIS.Maintenance.PlantLocalityPage(); }
-        private object Activate_119_PlantTypePage() { return new global::projectHerbariumMgmtIS.Maintenance.PlantTypePage(); }
-        private object Activate_120_SpeciesAuthorPage() { return new global::projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage(); }
-        private object Activate_121_SpeciesNomenclaturePage() { return new global::projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage(); }
-        private object Activate_122_TaxonClassPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonClassPage(); }
-        private object Activate_123_TaxonFamilyPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage(); }
-        private object Activate_124_TaxonGenusPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonGenusPage(); }
-        private object Activate_125_TaxonSpeciesPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage(); }
-        private object Activate_126_TaxonOrderPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonOrderPage(); }
-        private object Activate_127_TaxonPhylumPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage(); }
-        private object Activate_128_TaxonomicHierarchyPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage(); }
-        private object Activate_129_AuditTrailingPage() { return new global::projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage(); }
-        private object Activate_130_HerbariumInventoryPage() { return new global::projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage(); }
-        private object Activate_131_SheetTrackingPage() { return new global::projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage(); }
-        private object Activate_132_HomePage() { return new global::projectHerbariumMgmtIS.MenuPages.HomePage(); }
-        private object Activate_133_MaintenancePage() { return new global::projectHerbariumMgmtIS.MenuPages.MaintenancePage(); }
-        private object Activate_134_QueriesPage() { return new global::projectHerbariumMgmtIS.MenuPages.QueriesPage(); }
-        private object Activate_135_ReportsPage() { return new global::projectHerbariumMgmtIS.MenuPages.ReportsPage(); }
-        private object Activate_136_TransactionPage() { return new global::projectHerbariumMgmtIS.MenuPages.TransactionPage(); }
-        private object Activate_137_UtilitiesPage() { return new global::projectHerbariumMgmtIS.MenuPages.UtilitiesPage(); }
-        private object Activate_138_DepositTransactionPage() { return new global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage(); }
-        private object Activate_139_ExcelDepositPage() { return new global::projectHerbariumMgmtIS.Transaction.ExcelDepositPage(); }
-        private object Activate_140_PlantClassificationPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantClassificationPage(); }
-        private object Activate_141_PlantDepositPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantDepositPage(); }
-        private object Activate_142_PlantLoaningPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantLoaningPage(); }
-        private object Activate_143_PlantLoanReturnPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantLoanReturnPage(); }
-        private object Activate_144_PlantReceivingPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantReceivingPage(); }
-        private object Activate_145_PlantResubmissionPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantResubmissionPage(); }
-        private object Activate_146_PlantVerificationPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantVerificationPage(); }
-        private object Activate_147_UniformGrid() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid(); }
-        private object Activate_151_NullableBool() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool(); }
-        private void VectorAdd_23_List(object instance, object item)
+        private object Activate_6_DataGrid() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid(); }
+        private object Activate_9_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>(); }
+        private object Activate_10_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>(); }
+        private object Activate_31_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>(); }
+        private object Activate_32_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>(); }
+        private object Activate_34_DataGridTextColumn() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn(); }
+        private object Activate_39_ApproveLoanForm() { return new global::projectHerbariumMgmtIS.Dialogs.ApproveLoanForm(); }
+        private object Activate_40_PlantLoan() { return new global::projectHerbariumMgmtIS.Model.PlantLoan(); }
+        private object Activate_41_BorrowerForm() { return new global::projectHerbariumMgmtIS.Dialogs.BorrowerForm(); }
+        private object Activate_42_Borrower() { return new global::projectHerbariumMgmtIS.Model.Borrower(); }
+        private object Activate_43_ClassForm() { return new global::projectHerbariumMgmtIS.Dialogs.ClassForm(); }
+        private object Activate_44_TaxonClass() { return new global::projectHerbariumMgmtIS.Model.TaxonClass(); }
+        private object Activate_45_WrapPanel() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel(); }
+        private object Activate_49_ClassifySheetForm() { return new global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm(); }
+        private object Activate_50_HerbariumSheet() { return new global::projectHerbariumMgmtIS.Model.HerbariumSheet(); }
+        private object Activate_52_CollectorForm() { return new global::projectHerbariumMgmtIS.Dialogs.CollectorForm(); }
+        private object Activate_53_Collector() { return new global::projectHerbariumMgmtIS.Model.Collector(); }
+        private object Activate_54_ConfirmDepositForm() { return new global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm(); }
+        private object Activate_55_PlantDeposit() { return new global::projectHerbariumMgmtIS.Model.PlantDeposit(); }
+        private object Activate_56_EditSheetForm() { return new global::projectHerbariumMgmtIS.Dialogs.EditSheetForm(); }
+        private object Activate_57_List() { return new global::System.Collections.Generic.List<global::projectHerbariumMgmtIS.Model.HerbariumImage>(); }
+        private object Activate_58_HerbariumImage() { return new global::projectHerbariumMgmtIS.Model.HerbariumImage(); }
+        private object Activate_59_FamilyForm() { return new global::projectHerbariumMgmtIS.Dialogs.FamilyForm(); }
+        private object Activate_60_TaxonFamily() { return new global::projectHerbariumMgmtIS.Model.TaxonFamily(); }
+        private object Activate_61_GenusForm() { return new global::projectHerbariumMgmtIS.Dialogs.GenusForm(); }
+        private object Activate_62_TaxonGenus() { return new global::projectHerbariumMgmtIS.Model.TaxonGenus(); }
+        private object Activate_63_HerbariumBoxForm() { return new global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm(); }
+        private object Activate_64_HerbariumBox() { return new global::projectHerbariumMgmtIS.Model.HerbariumBox(); }
+        private object Activate_65_TextBoxMask() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask(); }
+        private object Activate_66_LocalityForm() { return new global::projectHerbariumMgmtIS.Dialogs.LocalityForm(); }
+        private object Activate_67_PlantLocality() { return new global::projectHerbariumMgmtIS.Model.PlantLocality(); }
+        private object Activate_68_NomenclatureForm() { return new global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm(); }
+        private object Activate_69_SpeciesNomenclature() { return new global::projectHerbariumMgmtIS.Model.SpeciesNomenclature(); }
+        private object Activate_70_PhylumForm() { return new global::projectHerbariumMgmtIS.Dialogs.PhylumForm(); }
+        private object Activate_71_TaxonPhylum() { return new global::projectHerbariumMgmtIS.Model.TaxonPhylum(); }
+        private object Activate_72_PlantTypeForm() { return new global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm(); }
+        private object Activate_73_PlantType() { return new global::projectHerbariumMgmtIS.Model.PlantType(); }
+        private object Activate_74_DataGridCheckBoxColumn() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn(); }
+        private object Activate_75_DataGridTemplateColumn() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn(); }
+        private object Activate_76_TextBoxRegex() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex(); }
+        private object Activate_80_RequestLoanForm() { return new global::projectHerbariumMgmtIS.Dialogs.RequestLoanForm(); }
+        private object Activate_81_ResubmitDepositForm() { return new global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm(); }
+        private object Activate_82_ResultDialog() { return new global::projectHerbariumMgmtIS.Dialogs.ResultDialog(); }
+        private object Activate_83_SampleDialog() { return new global::projectHerbariumMgmtIS.Dialogs.SampleDialog(); }
+        private object Activate_84_SpeciesAuthorForm() { return new global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm(); }
+        private object Activate_85_SpeciesAuthor() { return new global::projectHerbariumMgmtIS.Model.SpeciesAuthor(); }
+        private object Activate_86_SpeciesForm() { return new global::projectHerbariumMgmtIS.Dialogs.SpeciesForm(); }
+        private object Activate_87_TaxonSpecies() { return new global::projectHerbariumMgmtIS.Model.TaxonSpecies(); }
+        private object Activate_88_StaffForm() { return new global::projectHerbariumMgmtIS.Dialogs.StaffForm(); }
+        private object Activate_89_Staff() { return new global::projectHerbariumMgmtIS.Model.Staff(); }
+        private object Activate_90_ValidatorForm() { return new global::projectHerbariumMgmtIS.Dialogs.ValidatorForm(); }
+        private object Activate_91_Validator() { return new global::projectHerbariumMgmtIS.Model.Validator(); }
+        private object Activate_92_VerifyDepositForm() { return new global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm(); }
+        private object Activate_93_ViewLoanForm() { return new global::projectHerbariumMgmtIS.Dialogs.ViewLoanForm(); }
+        private object Activate_94_ViewSheetForm() { return new global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm(); }
+        private object Activate_95_Implicit() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit(); }
+        private object Activate_96_AnimationCollection() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection(); }
+        private object Activate_98_KeyFrameCollection() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection(); }
+        private object Activate_99_List() { return new global::System.Collections.Generic.List<global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>(); }
+        private object Activate_102_TranslationAnimation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation(); }
+        private object Activate_103_Vector3Animation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation(); }
+        private object Activate_105_OpacityAnimation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation(); }
+        private object Activate_106_ScalarAnimation() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation(); }
+        private object Activate_108_ScalarKeyFrame() { return new global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame(); }
+        private object Activate_110_MainPage() { return new global::projectHerbariumMgmtIS.MainPage(); }
+        private object Activate_113_OrderForm() { return new global::projectHerbariumMgmtIS.Dialogs.OrderForm(); }
+        private object Activate_114_TaxonOrder() { return new global::projectHerbariumMgmtIS.Model.TaxonOrder(); }
+        private object Activate_115_AccessAccountsPage() { return new global::projectHerbariumMgmtIS.Maintenance.AccessAccountsPage(); }
+        private object Activate_116_BorrowerPage() { return new global::projectHerbariumMgmtIS.Maintenance.BorrowerPage(); }
+        private object Activate_117_CollectorPage() { return new global::projectHerbariumMgmtIS.Maintenance.CollectorPage(); }
+        private object Activate_118_ExternalValidatorPage() { return new global::projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage(); }
+        private object Activate_119_HerbariumBoxPage() { return new global::projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage(); }
+        private object Activate_120_HerbariumStaffPage() { return new global::projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage(); }
+        private object Activate_121_PlantLocalityPage() { return new global::projectHerbariumMgmtIS.Maintenance.PlantLocalityPage(); }
+        private object Activate_122_PlantTypePage() { return new global::projectHerbariumMgmtIS.Maintenance.PlantTypePage(); }
+        private object Activate_123_SpeciesAuthorPage() { return new global::projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage(); }
+        private object Activate_124_SpeciesNomenclaturePage() { return new global::projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage(); }
+        private object Activate_125_TaxonClassPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonClassPage(); }
+        private object Activate_126_TaxonFamilyPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage(); }
+        private object Activate_127_TaxonGenusPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonGenusPage(); }
+        private object Activate_128_TaxonSpeciesPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage(); }
+        private object Activate_129_TaxonOrderPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonOrderPage(); }
+        private object Activate_130_TaxonPhylumPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage(); }
+        private object Activate_131_TaxonomicHierarchyPage() { return new global::projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage(); }
+        private object Activate_132_AuditTrailingPage() { return new global::projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage(); }
+        private object Activate_133_HerbariumInventoryPage() { return new global::projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage(); }
+        private object Activate_134_SheetTrackingPage() { return new global::projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage(); }
+        private object Activate_135_HomePage() { return new global::projectHerbariumMgmtIS.MenuPages.HomePage(); }
+        private object Activate_136_MaintenancePage() { return new global::projectHerbariumMgmtIS.MenuPages.MaintenancePage(); }
+        private object Activate_137_QuerySpeciesPage() { return new global::projectHerbariumMgmtIS.Queries.QuerySpeciesPage(); }
+        private object Activate_138_QueriesPage() { return new global::projectHerbariumMgmtIS.MenuPages.QueriesPage(); }
+        private object Activate_139_ReportsPage() { return new global::projectHerbariumMgmtIS.MenuPages.ReportsPage(); }
+        private object Activate_140_TransactionPage() { return new global::projectHerbariumMgmtIS.MenuPages.TransactionPage(); }
+        private object Activate_141_UtilitiesPage() { return new global::projectHerbariumMgmtIS.MenuPages.UtilitiesPage(); }
+        private object Activate_142_QueryHerbariumSheetPage() { return new global::projectHerbariumMgmtIS.Queries.QueryHerbariumSheetPage(); }
+        private object Activate_143_DocumentNewDeposit() { return new global::projectHerbariumMgmtIS.Reports.DocumentNewDeposit(); }
+        private object Activate_144_ReportNewDeposit() { return new global::projectHerbariumMgmtIS.Reports.ReportNewDeposit(); }
+        private object Activate_145_DepositTransactionPage() { return new global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage(); }
+        private object Activate_146_ExcelDepositPage() { return new global::projectHerbariumMgmtIS.Transaction.ExcelDepositPage(); }
+        private object Activate_147_PlantClassificationPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantClassificationPage(); }
+        private object Activate_148_PlantDepositPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantDepositPage(); }
+        private object Activate_149_PlantLoaningPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantLoaningPage(); }
+        private object Activate_150_PlantReceivingPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantReceivingPage(); }
+        private object Activate_151_PlantResubmissionPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantResubmissionPage(); }
+        private object Activate_152_PlantVerificationPage() { return new global::projectHerbariumMgmtIS.Transaction.PlantVerificationPage(); }
+        private object Activate_153_UniformGrid() { return new global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid(); }
+        private object Activate_157_NullableBool() { return new global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool(); }
+        private void VectorAdd_9_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>)instance;
+            var newItem = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_10_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>)instance;
+            var newItem = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_31_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.Style>)instance;
+            var newItem = (global::Windows.UI.Xaml.Style)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_32_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.Style>)instance;
+            var newItem = (global::Windows.UI.Xaml.Style)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_57_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::projectHerbariumMgmtIS.Model.HerbariumImage>)instance;
             var newItem = (global::projectHerbariumMgmtIS.Model.HerbariumImage)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_47_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>)instance;
-            var newItem = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_48_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>)instance;
-            var newItem = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_64_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.Style>)instance;
-            var newItem = (global::Windows.UI.Xaml.Style)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_65_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.Style>)instance;
-            var newItem = (global::Windows.UI.Xaml.Style)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_93_AnimationCollection(object instance, object item)
+        private void VectorAdd_96_AnimationCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase>)instance;
             var newItem = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_95_KeyFrameCollection(object instance, object item)
+        private void VectorAdd_98_KeyFrameCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>)instance;
             var newItem = (global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_96_List(object instance, object item)
+        private void VectorAdd_99_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>)instance;
             var newItem = (global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame)item;
@@ -750,273 +768,11 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  projectHerbariumMgmtIS.Dialogs.BorrowerForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_6_BorrowerForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("BorrowerData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  projectHerbariumMgmtIS.Model.Borrower
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 8:   //  projectHerbariumMgmtIS.Dialogs.ClassForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_8_ClassForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("ClassData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 9:   //  projectHerbariumMgmtIS.Model.TaxonClass
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 10:   //  Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
-                userType.Activator = Activate_10_WrapPanel;
-                userType.AddMemberName("HorizontalSpacing");
-                userType.AddMemberName("VerticalSpacing");
-                userType.AddMemberName("Orientation");
-                userType.AddMemberName("Padding");
-                xamlType = userType;
-                break;
-
-            case 11:   //  Windows.UI.Xaml.Controls.Panel
-                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 12:   //  Double
-                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 13:   //  Windows.UI.Xaml.Controls.Orientation
-                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 14:   //  Windows.UI.Xaml.Thickness
-                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 15:   //  projectHerbariumMgmtIS.Dialogs.ClassifySheetForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_15_ClassifySheetForm;
-                userType.AddMemberName("VerifiedSheetData");
-                userType.AddMemberName("HerbariumSheet");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 16:   //  projectHerbariumMgmtIS.Model.HerbariumSheet
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 17:   //  Windows.UI.Xaml.Media.Imaging.BitmapImage
-                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 18:   //  projectHerbariumMgmtIS.Dialogs.CollectorForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_18_CollectorForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("CollectorData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 19:   //  projectHerbariumMgmtIS.Model.Collector
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 20:   //  projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_20_ConfirmDepositForm;
-                userType.AddMemberName("ReceivedDepositData");
-                userType.AddMemberName("HerbariumSheet");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 21:   //  projectHerbariumMgmtIS.Model.PlantDeposit
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 22:   //  projectHerbariumMgmtIS.Dialogs.EditSheetForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_22_EditSheetForm;
-                userType.AddMemberName("HerbariumSheetData");
-                userType.AddMemberName("HerbariumSheet");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 23:   //  System.Collections.Generic.List`1<projectHerbariumMgmtIS.Model.HerbariumImage>
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_23_List;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 24:   //  projectHerbariumMgmtIS.Model.HerbariumImage
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_24_HerbariumImage;
-                userType.AddMemberName("AccessionNumber");
-                userType.AddMemberName("HerbariumSheet");
-                userType.AddMemberName("Tag");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 25:   //  projectHerbariumMgmtIS.Dialogs.FamilyForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_25_FamilyForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("FamilyData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 26:   //  projectHerbariumMgmtIS.Model.TaxonFamily
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 27:   //  projectHerbariumMgmtIS.Dialogs.GenusForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_27_GenusForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("GenusData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 28:   //  projectHerbariumMgmtIS.Model.TaxonGenus
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 29:   //  projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_29_HerbariumBoxForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("BoxData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 30:   //  projectHerbariumMgmtIS.Model.HerbariumBox
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 31:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_31_TextBoxMask;
-                userType.AddMemberName("Mask");
-                userType.AddMemberName("PlaceHolder");
-                userType.AddMemberName("CustomMask");
-                xamlType = userType;
-                break;
-
-            case 32:   //  Windows.UI.Xaml.DependencyObject
-                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 33:   //  projectHerbariumMgmtIS.Dialogs.LocalityForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_33_LocalityForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("LocalityData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 34:   //  projectHerbariumMgmtIS.Model.PlantLocality
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 35:   //  projectHerbariumMgmtIS.Dialogs.NomenclatureForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_35_NomenclatureForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("NomenclatureData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 36:   //  projectHerbariumMgmtIS.Model.SpeciesNomenclature
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 37:   //  projectHerbariumMgmtIS.Dialogs.PhylumForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_37_PhylumForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("PhylumData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 38:   //  projectHerbariumMgmtIS.Model.TaxonPhylum
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 39:   //  projectHerbariumMgmtIS.Dialogs.PlantTypeForm
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_39_PlantTypeForm;
-                userType.AddMemberName("TransactionForm");
-                userType.AddMemberName("PlantTypeData");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 40:   //  projectHerbariumMgmtIS.Model.PlantType
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 41:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGrid
+            case 6:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGrid
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_41_DataGrid;
-                userType.AddMemberName("CanUserSortColumns");
+                userType.Activator = Activate_6_DataGrid;
                 userType.AddMemberName("AutoGenerateColumns");
-                userType.AddMemberName("SelectionMode");
+                userType.AddMemberName("CanUserSortColumns");
                 userType.AddMemberName("Columns");
                 userType.AddMemberName("AlternatingRowBackground");
                 userType.AddMemberName("AlternatingRowForeground");
@@ -1049,6 +805,7 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 userType.AddMemberName("RowHeaderWidth");
                 userType.AddMemberName("RowHeaderStyle");
                 userType.AddMemberName("RowStyle");
+                userType.AddMemberName("SelectionMode");
                 userType.AddMemberName("SelectedIndex");
                 userType.AddMemberName("SelectedItem");
                 userType.AddMemberName("VerticalGridLinesBrush");
@@ -1060,46 +817,29 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  Windows.UI.Xaml.Controls.Control
+            case 7:   //  Windows.UI.Xaml.Controls.Control
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 43:   //  Boolean
+            case 8:   //  Boolean
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 44:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Extended", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode.Extended);
-                userType.AddEnumValue("Single", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode.Single);
-                xamlType = userType;
-                break;
-
-            case 45:   //  System.Enum
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                xamlType = userType;
-                break;
-
-            case 46:   //  System.ValueType
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                xamlType = userType;
-                break;
-
-            case 47:   //  System.Collections.ObjectModel.ObservableCollection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>
+            case 9:   //  System.Collections.ObjectModel.ObservableCollection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>"));
-                userType.CollectionAdd = VectorAdd_47_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_9_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 48:   //  System.Collections.ObjectModel.Collection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>
+            case 10:   //  System.Collections.ObjectModel.Collection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_48_Collection;
-                userType.CollectionAdd = VectorAdd_48_Collection;
+                userType.Activator = Activate_10_Collection;
+                userType.CollectionAdd = VectorAdd_10_Collection;
                 xamlType = userType;
                 break;
 
-            case 49:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn
+            case 11:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("ActualWidth");
                 userType.AddMemberName("CanUserReorder");
@@ -1123,40 +863,53 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 50:   //  Windows.UI.Xaml.Style
+            case 12:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 51:   //  Windows.UI.Xaml.Data.Binding
+            case 13:   //  Double
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 52:   //  Int32
+            case 14:   //  Windows.UI.Xaml.Style
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 53:   //  System.Nullable`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>
+            case 15:   //  Windows.UI.Xaml.Data.Binding
+                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  Int32
+                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 17:   //  System.Nullable`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 54:   //  Windows.UI.Xaml.Visibility
+            case 18:   //  System.ValueType
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 19:   //  Windows.UI.Xaml.Visibility
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 55:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength
+            case 20:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.CreateFromStringMethod = x => (global::System.Object)global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength.ConvertFromString(x);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 56:   //  Windows.UI.Xaml.Media.Brush
+            case 21:   //  Windows.UI.Xaml.Media.Brush
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 57:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode
+            case 22:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode.None);
                 userType.AddEnumValue("ExcludeHeader", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode.ExcludeHeader);
@@ -1164,7 +917,12 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 58:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility
+            case 23:   //  System.Enum
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 24:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility.None);
                 userType.AddEnumValue("Horizontal", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility.Horizontal);
@@ -1173,7 +931,7 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 59:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility
+            case 25:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility.None);
                 userType.AddEnumValue("Column", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility.Column);
@@ -1182,21 +940,21 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 60:   //  Windows.UI.Xaml.Controls.ScrollBarVisibility
+            case 26:   //  Windows.UI.Xaml.Controls.ScrollBarVisibility
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 61:   //  System.Collections.IEnumerable
+            case 27:   //  System.Collections.IEnumerable
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 62:   //  Windows.UI.Xaml.DataTemplate
+            case 28:   //  Windows.UI.Xaml.DataTemplate
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 63:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode
+            case 29:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("VisibleWhenSelected", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected);
                 userType.AddEnumValue("Visible", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode.Visible);
@@ -1204,45 +962,36 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 64:   //  System.Collections.ObjectModel.ObservableCollection`1<Windows.UI.Xaml.Style>
+            case 30:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Extended", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode.Extended);
+                userType.AddEnumValue("Single", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode.Single);
+                xamlType = userType;
+                break;
+
+            case 31:   //  System.Collections.ObjectModel.ObservableCollection`1<Windows.UI.Xaml.Style>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.Style>"));
-                userType.CollectionAdd = VectorAdd_64_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_31_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 65:   //  System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.Style>
+            case 32:   //  System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.Style>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_65_Collection;
-                userType.CollectionAdd = VectorAdd_65_Collection;
+                userType.Activator = Activate_32_Collection;
+                userType.CollectionAdd = VectorAdd_32_Collection;
                 xamlType = userType;
                 break;
 
-            case 66:   //  System.Collections.IList
+            case 33:   //  System.Collections.IList
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 67:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn
+            case 34:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn"));
-                userType.Activator = Activate_67_DataGridCheckBoxColumn;
-                userType.AddMemberName("IsThreeState");
-                xamlType = userType;
-                break;
-
-            case 68:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn"));
-                userType.AddMemberName("Binding");
-                userType.AddMemberName("ClipboardContentBinding");
-                userType.AddMemberName("EditingElementStyle");
-                userType.AddMemberName("ElementStyle");
-                xamlType = userType;
-                break;
-
-            case 69:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn"));
-                userType.Activator = Activate_69_DataGridTextColumn;
+                userType.Activator = Activate_34_DataGridTextColumn;
                 userType.AddMemberName("FontFamily");
                 userType.AddMemberName("FontSize");
                 userType.AddMemberName("FontStyle");
@@ -1251,11 +1000,20 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 70:   //  Windows.UI.Xaml.Media.FontFamily
+            case 35:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn"));
+                userType.AddMemberName("Binding");
+                userType.AddMemberName("ClipboardContentBinding");
+                userType.AddMemberName("EditingElementStyle");
+                userType.AddMemberName("ElementStyle");
+                xamlType = userType;
+                break;
+
+            case 36:   //  Windows.UI.Xaml.Media.FontFamily
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 71:   //  Windows.UI.Text.FontStyle
+            case 37:   //  Windows.UI.Text.FontStyle
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
                 userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
@@ -1263,23 +1021,298 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 72:   //  Windows.UI.Text.FontWeight
+            case 38:   //  Windows.UI.Text.FontWeight
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 73:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn
+            case 39:   //  projectHerbariumMgmtIS.Dialogs.ApproveLoanForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_39_ApproveLoanForm;
+                userType.AddMemberName("PlantLoanData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 40:   //  projectHerbariumMgmtIS.Model.PlantLoan
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 41:   //  projectHerbariumMgmtIS.Dialogs.BorrowerForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_41_BorrowerForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("BorrowerData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 42:   //  projectHerbariumMgmtIS.Model.Borrower
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 43:   //  projectHerbariumMgmtIS.Dialogs.ClassForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_43_ClassForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("ClassData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 44:   //  projectHerbariumMgmtIS.Model.TaxonClass
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 45:   //  Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
+                userType.Activator = Activate_45_WrapPanel;
+                userType.AddMemberName("HorizontalSpacing");
+                userType.AddMemberName("VerticalSpacing");
+                userType.AddMemberName("Orientation");
+                userType.AddMemberName("Padding");
+                xamlType = userType;
+                break;
+
+            case 46:   //  Windows.UI.Xaml.Controls.Panel
+                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 47:   //  Windows.UI.Xaml.Controls.Orientation
+                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 48:   //  Windows.UI.Xaml.Thickness
+                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 49:   //  projectHerbariumMgmtIS.Dialogs.ClassifySheetForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_49_ClassifySheetForm;
+                userType.AddMemberName("VerifiedSheetData");
+                userType.AddMemberName("HerbariumSheet");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 50:   //  projectHerbariumMgmtIS.Model.HerbariumSheet
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 51:   //  Windows.UI.Xaml.Media.Imaging.BitmapImage
+                xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 52:   //  projectHerbariumMgmtIS.Dialogs.CollectorForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_52_CollectorForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("CollectorData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 53:   //  projectHerbariumMgmtIS.Model.Collector
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 54:   //  projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_54_ConfirmDepositForm;
+                userType.AddMemberName("ReceivedDepositData");
+                userType.AddMemberName("HerbariumSheet");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 55:   //  projectHerbariumMgmtIS.Model.PlantDeposit
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 56:   //  projectHerbariumMgmtIS.Dialogs.EditSheetForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_56_EditSheetForm;
+                userType.AddMemberName("HerbariumSheetData");
+                userType.AddMemberName("HerbariumSheet");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 57:   //  System.Collections.Generic.List`1<projectHerbariumMgmtIS.Model.HerbariumImage>
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_57_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 58:   //  projectHerbariumMgmtIS.Model.HerbariumImage
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_58_HerbariumImage;
+                userType.AddMemberName("AccessionNumber");
+                userType.AddMemberName("HerbariumSheet");
+                userType.AddMemberName("Tag");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 59:   //  projectHerbariumMgmtIS.Dialogs.FamilyForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_59_FamilyForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("FamilyData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 60:   //  projectHerbariumMgmtIS.Model.TaxonFamily
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 61:   //  projectHerbariumMgmtIS.Dialogs.GenusForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_61_GenusForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("GenusData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 62:   //  projectHerbariumMgmtIS.Model.TaxonGenus
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 63:   //  projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_63_HerbariumBoxForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("BoxData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 64:   //  projectHerbariumMgmtIS.Model.HerbariumBox
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 65:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_65_TextBoxMask;
+                userType.AddMemberName("Mask");
+                userType.AddMemberName("PlaceHolder");
+                userType.AddMemberName("CustomMask");
+                xamlType = userType;
+                break;
+
+            case 66:   //  projectHerbariumMgmtIS.Dialogs.LocalityForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_66_LocalityForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("LocalityData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 67:   //  projectHerbariumMgmtIS.Model.PlantLocality
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 68:   //  projectHerbariumMgmtIS.Dialogs.NomenclatureForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_68_NomenclatureForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("NomenclatureData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 69:   //  projectHerbariumMgmtIS.Model.SpeciesNomenclature
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 70:   //  projectHerbariumMgmtIS.Dialogs.PhylumForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_70_PhylumForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("PhylumData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 71:   //  projectHerbariumMgmtIS.Model.TaxonPhylum
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 72:   //  projectHerbariumMgmtIS.Dialogs.PlantTypeForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_72_PlantTypeForm;
+                userType.AddMemberName("TransactionForm");
+                userType.AddMemberName("PlantTypeData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 73:   //  projectHerbariumMgmtIS.Model.PlantType
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 74:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn"));
+                userType.Activator = Activate_74_DataGridCheckBoxColumn;
+                userType.AddMemberName("IsThreeState");
+                xamlType = userType;
+                break;
+
+            case 75:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn"));
-                userType.Activator = Activate_73_DataGridTemplateColumn;
+                userType.Activator = Activate_75_DataGridTemplateColumn;
                 userType.AddMemberName("CellTemplate");
                 userType.AddMemberName("CellEditingTemplate");
                 xamlType = userType;
                 break;
 
-            case 74:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex
+            case 76:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_74_TextBoxRegex;
+                userType.Activator = Activate_76_TextBoxRegex;
                 userType.AddMemberName("ValidationType");
                 userType.AddMemberName("ValidationMode");
                 userType.AddMemberName("Regex");
@@ -1287,7 +1320,7 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 75:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType
+            case 77:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Custom", global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType.Custom);
                 userType.AddEnumValue("Email", global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType.Email);
@@ -1298,11 +1331,11 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 76:   //  Windows.UI.Xaml.Controls.TextBox
+            case 78:   //  Windows.UI.Xaml.Controls.TextBox
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 77:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode
+            case 79:   //  Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode.Normal);
                 userType.AddEnumValue("Forced", global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode.Forced);
@@ -1310,135 +1343,143 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 78:   //  projectHerbariumMgmtIS.Dialogs.RequestLoanForm
+            case 80:   //  projectHerbariumMgmtIS.Dialogs.RequestLoanForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_78_RequestLoanForm;
+                userType.Activator = Activate_80_RequestLoanForm;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 79:   //  projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm
+            case 81:   //  projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_79_ResubmitDepositForm;
+                userType.Activator = Activate_81_ResubmitDepositForm;
                 userType.AddMemberName("RejectedDepositData");
                 userType.AddMemberName("HerbariumSheet");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 80:   //  projectHerbariumMgmtIS.Dialogs.ResultDialog
+            case 82:   //  projectHerbariumMgmtIS.Dialogs.ResultDialog
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_80_ResultDialog;
+                userType.Activator = Activate_82_ResultDialog;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 81:   //  projectHerbariumMgmtIS.Dialogs.SampleDialog
+            case 83:   //  projectHerbariumMgmtIS.Dialogs.SampleDialog
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_81_SampleDialog;
+                userType.Activator = Activate_83_SampleDialog;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 82:   //  projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm
+            case 84:   //  projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_82_SpeciesAuthorForm;
+                userType.Activator = Activate_84_SpeciesAuthorForm;
                 userType.AddMemberName("TransactionForm");
                 userType.AddMemberName("AuthorData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 83:   //  projectHerbariumMgmtIS.Model.SpeciesAuthor
+            case 85:   //  projectHerbariumMgmtIS.Model.SpeciesAuthor
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 84:   //  projectHerbariumMgmtIS.Dialogs.SpeciesForm
+            case 86:   //  projectHerbariumMgmtIS.Dialogs.SpeciesForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_84_SpeciesForm;
+                userType.Activator = Activate_86_SpeciesForm;
                 userType.AddMemberName("TransactionForm");
                 userType.AddMemberName("SpeciesData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 85:   //  projectHerbariumMgmtIS.Model.TaxonSpecies
+            case 87:   //  projectHerbariumMgmtIS.Model.TaxonSpecies
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 86:   //  projectHerbariumMgmtIS.Dialogs.StaffForm
+            case 88:   //  projectHerbariumMgmtIS.Dialogs.StaffForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_86_StaffForm;
+                userType.Activator = Activate_88_StaffForm;
                 userType.AddMemberName("TransactionForm");
                 userType.AddMemberName("StaffData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 87:   //  projectHerbariumMgmtIS.Model.Staff
+            case 89:   //  projectHerbariumMgmtIS.Model.Staff
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 88:   //  projectHerbariumMgmtIS.Dialogs.ValidatorForm
+            case 90:   //  projectHerbariumMgmtIS.Dialogs.ValidatorForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_88_ValidatorForm;
+                userType.Activator = Activate_90_ValidatorForm;
                 userType.AddMemberName("TransactionForm");
                 userType.AddMemberName("ValidatorData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 89:   //  projectHerbariumMgmtIS.Model.Validator
+            case 91:   //  projectHerbariumMgmtIS.Model.Validator
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 90:   //  projectHerbariumMgmtIS.Dialogs.VerifyDepositForm
+            case 92:   //  projectHerbariumMgmtIS.Dialogs.VerifyDepositForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_90_VerifyDepositForm;
+                userType.Activator = Activate_92_VerifyDepositForm;
                 userType.AddMemberName("VerifyingDepositData");
                 userType.AddMemberName("HerbariumSheet");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 91:   //  projectHerbariumMgmtIS.Dialogs.ViewSheetForm
+            case 93:   //  projectHerbariumMgmtIS.Dialogs.ViewLoanForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_91_ViewSheetForm;
+                userType.Activator = Activate_93_ViewLoanForm;
+                userType.AddMemberName("PlantLoanData");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 94:   //  projectHerbariumMgmtIS.Dialogs.ViewSheetForm
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_94_ViewSheetForm;
                 userType.AddMemberName("HerbariumSheetData");
                 userType.AddMemberName("HerbariumSheet");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 92:   //  Microsoft.Toolkit.Uwp.UI.Animations.Implicit
+            case 95:   //  Microsoft.Toolkit.Uwp.UI.Animations.Implicit
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_92_Implicit;
+                userType.Activator = Activate_95_Implicit;
                 userType.AddMemberName("ShowAnimations");
                 userType.AddMemberName("HideAnimations");
                 userType.AddMemberName("Animations");
                 xamlType = userType;
                 break;
 
-            case 93:   //  Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection
+            case 96:   //  Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_93_AnimationCollection;
+                userType.CollectionAdd = VectorAdd_96_AnimationCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 94:   //  Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase
+            case 97:   //  Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetContentPropertyName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames");
                 userType.AddMemberName("KeyFrames");
@@ -1450,47 +1491,47 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 95:   //  Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection
+            case 98:   //  Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.Generic.List`1<Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>"));
-                userType.CollectionAdd = VectorAdd_95_KeyFrameCollection;
+                userType.CollectionAdd = VectorAdd_98_KeyFrameCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 96:   //  System.Collections.Generic.List`1<Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>
+            case 99:   //  System.Collections.Generic.List`1<Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_96_List;
-                userType.CollectionAdd = VectorAdd_96_List;
+                userType.Activator = Activate_99_List;
+                userType.CollectionAdd = VectorAdd_99_List;
                 xamlType = userType;
                 break;
 
-            case 97:   //  Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame
+            case 100:   //  Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("Key");
                 xamlType = userType;
                 break;
 
-            case 98:   //  TimeSpan
+            case 101:   //  TimeSpan
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 99:   //  Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation
+            case 102:   //  Microsoft.Toolkit.Uwp.UI.Animations.TranslationAnimation
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation"));
-                userType.Activator = Activate_99_TranslationAnimation;
+                userType.Activator = Activate_102_TranslationAnimation;
                 userType.SetContentPropertyName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames");
                 xamlType = userType;
                 break;
 
-            case 100:   //  Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation
+            case 103:   //  Microsoft.Toolkit.Uwp.UI.Animations.Vector3Animation
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>"));
-                userType.Activator = Activate_100_Vector3Animation;
+                userType.Activator = Activate_103_Vector3Animation;
                 userType.SetContentPropertyName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames");
                 xamlType = userType;
                 break;
 
-            case 101:   //  Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>
+            case 104:   //  Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase"));
                 userType.SetContentPropertyName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames");
                 userType.AddMemberName("From");
@@ -1498,21 +1539,21 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 102:   //  Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation
+            case 105:   //  Microsoft.Toolkit.Uwp.UI.Animations.OpacityAnimation
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation"));
-                userType.Activator = Activate_102_OpacityAnimation;
+                userType.Activator = Activate_105_OpacityAnimation;
                 userType.SetContentPropertyName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames");
                 xamlType = userType;
                 break;
 
-            case 103:   //  Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation
+            case 106:   //  Microsoft.Toolkit.Uwp.UI.Animations.ScalarAnimation
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>"));
-                userType.Activator = Activate_103_ScalarAnimation;
+                userType.Activator = Activate_106_ScalarAnimation;
                 userType.SetContentPropertyName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames");
                 xamlType = userType;
                 break;
 
-            case 104:   //  Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>
+            case 107:   //  Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase"));
                 userType.SetContentPropertyName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames");
                 userType.AddMemberName("From");
@@ -1520,300 +1561,324 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 105:   //  Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame
+            case 108:   //  Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame`1<Double>"));
-                userType.Activator = Activate_105_ScalarKeyFrame;
+                userType.Activator = Activate_108_ScalarKeyFrame;
                 xamlType = userType;
                 break;
 
-            case 106:   //  Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame`1<Double>
+            case 109:   //  Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame`1<Double>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame"));
                 userType.AddMemberName("Value");
                 xamlType = userType;
                 break;
 
-            case 107:   //  projectHerbariumMgmtIS.MainPage
+            case 110:   //  projectHerbariumMgmtIS.MainPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_107_MainPage;
+                userType.Activator = Activate_110_MainPage;
                 userType.AddMemberName("StaffName");
+                userType.AddMemberName("AccountLevel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 108:   //  Windows.UI.Xaml.Controls.Page
+            case 111:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 109:   //  Windows.UI.Xaml.Controls.UserControl
+            case 112:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 110:   //  projectHerbariumMgmtIS.Dialogs.OrderForm
+            case 113:   //  projectHerbariumMgmtIS.Dialogs.OrderForm
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_110_OrderForm;
+                userType.Activator = Activate_113_OrderForm;
                 userType.AddMemberName("TransactionForm");
                 userType.AddMemberName("OrderData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 111:   //  projectHerbariumMgmtIS.Model.TaxonOrder
+            case 114:   //  projectHerbariumMgmtIS.Model.TaxonOrder
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 112:   //  projectHerbariumMgmtIS.Maintenance.AccessAccountsPage
+            case 115:   //  projectHerbariumMgmtIS.Maintenance.AccessAccountsPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_112_AccessAccountsPage;
+                userType.Activator = Activate_115_AccessAccountsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 113:   //  projectHerbariumMgmtIS.Maintenance.BorrowerPage
+            case 116:   //  projectHerbariumMgmtIS.Maintenance.BorrowerPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_113_BorrowerPage;
+                userType.Activator = Activate_116_BorrowerPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 114:   //  projectHerbariumMgmtIS.Maintenance.CollectorPage
+            case 117:   //  projectHerbariumMgmtIS.Maintenance.CollectorPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_114_CollectorPage;
+                userType.Activator = Activate_117_CollectorPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 115:   //  projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage
+            case 118:   //  projectHerbariumMgmtIS.Maintenance.ExternalValidatorPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_115_ExternalValidatorPage;
+                userType.Activator = Activate_118_ExternalValidatorPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 116:   //  projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage
+            case 119:   //  projectHerbariumMgmtIS.Maintenance.HerbariumBoxPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_116_HerbariumBoxPage;
+                userType.Activator = Activate_119_HerbariumBoxPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 117:   //  projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage
+            case 120:   //  projectHerbariumMgmtIS.Maintenance.HerbariumStaffPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_117_HerbariumStaffPage;
+                userType.Activator = Activate_120_HerbariumStaffPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 118:   //  projectHerbariumMgmtIS.Maintenance.PlantLocalityPage
+            case 121:   //  projectHerbariumMgmtIS.Maintenance.PlantLocalityPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_118_PlantLocalityPage;
+                userType.Activator = Activate_121_PlantLocalityPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 119:   //  projectHerbariumMgmtIS.Maintenance.PlantTypePage
+            case 122:   //  projectHerbariumMgmtIS.Maintenance.PlantTypePage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_119_PlantTypePage;
+                userType.Activator = Activate_122_PlantTypePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 120:   //  projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage
+            case 123:   //  projectHerbariumMgmtIS.Maintenance.SpeciesAuthorPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_120_SpeciesAuthorPage;
+                userType.Activator = Activate_123_SpeciesAuthorPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 121:   //  projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage
+            case 124:   //  projectHerbariumMgmtIS.Maintenance.SpeciesNomenclaturePage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_121_SpeciesNomenclaturePage;
+                userType.Activator = Activate_124_SpeciesNomenclaturePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 122:   //  projectHerbariumMgmtIS.Maintenance.TaxonClassPage
+            case 125:   //  projectHerbariumMgmtIS.Maintenance.TaxonClassPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_122_TaxonClassPage;
+                userType.Activator = Activate_125_TaxonClassPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 123:   //  projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage
+            case 126:   //  projectHerbariumMgmtIS.Maintenance.TaxonFamilyPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_123_TaxonFamilyPage;
+                userType.Activator = Activate_126_TaxonFamilyPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 124:   //  projectHerbariumMgmtIS.Maintenance.TaxonGenusPage
+            case 127:   //  projectHerbariumMgmtIS.Maintenance.TaxonGenusPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_124_TaxonGenusPage;
+                userType.Activator = Activate_127_TaxonGenusPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 125:   //  projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage
+            case 128:   //  projectHerbariumMgmtIS.Maintenance.TaxonSpeciesPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_125_TaxonSpeciesPage;
+                userType.Activator = Activate_128_TaxonSpeciesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 126:   //  projectHerbariumMgmtIS.Maintenance.TaxonOrderPage
+            case 129:   //  projectHerbariumMgmtIS.Maintenance.TaxonOrderPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_126_TaxonOrderPage;
+                userType.Activator = Activate_129_TaxonOrderPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 127:   //  projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage
+            case 130:   //  projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_127_TaxonPhylumPage;
+                userType.Activator = Activate_130_TaxonPhylumPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 128:   //  projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage
+            case 131:   //  projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_128_TaxonomicHierarchyPage;
+                userType.Activator = Activate_131_TaxonomicHierarchyPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 129:   //  projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage
+            case 132:   //  projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_129_AuditTrailingPage;
+                userType.Activator = Activate_132_AuditTrailingPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 130:   //  projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage
+            case 133:   //  projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_130_HerbariumInventoryPage;
+                userType.Activator = Activate_133_HerbariumInventoryPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 131:   //  projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage
+            case 134:   //  projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_131_SheetTrackingPage;
+                userType.Activator = Activate_134_SheetTrackingPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 132:   //  projectHerbariumMgmtIS.MenuPages.HomePage
+            case 135:   //  projectHerbariumMgmtIS.MenuPages.HomePage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_132_HomePage;
+                userType.Activator = Activate_135_HomePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 133:   //  projectHerbariumMgmtIS.MenuPages.MaintenancePage
+            case 136:   //  projectHerbariumMgmtIS.MenuPages.MaintenancePage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_133_MaintenancePage;
+                userType.Activator = Activate_136_MaintenancePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 134:   //  projectHerbariumMgmtIS.MenuPages.QueriesPage
+            case 137:   //  projectHerbariumMgmtIS.Queries.QuerySpeciesPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_134_QueriesPage;
+                userType.Activator = Activate_137_QuerySpeciesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 135:   //  projectHerbariumMgmtIS.MenuPages.ReportsPage
+            case 138:   //  projectHerbariumMgmtIS.MenuPages.QueriesPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_135_ReportsPage;
+                userType.Activator = Activate_138_QueriesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 136:   //  projectHerbariumMgmtIS.MenuPages.TransactionPage
+            case 139:   //  projectHerbariumMgmtIS.MenuPages.ReportsPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_136_TransactionPage;
+                userType.Activator = Activate_139_ReportsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 137:   //  projectHerbariumMgmtIS.MenuPages.UtilitiesPage
+            case 140:   //  projectHerbariumMgmtIS.MenuPages.TransactionPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_137_UtilitiesPage;
+                userType.Activator = Activate_140_TransactionPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 138:   //  projectHerbariumMgmtIS.Transaction.DepositTransactionPage
+            case 141:   //  projectHerbariumMgmtIS.MenuPages.UtilitiesPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_138_DepositTransactionPage;
+                userType.Activator = Activate_141_UtilitiesPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 142:   //  projectHerbariumMgmtIS.Queries.QueryHerbariumSheetPage
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_142_QueryHerbariumSheetPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 143:   //  projectHerbariumMgmtIS.Reports.DocumentNewDeposit
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_143_DocumentNewDeposit;
+                userType.AddMemberName("Month");
+                userType.AddMemberName("Year");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 144:   //  projectHerbariumMgmtIS.Reports.ReportNewDeposit
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_144_ReportNewDeposit;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 145:   //  projectHerbariumMgmtIS.Transaction.DepositTransactionPage
+                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_145_DepositTransactionPage;
                 userType.AddMemberName("IsExisting");
                 userType.AddMemberName("NewDepositData");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 139:   //  projectHerbariumMgmtIS.Transaction.ExcelDepositPage
+            case 146:   //  projectHerbariumMgmtIS.Transaction.ExcelDepositPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_139_ExcelDepositPage;
+                userType.Activator = Activate_146_ExcelDepositPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 140:   //  projectHerbariumMgmtIS.Transaction.PlantClassificationPage
+            case 147:   //  projectHerbariumMgmtIS.Transaction.PlantClassificationPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_140_PlantClassificationPage;
+                userType.Activator = Activate_147_PlantClassificationPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 141:   //  projectHerbariumMgmtIS.Transaction.PlantDepositPage
+            case 148:   //  projectHerbariumMgmtIS.Transaction.PlantDepositPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_141_PlantDepositPage;
+                userType.Activator = Activate_148_PlantDepositPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 142:   //  projectHerbariumMgmtIS.Transaction.PlantLoaningPage
+            case 149:   //  projectHerbariumMgmtIS.Transaction.PlantLoaningPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_142_PlantLoaningPage;
+                userType.Activator = Activate_149_PlantLoaningPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 143:   //  projectHerbariumMgmtIS.Transaction.PlantLoanReturnPage
+            case 150:   //  projectHerbariumMgmtIS.Transaction.PlantReceivingPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_143_PlantLoanReturnPage;
+                userType.Activator = Activate_150_PlantReceivingPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 144:   //  projectHerbariumMgmtIS.Transaction.PlantReceivingPage
+            case 151:   //  projectHerbariumMgmtIS.Transaction.PlantResubmissionPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_144_PlantReceivingPage;
+                userType.Activator = Activate_151_PlantResubmissionPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 145:   //  projectHerbariumMgmtIS.Transaction.PlantResubmissionPage
+            case 152:   //  projectHerbariumMgmtIS.Transaction.PlantVerificationPage
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_145_PlantResubmissionPage;
+                userType.Activator = Activate_152_PlantVerificationPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 146:   //  projectHerbariumMgmtIS.Transaction.PlantVerificationPage
-                userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_146_PlantVerificationPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 147:   //  Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid
+            case 153:   //  Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Grid"));
-                userType.Activator = Activate_147_UniformGrid;
+                userType.Activator = Activate_153_UniformGrid;
                 userType.AddMemberName("Columns");
                 userType.AddMemberName("FirstColumn");
                 userType.AddMemberName("Orientation");
@@ -1823,23 +1888,23 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 148:   //  Windows.UI.Xaml.Controls.Grid
+            case 154:   //  Windows.UI.Xaml.Controls.Grid
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 149:   //  System.Nullable`1<Boolean>
+            case 155:   //  System.Nullable`1<Boolean>
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 150:   //  Windows.UI.Xaml.FrameworkElement
+            case 156:   //  Windows.UI.Xaml.FrameworkElement
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 151:   //  Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool
+            case 157:   //  Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool
                 userType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Markup.MarkupExtension"));
-                userType.Activator = Activate_151_NullableBool;
+                userType.Activator = Activate_157_NullableBool;
                 userType.AddMemberName("Value");
                 userType.AddMemberName("IsNull");
                 userType.SetIsBindable();
@@ -1847,7 +1912,7 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 152:   //  Windows.UI.Xaml.Markup.MarkupExtension
+            case 158:   //  Windows.UI.Xaml.Markup.MarkupExtension
                 xamlType = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -1933,1495 +1998,1545 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
             var that = (global::projectHerbariumMgmtIS.Dialogs.AccountForm)instance;
             that.AccountData = (global::projectHerbariumMgmtIS.Model.Account)Value;
         }
-        private object get_2_BorrowerForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_2_BorrowerForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_3_BorrowerForm_BorrowerData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
-            return that.BorrowerData;
-        }
-        private void set_3_BorrowerForm_BorrowerData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
-            that.BorrowerData = (global::projectHerbariumMgmtIS.Model.Borrower)Value;
-        }
-        private object get_4_ClassForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_4_ClassForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_5_ClassForm_ClassData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
-            return that.ClassData;
-        }
-        private void set_5_ClassForm_ClassData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
-            that.ClassData = (global::projectHerbariumMgmtIS.Model.TaxonClass)Value;
-        }
-        private object get_6_WrapPanel_HorizontalSpacing(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            return that.HorizontalSpacing;
-        }
-        private void set_6_WrapPanel_HorizontalSpacing(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            that.HorizontalSpacing = (global::System.Double)Value;
-        }
-        private object get_7_WrapPanel_VerticalSpacing(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            return that.VerticalSpacing;
-        }
-        private void set_7_WrapPanel_VerticalSpacing(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            that.VerticalSpacing = (global::System.Double)Value;
-        }
-        private object get_8_WrapPanel_Orientation(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            return that.Orientation;
-        }
-        private void set_8_WrapPanel_Orientation(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            that.Orientation = (global::Windows.UI.Xaml.Controls.Orientation)Value;
-        }
-        private object get_9_WrapPanel_Padding(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            return that.Padding;
-        }
-        private void set_9_WrapPanel_Padding(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
-            that.Padding = (global::Windows.UI.Xaml.Thickness)Value;
-        }
-        private object get_10_ClassifySheetForm_VerifiedSheetData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
-            return that.VerifiedSheetData;
-        }
-        private void set_10_ClassifySheetForm_VerifiedSheetData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
-            that.VerifiedSheetData = (global::projectHerbariumMgmtIS.Model.HerbariumSheet)Value;
-        }
-        private object get_11_ClassifySheetForm_HerbariumSheet(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
-            return that.HerbariumSheet;
-        }
-        private void set_11_ClassifySheetForm_HerbariumSheet(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
-            that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
-        }
-        private object get_12_CollectorForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_12_CollectorForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_13_CollectorForm_CollectorData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
-            return that.CollectorData;
-        }
-        private void set_13_CollectorForm_CollectorData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
-            that.CollectorData = (global::projectHerbariumMgmtIS.Model.Collector)Value;
-        }
-        private object get_14_ConfirmDepositForm_ReceivedDepositData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
-            return that.ReceivedDepositData;
-        }
-        private void set_14_ConfirmDepositForm_ReceivedDepositData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
-            that.ReceivedDepositData = (global::projectHerbariumMgmtIS.Model.PlantDeposit)Value;
-        }
-        private object get_15_ConfirmDepositForm_HerbariumSheet(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
-            return that.HerbariumSheet;
-        }
-        private void set_15_ConfirmDepositForm_HerbariumSheet(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
-            that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
-        }
-        private object get_16_EditSheetForm_HerbariumSheetData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
-            return that.HerbariumSheetData;
-        }
-        private void set_16_EditSheetForm_HerbariumSheetData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
-            that.HerbariumSheetData = (global::projectHerbariumMgmtIS.Model.HerbariumSheet)Value;
-        }
-        private object get_17_EditSheetForm_HerbariumSheet(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
-            return that.HerbariumSheet;
-        }
-        private void set_17_EditSheetForm_HerbariumSheet(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
-            that.HerbariumSheet = (global::System.Collections.Generic.List<global::projectHerbariumMgmtIS.Model.HerbariumImage>)Value;
-        }
-        private object get_18_HerbariumImage_AccessionNumber(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
-            return that.AccessionNumber;
-        }
-        private void set_18_HerbariumImage_AccessionNumber(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
-            that.AccessionNumber = (global::System.String)Value;
-        }
-        private object get_19_HerbariumImage_HerbariumSheet(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
-            return that.HerbariumSheet;
-        }
-        private void set_19_HerbariumImage_HerbariumSheet(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
-            that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
-        }
-        private object get_20_HerbariumImage_Tag(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
-            return that.Tag;
-        }
-        private void set_20_HerbariumImage_Tag(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
-            that.Tag = (global::System.String)Value;
-        }
-        private object get_21_FamilyForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_21_FamilyForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_22_FamilyForm_FamilyData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
-            return that.FamilyData;
-        }
-        private void set_22_FamilyForm_FamilyData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
-            that.FamilyData = (global::projectHerbariumMgmtIS.Model.TaxonFamily)Value;
-        }
-        private object get_23_GenusForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_23_GenusForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_24_GenusForm_GenusData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
-            return that.GenusData;
-        }
-        private void set_24_GenusForm_GenusData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
-            that.GenusData = (global::projectHerbariumMgmtIS.Model.TaxonGenus)Value;
-        }
-        private object get_25_HerbariumBoxForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_25_HerbariumBoxForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_26_HerbariumBoxForm_BoxData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
-            return that.BoxData;
-        }
-        private void set_26_HerbariumBoxForm_BoxData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
-            that.BoxData = (global::projectHerbariumMgmtIS.Model.HerbariumBox)Value;
-        }
-        private object get_27_TextBoxMask_Mask(object instance)
-        {
-            return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.GetMask((global::Windows.UI.Xaml.DependencyObject)instance);
-        }
-        private void set_27_TextBoxMask_Mask(object instance, object Value)
-        {
-            global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.SetMask((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
-        }
-        private object get_28_TextBoxMask_PlaceHolder(object instance)
-        {
-            return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.GetPlaceHolder((global::Windows.UI.Xaml.DependencyObject)instance);
-        }
-        private void set_28_TextBoxMask_PlaceHolder(object instance, object Value)
-        {
-            global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.SetPlaceHolder((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
-        }
-        private object get_29_TextBoxMask_CustomMask(object instance)
-        {
-            return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.GetCustomMask((global::Windows.UI.Xaml.DependencyObject)instance);
-        }
-        private void set_29_TextBoxMask_CustomMask(object instance, object Value)
-        {
-            global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.SetCustomMask((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
-        }
-        private object get_30_LocalityForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_30_LocalityForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_31_LocalityForm_LocalityData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
-            return that.LocalityData;
-        }
-        private void set_31_LocalityForm_LocalityData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
-            that.LocalityData = (global::projectHerbariumMgmtIS.Model.PlantLocality)Value;
-        }
-        private object get_32_NomenclatureForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_32_NomenclatureForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_33_NomenclatureForm_NomenclatureData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
-            return that.NomenclatureData;
-        }
-        private void set_33_NomenclatureForm_NomenclatureData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
-            that.NomenclatureData = (global::projectHerbariumMgmtIS.Model.SpeciesNomenclature)Value;
-        }
-        private object get_34_PhylumForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_34_PhylumForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_35_PhylumForm_PhylumData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
-            return that.PhylumData;
-        }
-        private void set_35_PhylumForm_PhylumData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
-            that.PhylumData = (global::projectHerbariumMgmtIS.Model.TaxonPhylum)Value;
-        }
-        private object get_36_PlantTypeForm_TransactionForm(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
-            return that.TransactionForm;
-        }
-        private void set_36_PlantTypeForm_TransactionForm(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
-            that.TransactionForm = (global::System.String)Value;
-        }
-        private object get_37_PlantTypeForm_PlantTypeData(object instance)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
-            return that.PlantTypeData;
-        }
-        private void set_37_PlantTypeForm_PlantTypeData(object instance, object Value)
-        {
-            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
-            that.PlantTypeData = (global::projectHerbariumMgmtIS.Model.PlantType)Value;
-        }
-        private object get_38_DataGrid_CanUserSortColumns(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.CanUserSortColumns;
-        }
-        private void set_38_DataGrid_CanUserSortColumns(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.CanUserSortColumns = (global::System.Boolean)Value;
-        }
-        private object get_39_DataGrid_AutoGenerateColumns(object instance)
+        private object get_2_DataGrid_AutoGenerateColumns(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.AutoGenerateColumns;
         }
-        private void set_39_DataGrid_AutoGenerateColumns(object instance, object Value)
+        private void set_2_DataGrid_AutoGenerateColumns(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.AutoGenerateColumns = (global::System.Boolean)Value;
         }
-        private object get_40_DataGrid_SelectionMode(object instance)
+        private object get_3_DataGrid_CanUserSortColumns(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.SelectionMode;
+            return that.CanUserSortColumns;
         }
-        private void set_40_DataGrid_SelectionMode(object instance, object Value)
+        private void set_3_DataGrid_CanUserSortColumns(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.SelectionMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode)Value;
+            that.CanUserSortColumns = (global::System.Boolean)Value;
         }
-        private object get_41_DataGrid_Columns(object instance)
+        private object get_4_DataGrid_Columns(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.Columns;
         }
-        private object get_42_DataGridColumn_ActualWidth(object instance)
+        private object get_5_DataGridColumn_ActualWidth(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.ActualWidth;
         }
-        private object get_43_DataGridColumn_CanUserReorder(object instance)
+        private object get_6_DataGridColumn_CanUserReorder(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.CanUserReorder;
         }
-        private void set_43_DataGridColumn_CanUserReorder(object instance, object Value)
+        private void set_6_DataGridColumn_CanUserReorder(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.CanUserReorder = (global::System.Boolean)Value;
         }
-        private object get_44_DataGridColumn_CanUserResize(object instance)
+        private object get_7_DataGridColumn_CanUserResize(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.CanUserResize;
         }
-        private void set_44_DataGridColumn_CanUserResize(object instance, object Value)
+        private void set_7_DataGridColumn_CanUserResize(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.CanUserResize = (global::System.Boolean)Value;
         }
-        private object get_45_DataGridColumn_CanUserSort(object instance)
+        private object get_8_DataGridColumn_CanUserSort(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.CanUserSort;
         }
-        private void set_45_DataGridColumn_CanUserSort(object instance, object Value)
+        private void set_8_DataGridColumn_CanUserSort(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.CanUserSort = (global::System.Boolean)Value;
         }
-        private object get_46_DataGridColumn_CellStyle(object instance)
+        private object get_9_DataGridColumn_CellStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.CellStyle;
         }
-        private void set_46_DataGridColumn_CellStyle(object instance, object Value)
+        private void set_9_DataGridColumn_CellStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.CellStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_47_DataGridColumn_ClipboardContentBinding(object instance)
+        private object get_10_DataGridColumn_ClipboardContentBinding(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.ClipboardContentBinding;
         }
-        private void set_47_DataGridColumn_ClipboardContentBinding(object instance, object Value)
+        private void set_10_DataGridColumn_ClipboardContentBinding(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.ClipboardContentBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
         }
-        private object get_48_DataGridColumn_DisplayIndex(object instance)
+        private object get_11_DataGridColumn_DisplayIndex(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.DisplayIndex;
         }
-        private void set_48_DataGridColumn_DisplayIndex(object instance, object Value)
+        private void set_11_DataGridColumn_DisplayIndex(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.DisplayIndex = (global::System.Int32)Value;
         }
-        private object get_49_DataGridColumn_DragIndicatorStyle(object instance)
+        private object get_12_DataGridColumn_DragIndicatorStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.DragIndicatorStyle;
         }
-        private void set_49_DataGridColumn_DragIndicatorStyle(object instance, object Value)
+        private void set_12_DataGridColumn_DragIndicatorStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.DragIndicatorStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_50_DataGridColumn_HeaderStyle(object instance)
+        private object get_13_DataGridColumn_HeaderStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.HeaderStyle;
         }
-        private void set_50_DataGridColumn_HeaderStyle(object instance, object Value)
+        private void set_13_DataGridColumn_HeaderStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.HeaderStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_51_DataGridColumn_Header(object instance)
+        private object get_14_DataGridColumn_Header(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.Header;
         }
-        private void set_51_DataGridColumn_Header(object instance, object Value)
+        private void set_14_DataGridColumn_Header(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.Header = (global::System.Object)Value;
         }
-        private object get_52_DataGridColumn_IsAutoGenerated(object instance)
+        private object get_15_DataGridColumn_IsAutoGenerated(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.IsAutoGenerated;
         }
-        private object get_53_DataGridColumn_IsFrozen(object instance)
+        private object get_16_DataGridColumn_IsFrozen(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.IsFrozen;
         }
-        private object get_54_DataGridColumn_IsReadOnly(object instance)
+        private object get_17_DataGridColumn_IsReadOnly(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.IsReadOnly;
         }
-        private void set_54_DataGridColumn_IsReadOnly(object instance, object Value)
+        private void set_17_DataGridColumn_IsReadOnly(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.IsReadOnly = (global::System.Boolean)Value;
         }
-        private object get_55_DataGridColumn_MaxWidth(object instance)
+        private object get_18_DataGridColumn_MaxWidth(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.MaxWidth;
         }
-        private void set_55_DataGridColumn_MaxWidth(object instance, object Value)
+        private void set_18_DataGridColumn_MaxWidth(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.MaxWidth = (global::System.Double)Value;
         }
-        private object get_56_DataGridColumn_MinWidth(object instance)
+        private object get_19_DataGridColumn_MinWidth(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.MinWidth;
         }
-        private void set_56_DataGridColumn_MinWidth(object instance, object Value)
+        private void set_19_DataGridColumn_MinWidth(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.MinWidth = (global::System.Double)Value;
         }
-        private object get_57_DataGridColumn_SortDirection(object instance)
+        private object get_20_DataGridColumn_SortDirection(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.SortDirection;
         }
-        private void set_57_DataGridColumn_SortDirection(object instance, object Value)
+        private void set_20_DataGridColumn_SortDirection(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.SortDirection = (global::System.Nullable<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>)Value;
         }
-        private object get_58_DataGridColumn_Tag(object instance)
+        private object get_21_DataGridColumn_Tag(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.Tag;
         }
-        private void set_58_DataGridColumn_Tag(object instance, object Value)
+        private void set_21_DataGridColumn_Tag(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.Tag = (global::System.Object)Value;
         }
-        private object get_59_DataGridColumn_Visibility(object instance)
+        private object get_22_DataGridColumn_Visibility(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.Visibility;
         }
-        private void set_59_DataGridColumn_Visibility(object instance, object Value)
+        private void set_22_DataGridColumn_Visibility(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.Visibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_60_DataGridColumn_Width(object instance)
+        private object get_23_DataGridColumn_Width(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             return that.Width;
         }
-        private void set_60_DataGridColumn_Width(object instance, object Value)
+        private void set_23_DataGridColumn_Width(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)instance;
             that.Width = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength)Value;
         }
-        private object get_61_DataGrid_AlternatingRowBackground(object instance)
+        private object get_24_DataGrid_AlternatingRowBackground(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.AlternatingRowBackground;
         }
-        private void set_61_DataGrid_AlternatingRowBackground(object instance, object Value)
+        private void set_24_DataGrid_AlternatingRowBackground(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.AlternatingRowBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_62_DataGrid_AlternatingRowForeground(object instance)
+        private object get_25_DataGrid_AlternatingRowForeground(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.AlternatingRowForeground;
         }
-        private void set_62_DataGrid_AlternatingRowForeground(object instance, object Value)
+        private void set_25_DataGrid_AlternatingRowForeground(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.AlternatingRowForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_63_DataGrid_AreRowDetailsFrozen(object instance)
+        private object get_26_DataGrid_AreRowDetailsFrozen(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.AreRowDetailsFrozen;
         }
-        private void set_63_DataGrid_AreRowDetailsFrozen(object instance, object Value)
+        private void set_26_DataGrid_AreRowDetailsFrozen(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.AreRowDetailsFrozen = (global::System.Boolean)Value;
         }
-        private object get_64_DataGrid_AreRowGroupHeadersFrozen(object instance)
+        private object get_27_DataGrid_AreRowGroupHeadersFrozen(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.AreRowGroupHeadersFrozen;
         }
-        private void set_64_DataGrid_AreRowGroupHeadersFrozen(object instance, object Value)
+        private void set_27_DataGrid_AreRowGroupHeadersFrozen(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.AreRowGroupHeadersFrozen = (global::System.Boolean)Value;
         }
-        private object get_65_DataGrid_CanUserReorderColumns(object instance)
+        private object get_28_DataGrid_CanUserReorderColumns(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.CanUserReorderColumns;
         }
-        private void set_65_DataGrid_CanUserReorderColumns(object instance, object Value)
+        private void set_28_DataGrid_CanUserReorderColumns(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.CanUserReorderColumns = (global::System.Boolean)Value;
         }
-        private object get_66_DataGrid_CanUserResizeColumns(object instance)
+        private object get_29_DataGrid_CanUserResizeColumns(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.CanUserResizeColumns;
         }
-        private void set_66_DataGrid_CanUserResizeColumns(object instance, object Value)
+        private void set_29_DataGrid_CanUserResizeColumns(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.CanUserResizeColumns = (global::System.Boolean)Value;
         }
-        private object get_67_DataGrid_CellStyle(object instance)
+        private object get_30_DataGrid_CellStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.CellStyle;
         }
-        private void set_67_DataGrid_CellStyle(object instance, object Value)
+        private void set_30_DataGrid_CellStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.CellStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_68_DataGrid_ClipboardCopyMode(object instance)
+        private object get_31_DataGrid_ClipboardCopyMode(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.ClipboardCopyMode;
         }
-        private void set_68_DataGrid_ClipboardCopyMode(object instance, object Value)
+        private void set_31_DataGrid_ClipboardCopyMode(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.ClipboardCopyMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode)Value;
         }
-        private object get_69_DataGrid_ColumnHeaderHeight(object instance)
+        private object get_32_DataGrid_ColumnHeaderHeight(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.ColumnHeaderHeight;
         }
-        private void set_69_DataGrid_ColumnHeaderHeight(object instance, object Value)
+        private void set_32_DataGrid_ColumnHeaderHeight(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.ColumnHeaderHeight = (global::System.Double)Value;
         }
-        private object get_70_DataGrid_ColumnHeaderStyle(object instance)
+        private object get_33_DataGrid_ColumnHeaderStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.ColumnHeaderStyle;
         }
-        private void set_70_DataGrid_ColumnHeaderStyle(object instance, object Value)
+        private void set_33_DataGrid_ColumnHeaderStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.ColumnHeaderStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_71_DataGrid_ColumnWidth(object instance)
+        private object get_34_DataGrid_ColumnWidth(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.ColumnWidth;
         }
-        private void set_71_DataGrid_ColumnWidth(object instance, object Value)
+        private void set_34_DataGrid_ColumnWidth(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.ColumnWidth = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength)Value;
         }
-        private object get_72_DataGrid_DragIndicatorStyle(object instance)
+        private object get_35_DataGrid_DragIndicatorStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.DragIndicatorStyle;
         }
-        private void set_72_DataGrid_DragIndicatorStyle(object instance, object Value)
+        private void set_35_DataGrid_DragIndicatorStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.DragIndicatorStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_73_DataGrid_DropLocationIndicatorStyle(object instance)
+        private object get_36_DataGrid_DropLocationIndicatorStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.DropLocationIndicatorStyle;
         }
-        private void set_73_DataGrid_DropLocationIndicatorStyle(object instance, object Value)
+        private void set_36_DataGrid_DropLocationIndicatorStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.DropLocationIndicatorStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_74_DataGrid_FrozenColumnCount(object instance)
+        private object get_37_DataGrid_FrozenColumnCount(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.FrozenColumnCount;
         }
-        private void set_74_DataGrid_FrozenColumnCount(object instance, object Value)
+        private void set_37_DataGrid_FrozenColumnCount(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.FrozenColumnCount = (global::System.Int32)Value;
         }
-        private object get_75_DataGrid_GridLinesVisibility(object instance)
+        private object get_38_DataGrid_GridLinesVisibility(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.GridLinesVisibility;
         }
-        private void set_75_DataGrid_GridLinesVisibility(object instance, object Value)
+        private void set_38_DataGrid_GridLinesVisibility(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.GridLinesVisibility = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility)Value;
         }
-        private object get_76_DataGrid_HeadersVisibility(object instance)
+        private object get_39_DataGrid_HeadersVisibility(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.HeadersVisibility;
         }
-        private void set_76_DataGrid_HeadersVisibility(object instance, object Value)
+        private void set_39_DataGrid_HeadersVisibility(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.HeadersVisibility = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility)Value;
         }
-        private object get_77_DataGrid_HorizontalGridLinesBrush(object instance)
+        private object get_40_DataGrid_HorizontalGridLinesBrush(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.HorizontalGridLinesBrush;
         }
-        private void set_77_DataGrid_HorizontalGridLinesBrush(object instance, object Value)
+        private void set_40_DataGrid_HorizontalGridLinesBrush(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.HorizontalGridLinesBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_78_DataGrid_HorizontalScrollBarVisibility(object instance)
+        private object get_41_DataGrid_HorizontalScrollBarVisibility(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.HorizontalScrollBarVisibility;
         }
-        private void set_78_DataGrid_HorizontalScrollBarVisibility(object instance, object Value)
+        private void set_41_DataGrid_HorizontalScrollBarVisibility(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.HorizontalScrollBarVisibility = (global::Windows.UI.Xaml.Controls.ScrollBarVisibility)Value;
         }
-        private object get_79_DataGrid_IsReadOnly(object instance)
+        private object get_42_DataGrid_IsReadOnly(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.IsReadOnly;
         }
-        private void set_79_DataGrid_IsReadOnly(object instance, object Value)
+        private void set_42_DataGrid_IsReadOnly(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.IsReadOnly = (global::System.Boolean)Value;
         }
-        private object get_80_DataGrid_IsValid(object instance)
+        private object get_43_DataGrid_IsValid(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.IsValid;
         }
-        private object get_81_DataGrid_ItemsSource(object instance)
+        private object get_44_DataGrid_ItemsSource(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.ItemsSource;
         }
-        private void set_81_DataGrid_ItemsSource(object instance, object Value)
+        private void set_44_DataGrid_ItemsSource(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.ItemsSource = (global::System.Collections.IEnumerable)Value;
         }
-        private object get_82_DataGrid_MaxColumnWidth(object instance)
+        private object get_45_DataGrid_MaxColumnWidth(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.MaxColumnWidth;
         }
-        private void set_82_DataGrid_MaxColumnWidth(object instance, object Value)
+        private void set_45_DataGrid_MaxColumnWidth(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.MaxColumnWidth = (global::System.Double)Value;
         }
-        private object get_83_DataGrid_MinColumnWidth(object instance)
+        private object get_46_DataGrid_MinColumnWidth(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.MinColumnWidth;
         }
-        private void set_83_DataGrid_MinColumnWidth(object instance, object Value)
+        private void set_46_DataGrid_MinColumnWidth(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.MinColumnWidth = (global::System.Double)Value;
         }
-        private object get_84_DataGrid_RowBackground(object instance)
+        private object get_47_DataGrid_RowBackground(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowBackground;
         }
-        private void set_84_DataGrid_RowBackground(object instance, object Value)
+        private void set_47_DataGrid_RowBackground(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_85_DataGrid_RowDetailsTemplate(object instance)
+        private object get_48_DataGrid_RowDetailsTemplate(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowDetailsTemplate;
         }
-        private void set_85_DataGrid_RowDetailsTemplate(object instance, object Value)
+        private void set_48_DataGrid_RowDetailsTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowDetailsTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_86_DataGrid_RowDetailsVisibilityMode(object instance)
+        private object get_49_DataGrid_RowDetailsVisibilityMode(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowDetailsVisibilityMode;
         }
-        private void set_86_DataGrid_RowDetailsVisibilityMode(object instance, object Value)
+        private void set_49_DataGrid_RowDetailsVisibilityMode(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowDetailsVisibilityMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode)Value;
         }
-        private object get_87_DataGrid_RowForeground(object instance)
+        private object get_50_DataGrid_RowForeground(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowForeground;
         }
-        private void set_87_DataGrid_RowForeground(object instance, object Value)
+        private void set_50_DataGrid_RowForeground(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_88_DataGrid_RowHeight(object instance)
+        private object get_51_DataGrid_RowHeight(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowHeight;
         }
-        private void set_88_DataGrid_RowHeight(object instance, object Value)
+        private void set_51_DataGrid_RowHeight(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowHeight = (global::System.Double)Value;
         }
-        private object get_89_DataGrid_RowHeaderWidth(object instance)
+        private object get_52_DataGrid_RowHeaderWidth(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowHeaderWidth;
         }
-        private void set_89_DataGrid_RowHeaderWidth(object instance, object Value)
+        private void set_52_DataGrid_RowHeaderWidth(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowHeaderWidth = (global::System.Double)Value;
         }
-        private object get_90_DataGrid_RowHeaderStyle(object instance)
+        private object get_53_DataGrid_RowHeaderStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowHeaderStyle;
         }
-        private void set_90_DataGrid_RowHeaderStyle(object instance, object Value)
+        private void set_53_DataGrid_RowHeaderStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowHeaderStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_91_DataGrid_RowStyle(object instance)
+        private object get_54_DataGrid_RowStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowStyle;
         }
-        private void set_91_DataGrid_RowStyle(object instance, object Value)
+        private void set_54_DataGrid_RowStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowStyle = (global::Windows.UI.Xaml.Style)Value;
         }
-        private object get_92_DataGrid_SelectedIndex(object instance)
+        private object get_55_DataGrid_SelectionMode(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.SelectionMode;
+        }
+        private void set_55_DataGrid_SelectionMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.SelectionMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode)Value;
+        }
+        private object get_56_DataGrid_SelectedIndex(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.SelectedIndex;
         }
-        private void set_92_DataGrid_SelectedIndex(object instance, object Value)
+        private void set_56_DataGrid_SelectedIndex(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.SelectedIndex = (global::System.Int32)Value;
         }
-        private object get_93_DataGrid_SelectedItem(object instance)
+        private object get_57_DataGrid_SelectedItem(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.SelectedItem;
         }
-        private void set_93_DataGrid_SelectedItem(object instance, object Value)
+        private void set_57_DataGrid_SelectedItem(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.SelectedItem = (global::System.Object)Value;
         }
-        private object get_94_DataGrid_VerticalGridLinesBrush(object instance)
+        private object get_58_DataGrid_VerticalGridLinesBrush(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.VerticalGridLinesBrush;
         }
-        private void set_94_DataGrid_VerticalGridLinesBrush(object instance, object Value)
+        private void set_58_DataGrid_VerticalGridLinesBrush(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.VerticalGridLinesBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_95_DataGrid_VerticalScrollBarVisibility(object instance)
+        private object get_59_DataGrid_VerticalScrollBarVisibility(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.VerticalScrollBarVisibility;
         }
-        private void set_95_DataGrid_VerticalScrollBarVisibility(object instance, object Value)
+        private void set_59_DataGrid_VerticalScrollBarVisibility(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.VerticalScrollBarVisibility = (global::Windows.UI.Xaml.Controls.ScrollBarVisibility)Value;
         }
-        private object get_96_DataGrid_CurrentColumn(object instance)
+        private object get_60_DataGrid_CurrentColumn(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.CurrentColumn;
         }
-        private void set_96_DataGrid_CurrentColumn(object instance, object Value)
+        private void set_60_DataGrid_CurrentColumn(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.CurrentColumn = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn)Value;
         }
-        private object get_97_DataGrid_RowGroupHeaderPropertyNameAlternative(object instance)
+        private object get_61_DataGrid_RowGroupHeaderPropertyNameAlternative(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowGroupHeaderPropertyNameAlternative;
         }
-        private void set_97_DataGrid_RowGroupHeaderPropertyNameAlternative(object instance, object Value)
+        private void set_61_DataGrid_RowGroupHeaderPropertyNameAlternative(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.RowGroupHeaderPropertyNameAlternative = (global::System.String)Value;
         }
-        private object get_98_DataGrid_RowGroupHeaderStyles(object instance)
+        private object get_62_DataGrid_RowGroupHeaderStyles(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.RowGroupHeaderStyles;
         }
-        private object get_99_DataGrid_SelectedItems(object instance)
+        private object get_63_DataGrid_SelectedItems(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.SelectedItems;
         }
-        private object get_100_DataGridBoundColumn_Binding(object instance)
+        private object get_64_DataGridBoundColumn_Binding(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
             return that.Binding;
         }
-        private void set_100_DataGridBoundColumn_Binding(object instance, object Value)
+        private void set_64_DataGridBoundColumn_Binding(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
             that.Binding = (global::Windows.UI.Xaml.Data.Binding)Value;
         }
-        private object get_101_DataGridCheckBoxColumn_IsThreeState(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn)instance;
-            return that.IsThreeState;
-        }
-        private void set_101_DataGridCheckBoxColumn_IsThreeState(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn)instance;
-            that.IsThreeState = (global::System.Boolean)Value;
-        }
-        private object get_102_DataGridBoundColumn_ClipboardContentBinding(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
-            return that.ClipboardContentBinding;
-        }
-        private void set_102_DataGridBoundColumn_ClipboardContentBinding(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
-            that.ClipboardContentBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
-        }
-        private object get_103_DataGridBoundColumn_EditingElementStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
-            return that.EditingElementStyle;
-        }
-        private void set_103_DataGridBoundColumn_EditingElementStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
-            that.EditingElementStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_104_DataGridBoundColumn_ElementStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
-            return that.ElementStyle;
-        }
-        private void set_104_DataGridBoundColumn_ElementStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
-            that.ElementStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_105_DataGridTextColumn_FontFamily(object instance)
+        private object get_65_DataGridTextColumn_FontFamily(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             return that.FontFamily;
         }
-        private void set_105_DataGridTextColumn_FontFamily(object instance, object Value)
+        private void set_65_DataGridTextColumn_FontFamily(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             that.FontFamily = (global::Windows.UI.Xaml.Media.FontFamily)Value;
         }
-        private object get_106_DataGridTextColumn_FontSize(object instance)
+        private object get_66_DataGridTextColumn_FontSize(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             return that.FontSize;
         }
-        private void set_106_DataGridTextColumn_FontSize(object instance, object Value)
+        private void set_66_DataGridTextColumn_FontSize(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             that.FontSize = (global::System.Double)Value;
         }
-        private object get_107_DataGridTextColumn_FontStyle(object instance)
+        private object get_67_DataGridTextColumn_FontStyle(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             return that.FontStyle;
         }
-        private void set_107_DataGridTextColumn_FontStyle(object instance, object Value)
+        private void set_67_DataGridTextColumn_FontStyle(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             that.FontStyle = (global::Windows.UI.Text.FontStyle)Value;
         }
-        private object get_108_DataGridTextColumn_FontWeight(object instance)
+        private object get_68_DataGridTextColumn_FontWeight(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             return that.FontWeight;
         }
-        private void set_108_DataGridTextColumn_FontWeight(object instance, object Value)
+        private void set_68_DataGridTextColumn_FontWeight(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             that.FontWeight = (global::Windows.UI.Text.FontWeight)Value;
         }
-        private object get_109_DataGridTextColumn_Foreground(object instance)
+        private object get_69_DataGridTextColumn_Foreground(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             return that.Foreground;
         }
-        private void set_109_DataGridTextColumn_Foreground(object instance, object Value)
+        private void set_69_DataGridTextColumn_Foreground(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn)instance;
             that.Foreground = (global::Windows.UI.Xaml.Media.Brush)Value;
         }
-        private object get_110_DataGridTemplateColumn_CellTemplate(object instance)
+        private object get_70_DataGridBoundColumn_ClipboardContentBinding(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
+            return that.ClipboardContentBinding;
+        }
+        private void set_70_DataGridBoundColumn_ClipboardContentBinding(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
+            that.ClipboardContentBinding = (global::Windows.UI.Xaml.Data.Binding)Value;
+        }
+        private object get_71_DataGridBoundColumn_EditingElementStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
+            return that.EditingElementStyle;
+        }
+        private void set_71_DataGridBoundColumn_EditingElementStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
+            that.EditingElementStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_72_DataGridBoundColumn_ElementStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
+            return that.ElementStyle;
+        }
+        private void set_72_DataGridBoundColumn_ElementStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn)instance;
+            that.ElementStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_73_ApproveLoanForm_PlantLoanData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ApproveLoanForm)instance;
+            return that.PlantLoanData;
+        }
+        private void set_73_ApproveLoanForm_PlantLoanData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ApproveLoanForm)instance;
+            that.PlantLoanData = (global::projectHerbariumMgmtIS.Model.PlantLoan)Value;
+        }
+        private object get_74_BorrowerForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_74_BorrowerForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_75_BorrowerForm_BorrowerData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
+            return that.BorrowerData;
+        }
+        private void set_75_BorrowerForm_BorrowerData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.BorrowerForm)instance;
+            that.BorrowerData = (global::projectHerbariumMgmtIS.Model.Borrower)Value;
+        }
+        private object get_76_ClassForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_76_ClassForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_77_ClassForm_ClassData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
+            return that.ClassData;
+        }
+        private void set_77_ClassForm_ClassData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassForm)instance;
+            that.ClassData = (global::projectHerbariumMgmtIS.Model.TaxonClass)Value;
+        }
+        private object get_78_WrapPanel_HorizontalSpacing(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            return that.HorizontalSpacing;
+        }
+        private void set_78_WrapPanel_HorizontalSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            that.HorizontalSpacing = (global::System.Double)Value;
+        }
+        private object get_79_WrapPanel_VerticalSpacing(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            return that.VerticalSpacing;
+        }
+        private void set_79_WrapPanel_VerticalSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            that.VerticalSpacing = (global::System.Double)Value;
+        }
+        private object get_80_WrapPanel_Orientation(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            return that.Orientation;
+        }
+        private void set_80_WrapPanel_Orientation(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            that.Orientation = (global::Windows.UI.Xaml.Controls.Orientation)Value;
+        }
+        private object get_81_WrapPanel_Padding(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            return that.Padding;
+        }
+        private void set_81_WrapPanel_Padding(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel)instance;
+            that.Padding = (global::Windows.UI.Xaml.Thickness)Value;
+        }
+        private object get_82_ClassifySheetForm_VerifiedSheetData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
+            return that.VerifiedSheetData;
+        }
+        private void set_82_ClassifySheetForm_VerifiedSheetData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
+            that.VerifiedSheetData = (global::projectHerbariumMgmtIS.Model.HerbariumSheet)Value;
+        }
+        private object get_83_ClassifySheetForm_HerbariumSheet(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
+            return that.HerbariumSheet;
+        }
+        private void set_83_ClassifySheetForm_HerbariumSheet(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ClassifySheetForm)instance;
+            that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
+        }
+        private object get_84_CollectorForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_84_CollectorForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_85_CollectorForm_CollectorData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
+            return that.CollectorData;
+        }
+        private void set_85_CollectorForm_CollectorData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.CollectorForm)instance;
+            that.CollectorData = (global::projectHerbariumMgmtIS.Model.Collector)Value;
+        }
+        private object get_86_ConfirmDepositForm_ReceivedDepositData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
+            return that.ReceivedDepositData;
+        }
+        private void set_86_ConfirmDepositForm_ReceivedDepositData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
+            that.ReceivedDepositData = (global::projectHerbariumMgmtIS.Model.PlantDeposit)Value;
+        }
+        private object get_87_ConfirmDepositForm_HerbariumSheet(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
+            return that.HerbariumSheet;
+        }
+        private void set_87_ConfirmDepositForm_HerbariumSheet(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm)instance;
+            that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
+        }
+        private object get_88_EditSheetForm_HerbariumSheetData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
+            return that.HerbariumSheetData;
+        }
+        private void set_88_EditSheetForm_HerbariumSheetData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
+            that.HerbariumSheetData = (global::projectHerbariumMgmtIS.Model.HerbariumSheet)Value;
+        }
+        private object get_89_EditSheetForm_HerbariumSheet(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
+            return that.HerbariumSheet;
+        }
+        private void set_89_EditSheetForm_HerbariumSheet(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.EditSheetForm)instance;
+            that.HerbariumSheet = (global::System.Collections.Generic.List<global::projectHerbariumMgmtIS.Model.HerbariumImage>)Value;
+        }
+        private object get_90_HerbariumImage_AccessionNumber(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
+            return that.AccessionNumber;
+        }
+        private void set_90_HerbariumImage_AccessionNumber(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
+            that.AccessionNumber = (global::System.String)Value;
+        }
+        private object get_91_HerbariumImage_HerbariumSheet(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
+            return that.HerbariumSheet;
+        }
+        private void set_91_HerbariumImage_HerbariumSheet(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
+            that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
+        }
+        private object get_92_HerbariumImage_Tag(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
+            return that.Tag;
+        }
+        private void set_92_HerbariumImage_Tag(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Model.HerbariumImage)instance;
+            that.Tag = (global::System.String)Value;
+        }
+        private object get_93_FamilyForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_93_FamilyForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_94_FamilyForm_FamilyData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
+            return that.FamilyData;
+        }
+        private void set_94_FamilyForm_FamilyData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.FamilyForm)instance;
+            that.FamilyData = (global::projectHerbariumMgmtIS.Model.TaxonFamily)Value;
+        }
+        private object get_95_GenusForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_95_GenusForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_96_GenusForm_GenusData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
+            return that.GenusData;
+        }
+        private void set_96_GenusForm_GenusData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.GenusForm)instance;
+            that.GenusData = (global::projectHerbariumMgmtIS.Model.TaxonGenus)Value;
+        }
+        private object get_97_HerbariumBoxForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_97_HerbariumBoxForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_98_HerbariumBoxForm_BoxData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
+            return that.BoxData;
+        }
+        private void set_98_HerbariumBoxForm_BoxData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm)instance;
+            that.BoxData = (global::projectHerbariumMgmtIS.Model.HerbariumBox)Value;
+        }
+        private object get_99_TextBoxMask_Mask(object instance)
+        {
+            return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.GetMask((global::Windows.UI.Xaml.DependencyObject)instance);
+        }
+        private void set_99_TextBoxMask_Mask(object instance, object Value)
+        {
+            global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.SetMask((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
+        }
+        private object get_100_TextBoxMask_PlaceHolder(object instance)
+        {
+            return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.GetPlaceHolder((global::Windows.UI.Xaml.DependencyObject)instance);
+        }
+        private void set_100_TextBoxMask_PlaceHolder(object instance, object Value)
+        {
+            global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.SetPlaceHolder((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
+        }
+        private object get_101_TextBoxMask_CustomMask(object instance)
+        {
+            return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.GetCustomMask((global::Windows.UI.Xaml.DependencyObject)instance);
+        }
+        private void set_101_TextBoxMask_CustomMask(object instance, object Value)
+        {
+            global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.SetCustomMask((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
+        }
+        private object get_102_LocalityForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_102_LocalityForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_103_LocalityForm_LocalityData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
+            return that.LocalityData;
+        }
+        private void set_103_LocalityForm_LocalityData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.LocalityForm)instance;
+            that.LocalityData = (global::projectHerbariumMgmtIS.Model.PlantLocality)Value;
+        }
+        private object get_104_NomenclatureForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_104_NomenclatureForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_105_NomenclatureForm_NomenclatureData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
+            return that.NomenclatureData;
+        }
+        private void set_105_NomenclatureForm_NomenclatureData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.NomenclatureForm)instance;
+            that.NomenclatureData = (global::projectHerbariumMgmtIS.Model.SpeciesNomenclature)Value;
+        }
+        private object get_106_PhylumForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_106_PhylumForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_107_PhylumForm_PhylumData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
+            return that.PhylumData;
+        }
+        private void set_107_PhylumForm_PhylumData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PhylumForm)instance;
+            that.PhylumData = (global::projectHerbariumMgmtIS.Model.TaxonPhylum)Value;
+        }
+        private object get_108_PlantTypeForm_TransactionForm(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
+            return that.TransactionForm;
+        }
+        private void set_108_PlantTypeForm_TransactionForm(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
+            that.TransactionForm = (global::System.String)Value;
+        }
+        private object get_109_PlantTypeForm_PlantTypeData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
+            return that.PlantTypeData;
+        }
+        private void set_109_PlantTypeForm_PlantTypeData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.PlantTypeForm)instance;
+            that.PlantTypeData = (global::projectHerbariumMgmtIS.Model.PlantType)Value;
+        }
+        private object get_110_DataGridCheckBoxColumn_IsThreeState(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn)instance;
+            return that.IsThreeState;
+        }
+        private void set_110_DataGridCheckBoxColumn_IsThreeState(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn)instance;
+            that.IsThreeState = (global::System.Boolean)Value;
+        }
+        private object get_111_DataGridTemplateColumn_CellTemplate(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn)instance;
             return that.CellTemplate;
         }
-        private void set_110_DataGridTemplateColumn_CellTemplate(object instance, object Value)
+        private void set_111_DataGridTemplateColumn_CellTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn)instance;
             that.CellTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_111_DataGridTemplateColumn_CellEditingTemplate(object instance)
+        private object get_112_DataGridTemplateColumn_CellEditingTemplate(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn)instance;
             return that.CellEditingTemplate;
         }
-        private void set_111_DataGridTemplateColumn_CellEditingTemplate(object instance, object Value)
+        private void set_112_DataGridTemplateColumn_CellEditingTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn)instance;
             that.CellEditingTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_112_TextBoxRegex_ValidationType(object instance)
+        private object get_113_TextBoxRegex_ValidationType(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.GetValidationType((global::Windows.UI.Xaml.Controls.TextBox)instance);
         }
-        private void set_112_TextBoxRegex_ValidationType(object instance, object Value)
+        private void set_113_TextBoxRegex_ValidationType(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.SetValidationType((global::Windows.UI.Xaml.Controls.TextBox)instance, (global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType)Value);
         }
-        private object get_113_TextBoxRegex_ValidationMode(object instance)
+        private object get_114_TextBoxRegex_ValidationMode(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.GetValidationMode((global::Windows.UI.Xaml.Controls.TextBox)instance);
         }
-        private void set_113_TextBoxRegex_ValidationMode(object instance, object Value)
+        private void set_114_TextBoxRegex_ValidationMode(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.SetValidationMode((global::Windows.UI.Xaml.Controls.TextBox)instance, (global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode)Value);
         }
-        private object get_114_TextBoxRegex_Regex(object instance)
+        private object get_115_TextBoxRegex_Regex(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.GetRegex((global::Windows.UI.Xaml.Controls.TextBox)instance);
         }
-        private void set_114_TextBoxRegex_Regex(object instance, object Value)
+        private void set_115_TextBoxRegex_Regex(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.SetRegex((global::Windows.UI.Xaml.Controls.TextBox)instance, (global::System.String)Value);
         }
-        private object get_115_TextBoxRegex_IsValid(object instance)
+        private object get_116_TextBoxRegex_IsValid(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.GetIsValid((global::Windows.UI.Xaml.Controls.TextBox)instance);
         }
-        private void set_115_TextBoxRegex_IsValid(object instance, object Value)
+        private void set_116_TextBoxRegex_IsValid(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.SetIsValid((global::Windows.UI.Xaml.Controls.TextBox)instance, (global::System.Boolean)Value);
         }
-        private object get_116_ResubmitDepositForm_RejectedDepositData(object instance)
+        private object get_117_ResubmitDepositForm_RejectedDepositData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm)instance;
             return that.RejectedDepositData;
         }
-        private void set_116_ResubmitDepositForm_RejectedDepositData(object instance, object Value)
+        private void set_117_ResubmitDepositForm_RejectedDepositData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm)instance;
             that.RejectedDepositData = (global::projectHerbariumMgmtIS.Model.PlantDeposit)Value;
         }
-        private object get_117_ResubmitDepositForm_HerbariumSheet(object instance)
+        private object get_118_ResubmitDepositForm_HerbariumSheet(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm)instance;
             return that.HerbariumSheet;
         }
-        private void set_117_ResubmitDepositForm_HerbariumSheet(object instance, object Value)
+        private void set_118_ResubmitDepositForm_HerbariumSheet(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm)instance;
             that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
         }
-        private object get_118_SpeciesAuthorForm_TransactionForm(object instance)
+        private object get_119_SpeciesAuthorForm_TransactionForm(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm)instance;
             return that.TransactionForm;
         }
-        private void set_118_SpeciesAuthorForm_TransactionForm(object instance, object Value)
+        private void set_119_SpeciesAuthorForm_TransactionForm(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm)instance;
             that.TransactionForm = (global::System.String)Value;
         }
-        private object get_119_SpeciesAuthorForm_AuthorData(object instance)
+        private object get_120_SpeciesAuthorForm_AuthorData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm)instance;
             return that.AuthorData;
         }
-        private void set_119_SpeciesAuthorForm_AuthorData(object instance, object Value)
+        private void set_120_SpeciesAuthorForm_AuthorData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm)instance;
             that.AuthorData = (global::projectHerbariumMgmtIS.Model.SpeciesAuthor)Value;
         }
-        private object get_120_SpeciesForm_TransactionForm(object instance)
+        private object get_121_SpeciesForm_TransactionForm(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesForm)instance;
             return that.TransactionForm;
         }
-        private void set_120_SpeciesForm_TransactionForm(object instance, object Value)
+        private void set_121_SpeciesForm_TransactionForm(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesForm)instance;
             that.TransactionForm = (global::System.String)Value;
         }
-        private object get_121_SpeciesForm_SpeciesData(object instance)
+        private object get_122_SpeciesForm_SpeciesData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesForm)instance;
             return that.SpeciesData;
         }
-        private void set_121_SpeciesForm_SpeciesData(object instance, object Value)
+        private void set_122_SpeciesForm_SpeciesData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.SpeciesForm)instance;
             that.SpeciesData = (global::projectHerbariumMgmtIS.Model.TaxonSpecies)Value;
         }
-        private object get_122_StaffForm_TransactionForm(object instance)
+        private object get_123_StaffForm_TransactionForm(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.StaffForm)instance;
             return that.TransactionForm;
         }
-        private void set_122_StaffForm_TransactionForm(object instance, object Value)
+        private void set_123_StaffForm_TransactionForm(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.StaffForm)instance;
             that.TransactionForm = (global::System.String)Value;
         }
-        private object get_123_StaffForm_StaffData(object instance)
+        private object get_124_StaffForm_StaffData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.StaffForm)instance;
             return that.StaffData;
         }
-        private void set_123_StaffForm_StaffData(object instance, object Value)
+        private void set_124_StaffForm_StaffData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.StaffForm)instance;
             that.StaffData = (global::projectHerbariumMgmtIS.Model.Staff)Value;
         }
-        private object get_124_ValidatorForm_TransactionForm(object instance)
+        private object get_125_ValidatorForm_TransactionForm(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ValidatorForm)instance;
             return that.TransactionForm;
         }
-        private void set_124_ValidatorForm_TransactionForm(object instance, object Value)
+        private void set_125_ValidatorForm_TransactionForm(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ValidatorForm)instance;
             that.TransactionForm = (global::System.String)Value;
         }
-        private object get_125_ValidatorForm_ValidatorData(object instance)
+        private object get_126_ValidatorForm_ValidatorData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ValidatorForm)instance;
             return that.ValidatorData;
         }
-        private void set_125_ValidatorForm_ValidatorData(object instance, object Value)
+        private void set_126_ValidatorForm_ValidatorData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ValidatorForm)instance;
             that.ValidatorData = (global::projectHerbariumMgmtIS.Model.Validator)Value;
         }
-        private object get_126_VerifyDepositForm_VerifyingDepositData(object instance)
+        private object get_127_VerifyDepositForm_VerifyingDepositData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm)instance;
             return that.VerifyingDepositData;
         }
-        private void set_126_VerifyDepositForm_VerifyingDepositData(object instance, object Value)
+        private void set_127_VerifyDepositForm_VerifyingDepositData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm)instance;
             that.VerifyingDepositData = (global::projectHerbariumMgmtIS.Model.PlantDeposit)Value;
         }
-        private object get_127_VerifyDepositForm_HerbariumSheet(object instance)
+        private object get_128_VerifyDepositForm_HerbariumSheet(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm)instance;
             return that.HerbariumSheet;
         }
-        private void set_127_VerifyDepositForm_HerbariumSheet(object instance, object Value)
+        private void set_128_VerifyDepositForm_HerbariumSheet(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.VerifyDepositForm)instance;
             that.HerbariumSheet = (global::Windows.UI.Xaml.Media.Imaging.BitmapImage)Value;
         }
-        private object get_128_ViewSheetForm_HerbariumSheetData(object instance)
+        private object get_129_ViewLoanForm_PlantLoanData(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ViewLoanForm)instance;
+            return that.PlantLoanData;
+        }
+        private void set_129_ViewLoanForm_PlantLoanData(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Dialogs.ViewLoanForm)instance;
+            that.PlantLoanData = (global::projectHerbariumMgmtIS.Model.PlantLoan)Value;
+        }
+        private object get_130_ViewSheetForm_HerbariumSheetData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm)instance;
             return that.HerbariumSheetData;
         }
-        private void set_128_ViewSheetForm_HerbariumSheetData(object instance, object Value)
+        private void set_130_ViewSheetForm_HerbariumSheetData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm)instance;
             that.HerbariumSheetData = (global::projectHerbariumMgmtIS.Model.HerbariumSheet)Value;
         }
-        private object get_129_ViewSheetForm_HerbariumSheet(object instance)
+        private object get_131_ViewSheetForm_HerbariumSheet(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm)instance;
             return that.HerbariumSheet;
         }
-        private void set_129_ViewSheetForm_HerbariumSheet(object instance, object Value)
+        private void set_131_ViewSheetForm_HerbariumSheet(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ViewSheetForm)instance;
             that.HerbariumSheet = (global::System.Collections.Generic.List<global::projectHerbariumMgmtIS.Model.HerbariumImage>)Value;
         }
-        private object get_130_Implicit_ShowAnimations(object instance)
+        private object get_132_Implicit_ShowAnimations(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit.GetShowAnimations((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_130_Implicit_ShowAnimations(object instance, object Value)
+        private void set_132_Implicit_ShowAnimations(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit.SetShowAnimations((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection)Value);
         }
-        private object get_131_AnimationBase_KeyFrames(object instance)
+        private object get_133_AnimationBase_KeyFrames(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             return that.KeyFrames;
         }
-        private void set_131_AnimationBase_KeyFrames(object instance, object Value)
+        private void set_133_AnimationBase_KeyFrames(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             that.KeyFrames = (global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection)Value;
         }
-        private object get_132_KeyFrame_Key(object instance)
+        private object get_134_KeyFrame_Key(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame)instance;
             return that.Key;
         }
-        private void set_132_KeyFrame_Key(object instance, object Value)
+        private void set_134_KeyFrame_Key(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame)instance;
             that.Key = (global::System.Double)Value;
         }
-        private object get_133_AnimationBase_Duration(object instance)
+        private object get_135_AnimationBase_Duration(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             return that.Duration;
         }
-        private void set_133_AnimationBase_Duration(object instance, object Value)
+        private void set_135_AnimationBase_Duration(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             that.Duration = (global::System.TimeSpan)Value;
         }
-        private object get_134_AnimationBase_Target(object instance)
+        private object get_136_AnimationBase_Target(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             return that.Target;
         }
-        private void set_134_AnimationBase_Target(object instance, object Value)
+        private void set_136_AnimationBase_Target(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             that.Target = (global::System.String)Value;
         }
-        private object get_135_AnimationBase_ImplicitTarget(object instance)
+        private object get_137_AnimationBase_ImplicitTarget(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             return that.ImplicitTarget;
         }
-        private void set_135_AnimationBase_ImplicitTarget(object instance, object Value)
+        private void set_137_AnimationBase_ImplicitTarget(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             that.ImplicitTarget = (global::System.String)Value;
         }
-        private object get_136_AnimationBase_Delay(object instance)
+        private object get_138_AnimationBase_Delay(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             return that.Delay;
         }
-        private void set_136_AnimationBase_Delay(object instance, object Value)
+        private void set_138_AnimationBase_Delay(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             that.Delay = (global::System.TimeSpan)Value;
         }
-        private object get_137_AnimationBase_SetInitialValueBeforeDelay(object instance)
+        private object get_139_AnimationBase_SetInitialValueBeforeDelay(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             return that.SetInitialValueBeforeDelay;
         }
-        private void set_137_AnimationBase_SetInitialValueBeforeDelay(object instance, object Value)
+        private void set_139_AnimationBase_SetInitialValueBeforeDelay(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase)instance;
             that.SetInitialValueBeforeDelay = (global::System.Boolean)Value;
         }
-        private object get_138_Implicit_HideAnimations(object instance)
+        private object get_140_Implicit_HideAnimations(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit.GetHideAnimations((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_138_Implicit_HideAnimations(object instance, object Value)
+        private void set_140_Implicit_HideAnimations(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit.SetHideAnimations((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection)Value);
         }
-        private object get_139_Implicit_Animations(object instance)
+        private object get_141_Implicit_Animations(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit.GetAnimations((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_139_Implicit_Animations(object instance, object Value)
+        private void set_141_Implicit_Animations(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Animations.Implicit.SetAnimations((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection)Value);
         }
-        private object get_140_TypedAnimationBase_From(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
-            return that.From;
-        }
-        private void set_140_TypedAnimationBase_From(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
-            that.From = (global::System.String)Value;
-        }
-        private object get_141_TypedAnimationBase_To(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
-            return that.To;
-        }
-        private void set_141_TypedAnimationBase_To(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
-            that.To = (global::System.String)Value;
-        }
         private object get_142_TypedAnimationBase_From(object instance)
         {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>)instance;
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
             return that.From;
         }
         private void set_142_TypedAnimationBase_From(object instance, object Value)
         {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>)instance;
-            that.From = (global::System.Double)Value;
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
+            that.From = (global::System.String)Value;
         }
         private object get_143_TypedAnimationBase_To(object instance)
         {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>)instance;
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
             return that.To;
         }
         private void set_143_TypedAnimationBase_To(object instance, object Value)
         {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, global::System.String>)instance;
+            that.To = (global::System.String)Value;
+        }
+        private object get_144_TypedAnimationBase_From(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>)instance;
+            return that.From;
+        }
+        private void set_144_TypedAnimationBase_From(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>)instance;
+            that.From = (global::System.Double)Value;
+        }
+        private object get_145_TypedAnimationBase_To(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>)instance;
+            return that.To;
+        }
+        private void set_145_TypedAnimationBase_To(object instance, object Value)
+        {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase<global::Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, global::System.Double>)instance;
             that.To = (global::System.Double)Value;
         }
-        private object get_144_TypedKeyFrame_Value(object instance)
+        private object get_146_TypedKeyFrame_Value(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame<global::System.Double>)instance;
             return that.Value;
         }
-        private void set_144_TypedKeyFrame_Value(object instance, object Value)
+        private void set_146_TypedKeyFrame_Value(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame<global::System.Double>)instance;
             that.Value = (global::System.Double)Value;
         }
-        private object get_145_MainPage_StaffName(object instance)
+        private object get_147_MainPage_StaffName(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.MainPage)instance;
             return that.StaffName;
         }
-        private void set_145_MainPage_StaffName(object instance, object Value)
+        private void set_147_MainPage_StaffName(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.MainPage)instance;
             that.StaffName = (global::System.String)Value;
         }
-        private object get_146_OrderForm_TransactionForm(object instance)
+        private object get_148_MainPage_AccountLevel(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.MainPage)instance;
+            return that.AccountLevel;
+        }
+        private void set_148_MainPage_AccountLevel(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.MainPage)instance;
+            that.AccountLevel = (global::System.String)Value;
+        }
+        private object get_149_OrderForm_TransactionForm(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.OrderForm)instance;
             return that.TransactionForm;
         }
-        private void set_146_OrderForm_TransactionForm(object instance, object Value)
+        private void set_149_OrderForm_TransactionForm(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.OrderForm)instance;
             that.TransactionForm = (global::System.String)Value;
         }
-        private object get_147_OrderForm_OrderData(object instance)
+        private object get_150_OrderForm_OrderData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.OrderForm)instance;
             return that.OrderData;
         }
-        private void set_147_OrderForm_OrderData(object instance, object Value)
+        private void set_150_OrderForm_OrderData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.OrderForm)instance;
             that.OrderData = (global::projectHerbariumMgmtIS.Model.TaxonOrder)Value;
         }
-        private object get_148_DepositTransactionPage_IsExisting(object instance)
+        private object get_151_DocumentNewDeposit_Month(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Reports.DocumentNewDeposit)instance;
+            return that.Month;
+        }
+        private void set_151_DocumentNewDeposit_Month(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Reports.DocumentNewDeposit)instance;
+            that.Month = (global::System.String)Value;
+        }
+        private object get_152_DocumentNewDeposit_Year(object instance)
+        {
+            var that = (global::projectHerbariumMgmtIS.Reports.DocumentNewDeposit)instance;
+            return that.Year;
+        }
+        private void set_152_DocumentNewDeposit_Year(object instance, object Value)
+        {
+            var that = (global::projectHerbariumMgmtIS.Reports.DocumentNewDeposit)instance;
+            that.Year = (global::System.Int32)Value;
+        }
+        private object get_153_DepositTransactionPage_IsExisting(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage)instance;
             return that.IsExisting;
         }
-        private void set_148_DepositTransactionPage_IsExisting(object instance, object Value)
+        private void set_153_DepositTransactionPage_IsExisting(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage)instance;
             that.IsExisting = (global::System.Boolean)Value;
         }
-        private object get_149_DepositTransactionPage_NewDepositData(object instance)
+        private object get_154_DepositTransactionPage_NewDepositData(object instance)
         {
             var that = (global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage)instance;
             return that.NewDepositData;
         }
-        private void set_149_DepositTransactionPage_NewDepositData(object instance, object Value)
+        private void set_154_DepositTransactionPage_NewDepositData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Transaction.DepositTransactionPage)instance;
             that.NewDepositData = (global::projectHerbariumMgmtIS.Model.PlantDeposit)Value;
         }
-        private object get_150_UniformGrid_Columns(object instance)
+        private object get_155_UniformGrid_Columns(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             return that.Columns;
         }
-        private void set_150_UniformGrid_Columns(object instance, object Value)
+        private void set_155_UniformGrid_Columns(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             that.Columns = (global::System.Int32)Value;
         }
-        private object get_151_UniformGrid_FirstColumn(object instance)
+        private object get_156_UniformGrid_FirstColumn(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             return that.FirstColumn;
         }
-        private void set_151_UniformGrid_FirstColumn(object instance, object Value)
+        private void set_156_UniformGrid_FirstColumn(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             that.FirstColumn = (global::System.Int32)Value;
         }
-        private object get_152_UniformGrid_Orientation(object instance)
+        private object get_157_UniformGrid_Orientation(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             return that.Orientation;
         }
-        private void set_152_UniformGrid_Orientation(object instance, object Value)
+        private void set_157_UniformGrid_Orientation(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             that.Orientation = (global::Windows.UI.Xaml.Controls.Orientation)Value;
         }
-        private object get_153_UniformGrid_Rows(object instance)
+        private object get_158_UniformGrid_Rows(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             return that.Rows;
         }
-        private void set_153_UniformGrid_Rows(object instance, object Value)
+        private void set_158_UniformGrid_Rows(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid)instance;
             that.Rows = (global::System.Int32)Value;
         }
-        private object get_154_UniformGrid_AutoLayout(object instance)
+        private object get_159_UniformGrid_AutoLayout(object instance)
         {
             return global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid.GetAutoLayout((global::Windows.UI.Xaml.FrameworkElement)instance);
         }
-        private void set_154_UniformGrid_AutoLayout(object instance, object Value)
+        private void set_159_UniformGrid_AutoLayout(object instance, object Value)
         {
             global::Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid.SetAutoLayout((global::Windows.UI.Xaml.FrameworkElement)instance, (global::System.Nullable<global::System.Boolean>)Value);
         }
-        private object get_155_NullableBool_Value(object instance)
+        private object get_160_NullableBool_Value(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool)instance;
             return that.Value;
         }
-        private void set_155_NullableBool_Value(object instance, object Value)
+        private void set_160_NullableBool_Value(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool)instance;
             that.Value = (global::System.Boolean)Value;
         }
-        private object get_156_NullableBool_IsNull(object instance)
+        private object get_161_NullableBool_IsNull(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool)instance;
             return that.IsNull;
         }
-        private void set_156_NullableBool_IsNull(object instance, object Value)
+        private void set_161_NullableBool_IsNull(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool)instance;
             that.IsNull = (global::System.Boolean)Value;
@@ -3448,1041 +3563,1076 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlMember.Getter = get_1_AccountForm_AccountData;
                 xamlMember.Setter = set_1_AccountForm_AccountData;
                 break;
-            case "projectHerbariumMgmtIS.Dialogs.BorrowerForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.BorrowerForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AutoGenerateColumns":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AutoGenerateColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_BorrowerForm_TransactionForm;
-                xamlMember.Setter = set_2_BorrowerForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.BorrowerForm.BorrowerData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.BorrowerForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "BorrowerData", "projectHerbariumMgmtIS.Model.Borrower");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_BorrowerForm_BorrowerData;
-                xamlMember.Setter = set_3_BorrowerForm_BorrowerData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.ClassForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_ClassForm_TransactionForm;
-                xamlMember.Setter = set_4_ClassForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.ClassForm.ClassData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ClassData", "projectHerbariumMgmtIS.Model.TaxonClass");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_ClassForm_ClassData;
-                xamlMember.Setter = set_5_ClassForm_ClassData;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.HorizontalSpacing":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HorizontalSpacing", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_6_WrapPanel_HorizontalSpacing;
-                xamlMember.Setter = set_6_WrapPanel_HorizontalSpacing;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.VerticalSpacing":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "VerticalSpacing", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_WrapPanel_VerticalSpacing;
-                xamlMember.Setter = set_7_WrapPanel_VerticalSpacing;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.Orientation":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Orientation", "Windows.UI.Xaml.Controls.Orientation");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_WrapPanel_Orientation;
-                xamlMember.Setter = set_8_WrapPanel_Orientation;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.Padding":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Padding", "Windows.UI.Xaml.Thickness");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_WrapPanel_Padding;
-                xamlMember.Setter = set_9_WrapPanel_Padding;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.ClassifySheetForm.VerifiedSheetData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassifySheetForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "VerifiedSheetData", "projectHerbariumMgmtIS.Model.HerbariumSheet");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_ClassifySheetForm_VerifiedSheetData;
-                xamlMember.Setter = set_10_ClassifySheetForm_VerifiedSheetData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.ClassifySheetForm.HerbariumSheet":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassifySheetForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_11_ClassifySheetForm_HerbariumSheet;
-                xamlMember.Setter = set_11_ClassifySheetForm_HerbariumSheet;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.CollectorForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.CollectorForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_12_CollectorForm_TransactionForm;
-                xamlMember.Setter = set_12_CollectorForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.CollectorForm.CollectorData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.CollectorForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CollectorData", "projectHerbariumMgmtIS.Model.Collector");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_13_CollectorForm_CollectorData;
-                xamlMember.Setter = set_13_CollectorForm_CollectorData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm.ReceivedDepositData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ReceivedDepositData", "projectHerbariumMgmtIS.Model.PlantDeposit");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_14_ConfirmDepositForm_ReceivedDepositData;
-                xamlMember.Setter = set_14_ConfirmDepositForm_ReceivedDepositData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm.HerbariumSheet":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_15_ConfirmDepositForm_HerbariumSheet;
-                xamlMember.Setter = set_15_ConfirmDepositForm_HerbariumSheet;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.EditSheetForm.HerbariumSheetData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.EditSheetForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheetData", "projectHerbariumMgmtIS.Model.HerbariumSheet");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_EditSheetForm_HerbariumSheetData;
-                xamlMember.Setter = set_16_EditSheetForm_HerbariumSheetData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.EditSheetForm.HerbariumSheet":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.EditSheetForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "System.Collections.Generic.List`1<projectHerbariumMgmtIS.Model.HerbariumImage>");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_17_EditSheetForm_HerbariumSheet;
-                xamlMember.Setter = set_17_EditSheetForm_HerbariumSheet;
-                break;
-            case "projectHerbariumMgmtIS.Model.HerbariumImage.AccessionNumber":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Model.HerbariumImage");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AccessionNumber", "String");
-                xamlMember.Getter = get_18_HerbariumImage_AccessionNumber;
-                xamlMember.Setter = set_18_HerbariumImage_AccessionNumber;
-                break;
-            case "projectHerbariumMgmtIS.Model.HerbariumImage.HerbariumSheet":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Model.HerbariumImage");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
-                xamlMember.Getter = get_19_HerbariumImage_HerbariumSheet;
-                xamlMember.Setter = set_19_HerbariumImage_HerbariumSheet;
-                break;
-            case "projectHerbariumMgmtIS.Model.HerbariumImage.Tag":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Model.HerbariumImage");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Tag", "String");
-                xamlMember.Getter = get_20_HerbariumImage_Tag;
-                xamlMember.Setter = set_20_HerbariumImage_Tag;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.FamilyForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.FamilyForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_21_FamilyForm_TransactionForm;
-                xamlMember.Setter = set_21_FamilyForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.FamilyForm.FamilyData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.FamilyForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FamilyData", "projectHerbariumMgmtIS.Model.TaxonFamily");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_22_FamilyForm_FamilyData;
-                xamlMember.Setter = set_22_FamilyForm_FamilyData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.GenusForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.GenusForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_23_GenusForm_TransactionForm;
-                xamlMember.Setter = set_23_GenusForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.GenusForm.GenusData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.GenusForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "GenusData", "projectHerbariumMgmtIS.Model.TaxonGenus");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_24_GenusForm_GenusData;
-                xamlMember.Setter = set_24_GenusForm_GenusData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_25_HerbariumBoxForm_TransactionForm;
-                xamlMember.Setter = set_25_HerbariumBoxForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm.BoxData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "BoxData", "projectHerbariumMgmtIS.Model.HerbariumBox");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_26_HerbariumBoxForm_BoxData;
-                xamlMember.Setter = set_26_HerbariumBoxForm_BoxData;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.Mask":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Mask", "String");
-                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_27_TextBoxMask_Mask;
-                xamlMember.Setter = set_27_TextBoxMask_Mask;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.PlaceHolder":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PlaceHolder", "String");
-                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_28_TextBoxMask_PlaceHolder;
-                xamlMember.Setter = set_28_TextBoxMask_PlaceHolder;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.CustomMask":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CustomMask", "String");
-                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_29_TextBoxMask_CustomMask;
-                xamlMember.Setter = set_29_TextBoxMask_CustomMask;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.LocalityForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.LocalityForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_30_LocalityForm_TransactionForm;
-                xamlMember.Setter = set_30_LocalityForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.LocalityForm.LocalityData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.LocalityForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "LocalityData", "projectHerbariumMgmtIS.Model.PlantLocality");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_31_LocalityForm_LocalityData;
-                xamlMember.Setter = set_31_LocalityForm_LocalityData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.NomenclatureForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.NomenclatureForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_32_NomenclatureForm_TransactionForm;
-                xamlMember.Setter = set_32_NomenclatureForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.NomenclatureForm.NomenclatureData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.NomenclatureForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "NomenclatureData", "projectHerbariumMgmtIS.Model.SpeciesNomenclature");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_NomenclatureForm_NomenclatureData;
-                xamlMember.Setter = set_33_NomenclatureForm_NomenclatureData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.PhylumForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PhylumForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_PhylumForm_TransactionForm;
-                xamlMember.Setter = set_34_PhylumForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.PhylumForm.PhylumData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PhylumForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PhylumData", "projectHerbariumMgmtIS.Model.TaxonPhylum");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_PhylumForm_PhylumData;
-                xamlMember.Setter = set_35_PhylumForm_PhylumData;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.PlantTypeForm.TransactionForm":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PlantTypeForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_36_PlantTypeForm_TransactionForm;
-                xamlMember.Setter = set_36_PlantTypeForm_TransactionForm;
-                break;
-            case "projectHerbariumMgmtIS.Dialogs.PlantTypeForm.PlantTypeData":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PlantTypeForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PlantTypeData", "projectHerbariumMgmtIS.Model.PlantType");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_PlantTypeForm_PlantTypeData;
-                xamlMember.Setter = set_37_PlantTypeForm_PlantTypeData;
+                xamlMember.Getter = get_2_DataGrid_AutoGenerateColumns;
+                xamlMember.Setter = set_2_DataGrid_AutoGenerateColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CanUserSortColumns":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CanUserSortColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_38_DataGrid_CanUserSortColumns;
-                xamlMember.Setter = set_38_DataGrid_CanUserSortColumns;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AutoGenerateColumns":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AutoGenerateColumns", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_39_DataGrid_AutoGenerateColumns;
-                xamlMember.Setter = set_39_DataGrid_AutoGenerateColumns;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectionMode":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SelectionMode", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_40_DataGrid_SelectionMode;
-                xamlMember.Setter = set_40_DataGrid_SelectionMode;
+                xamlMember.Getter = get_3_DataGrid_CanUserSortColumns;
+                xamlMember.Setter = set_3_DataGrid_CanUserSortColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.Columns":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Columns", "System.Collections.ObjectModel.ObservableCollection`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>");
-                xamlMember.Getter = get_41_DataGrid_Columns;
+                xamlMember.Getter = get_4_DataGrid_Columns;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.ActualWidth":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ActualWidth", "Double");
-                xamlMember.Getter = get_42_DataGridColumn_ActualWidth;
+                xamlMember.Getter = get_5_DataGridColumn_ActualWidth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.CanUserReorder":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CanUserReorder", "Boolean");
-                xamlMember.Getter = get_43_DataGridColumn_CanUserReorder;
-                xamlMember.Setter = set_43_DataGridColumn_CanUserReorder;
+                xamlMember.Getter = get_6_DataGridColumn_CanUserReorder;
+                xamlMember.Setter = set_6_DataGridColumn_CanUserReorder;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.CanUserResize":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CanUserResize", "Boolean");
-                xamlMember.Getter = get_44_DataGridColumn_CanUserResize;
-                xamlMember.Setter = set_44_DataGridColumn_CanUserResize;
+                xamlMember.Getter = get_7_DataGridColumn_CanUserResize;
+                xamlMember.Setter = set_7_DataGridColumn_CanUserResize;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.CanUserSort":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CanUserSort", "Boolean");
-                xamlMember.Getter = get_45_DataGridColumn_CanUserSort;
-                xamlMember.Setter = set_45_DataGridColumn_CanUserSort;
+                xamlMember.Getter = get_8_DataGridColumn_CanUserSort;
+                xamlMember.Setter = set_8_DataGridColumn_CanUserSort;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.CellStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CellStyle", "Windows.UI.Xaml.Style");
-                xamlMember.Getter = get_46_DataGridColumn_CellStyle;
-                xamlMember.Setter = set_46_DataGridColumn_CellStyle;
+                xamlMember.Getter = get_9_DataGridColumn_CellStyle;
+                xamlMember.Setter = set_9_DataGridColumn_CellStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.ClipboardContentBinding":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ClipboardContentBinding", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_47_DataGridColumn_ClipboardContentBinding;
-                xamlMember.Setter = set_47_DataGridColumn_ClipboardContentBinding;
+                xamlMember.Getter = get_10_DataGridColumn_ClipboardContentBinding;
+                xamlMember.Setter = set_10_DataGridColumn_ClipboardContentBinding;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.DisplayIndex":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "DisplayIndex", "Int32");
-                xamlMember.Getter = get_48_DataGridColumn_DisplayIndex;
-                xamlMember.Setter = set_48_DataGridColumn_DisplayIndex;
+                xamlMember.Getter = get_11_DataGridColumn_DisplayIndex;
+                xamlMember.Setter = set_11_DataGridColumn_DisplayIndex;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.DragIndicatorStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "DragIndicatorStyle", "Windows.UI.Xaml.Style");
-                xamlMember.Getter = get_49_DataGridColumn_DragIndicatorStyle;
-                xamlMember.Setter = set_49_DataGridColumn_DragIndicatorStyle;
+                xamlMember.Getter = get_12_DataGridColumn_DragIndicatorStyle;
+                xamlMember.Setter = set_12_DataGridColumn_DragIndicatorStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.HeaderStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HeaderStyle", "Windows.UI.Xaml.Style");
-                xamlMember.Getter = get_50_DataGridColumn_HeaderStyle;
-                xamlMember.Setter = set_50_DataGridColumn_HeaderStyle;
+                xamlMember.Getter = get_13_DataGridColumn_HeaderStyle;
+                xamlMember.Setter = set_13_DataGridColumn_HeaderStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.Header":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Header", "Object");
-                xamlMember.Getter = get_51_DataGridColumn_Header;
-                xamlMember.Setter = set_51_DataGridColumn_Header;
+                xamlMember.Getter = get_14_DataGridColumn_Header;
+                xamlMember.Setter = set_14_DataGridColumn_Header;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.IsAutoGenerated":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsAutoGenerated", "Boolean");
-                xamlMember.Getter = get_52_DataGridColumn_IsAutoGenerated;
+                xamlMember.Getter = get_15_DataGridColumn_IsAutoGenerated;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.IsFrozen":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsFrozen", "Boolean");
-                xamlMember.Getter = get_53_DataGridColumn_IsFrozen;
+                xamlMember.Getter = get_16_DataGridColumn_IsFrozen;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.IsReadOnly":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsReadOnly", "Boolean");
-                xamlMember.Getter = get_54_DataGridColumn_IsReadOnly;
-                xamlMember.Setter = set_54_DataGridColumn_IsReadOnly;
+                xamlMember.Getter = get_17_DataGridColumn_IsReadOnly;
+                xamlMember.Setter = set_17_DataGridColumn_IsReadOnly;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.MaxWidth":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "MaxWidth", "Double");
-                xamlMember.Getter = get_55_DataGridColumn_MaxWidth;
-                xamlMember.Setter = set_55_DataGridColumn_MaxWidth;
+                xamlMember.Getter = get_18_DataGridColumn_MaxWidth;
+                xamlMember.Setter = set_18_DataGridColumn_MaxWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.MinWidth":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "MinWidth", "Double");
-                xamlMember.Getter = get_56_DataGridColumn_MinWidth;
-                xamlMember.Setter = set_56_DataGridColumn_MinWidth;
+                xamlMember.Getter = get_19_DataGridColumn_MinWidth;
+                xamlMember.Setter = set_19_DataGridColumn_MinWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.SortDirection":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SortDirection", "System.Nullable`1<Microsoft.Toolkit.Uwp.UI.Controls.DataGridSortDirection>");
-                xamlMember.Getter = get_57_DataGridColumn_SortDirection;
-                xamlMember.Setter = set_57_DataGridColumn_SortDirection;
+                xamlMember.Getter = get_20_DataGridColumn_SortDirection;
+                xamlMember.Setter = set_20_DataGridColumn_SortDirection;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.Tag":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Tag", "Object");
-                xamlMember.Getter = get_58_DataGridColumn_Tag;
-                xamlMember.Setter = set_58_DataGridColumn_Tag;
+                xamlMember.Getter = get_21_DataGridColumn_Tag;
+                xamlMember.Setter = set_21_DataGridColumn_Tag;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.Visibility":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Visibility", "Windows.UI.Xaml.Visibility");
-                xamlMember.Getter = get_59_DataGridColumn_Visibility;
-                xamlMember.Setter = set_59_DataGridColumn_Visibility;
+                xamlMember.Getter = get_22_DataGridColumn_Visibility;
+                xamlMember.Setter = set_22_DataGridColumn_Visibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn.Width":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Width", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength");
-                xamlMember.Getter = get_60_DataGridColumn_Width;
-                xamlMember.Setter = set_60_DataGridColumn_Width;
+                xamlMember.Getter = get_23_DataGridColumn_Width;
+                xamlMember.Setter = set_23_DataGridColumn_Width;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AlternatingRowBackground":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AlternatingRowBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_DataGrid_AlternatingRowBackground;
-                xamlMember.Setter = set_61_DataGrid_AlternatingRowBackground;
+                xamlMember.Getter = get_24_DataGrid_AlternatingRowBackground;
+                xamlMember.Setter = set_24_DataGrid_AlternatingRowBackground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AlternatingRowForeground":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AlternatingRowForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_DataGrid_AlternatingRowForeground;
-                xamlMember.Setter = set_62_DataGrid_AlternatingRowForeground;
+                xamlMember.Getter = get_25_DataGrid_AlternatingRowForeground;
+                xamlMember.Setter = set_25_DataGrid_AlternatingRowForeground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AreRowDetailsFrozen":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AreRowDetailsFrozen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_DataGrid_AreRowDetailsFrozen;
-                xamlMember.Setter = set_63_DataGrid_AreRowDetailsFrozen;
+                xamlMember.Getter = get_26_DataGrid_AreRowDetailsFrozen;
+                xamlMember.Setter = set_26_DataGrid_AreRowDetailsFrozen;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AreRowGroupHeadersFrozen":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AreRowGroupHeadersFrozen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_DataGrid_AreRowGroupHeadersFrozen;
-                xamlMember.Setter = set_64_DataGrid_AreRowGroupHeadersFrozen;
+                xamlMember.Getter = get_27_DataGrid_AreRowGroupHeadersFrozen;
+                xamlMember.Setter = set_27_DataGrid_AreRowGroupHeadersFrozen;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CanUserReorderColumns":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CanUserReorderColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_DataGrid_CanUserReorderColumns;
-                xamlMember.Setter = set_65_DataGrid_CanUserReorderColumns;
+                xamlMember.Getter = get_28_DataGrid_CanUserReorderColumns;
+                xamlMember.Setter = set_28_DataGrid_CanUserReorderColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CanUserResizeColumns":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CanUserResizeColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_DataGrid_CanUserResizeColumns;
-                xamlMember.Setter = set_66_DataGrid_CanUserResizeColumns;
+                xamlMember.Getter = get_29_DataGrid_CanUserResizeColumns;
+                xamlMember.Setter = set_29_DataGrid_CanUserResizeColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CellStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CellStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_DataGrid_CellStyle;
-                xamlMember.Setter = set_67_DataGrid_CellStyle;
+                xamlMember.Getter = get_30_DataGrid_CellStyle;
+                xamlMember.Setter = set_30_DataGrid_CellStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ClipboardCopyMode":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ClipboardCopyMode", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_DataGrid_ClipboardCopyMode;
-                xamlMember.Setter = set_68_DataGrid_ClipboardCopyMode;
+                xamlMember.Getter = get_31_DataGrid_ClipboardCopyMode;
+                xamlMember.Setter = set_31_DataGrid_ClipboardCopyMode;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ColumnHeaderHeight":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ColumnHeaderHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_69_DataGrid_ColumnHeaderHeight;
-                xamlMember.Setter = set_69_DataGrid_ColumnHeaderHeight;
+                xamlMember.Getter = get_32_DataGrid_ColumnHeaderHeight;
+                xamlMember.Setter = set_32_DataGrid_ColumnHeaderHeight;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ColumnHeaderStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ColumnHeaderStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_DataGrid_ColumnHeaderStyle;
-                xamlMember.Setter = set_70_DataGrid_ColumnHeaderStyle;
+                xamlMember.Getter = get_33_DataGrid_ColumnHeaderStyle;
+                xamlMember.Setter = set_33_DataGrid_ColumnHeaderStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ColumnWidth":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ColumnWidth", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_71_DataGrid_ColumnWidth;
-                xamlMember.Setter = set_71_DataGrid_ColumnWidth;
+                xamlMember.Getter = get_34_DataGrid_ColumnWidth;
+                xamlMember.Setter = set_34_DataGrid_ColumnWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.DragIndicatorStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "DragIndicatorStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_DataGrid_DragIndicatorStyle;
-                xamlMember.Setter = set_72_DataGrid_DragIndicatorStyle;
+                xamlMember.Getter = get_35_DataGrid_DragIndicatorStyle;
+                xamlMember.Setter = set_35_DataGrid_DragIndicatorStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.DropLocationIndicatorStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "DropLocationIndicatorStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_DataGrid_DropLocationIndicatorStyle;
-                xamlMember.Setter = set_73_DataGrid_DropLocationIndicatorStyle;
+                xamlMember.Getter = get_36_DataGrid_DropLocationIndicatorStyle;
+                xamlMember.Setter = set_36_DataGrid_DropLocationIndicatorStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.FrozenColumnCount":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FrozenColumnCount", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_DataGrid_FrozenColumnCount;
-                xamlMember.Setter = set_74_DataGrid_FrozenColumnCount;
+                xamlMember.Getter = get_37_DataGrid_FrozenColumnCount;
+                xamlMember.Setter = set_37_DataGrid_FrozenColumnCount;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.GridLinesVisibility":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "GridLinesVisibility", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_75_DataGrid_GridLinesVisibility;
-                xamlMember.Setter = set_75_DataGrid_GridLinesVisibility;
+                xamlMember.Getter = get_38_DataGrid_GridLinesVisibility;
+                xamlMember.Setter = set_38_DataGrid_GridLinesVisibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.HeadersVisibility":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HeadersVisibility", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_76_DataGrid_HeadersVisibility;
-                xamlMember.Setter = set_76_DataGrid_HeadersVisibility;
+                xamlMember.Getter = get_39_DataGrid_HeadersVisibility;
+                xamlMember.Setter = set_39_DataGrid_HeadersVisibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.HorizontalGridLinesBrush":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HorizontalGridLinesBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_DataGrid_HorizontalGridLinesBrush;
-                xamlMember.Setter = set_77_DataGrid_HorizontalGridLinesBrush;
+                xamlMember.Getter = get_40_DataGrid_HorizontalGridLinesBrush;
+                xamlMember.Setter = set_40_DataGrid_HorizontalGridLinesBrush;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.HorizontalScrollBarVisibility":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HorizontalScrollBarVisibility", "Windows.UI.Xaml.Controls.ScrollBarVisibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_78_DataGrid_HorizontalScrollBarVisibility;
-                xamlMember.Setter = set_78_DataGrid_HorizontalScrollBarVisibility;
+                xamlMember.Getter = get_41_DataGrid_HorizontalScrollBarVisibility;
+                xamlMember.Setter = set_41_DataGrid_HorizontalScrollBarVisibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.IsReadOnly":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsReadOnly", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_79_DataGrid_IsReadOnly;
-                xamlMember.Setter = set_79_DataGrid_IsReadOnly;
+                xamlMember.Getter = get_42_DataGrid_IsReadOnly;
+                xamlMember.Setter = set_42_DataGrid_IsReadOnly;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.IsValid":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsValid", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_80_DataGrid_IsValid;
+                xamlMember.Getter = get_43_DataGrid_IsValid;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ItemsSource":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ItemsSource", "System.Collections.IEnumerable");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_81_DataGrid_ItemsSource;
-                xamlMember.Setter = set_81_DataGrid_ItemsSource;
+                xamlMember.Getter = get_44_DataGrid_ItemsSource;
+                xamlMember.Setter = set_44_DataGrid_ItemsSource;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.MaxColumnWidth":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "MaxColumnWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_82_DataGrid_MaxColumnWidth;
-                xamlMember.Setter = set_82_DataGrid_MaxColumnWidth;
+                xamlMember.Getter = get_45_DataGrid_MaxColumnWidth;
+                xamlMember.Setter = set_45_DataGrid_MaxColumnWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.MinColumnWidth":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "MinColumnWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_83_DataGrid_MinColumnWidth;
-                xamlMember.Setter = set_83_DataGrid_MinColumnWidth;
+                xamlMember.Getter = get_46_DataGrid_MinColumnWidth;
+                xamlMember.Setter = set_46_DataGrid_MinColumnWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowBackground":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_84_DataGrid_RowBackground;
-                xamlMember.Setter = set_84_DataGrid_RowBackground;
+                xamlMember.Getter = get_47_DataGrid_RowBackground;
+                xamlMember.Setter = set_47_DataGrid_RowBackground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowDetailsTemplate":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowDetailsTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_85_DataGrid_RowDetailsTemplate;
-                xamlMember.Setter = set_85_DataGrid_RowDetailsTemplate;
+                xamlMember.Getter = get_48_DataGrid_RowDetailsTemplate;
+                xamlMember.Setter = set_48_DataGrid_RowDetailsTemplate;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowDetailsVisibilityMode":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowDetailsVisibilityMode", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_86_DataGrid_RowDetailsVisibilityMode;
-                xamlMember.Setter = set_86_DataGrid_RowDetailsVisibilityMode;
+                xamlMember.Getter = get_49_DataGrid_RowDetailsVisibilityMode;
+                xamlMember.Setter = set_49_DataGrid_RowDetailsVisibilityMode;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowForeground":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_87_DataGrid_RowForeground;
-                xamlMember.Setter = set_87_DataGrid_RowForeground;
+                xamlMember.Getter = get_50_DataGrid_RowForeground;
+                xamlMember.Setter = set_50_DataGrid_RowForeground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowHeight":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_88_DataGrid_RowHeight;
-                xamlMember.Setter = set_88_DataGrid_RowHeight;
+                xamlMember.Getter = get_51_DataGrid_RowHeight;
+                xamlMember.Setter = set_51_DataGrid_RowHeight;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowHeaderWidth":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowHeaderWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_89_DataGrid_RowHeaderWidth;
-                xamlMember.Setter = set_89_DataGrid_RowHeaderWidth;
+                xamlMember.Getter = get_52_DataGrid_RowHeaderWidth;
+                xamlMember.Setter = set_52_DataGrid_RowHeaderWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowHeaderStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowHeaderStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_90_DataGrid_RowHeaderStyle;
-                xamlMember.Setter = set_90_DataGrid_RowHeaderStyle;
+                xamlMember.Getter = get_53_DataGrid_RowHeaderStyle;
+                xamlMember.Setter = set_53_DataGrid_RowHeaderStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_91_DataGrid_RowStyle;
-                xamlMember.Setter = set_91_DataGrid_RowStyle;
+                xamlMember.Getter = get_54_DataGrid_RowStyle;
+                xamlMember.Setter = set_54_DataGrid_RowStyle;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectionMode":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SelectionMode", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_55_DataGrid_SelectionMode;
+                xamlMember.Setter = set_55_DataGrid_SelectionMode;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectedIndex":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SelectedIndex", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_92_DataGrid_SelectedIndex;
-                xamlMember.Setter = set_92_DataGrid_SelectedIndex;
+                xamlMember.Getter = get_56_DataGrid_SelectedIndex;
+                xamlMember.Setter = set_56_DataGrid_SelectedIndex;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectedItem":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_93_DataGrid_SelectedItem;
-                xamlMember.Setter = set_93_DataGrid_SelectedItem;
+                xamlMember.Getter = get_57_DataGrid_SelectedItem;
+                xamlMember.Setter = set_57_DataGrid_SelectedItem;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.VerticalGridLinesBrush":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "VerticalGridLinesBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_94_DataGrid_VerticalGridLinesBrush;
-                xamlMember.Setter = set_94_DataGrid_VerticalGridLinesBrush;
+                xamlMember.Getter = get_58_DataGrid_VerticalGridLinesBrush;
+                xamlMember.Setter = set_58_DataGrid_VerticalGridLinesBrush;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.VerticalScrollBarVisibility":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "VerticalScrollBarVisibility", "Windows.UI.Xaml.Controls.ScrollBarVisibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_95_DataGrid_VerticalScrollBarVisibility;
-                xamlMember.Setter = set_95_DataGrid_VerticalScrollBarVisibility;
+                xamlMember.Getter = get_59_DataGrid_VerticalScrollBarVisibility;
+                xamlMember.Setter = set_59_DataGrid_VerticalScrollBarVisibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CurrentColumn":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CurrentColumn", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn");
-                xamlMember.Getter = get_96_DataGrid_CurrentColumn;
-                xamlMember.Setter = set_96_DataGrid_CurrentColumn;
+                xamlMember.Getter = get_60_DataGrid_CurrentColumn;
+                xamlMember.Setter = set_60_DataGrid_CurrentColumn;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowGroupHeaderPropertyNameAlternative":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowGroupHeaderPropertyNameAlternative", "String");
-                xamlMember.Getter = get_97_DataGrid_RowGroupHeaderPropertyNameAlternative;
-                xamlMember.Setter = set_97_DataGrid_RowGroupHeaderPropertyNameAlternative;
+                xamlMember.Getter = get_61_DataGrid_RowGroupHeaderPropertyNameAlternative;
+                xamlMember.Setter = set_61_DataGrid_RowGroupHeaderPropertyNameAlternative;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowGroupHeaderStyles":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RowGroupHeaderStyles", "System.Collections.ObjectModel.ObservableCollection`1<Windows.UI.Xaml.Style>");
-                xamlMember.Getter = get_98_DataGrid_RowGroupHeaderStyles;
+                xamlMember.Getter = get_62_DataGrid_RowGroupHeaderStyles;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectedItems":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SelectedItems", "System.Collections.IList");
-                xamlMember.Getter = get_99_DataGrid_SelectedItems;
+                xamlMember.Getter = get_63_DataGrid_SelectedItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn.Binding":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Binding", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_100_DataGridBoundColumn_Binding;
-                xamlMember.Setter = set_100_DataGridBoundColumn_Binding;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn.IsThreeState":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsThreeState", "Boolean");
-                xamlMember.Getter = get_101_DataGridCheckBoxColumn_IsThreeState;
-                xamlMember.Setter = set_101_DataGridCheckBoxColumn_IsThreeState;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn.ClipboardContentBinding":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ClipboardContentBinding", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_102_DataGridBoundColumn_ClipboardContentBinding;
-                xamlMember.Setter = set_102_DataGridBoundColumn_ClipboardContentBinding;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn.EditingElementStyle":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "EditingElementStyle", "Windows.UI.Xaml.Style");
-                xamlMember.Getter = get_103_DataGridBoundColumn_EditingElementStyle;
-                xamlMember.Setter = set_103_DataGridBoundColumn_EditingElementStyle;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn.ElementStyle":
-                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ElementStyle", "Windows.UI.Xaml.Style");
-                xamlMember.Getter = get_104_DataGridBoundColumn_ElementStyle;
-                xamlMember.Setter = set_104_DataGridBoundColumn_ElementStyle;
+                xamlMember.Getter = get_64_DataGridBoundColumn_Binding;
+                xamlMember.Setter = set_64_DataGridBoundColumn_Binding;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn.FontFamily":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FontFamily", "Windows.UI.Xaml.Media.FontFamily");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_105_DataGridTextColumn_FontFamily;
-                xamlMember.Setter = set_105_DataGridTextColumn_FontFamily;
+                xamlMember.Getter = get_65_DataGridTextColumn_FontFamily;
+                xamlMember.Setter = set_65_DataGridTextColumn_FontFamily;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn.FontSize":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
-                xamlMember.Getter = get_106_DataGridTextColumn_FontSize;
-                xamlMember.Setter = set_106_DataGridTextColumn_FontSize;
+                xamlMember.Getter = get_66_DataGridTextColumn_FontSize;
+                xamlMember.Setter = set_66_DataGridTextColumn_FontSize;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn.FontStyle":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
-                xamlMember.Getter = get_107_DataGridTextColumn_FontStyle;
-                xamlMember.Setter = set_107_DataGridTextColumn_FontStyle;
+                xamlMember.Getter = get_67_DataGridTextColumn_FontStyle;
+                xamlMember.Setter = set_67_DataGridTextColumn_FontStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn.FontWeight":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
-                xamlMember.Getter = get_108_DataGridTextColumn_FontWeight;
-                xamlMember.Setter = set_108_DataGridTextColumn_FontWeight;
+                xamlMember.Getter = get_68_DataGridTextColumn_FontWeight;
+                xamlMember.Setter = set_68_DataGridTextColumn_FontWeight;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn.Foreground":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Foreground", "Windows.UI.Xaml.Media.Brush");
-                xamlMember.Getter = get_109_DataGridTextColumn_Foreground;
-                xamlMember.Setter = set_109_DataGridTextColumn_Foreground;
+                xamlMember.Getter = get_69_DataGridTextColumn_Foreground;
+                xamlMember.Setter = set_69_DataGridTextColumn_Foreground;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn.ClipboardContentBinding":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ClipboardContentBinding", "Windows.UI.Xaml.Data.Binding");
+                xamlMember.Getter = get_70_DataGridBoundColumn_ClipboardContentBinding;
+                xamlMember.Setter = set_70_DataGridBoundColumn_ClipboardContentBinding;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn.EditingElementStyle":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "EditingElementStyle", "Windows.UI.Xaml.Style");
+                xamlMember.Getter = get_71_DataGridBoundColumn_EditingElementStyle;
+                xamlMember.Setter = set_71_DataGridBoundColumn_EditingElementStyle;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn.ElementStyle":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridBoundColumn");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ElementStyle", "Windows.UI.Xaml.Style");
+                xamlMember.Getter = get_72_DataGridBoundColumn_ElementStyle;
+                xamlMember.Setter = set_72_DataGridBoundColumn_ElementStyle;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ApproveLoanForm.PlantLoanData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ApproveLoanForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PlantLoanData", "projectHerbariumMgmtIS.Model.PlantLoan");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_73_ApproveLoanForm_PlantLoanData;
+                xamlMember.Setter = set_73_ApproveLoanForm_PlantLoanData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.BorrowerForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.BorrowerForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_74_BorrowerForm_TransactionForm;
+                xamlMember.Setter = set_74_BorrowerForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.BorrowerForm.BorrowerData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.BorrowerForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "BorrowerData", "projectHerbariumMgmtIS.Model.Borrower");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_75_BorrowerForm_BorrowerData;
+                xamlMember.Setter = set_75_BorrowerForm_BorrowerData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ClassForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_76_ClassForm_TransactionForm;
+                xamlMember.Setter = set_76_ClassForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ClassForm.ClassData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ClassData", "projectHerbariumMgmtIS.Model.TaxonClass");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_77_ClassForm_ClassData;
+                xamlMember.Setter = set_77_ClassForm_ClassData;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.HorizontalSpacing":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HorizontalSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_78_WrapPanel_HorizontalSpacing;
+                xamlMember.Setter = set_78_WrapPanel_HorizontalSpacing;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.VerticalSpacing":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "VerticalSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_79_WrapPanel_VerticalSpacing;
+                xamlMember.Setter = set_79_WrapPanel_VerticalSpacing;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.Orientation":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Orientation", "Windows.UI.Xaml.Controls.Orientation");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_80_WrapPanel_Orientation;
+                xamlMember.Setter = set_80_WrapPanel_Orientation;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel.Padding":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.WrapPanel");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Padding", "Windows.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_81_WrapPanel_Padding;
+                xamlMember.Setter = set_81_WrapPanel_Padding;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ClassifySheetForm.VerifiedSheetData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassifySheetForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "VerifiedSheetData", "projectHerbariumMgmtIS.Model.HerbariumSheet");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_82_ClassifySheetForm_VerifiedSheetData;
+                xamlMember.Setter = set_82_ClassifySheetForm_VerifiedSheetData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ClassifySheetForm.HerbariumSheet":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ClassifySheetForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_83_ClassifySheetForm_HerbariumSheet;
+                xamlMember.Setter = set_83_ClassifySheetForm_HerbariumSheet;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.CollectorForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.CollectorForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_84_CollectorForm_TransactionForm;
+                xamlMember.Setter = set_84_CollectorForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.CollectorForm.CollectorData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.CollectorForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CollectorData", "projectHerbariumMgmtIS.Model.Collector");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_85_CollectorForm_CollectorData;
+                xamlMember.Setter = set_85_CollectorForm_CollectorData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm.ReceivedDepositData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ReceivedDepositData", "projectHerbariumMgmtIS.Model.PlantDeposit");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_86_ConfirmDepositForm_ReceivedDepositData;
+                xamlMember.Setter = set_86_ConfirmDepositForm_ReceivedDepositData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm.HerbariumSheet":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ConfirmDepositForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_87_ConfirmDepositForm_HerbariumSheet;
+                xamlMember.Setter = set_87_ConfirmDepositForm_HerbariumSheet;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.EditSheetForm.HerbariumSheetData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.EditSheetForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheetData", "projectHerbariumMgmtIS.Model.HerbariumSheet");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_88_EditSheetForm_HerbariumSheetData;
+                xamlMember.Setter = set_88_EditSheetForm_HerbariumSheetData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.EditSheetForm.HerbariumSheet":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.EditSheetForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "System.Collections.Generic.List`1<projectHerbariumMgmtIS.Model.HerbariumImage>");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_89_EditSheetForm_HerbariumSheet;
+                xamlMember.Setter = set_89_EditSheetForm_HerbariumSheet;
+                break;
+            case "projectHerbariumMgmtIS.Model.HerbariumImage.AccessionNumber":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Model.HerbariumImage");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AccessionNumber", "String");
+                xamlMember.Getter = get_90_HerbariumImage_AccessionNumber;
+                xamlMember.Setter = set_90_HerbariumImage_AccessionNumber;
+                break;
+            case "projectHerbariumMgmtIS.Model.HerbariumImage.HerbariumSheet":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Model.HerbariumImage");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
+                xamlMember.Getter = get_91_HerbariumImage_HerbariumSheet;
+                xamlMember.Setter = set_91_HerbariumImage_HerbariumSheet;
+                break;
+            case "projectHerbariumMgmtIS.Model.HerbariumImage.Tag":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Model.HerbariumImage");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Tag", "String");
+                xamlMember.Getter = get_92_HerbariumImage_Tag;
+                xamlMember.Setter = set_92_HerbariumImage_Tag;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.FamilyForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.FamilyForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_93_FamilyForm_TransactionForm;
+                xamlMember.Setter = set_93_FamilyForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.FamilyForm.FamilyData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.FamilyForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FamilyData", "projectHerbariumMgmtIS.Model.TaxonFamily");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_94_FamilyForm_FamilyData;
+                xamlMember.Setter = set_94_FamilyForm_FamilyData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.GenusForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.GenusForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_95_GenusForm_TransactionForm;
+                xamlMember.Setter = set_95_GenusForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.GenusForm.GenusData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.GenusForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "GenusData", "projectHerbariumMgmtIS.Model.TaxonGenus");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_96_GenusForm_GenusData;
+                xamlMember.Setter = set_96_GenusForm_GenusData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_97_HerbariumBoxForm_TransactionForm;
+                xamlMember.Setter = set_97_HerbariumBoxForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm.BoxData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.HerbariumBoxForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "BoxData", "projectHerbariumMgmtIS.Model.HerbariumBox");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_98_HerbariumBoxForm_BoxData;
+                xamlMember.Setter = set_98_HerbariumBoxForm_BoxData;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.Mask":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Mask", "String");
+                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_99_TextBoxMask_Mask;
+                xamlMember.Setter = set_99_TextBoxMask_Mask;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.PlaceHolder":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PlaceHolder", "String");
+                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_100_TextBoxMask_PlaceHolder;
+                xamlMember.Setter = set_100_TextBoxMask_PlaceHolder;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask.CustomMask":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxMask");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CustomMask", "String");
+                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_101_TextBoxMask_CustomMask;
+                xamlMember.Setter = set_101_TextBoxMask_CustomMask;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.LocalityForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.LocalityForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_102_LocalityForm_TransactionForm;
+                xamlMember.Setter = set_102_LocalityForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.LocalityForm.LocalityData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.LocalityForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "LocalityData", "projectHerbariumMgmtIS.Model.PlantLocality");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_103_LocalityForm_LocalityData;
+                xamlMember.Setter = set_103_LocalityForm_LocalityData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.NomenclatureForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.NomenclatureForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_104_NomenclatureForm_TransactionForm;
+                xamlMember.Setter = set_104_NomenclatureForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.NomenclatureForm.NomenclatureData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.NomenclatureForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "NomenclatureData", "projectHerbariumMgmtIS.Model.SpeciesNomenclature");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_105_NomenclatureForm_NomenclatureData;
+                xamlMember.Setter = set_105_NomenclatureForm_NomenclatureData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.PhylumForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PhylumForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_106_PhylumForm_TransactionForm;
+                xamlMember.Setter = set_106_PhylumForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.PhylumForm.PhylumData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PhylumForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PhylumData", "projectHerbariumMgmtIS.Model.TaxonPhylum");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_107_PhylumForm_PhylumData;
+                xamlMember.Setter = set_107_PhylumForm_PhylumData;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.PlantTypeForm.TransactionForm":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PlantTypeForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_108_PlantTypeForm_TransactionForm;
+                xamlMember.Setter = set_108_PlantTypeForm_TransactionForm;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.PlantTypeForm.PlantTypeData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.PlantTypeForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PlantTypeData", "projectHerbariumMgmtIS.Model.PlantType");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_109_PlantTypeForm_PlantTypeData;
+                xamlMember.Setter = set_109_PlantTypeForm_PlantTypeData;
+                break;
+            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn.IsThreeState":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsThreeState", "Boolean");
+                xamlMember.Getter = get_110_DataGridCheckBoxColumn_IsThreeState;
+                xamlMember.Setter = set_110_DataGridCheckBoxColumn_IsThreeState;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn.CellTemplate":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CellTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_110_DataGridTemplateColumn_CellTemplate;
-                xamlMember.Setter = set_110_DataGridTemplateColumn_CellTemplate;
+                xamlMember.Getter = get_111_DataGridTemplateColumn_CellTemplate;
+                xamlMember.Setter = set_111_DataGridTemplateColumn_CellTemplate;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn.CellEditingTemplate":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "CellEditingTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_111_DataGridTemplateColumn_CellEditingTemplate;
-                xamlMember.Setter = set_111_DataGridTemplateColumn_CellEditingTemplate;
+                xamlMember.Getter = get_112_DataGridTemplateColumn_CellEditingTemplate;
+                xamlMember.Setter = set_112_DataGridTemplateColumn_CellEditingTemplate;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ValidationType", "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationType");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.Controls.TextBox");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_112_TextBoxRegex_ValidationType;
-                xamlMember.Setter = set_112_TextBoxRegex_ValidationType;
+                xamlMember.Getter = get_113_TextBoxRegex_ValidationType;
+                xamlMember.Setter = set_113_TextBoxRegex_ValidationType;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ValidationMode", "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.ValidationMode");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.Controls.TextBox");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_113_TextBoxRegex_ValidationMode;
-                xamlMember.Setter = set_113_TextBoxRegex_ValidationMode;
+                xamlMember.Getter = get_114_TextBoxRegex_ValidationMode;
+                xamlMember.Setter = set_114_TextBoxRegex_ValidationMode;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.Regex":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Regex", "String");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.Controls.TextBox");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_114_TextBoxRegex_Regex;
-                xamlMember.Setter = set_114_TextBoxRegex_Regex;
+                xamlMember.Getter = get_115_TextBoxRegex_Regex;
+                xamlMember.Setter = set_115_TextBoxRegex_Regex;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex.IsValid":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.TextBoxRegex");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsValid", "Boolean");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.Controls.TextBox");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_115_TextBoxRegex_IsValid;
-                xamlMember.Setter = set_115_TextBoxRegex_IsValid;
+                xamlMember.Getter = get_116_TextBoxRegex_IsValid;
+                xamlMember.Setter = set_116_TextBoxRegex_IsValid;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm.RejectedDepositData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "RejectedDepositData", "projectHerbariumMgmtIS.Model.PlantDeposit");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_116_ResubmitDepositForm_RejectedDepositData;
-                xamlMember.Setter = set_116_ResubmitDepositForm_RejectedDepositData;
+                xamlMember.Getter = get_117_ResubmitDepositForm_RejectedDepositData;
+                xamlMember.Setter = set_117_ResubmitDepositForm_RejectedDepositData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm.HerbariumSheet":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_117_ResubmitDepositForm_HerbariumSheet;
-                xamlMember.Setter = set_117_ResubmitDepositForm_HerbariumSheet;
+                xamlMember.Getter = get_118_ResubmitDepositForm_HerbariumSheet;
+                xamlMember.Setter = set_118_ResubmitDepositForm_HerbariumSheet;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm.TransactionForm":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_118_SpeciesAuthorForm_TransactionForm;
-                xamlMember.Setter = set_118_SpeciesAuthorForm_TransactionForm;
+                xamlMember.Getter = get_119_SpeciesAuthorForm_TransactionForm;
+                xamlMember.Setter = set_119_SpeciesAuthorForm_TransactionForm;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm.AuthorData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AuthorData", "projectHerbariumMgmtIS.Model.SpeciesAuthor");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_119_SpeciesAuthorForm_AuthorData;
-                xamlMember.Setter = set_119_SpeciesAuthorForm_AuthorData;
+                xamlMember.Getter = get_120_SpeciesAuthorForm_AuthorData;
+                xamlMember.Setter = set_120_SpeciesAuthorForm_AuthorData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.SpeciesForm.TransactionForm":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.SpeciesForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_120_SpeciesForm_TransactionForm;
-                xamlMember.Setter = set_120_SpeciesForm_TransactionForm;
+                xamlMember.Getter = get_121_SpeciesForm_TransactionForm;
+                xamlMember.Setter = set_121_SpeciesForm_TransactionForm;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.SpeciesForm.SpeciesData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.SpeciesForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SpeciesData", "projectHerbariumMgmtIS.Model.TaxonSpecies");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_121_SpeciesForm_SpeciesData;
-                xamlMember.Setter = set_121_SpeciesForm_SpeciesData;
+                xamlMember.Getter = get_122_SpeciesForm_SpeciesData;
+                xamlMember.Setter = set_122_SpeciesForm_SpeciesData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.StaffForm.TransactionForm":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.StaffForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_122_StaffForm_TransactionForm;
-                xamlMember.Setter = set_122_StaffForm_TransactionForm;
+                xamlMember.Getter = get_123_StaffForm_TransactionForm;
+                xamlMember.Setter = set_123_StaffForm_TransactionForm;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.StaffForm.StaffData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.StaffForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "StaffData", "projectHerbariumMgmtIS.Model.Staff");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_123_StaffForm_StaffData;
-                xamlMember.Setter = set_123_StaffForm_StaffData;
+                xamlMember.Getter = get_124_StaffForm_StaffData;
+                xamlMember.Setter = set_124_StaffForm_StaffData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.ValidatorForm.TransactionForm":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ValidatorForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_124_ValidatorForm_TransactionForm;
-                xamlMember.Setter = set_124_ValidatorForm_TransactionForm;
+                xamlMember.Getter = get_125_ValidatorForm_TransactionForm;
+                xamlMember.Setter = set_125_ValidatorForm_TransactionForm;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.ValidatorForm.ValidatorData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ValidatorForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ValidatorData", "projectHerbariumMgmtIS.Model.Validator");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_125_ValidatorForm_ValidatorData;
-                xamlMember.Setter = set_125_ValidatorForm_ValidatorData;
+                xamlMember.Getter = get_126_ValidatorForm_ValidatorData;
+                xamlMember.Setter = set_126_ValidatorForm_ValidatorData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.VerifyDepositForm.VerifyingDepositData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.VerifyDepositForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "VerifyingDepositData", "projectHerbariumMgmtIS.Model.PlantDeposit");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_126_VerifyDepositForm_VerifyingDepositData;
-                xamlMember.Setter = set_126_VerifyDepositForm_VerifyingDepositData;
+                xamlMember.Getter = get_127_VerifyDepositForm_VerifyingDepositData;
+                xamlMember.Setter = set_127_VerifyDepositForm_VerifyingDepositData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.VerifyDepositForm.HerbariumSheet":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.VerifyDepositForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "Windows.UI.Xaml.Media.Imaging.BitmapImage");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_127_VerifyDepositForm_HerbariumSheet;
-                xamlMember.Setter = set_127_VerifyDepositForm_HerbariumSheet;
+                xamlMember.Getter = get_128_VerifyDepositForm_HerbariumSheet;
+                xamlMember.Setter = set_128_VerifyDepositForm_HerbariumSheet;
+                break;
+            case "projectHerbariumMgmtIS.Dialogs.ViewLoanForm.PlantLoanData":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ViewLoanForm");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "PlantLoanData", "projectHerbariumMgmtIS.Model.PlantLoan");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_129_ViewLoanForm_PlantLoanData;
+                xamlMember.Setter = set_129_ViewLoanForm_PlantLoanData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.ViewSheetForm.HerbariumSheetData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ViewSheetForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheetData", "projectHerbariumMgmtIS.Model.HerbariumSheet");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_128_ViewSheetForm_HerbariumSheetData;
-                xamlMember.Setter = set_128_ViewSheetForm_HerbariumSheetData;
+                xamlMember.Getter = get_130_ViewSheetForm_HerbariumSheetData;
+                xamlMember.Setter = set_130_ViewSheetForm_HerbariumSheetData;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.ViewSheetForm.HerbariumSheet":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ViewSheetForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheet", "System.Collections.Generic.List`1<projectHerbariumMgmtIS.Model.HerbariumImage>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_129_ViewSheetForm_HerbariumSheet;
-                xamlMember.Setter = set_129_ViewSheetForm_HerbariumSheet;
+                xamlMember.Getter = get_131_ViewSheetForm_HerbariumSheet;
+                xamlMember.Setter = set_131_ViewSheetForm_HerbariumSheet;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.Implicit.ShowAnimations":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.Implicit");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ShowAnimations", "Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_130_Implicit_ShowAnimations;
-                xamlMember.Setter = set_130_Implicit_ShowAnimations;
+                xamlMember.Getter = get_132_Implicit_ShowAnimations;
+                xamlMember.Setter = set_132_Implicit_ShowAnimations;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.KeyFrames":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "KeyFrames", "Microsoft.Toolkit.Uwp.UI.Animations.KeyFrameCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_131_AnimationBase_KeyFrames;
-                xamlMember.Setter = set_131_AnimationBase_KeyFrames;
+                xamlMember.Getter = get_133_AnimationBase_KeyFrames;
+                xamlMember.Setter = set_133_AnimationBase_KeyFrames;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame.Key":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.KeyFrame");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Key", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_132_KeyFrame_Key;
-                xamlMember.Setter = set_132_KeyFrame_Key;
+                xamlMember.Getter = get_134_KeyFrame_Key;
+                xamlMember.Setter = set_134_KeyFrame_Key;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.Duration":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Duration", "TimeSpan");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_133_AnimationBase_Duration;
-                xamlMember.Setter = set_133_AnimationBase_Duration;
+                xamlMember.Getter = get_135_AnimationBase_Duration;
+                xamlMember.Setter = set_135_AnimationBase_Duration;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.Target":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Target", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_134_AnimationBase_Target;
-                xamlMember.Setter = set_134_AnimationBase_Target;
+                xamlMember.Getter = get_136_AnimationBase_Target;
+                xamlMember.Setter = set_136_AnimationBase_Target;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.ImplicitTarget":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "ImplicitTarget", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_135_AnimationBase_ImplicitTarget;
-                xamlMember.Setter = set_135_AnimationBase_ImplicitTarget;
+                xamlMember.Getter = get_137_AnimationBase_ImplicitTarget;
+                xamlMember.Setter = set_137_AnimationBase_ImplicitTarget;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.Delay":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Delay", "TimeSpan");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_136_AnimationBase_Delay;
-                xamlMember.Setter = set_136_AnimationBase_Delay;
+                xamlMember.Getter = get_138_AnimationBase_Delay;
+                xamlMember.Setter = set_138_AnimationBase_Delay;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase.SetInitialValueBeforeDelay":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.AnimationBase");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "SetInitialValueBeforeDelay", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_137_AnimationBase_SetInitialValueBeforeDelay;
-                xamlMember.Setter = set_137_AnimationBase_SetInitialValueBeforeDelay;
+                xamlMember.Getter = get_139_AnimationBase_SetInitialValueBeforeDelay;
+                xamlMember.Setter = set_139_AnimationBase_SetInitialValueBeforeDelay;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.Implicit.HideAnimations":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.Implicit");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HideAnimations", "Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_138_Implicit_HideAnimations;
-                xamlMember.Setter = set_138_Implicit_HideAnimations;
+                xamlMember.Getter = get_140_Implicit_HideAnimations;
+                xamlMember.Setter = set_140_Implicit_HideAnimations;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.Implicit.Animations":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.Implicit");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Animations", "Microsoft.Toolkit.Uwp.UI.Animations.AnimationCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_139_Implicit_Animations;
-                xamlMember.Setter = set_139_Implicit_Animations;
+                xamlMember.Getter = get_141_Implicit_Animations;
+                xamlMember.Setter = set_141_Implicit_Animations;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>.From":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "From", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_140_TypedAnimationBase_From;
-                xamlMember.Setter = set_140_TypedAnimationBase_From;
+                xamlMember.Getter = get_142_TypedAnimationBase_From;
+                xamlMember.Setter = set_142_TypedAnimationBase_From;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>.To":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.Vector3KeyFrame, String>");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "To", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_141_TypedAnimationBase_To;
-                xamlMember.Setter = set_141_TypedAnimationBase_To;
+                xamlMember.Getter = get_143_TypedAnimationBase_To;
+                xamlMember.Setter = set_143_TypedAnimationBase_To;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>.From":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "From", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_142_TypedAnimationBase_From;
-                xamlMember.Setter = set_142_TypedAnimationBase_From;
+                xamlMember.Getter = get_144_TypedAnimationBase_From;
+                xamlMember.Setter = set_144_TypedAnimationBase_From;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>.To":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedAnimationBase`2<Microsoft.Toolkit.Uwp.UI.Animations.ScalarKeyFrame, Double>");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "To", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_143_TypedAnimationBase_To;
-                xamlMember.Setter = set_143_TypedAnimationBase_To;
+                xamlMember.Getter = get_145_TypedAnimationBase_To;
+                xamlMember.Setter = set_145_TypedAnimationBase_To;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame`1<Double>.Value":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Animations.TypedKeyFrame`1<Double>");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Value", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_144_TypedKeyFrame_Value;
-                xamlMember.Setter = set_144_TypedKeyFrame_Value;
+                xamlMember.Getter = get_146_TypedKeyFrame_Value;
+                xamlMember.Setter = set_146_TypedKeyFrame_Value;
                 break;
             case "projectHerbariumMgmtIS.MainPage.StaffName":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.MainPage");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "StaffName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_145_MainPage_StaffName;
-                xamlMember.Setter = set_145_MainPage_StaffName;
+                xamlMember.Getter = get_147_MainPage_StaffName;
+                xamlMember.Setter = set_147_MainPage_StaffName;
+                break;
+            case "projectHerbariumMgmtIS.MainPage.AccountLevel":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.MainPage");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "AccountLevel", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_148_MainPage_AccountLevel;
+                xamlMember.Setter = set_148_MainPage_AccountLevel;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.OrderForm.TransactionForm":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.OrderForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "TransactionForm", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_146_OrderForm_TransactionForm;
-                xamlMember.Setter = set_146_OrderForm_TransactionForm;
+                xamlMember.Getter = get_149_OrderForm_TransactionForm;
+                xamlMember.Setter = set_149_OrderForm_TransactionForm;
                 break;
             case "projectHerbariumMgmtIS.Dialogs.OrderForm.OrderData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.OrderForm");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "OrderData", "projectHerbariumMgmtIS.Model.TaxonOrder");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_147_OrderForm_OrderData;
-                xamlMember.Setter = set_147_OrderForm_OrderData;
+                xamlMember.Getter = get_150_OrderForm_OrderData;
+                xamlMember.Setter = set_150_OrderForm_OrderData;
+                break;
+            case "projectHerbariumMgmtIS.Reports.DocumentNewDeposit.Month":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Reports.DocumentNewDeposit");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Month", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_151_DocumentNewDeposit_Month;
+                xamlMember.Setter = set_151_DocumentNewDeposit_Month;
+                break;
+            case "projectHerbariumMgmtIS.Reports.DocumentNewDeposit.Year":
+                userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Reports.DocumentNewDeposit");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Year", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_152_DocumentNewDeposit_Year;
+                xamlMember.Setter = set_152_DocumentNewDeposit_Year;
                 break;
             case "projectHerbariumMgmtIS.Transaction.DepositTransactionPage.IsExisting":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Transaction.DepositTransactionPage");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsExisting", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_148_DepositTransactionPage_IsExisting;
-                xamlMember.Setter = set_148_DepositTransactionPage_IsExisting;
+                xamlMember.Getter = get_153_DepositTransactionPage_IsExisting;
+                xamlMember.Setter = set_153_DepositTransactionPage_IsExisting;
                 break;
             case "projectHerbariumMgmtIS.Transaction.DepositTransactionPage.NewDepositData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Transaction.DepositTransactionPage");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "NewDepositData", "projectHerbariumMgmtIS.Model.PlantDeposit");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_149_DepositTransactionPage_NewDepositData;
-                xamlMember.Setter = set_149_DepositTransactionPage_NewDepositData;
+                xamlMember.Getter = get_154_DepositTransactionPage_NewDepositData;
+                xamlMember.Setter = set_154_DepositTransactionPage_NewDepositData;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid.Columns":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Columns", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_150_UniformGrid_Columns;
-                xamlMember.Setter = set_150_UniformGrid_Columns;
+                xamlMember.Getter = get_155_UniformGrid_Columns;
+                xamlMember.Setter = set_155_UniformGrid_Columns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid.FirstColumn":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "FirstColumn", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_151_UniformGrid_FirstColumn;
-                xamlMember.Setter = set_151_UniformGrid_FirstColumn;
+                xamlMember.Getter = get_156_UniformGrid_FirstColumn;
+                xamlMember.Setter = set_156_UniformGrid_FirstColumn;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid.Orientation":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Orientation", "Windows.UI.Xaml.Controls.Orientation");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_152_UniformGrid_Orientation;
-                xamlMember.Setter = set_152_UniformGrid_Orientation;
+                xamlMember.Getter = get_157_UniformGrid_Orientation;
+                xamlMember.Setter = set_157_UniformGrid_Orientation;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid.Rows":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Rows", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_153_UniformGrid_Rows;
-                xamlMember.Setter = set_153_UniformGrid_Rows;
+                xamlMember.Getter = get_158_UniformGrid_Rows;
+                xamlMember.Setter = set_158_UniformGrid_Rows;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid.AutoLayout":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.UniformGrid");
@@ -4490,20 +4640,20 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.FrameworkElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_154_UniformGrid_AutoLayout;
-                xamlMember.Setter = set_154_UniformGrid_AutoLayout;
+                xamlMember.Getter = get_159_UniformGrid_AutoLayout;
+                xamlMember.Setter = set_159_UniformGrid_AutoLayout;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool.Value":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "Value", "Boolean");
-                xamlMember.Getter = get_155_NullableBool_Value;
-                xamlMember.Setter = set_155_NullableBool_Value;
+                xamlMember.Getter = get_160_NullableBool_Value;
+                xamlMember.Setter = set_160_NullableBool_Value;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool.IsNull":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Extensions.NullableBool");
                 xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "IsNull", "Boolean");
-                xamlMember.Getter = get_156_NullableBool_IsNull;
-                xamlMember.Setter = set_156_NullableBool_IsNull;
+                xamlMember.Getter = get_161_NullableBool_IsNull;
+                xamlMember.Setter = set_161_NullableBool_IsNull;
                 break;
             }
             return xamlMember;

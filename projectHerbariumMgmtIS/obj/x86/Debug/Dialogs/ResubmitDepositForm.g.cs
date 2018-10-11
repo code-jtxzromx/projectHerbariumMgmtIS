@@ -203,12 +203,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj3, obj, null);
                 }
             }
-            private void Update_RejectedDepositData_DateCollected(global::System.DateTimeOffset obj, int phase)
+            private void Update_RejectedDepositData_DateCollected(global::System.String obj, int phase)
             {
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ResubmitDepositForm.xaml line 54
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj.ToString(), null);
+                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj, null);
                 }
             }
             private void Update_RejectedDepositData_PlantType(global::System.String obj, int phase)

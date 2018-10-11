@@ -8,6 +8,7 @@
     xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
     xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
     xmlns:SpringCreators="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 6)"
+    xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
@@ -23,7 +24,7 @@
         </Grid.Background>
 
         <Grid x:ConnectionId='2' x:Name="LoginScreen" Visibility="Visible">
-            <FlipView x:ConnectionId='10' x:Name="flvBackgrounds" BorderBrush="Transparent">
+            <FlipView x:ConnectionId='12' x:Name="flvBackgrounds" BorderBrush="Transparent">
                 <animations:Implicit.ShowAnimations>
                     <animations:TranslationAnimation Duration="0:0:1" From="200, 0, 0" To="0" ></animations:TranslationAnimation>
                     <animations:OpacityAnimation Duration="0:0:1" From="0" To="1.0"></animations:OpacityAnimation>
@@ -71,19 +72,19 @@
                             HERBARIUM MANAGEMENT INFORMATION SYSTEM
                         </TextBlock>
 
-                        <Border x:ConnectionId='11' x:Name="lblLoginError" Background="#BF800000" Margin="0 0 0 10" Visibility="Collapsed">
+                        <Border x:ConnectionId='13' x:Name="lblLoginError" Background="#BF800000" Margin="0 0 0 10" Visibility="Collapsed">
                             <TextBlock Margin="10 5" TextAlignment="Center" Text="Invalid Username or Password" />
                         </Border>
 
-                        <TextBox x:ConnectionId='12' x:Name="txfUsername" Margin="20 5" Header="Username:" PlaceholderText="Enter Username"/>
-                        <PasswordBox x:ConnectionId='13' x:Name="txfPassword" Margin="20 5" Header="Password:" PlaceholderText="Enter Password"/>
+                        <TextBox x:ConnectionId='14' x:Name="txfUsername"                                 Margin="20 5" Header="Username:" PlaceholderText="Enter Username"/>
+                        <PasswordBox x:ConnectionId='15' x:Name="txfPassword"                                 Margin="20 5" Header="Password:" PlaceholderText="Enter Password"/>
 
                         <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
-                            <Button x:ConnectionId='15' x:Name="btnLogin"                        Content="Login" Width="75" Margin="20 20 5 20" />
-                            <Button x:ConnectionId='16' x:Name="btnClear"                        Content="Clear" Width="75" Margin="5 20 20 20" />
+                            <Button x:ConnectionId='17' x:Name="btnLogin"                        Content="Login" Width="75" Margin="20 20 5 20" />
+                            <Button x:ConnectionId='18' x:Name="btnClear"                        Content="Clear" Width="75" Margin="5 20 20 20" />
                         </StackPanel>
 
-                        <ProgressRing x:ConnectionId='14' x:Name="pgrLogin" IsActive="False" Width="50" Height="50" />
+                        <ProgressRing x:ConnectionId='16' x:Name="pgrLogin" IsActive="False" Width="50" Height="50" />
                     </StackPanel>
                 </Grid>
 
@@ -107,51 +108,35 @@
                                                                             
                             IsSettingsVisible="False" SpringCreators:IsBackButtonVisible="Collapsed"
                             Background="{ThemeResource BackgroundAcrylic}" OpenPaneLength="320">
+                <NavigationView.MenuItemTemplate>
+                    <DataTemplate                            >
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Glyph="{Binding GlyphCode}" FontFamily="Segoe MDL2 Assets" />
+                            <TextBlock Text="{Binding Menu}" Margin="15 0" TextWrapping="WrapWholeWords" />
+                        </StackPanel>
+                    </DataTemplate>
+                </NavigationView.MenuItemTemplate>
                 <NavigationView.HeaderTemplate>
                     <DataTemplate>
-                        <TextBlock VerticalAlignment="Center" Margin="10 5" Text="{Binding}" />
+                        <Grid>
+                            <TextBlock Grid.Column="0" VerticalAlignment="Center" Margin="10 5" Text="{Binding}" />
+                        </Grid>
                     </DataTemplate>
                 </NavigationView.HeaderTemplate>
-                <NavigationView.MenuItems>
-                    <NavigationViewItem Content="Home" Tag="HomePage">
-                        <NavigationViewItem.Icon>
-                            <FontIcon Glyph="&#xE80F;" />
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                    <NavigationViewItem Content="Maintenance" Tag="MaintenancePage">
-                        <NavigationViewItem.Icon>
-                            <FontIcon Glyph="&#xEDA2;" />
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                    <NavigationViewItem Content="Transaction" Tag="TransactionPage">
-                        <NavigationViewItem.Icon>
-                            <FontIcon Glyph="&#xEC0A;" />
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                    <NavigationViewItem Content="Management Tools" Tag="UtilitiesPage">
-                        <NavigationViewItem.Icon>
-                            <FontIcon Glyph="&#xEC7A;" />
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                    <NavigationViewItem Content="Queries" Tag="QueriesPage">
-                        <NavigationViewItem.Icon>
-                            <FontIcon Glyph="&#xEADF;" />
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                    <NavigationViewItem Content="Reports" Tag="ReportsPage">
-                        <NavigationViewItem.Icon>
-                            <FontIcon Glyph="&#xE956;" />
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                </NavigationView.MenuItems>
                 <NavigationView.PaneFooter>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition Width="50" />
                         </Grid.ColumnDefinitions>
-                        <NavigationViewItem x:ConnectionId='6' Icon="Contact" VerticalAlignment="Stretch" 
-                                                                                       />
+                        <NavigationViewItem Icon="Contact" VerticalAlignment="Stretch">
+                            <NavigationViewItem.Content>
+                                <StackPanel>
+                                    <TextBlock x:ConnectionId='9'                                        FontWeight="Bold" />
+                                    <TextBlock x:ConnectionId='10'                                          FontStyle="Italic" FontSize="10" />
+                                </StackPanel>
+                            </NavigationViewItem.Content>
+                        </NavigationViewItem>
                         <CommandBar Grid.Column="1" Background="Transparent">
                             <AppBarButton x:ConnectionId='7' x:Name="btnAbout"                        Label="About Us">
                                 <AppBarButton.Icon>
@@ -166,7 +151,7 @@
                         </CommandBar>
                     </Grid>
                 </NavigationView.PaneFooter>
-                <Frame x:ConnectionId='9' x:Name="frmPageContent" Margin="15" />
+                <Frame x:ConnectionId='11' x:Name="frmPageContent" Margin="15" />
             </NavigationView>
         </Grid>        
     </Grid>

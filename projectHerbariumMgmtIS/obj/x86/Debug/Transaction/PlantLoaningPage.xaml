@@ -27,6 +27,11 @@
                     <AppBarButton x:ConnectionId='3' x:Name="btnNewLoan"                          Icon="Add" Label="New Loan Transaction" />
                     <AppBarButton x:ConnectionId='4' x:Name="btnViewLoan"                           Icon="View" Label="View Loan Transaction" />
                     <AppBarButton x:ConnectionId='5' x:Name="btnApprove"                          Icon="Accept" Label="Approve Loan Transaction" />
+                    <AppBarButton x:ConnectionId='6' x:Name="btnReturn"                         Label="Return Loaned Specimens">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE944;" />
+                        </AppBarButton.Icon>
+                    </AppBarButton>
                 </CommandBar>
             </Grid>
 

@@ -25,21 +25,6 @@ namespace projectHerbariumMgmtIS.MenuPages
     /// </summary>
     public sealed partial class MaintenancePage : Page
     {
-        private List<SubMenu> MaintenanceMenu = new List<SubMenu>()
-        {
-            new SubMenu() { MenuItem = "Taxonomic Hierarchy",       Page = typeof(TaxonomicHierarchyPage) },
-            new SubMenu() { MenuItem = "Species Author",            Page = typeof(SpeciesAuthorPage) },
-            new SubMenu() { MenuItem = "Species Nomenclature",      Page = typeof(SpeciesNomenclaturePage) },
-            new SubMenu() { MenuItem = "Plant Types",               Page = typeof(PlantTypePage) },
-            new SubMenu() { MenuItem = "Herbarium Boxes",           Page = typeof(HerbariumBoxPage) },
-            new SubMenu() { MenuItem = "Plant Locality",            Page = typeof(PlantLocalityPage) },
-            new SubMenu() { MenuItem = "Collector",                 Page = typeof(CollectorPage) },
-            new SubMenu() { MenuItem = "Borrower",                  Page = typeof(BorrowerPage) },
-            new SubMenu() { MenuItem = "External Validator",        Page = typeof(ExternalValidatorPage) },
-            new SubMenu() { MenuItem = "Herbarium Staff",           Page = typeof(HerbariumStaffPage) },
-            new SubMenu() { MenuItem = "Access Accounts",           Page = typeof(AccessAccountsPage) }
-        };
-
         public MaintenancePage()
         {
             this.InitializeComponent();
@@ -48,10 +33,15 @@ namespace projectHerbariumMgmtIS.MenuPages
 
         private void InitializePage()
         {
-            lstMaintenanceMenu.ItemsSource = MaintenanceMenu; 
-            frmPageContent.Navigate(typeof(TaxonomicHierarchyPage));
+            lstMaintenanceMenu.ItemsSource = new SubMenu().GetSubMenu("Maintenance"); 
         }
 
-        private void lstMaintenanceMenu_ItemClick(object sender, ItemClickEventArgs e) => frmPageContent.Navigate((e.ClickedItem as SubMenu).Page);
+        private void lstMaintenanceMenu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var selectedItem = (SubMenu)e.ClickedItem;
+            string pageName = "projectHerbariumMgmtIS.Maintenance." + ((string)selectedItem.Page);
+            Type pageType = Type.GetType(pageName);
+            frmPageContent.Navigate(pageType);
+        }
     }
 }

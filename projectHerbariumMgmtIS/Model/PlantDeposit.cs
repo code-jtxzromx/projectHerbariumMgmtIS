@@ -22,13 +22,13 @@ namespace projectHerbariumMgmtIS.Model
         public string Collector { get; set; }
         public string Locality { get; set; }
         public string Staff { get; set; }
-        public DateTimeOffset DateCollected { get; set; }
-        public DateTimeOffset DateDeposited { get; set; }
+        public string DateCollected { get; set; }
+        public string DateDeposited { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }
 
         public string TaxonName { get; set; }
-        public DateTimeOffset DateVerified { get; set; } = DateTime.Now;
+        public string DateVerified { get; set; }
         public string NewAccesion { get; set; }
         public string Validator { get; set; }
 
@@ -41,8 +41,8 @@ namespace projectHerbariumMgmtIS.Model
             this.Collector = "";
             this.Locality = "";
             this.Staff = StaticAccess.StaffName;
-            this.DateCollected = DateTime.Now;
-            this.DateDeposited = DateTime.Now;
+            this.DateCollected = "";
+            this.DateDeposited = "";
             this.Description = "";
             this.Status = "";
         }
@@ -69,8 +69,8 @@ namespace projectHerbariumMgmtIS.Model
                     Collector = sqlData[2].ToString(),
                     Locality = sqlData[3].ToString(),
                     Staff = sqlData[4].ToString(),
-                    DateCollected = Convert.ToDateTime(sqlData[5]),
-                    DateDeposited = Convert.ToDateTime(sqlData[6]),
+                    DateCollected = sqlData[5].ToString(),
+                    DateDeposited = sqlData[6].ToString(),
                     Description = sqlData[7].ToString(),
                     Status = sqlData[8].ToString()
                 });
@@ -100,8 +100,8 @@ namespace projectHerbariumMgmtIS.Model
                     Collector = sqlData[2].ToString(),
                     Locality = sqlData[3].ToString(),
                     Staff = sqlData[4].ToString(),
-                    DateCollected = Convert.ToDateTime(sqlData[5]),
-                    DateDeposited = Convert.ToDateTime(sqlData[6]),
+                    DateCollected = sqlData[5].ToString(),
+                    DateDeposited = sqlData[6].ToString(),
                     Description = sqlData[7].ToString(),
                     Status = sqlData[8].ToString()
                 });
@@ -130,10 +130,36 @@ namespace projectHerbariumMgmtIS.Model
                     Collector = sqlData[1].ToString(),
                     Locality = sqlData[2].ToString(),
                     Staff = sqlData[3].ToString(),
-                    DateCollected = Convert.ToDateTime(sqlData[4]),
-                    DateDeposited = Convert.ToDateTime(sqlData[5]),
+                    DateCollected = sqlData[4].ToString(),
+                    DateDeposited = sqlData[5].ToString(),
                     Description = sqlData[6].ToString(),
                     Status = sqlData[7].ToString()
+                });
+            }
+            connection.closeResult();
+            return plantDeposits;
+        }
+
+        public List<PlantDeposit> GetNewDepositReport(string startDate, string endDate)
+        {
+            List<PlantDeposit> plantDeposits = new List<PlantDeposit>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strDepositNumber, strCollector, CONVERT(VARCHAR, dateDeposited, 107), strStatus " +
+                                "FROM viewReceivedDeposit   " +
+                                "WHERE dateDeposited BETWEEN @startDate AND @endDate");
+            connection.addQueryParameter("@startDate", SqlDbType.VarChar, startDate);
+            connection.addQueryParameter("@endDate", SqlDbType.VarChar, endDate);
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                plantDeposits.Add(new PlantDeposit()
+                {
+                    DepositNumber = sqlData[0].ToString(),
+                    Collector = sqlData[1].ToString(),
+                    DateDeposited = sqlData[2].ToString(),
+                    Status = sqlData[3].ToString()
                 });
             }
             connection.closeResult();
@@ -216,7 +242,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@locality", SqlDbType.VarChar, Locality);
             connection.addProcParameter("@collector", SqlDbType.VarChar, Collector);
             connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
-            connection.addProcParameter("@dateCollected", SqlDbType.Date, DateCollected.ToString());
+            connection.addProcParameter("@dateCollected", SqlDbType.Date, DateCollected);
             connection.addProcParameter("@description", SqlDbType.VarChar, Description);
             connection.addProcParameter("@plantType", SqlDbType.VarChar, PlantType);
             status = connection.executeProcedure();
@@ -224,7 +250,7 @@ namespace projectHerbariumMgmtIS.Model
             return status;
         }
 
-        public int SaveUnverifiedDeposit(bool pictureEmpty, byte[] picture = null)
+        public int SaveUnverifiedDeposit(bool pictureAvailable, byte[] picture = null)
         {
             int status;
             int accessionDigit = Convert.ToInt32(DepositNumber);
@@ -232,22 +258,22 @@ namespace projectHerbariumMgmtIS.Model
             DatabaseConnection connection = new DatabaseConnection();
             connection.setStoredProc("dbo.procInsertPlantDeposit");
             connection.addProcParameter("@isIDBase", SqlDbType.Bit, 0);
-            if (pictureEmpty)
+            connection.addProcParameter("@accessionDigits", SqlDbType.Int, accessionDigit);
+            if (pictureAvailable)
                 connection.addProcParameter("@herbariumSheet", SqlDbType.VarBinary, picture);
             connection.addProcParameter("@locality", SqlDbType.VarChar, Locality);
             connection.addProcParameter("@collector", SqlDbType.VarChar, Collector);
             connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
-            connection.addProcParameter("@dateCollected", SqlDbType.Date, DateCollected.ToString());
+            connection.addProcParameter("@dateCollected", SqlDbType.Date, DateCollected);
+            connection.addProcParameter("@dateDeposited", SqlDbType.Date, DateDeposited);
             connection.addProcParameter("@description", SqlDbType.VarChar, Description);
             connection.addProcParameter("@plantType", SqlDbType.VarChar, PlantType);
-            connection.addProcParameter("@accessionDigits", SqlDbType.Int, accessionDigit);
-            connection.addProcParameter("@dateDeposited", SqlDbType.Date, DateDeposited.ToString());
             status = connection.executeProcedure();
             
             return status;
         }
 
-        public int SaveVerifiedDeposit(bool sameAccession, bool pictureEmpty, byte[] picture = null)
+        public int SaveVerifiedDeposit(bool isDuplicate, bool pictureAvailable, byte[] picture = null)
         {
             int status;
             int accessionDigit = Convert.ToInt32(DepositNumber);
@@ -256,23 +282,23 @@ namespace projectHerbariumMgmtIS.Model
             connection.setStoredProc("dbo.procInsertVerifiedDeposit");
             connection.addProcParameter("@isIDBase", SqlDbType.Bit, 0);
             connection.addProcParameter("@accessionDigits", SqlDbType.Int, accessionDigit);
-            if (sameAccession)
+            connection.addProcParameter("@sameAccession", SqlDbType.Bit, !isDuplicate);
+            if (isDuplicate)
                 connection.addProcParameter("@newDeposit", SqlDbType.VarChar, NewAccesion);
-            connection.addProcParameter("@sameAccession", SqlDbType.Bit, sameAccession);
-            if (pictureEmpty)
+            if (pictureAvailable)
                 connection.addProcParameter("@herbariumSheet", SqlDbType.VarBinary, picture);
             connection.addProcParameter("@locality", SqlDbType.VarChar, Locality);
             connection.addProcParameter("@species", SqlDbType.VarChar, TaxonName);
             connection.addProcParameter("@collector", SqlDbType.VarChar, Collector);
             connection.addProcParameter("@validator", SqlDbType.VarChar, Validator);
             connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
-            connection.addProcParameter("@dateCollected", SqlDbType.Date, DateCollected.ToString());
-            connection.addProcParameter("@dateDeposited", SqlDbType.Date, DateDeposited.ToString());
-            connection.addProcParameter("@dateVerified", SqlDbType.Date, DateVerified.ToString());
+            connection.addProcParameter("@dateCollected", SqlDbType.Date, DateCollected);
+            connection.addProcParameter("@dateDeposited", SqlDbType.Date, DateDeposited);
+            connection.addProcParameter("@dateVerified", SqlDbType.Date, DateVerified);
             connection.addProcParameter("@description", SqlDbType.VarChar, Description);
             connection.addProcParameter("@plantType", SqlDbType.VarChar, PlantType);
             status = connection.executeProcedure();
-
+            
             return status;
         }
 

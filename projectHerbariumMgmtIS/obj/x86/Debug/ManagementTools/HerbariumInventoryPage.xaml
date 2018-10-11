@@ -37,7 +37,8 @@
             </Grid>
             <StackPanel Grid.Row="1" BorderBrush="{StaticResource AppBarBorderThemeBrush}" Margin="5 0" Padding="5" BorderThickness="1">
                 <TextBlock Margin="10 0" Text="Family Boxes" />
-                <ListView x:ConnectionId='3' x:Name="lstHerbariumBoxes" Margin="5" Padding="5" IsItemClickEnabled="True"                                        >
+                <ListView x:ConnectionId='3' x:Name="lstHerbariumBoxes" Margin="5" Padding="5 10 5 20" IsItemClickEnabled="True"                                         
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Auto">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Background="Transparent" Orientation="Horizontal" />

@@ -36,9 +36,16 @@ namespace projectHerbariumMgmtIS
             get { return (string)GetValue(StaffNameProperty); }
             set { SetValue(StaffNameProperty, value); }
         }
+        public string AccountLevel
+        {
+            get { return (string)GetValue(AccountLevelProperty); }
+            set { SetValue(AccountLevelProperty, value); }
+        }
 
         public static readonly DependencyProperty StaffNameProperty =
             DependencyProperty.Register("StaffName", typeof(string), typeof(MainPage), new PropertyMetadata(""));
+        public static readonly DependencyProperty AccountLevelProperty =
+            DependencyProperty.Register("AccountLevel", typeof(string), typeof(MainPage), new PropertyMetadata(""));
 
 
         public MainPage()
@@ -70,11 +77,17 @@ namespace projectHerbariumMgmtIS
 
         private void navMainMenu_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            var selectedItem = (NavigationViewItem)args.SelectedItem;
-            string pageName = "projectHerbariumMgmtIS.MenuPages." + ((string)selectedItem.Tag);
+            var selectedItem = (MainMenu)args.SelectedItem;
+            string pageName = "projectHerbariumMgmtIS.MenuPages." + ((string)selectedItem.TagPage);
             Type pageType = Type.GetType(pageName);
             frmPageContent.Navigate(pageType);
-            navMainMenu.Header = selectedItem.Content;
+            navMainMenu.Header = selectedItem.Menu;
+        }
+
+        private void KeyBoardEnter_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+                btnLogin_Click(btnLogin, null);
         }
 
         private void TestConnection()
@@ -102,6 +115,16 @@ namespace projectHerbariumMgmtIS
             if (result == 0)
             {
                 StaffName = StaticAccess.StaffName;
+                AccountLevel = StaticAccess.Role;
+
+                foreach (var item in new MainMenu().GetMenus())
+                {
+                    navMainMenu.MenuItems.Add(item);
+                }
+
+                frmPageContent.Navigate(typeof(HomePage));
+                navMainMenu.Header = "Homepage";
+
                 LoginScreen.Visibility = Visibility.Collapsed;
                 MainNavigation.Visibility = Visibility.Visible;
             }
@@ -123,6 +146,10 @@ namespace projectHerbariumMgmtIS
         {
             Timer.Start();
             StaffName = "";
+            btnClear_Click(btnClear, null);
+
+            navMainMenu.MenuItems.Clear();
+
             MainNavigation.Visibility = Visibility.Collapsed;
             LoginScreen.Visibility = Visibility.Visible;
         }
@@ -130,7 +157,7 @@ namespace projectHerbariumMgmtIS
         private void btnAbout_Click(object sender, RoutedEventArgs e)
         {
             MessageDialog dialog = new MessageDialog("Herbarium Management Information System \n" +
-                                                     "Copyright &copy;2018 \n\n" +
+                                                     "Copyright © 2018 \n\n" +
                                                      "Developed by: PUPCCIS BSIT 4-1 ISD [Casingal, Cruz, Escueta, Leynes]");
             var result = dialog.ShowAsync();
         }

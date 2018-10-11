@@ -5,10 +5,136 @@
     xmlns:local="using:projectHerbariumMgmtIS.MenuPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock Text="Welcome to Herbarium Management Information System"/>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#7F77DD77" Padding="20 10">
+            <TextBlock FontSize="16" Text="Welcome, " />
+            <TextBlock x:Name="lblUser" FontSize="16" Margin="5 0 0 0" Text="[user]" />
+            <TextBlock FontSize="16" Text="!" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" ScrollViewer.VerticalScrollMode="Auto">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="500" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="System Status" Margin="20 5" FontSize="16" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
+                <CalendarView Margin="20 5" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" />
+                <GridView Grid.Column="1" Grid.Row="1" x:Name="grvCard" Padding="20 5" >
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="model:GridViewList">
+                            <Grid Width="200" Margin="5 0 5 5" Background="#FFEEEEEE">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="50" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0" Margin="10 5" Text="{Binding Count}" FontSize="48" />
+                                <Border Grid.Row="1"  Background="#FFDDDDDD">
+                                    <TextBlock Margin="10" FontSize="12" Text="{Binding Title}" TextWrapping="WrapWholeWords"/>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </Grid>
+            <Grid Width="340">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Critical Herbarium Sheets" Margin="20 5" FontSize="16" Grid.Column="0" Grid.Row="0" />
+                <TextBlock Grid.Row="1" Margin="20 0" TextWrapping="WrapWholeWords">
+                            This is the List of Herbarium Boxes that have less 
+                            Available Slots that need to create additional box
+                </TextBlock>
+                <ListView Grid.Row="2" x:Name="lstCriticaBoxes" Margin="20 10" 
+                                  Background="#FFEEEEEE">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="model:HerbariumBox">
+                            <StackPanel>
+                                <TextBlock Text="{Binding BoxNumber}" />
+                                <TextBlock Text="{Binding Family}" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Capacity: " />
+                                    <TextBlock Margin="5" Text="{Binding CurrentNo}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Grid Width="340">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Pending Plant Loan Approval" Margin="20 5" FontSize="16" Grid.Column="0" Grid.Row="0" />
+                <TextBlock Grid.Row="1" Margin="20 0" TextWrapping="WrapWholeWords">
+                            This is the List of Herbarium Boxes that have less 
+                            Available Slots that need to create additional box
+                </TextBlock>
+                <ListView Grid.Row="2" x:Name="lstPlantLoan" Margin="20 10" 
+                                  Background="#FFEEEEEE">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="model:HerbariumBox">
+                            <StackPanel>
+                                <TextBlock Text="{Binding BoxNumber}" />
+                                <TextBlock Text="{Binding Family}" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Capacity: " />
+                                    <TextBlock Margin="5" Text="{Binding CurrentNo}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Grid Width="340">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Pending External Verification" Margin="20 5" FontSize="16" Grid.Column="0" Grid.Row="0" />
+                <TextBlock Grid.Row="1" Margin="20 0" TextWrapping="WrapWholeWords">
+                            This is the List of Herbarium Boxes that have less 
+                            Available Slots that need to create additional box
+                </TextBlock>
+                <ListView Grid.Row="2" x:Name="lstExternalVerification" Margin="20 10" 
+                                  Background="#FFEEEEEE">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="model:HerbariumBox">
+                            <StackPanel>
+                                <TextBlock Text="{Binding BoxNumber}" />
+                                <TextBlock Text="{Binding Family}" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Capacity: " />
+                                    <TextBlock Margin="5" Text="{Binding CurrentNo}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>

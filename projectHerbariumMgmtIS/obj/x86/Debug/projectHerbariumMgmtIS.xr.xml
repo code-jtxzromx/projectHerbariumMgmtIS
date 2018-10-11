@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Copies" />
+    <RootPropertyPathName Name="ScientificName" />
+    <RootPropertyPathName Name="FamilyName" />
     <RootPropertyPathName Name="Tag" />
     <RootPropertyPathName Name="HerbariumSheet" />
-    <RootPropertyPathName Name="Copies" />
     <RootPropertyPathName Name="Specimens" />
-    <RootPropertyPathName Name="ScientificName" />
     <RootPropertyPathName Name="IsChecked" />
     <RootPropertyPathName Name="GenusName" />
-    <RootPropertyPathName Name="FamilyName" />
+    <RootPropertyPathName Name="Menu" />
+    <RootPropertyPathName Name="GlyphCode" />
     <RootPropertyPathName Name="Role" />
     <RootPropertyPathName Name="Username" />
     <RootPropertyPathName Name="Staff" />
@@ -46,14 +48,19 @@
     <RootPropertyPathName Name="AccessionNumber" />
     <RootPropertyPathName Name="BoxLimit" />
     <RootPropertyPathName Name="CurrentNo" />
+    <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="Count" />
     <RootPropertyPathName Name="MenuItem" />
+    <RootPropertyPathName Name="SpeciesAuthor" />
+    <RootPropertyPathName Name="SpeciesName" />
+    <RootPropertyPathName Name="Item" />
+    <RootPropertyPathName Name="DateDeposited" />
+    <RootPropertyPathName Name="DepositNumber" />
     <RootPropertyPathName Name="IsOn" />
     <RootPropertyPathName Name="DateValidated" />
     <RootPropertyPathName Name="Duration" />
     <RootPropertyPathName Name="Borrower" />
     <RootPropertyPathName Name="LoanNumber" />
-    <RootPropertyPathName Name="DateDeposited" />
-    <RootPropertyPathName Name="DepositNumber" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -81,8 +88,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="FlowDirection" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Margin" />
@@ -101,10 +108,11 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="Inlines" />
-      <RootProperty Name="Style" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontStyle" />
+      <RootProperty Name="Inlines" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
@@ -116,11 +124,13 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
       <RootProperty Name="Background" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootMethod Name="GetColumn" />
@@ -148,8 +158,10 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Height" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="AcceptsReturn" />
+      <RootEvent Name="KeyDown" />
       <RootEvent Name="LostFocus" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -160,6 +172,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Width" />
       <RootProperty Name="IsEnabled" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
@@ -169,9 +182,31 @@
       <RootProperty Name="Password" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.AccountForm" />
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="AutoGenerateColumns" />
+      <RootProperty Name="CanUserSortColumns" />
+      <RootProperty Name="Columns" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="RowDetailsTemplate" />
+      <RootProperty Name="RowDetailsVisibilityMode" />
+    </RootType>
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="Binding" />
+      <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="FontStyle" />
+    </RootType>
+    <RootType FullName="projectHerbariumMgmtIS.Dialogs.ApproveLoanForm" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
       <RootProperty Name="VerticalScrollBarVisibility" />
@@ -180,6 +215,10 @@
       <RootProperty Name="Padding" />
       <RootMethod Name="GetVerticalScrollMode" />
       <RootMethod Name="SetVerticalScrollMode" />
+      <RootMethod Name="GetHorizontalScrollBarVisibility" />
+      <RootMethod Name="SetHorizontalScrollBarVisibility" />
+      <RootMethod Name="GetHorizontalScrollMode" />
+      <RootMethod Name="SetHorizontalScrollMode" />
     </RootType>
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.BorrowerForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ClassForm" />
@@ -243,27 +282,10 @@
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.NomenclatureForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.PhylumForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.PlantTypeForm" />
-    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="CanUserSortColumns" />
-      <RootProperty Name="AutoGenerateColumns" />
-      <RootProperty Name="SelectionMode" />
-      <RootProperty Name="Columns" />
-      <RootProperty Name="IsReadOnly" />
-    </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn">
       <RootProperty Name="Width" />
       <RootProperty Name="Binding" />
       <RootProperty Name="Header" />
-    </RootType>
-    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="Binding" />
-      <RootProperty Name="IsReadOnly" />
-      <RootProperty Name="FontStyle" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn">
       <RootProperty Name="Width" />
@@ -285,6 +307,7 @@
       <RootProperty Name="Padding" />
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemsPanel" />
+      <RootProperty Name="Background" />
       <RootProperty Name="ItemContainerStyle" />
       <RootEvent Name="ItemClick" />
     </RootType>
@@ -306,7 +329,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Header" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Date" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="DateChanged" />
     </RootType>
@@ -319,6 +341,7 @@
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.StaffForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ValidatorForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.VerifyDepositForm" />
+    <RootType FullName="projectHerbariumMgmtIS.Dialogs.ViewLoanForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ViewSheetForm" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
@@ -369,20 +392,20 @@
       <RootProperty Name="IsBackButtonVisible" />
       <RootProperty Name="Background" />
       <RootProperty Name="OpenPaneLength" />
+      <RootProperty Name="MenuItemTemplate" />
       <RootProperty Name="HeaderTemplate" />
-      <RootProperty Name="MenuItems" />
       <RootProperty Name="PaneFooter" />
       <RootProperty Name="Content" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
-      <RootProperty Name="Content" />
-      <RootProperty Name="Tag" />
-      <RootProperty Name="Icon" />
-      <RootProperty Name="VerticalAlignment" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.FontIcon">
       <RootProperty Name="Glyph" />
+      <RootProperty Name="FontFamily" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Background" />
@@ -434,6 +457,14 @@
     </RootType>
     <RootType FullName="projectHerbariumMgmtIS.ManagementTools.HerbariumInventoryPage" />
     <RootType FullName="projectHerbariumMgmtIS.ManagementTools.SheetTrackingPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CalendarView">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="Padding" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
@@ -447,10 +478,14 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.MaintenancePage" />
+    <RootType FullName="projectHerbariumMgmtIS.Queries.QuerySpeciesPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.QueriesPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.ReportsPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.TransactionPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.UtilitiesPage" />
+    <RootType FullName="projectHerbariumMgmtIS.Queries.QueryHerbariumSheetPage" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentNewDeposit" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.ReportNewDeposit" />
     <RootType FullName="projectHerbariumMgmtIS.Transaction.DepositTransactionPage">
       <RootProperty Name="IsExisting" />
     </RootType>
@@ -458,7 +493,6 @@
     <RootType FullName="projectHerbariumMgmtIS.Transaction.PlantClassificationPage" />
     <RootType FullName="projectHerbariumMgmtIS.Transaction.PlantDepositPage" />
     <RootType FullName="projectHerbariumMgmtIS.Transaction.PlantLoaningPage" />
-    <RootType FullName="projectHerbariumMgmtIS.Transaction.PlantLoanReturnPage" />
     <RootType FullName="projectHerbariumMgmtIS.Transaction.PlantReceivingPage" />
     <RootType FullName="projectHerbariumMgmtIS.Transaction.PlantResubmissionPage" />
     <RootType FullName="projectHerbariumMgmtIS.Transaction.PlantVerificationPage" />

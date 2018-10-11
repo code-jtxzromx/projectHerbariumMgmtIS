@@ -206,20 +206,20 @@ namespace projectHerbariumMgmtIS.Dialogs
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj, null);
                 }
             }
-            private void Update_ReceivedDepositData_DateCollected(global::System.DateTimeOffset obj, int phase)
+            private void Update_ReceivedDepositData_DateCollected(global::System.String obj, int phase)
             {
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 60
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj5, obj.ToString(), null);
+                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj5, obj, null);
                 }
             }
-            private void Update_ReceivedDepositData_DateDeposited(global::System.DateTimeOffset obj, int phase)
+            private void Update_ReceivedDepositData_DateDeposited(global::System.String obj, int phase)
             {
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 62
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj.ToString(), null);
+                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj, null);
                 }
             }
             private void Update_ReceivedDepositData_Locality(global::System.String obj, int phase)

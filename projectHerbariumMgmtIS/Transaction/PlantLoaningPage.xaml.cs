@@ -42,13 +42,39 @@ namespace projectHerbariumMgmtIS.Transaction
 
         private void btnViewLoan_Click(object sender, RoutedEventArgs e)
         {
+            if (dgrLoanTable.SelectedIndex != -1)
+            {
+                var selectedItem = dgrLoanTable.SelectedItem as PlantLoan;
 
+                ViewLoanForm form = new ViewLoanForm()
+                {
+                    PlantLoanData = selectedItem
+                };
+                var result = form.ShowAsync();
+
+                this.InitializePage();
+            }
         }
 
         private void btnApprove_Click(object sender, RoutedEventArgs e)
         {
+            if (dgrLoanTable.SelectedIndex != -1)
+            {
+                var selectedItem = dgrLoanTable.SelectedItem as PlantLoan;
 
+                ApproveLoanForm form = new ApproveLoanForm()
+                {
+                    PlantLoanData = selectedItem
+                };
+                var result = form.ShowAsync();
+
+                this.InitializePage();
+            }
         }
 
+        private void btnReturn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

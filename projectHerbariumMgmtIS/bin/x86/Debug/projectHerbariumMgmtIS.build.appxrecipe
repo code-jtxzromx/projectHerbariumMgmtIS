@@ -580,6 +580,9 @@
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\background-1.png">
       <PackagePath>Assets\background-1.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\herbarium_banner.png">
+      <PackagePath>Assets\herbarium_banner.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\herbarium_icon.png">
       <PackagePath>Assets\herbarium_icon.png</PackagePath>
     </AppxPackagedFile>
@@ -639,6 +642,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\AccountForm.xbf">
       <PackagePath>Dialogs\AccountForm.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ApproveLoanForm.xbf">
+      <PackagePath>Dialogs\ApproveLoanForm.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\BorrowerForm.xbf">
       <PackagePath>Dialogs\BorrowerForm.xbf</PackagePath>
@@ -705,6 +711,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\VerifyDepositForm.xbf">
       <PackagePath>Dialogs\VerifyDepositForm.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewLoanForm.xbf">
+      <PackagePath>Dialogs\ViewLoanForm.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewSheetForm.xbf">
       <PackagePath>Dialogs\ViewSheetForm.xbf</PackagePath>
@@ -793,6 +802,18 @@
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\UtilitiesPage.xbf">
       <PackagePath>MenuPages\UtilitiesPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Queries\QueryHerbariumSheetPage.xbf">
+      <PackagePath>Queries\QueryHerbariumSheetPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Queries\QuerySpeciesPage.xbf">
+      <PackagePath>Queries\QuerySpeciesPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentNewDeposit.xbf">
+      <PackagePath>Reports\DocumentNewDeposit.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportNewDeposit.xbf">
+      <PackagePath>Reports\ReportNewDeposit.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\DepositTransactionPage.xbf">
       <PackagePath>Transaction\DepositTransactionPage.xbf</PackagePath>
     </AppxPackagedFile>
@@ -807,9 +828,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantLoaningPage.xbf">
       <PackagePath>Transaction\PlantLoaningPage.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantLoanReturnPage.xbf">
-      <PackagePath>Transaction\PlantLoanReturnPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantReceivingPage.xbf">
       <PackagePath>Transaction\PlantReceivingPage.xbf</PackagePath>

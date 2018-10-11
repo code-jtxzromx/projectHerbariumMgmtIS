@@ -1,4 +1,6 @@
-﻿using System;
+﻿using projectHerbariumMgmtIS.Model;
+using projectHerbariumMgmtIS.Reports;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +24,29 @@ namespace projectHerbariumMgmtIS.MenuPages
     /// </summary>
     public sealed partial class ReportsPage : Page
     {
+        private List<SubMenu> ReportsMenu = new List<SubMenu>()
+        {
+            new SubMenu() { MenuItem = "List of New Deposits",              TypePage = typeof(ReportNewDeposit) },
+            new SubMenu() { MenuItem = "List of Verified Deposits",         TypePage = typeof(ReportNewDeposit) },
+            new SubMenu() { MenuItem = "List of Rejected Deposits",         TypePage = typeof(ReportNewDeposit) },
+            new SubMenu() { MenuItem = "Collectors who Deposited",          TypePage = typeof(ReportNewDeposit) },
+            new SubMenu() { MenuItem = "Loans for the Month",               TypePage = typeof(ReportNewDeposit) },
+            new SubMenu() { MenuItem = "Externally Verified Collections",   TypePage = typeof(ReportNewDeposit) },
+            new SubMenu() { MenuItem = "New Family Boxes",                  TypePage = typeof(ReportNewDeposit) },
+
+        };
+
         public ReportsPage()
         {
             this.InitializeComponent();
+            this.InitializePage();
         }
+
+        private void InitializePage()
+        {
+            lstReportsMenu.ItemsSource = ReportsMenu;
+        }
+
+        private void lstReportsMenu_ItemClick(object sender, ItemClickEventArgs e) => frmPageContent.Navigate((e.ClickedItem as SubMenu).TypePage);
     }
 }

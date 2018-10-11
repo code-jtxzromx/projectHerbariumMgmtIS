@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectHerbariumMgmtIS.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,21 @@ namespace projectHerbariumMgmtIS.MenuPages
     /// </summary>
     public sealed partial class HomePage : Page
     {
+        public List<GridViewList> Cards = new List<GridViewList>()
+        {
+            new GridViewList() { Title = "Herbarium Sheets",                            Count = 0 },
+            new GridViewList() { Title = "Verified Species",                            Count = 0 },
+            new GridViewList() { Title = "Available Family Boxes",                      Count = 0 },
+            new GridViewList() { Title = "Available Sheets for Loaning",                Count = 0 },
+            new GridViewList() { Title = "New Plant Deposits",                          Count = 0 },
+            new GridViewList() { Title = "Resubmitting Deposits",                       Count = 0 },
+        };
+
         public HomePage()
         {
             this.InitializeComponent();
+            lblUser.Text = StaticAccess.StaffName;
+            grvCard.ItemsSource = Cards;
         }
     }
 }

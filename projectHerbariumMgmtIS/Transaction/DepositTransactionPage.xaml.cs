@@ -99,6 +99,10 @@ namespace projectHerbariumMgmtIS.Transaction
 
             if (ValidateForm())
             {
+                NewDepositData.DateCollected = dpkDateCollected.Date.ToString();
+                NewDepositData.DateDeposited = dpkDateDeposited.Date.ToString();
+                NewDepositData.DateVerified = dpkDateVerified.Date.ToString();
+
                 if (IsExisting && btnIsVerifiedDeposit.IsOn)                
                     TransactionResult = NewDepositData.SaveVerifiedDeposit((chkSameAccession.IsChecked == true), 
                                                                             isFileUpload, imageBinary);
@@ -124,6 +128,8 @@ namespace projectHerbariumMgmtIS.Transaction
 
                 MessageDialog dialog = new MessageDialog(message, "Process Done");
                 var result = dialog.ShowAsync();
+
+                this.ClearForm();
             }
         }
 

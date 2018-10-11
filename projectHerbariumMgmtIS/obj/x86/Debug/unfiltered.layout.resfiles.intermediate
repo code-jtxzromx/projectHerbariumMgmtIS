@@ -4,6 +4,7 @@ Assets\background-2.jpg
 Assets\background-3.jpg
 Assets\background-4.jpg
 Assets\background-5.jpg
+Assets\herbarium_banner.png
 Assets\herbarium_banner_white.png
 Assets\herbarium_banner_white_padded.png
 Assets\herbarium_icon.png
@@ -16,6 +17,7 @@ Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 Dialogs\AccountForm.xbf
+Dialogs\ApproveLoanForm.xbf
 Dialogs\BorrowerForm.xbf
 Dialogs\ClassForm.xbf
 Dialogs\ClassifySheetForm.xbf
@@ -39,6 +41,7 @@ Dialogs\SpeciesForm.xbf
 Dialogs\StaffForm.xbf
 Dialogs\ValidatorForm.xbf
 Dialogs\VerifyDepositForm.xbf
+Dialogs\ViewLoanForm.xbf
 Dialogs\ViewSheetForm.xbf
 MainPage.xbf
 Maintenance\AccessAccountsPage.xbf
@@ -68,12 +71,15 @@ MenuPages\ReportsPage.xbf
 MenuPages\TransactionPage.xbf
 MenuPages\UtilitiesPage.xbf
 projectHerbariumMgmtIS.xr.xml
+Queries\QueryHerbariumSheetPage.xbf
+Queries\QuerySpeciesPage.xbf
+Reports\DocumentNewDeposit.xbf
+Reports\ReportNewDeposit.xbf
 Transaction\DepositTransactionPage.xbf
 Transaction\ExcelDepositPage.xbf
 Transaction\PlantClassificationPage.xbf
 Transaction\PlantDepositPage.xbf
 Transaction\PlantLoaningPage.xbf
-Transaction\PlantLoanReturnPage.xbf
 Transaction\PlantReceivingPage.xbf
 Transaction\PlantResubmissionPage.xbf
 Transaction\PlantVerificationPage.xbf
