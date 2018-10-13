@@ -249,9 +249,9 @@ namespace projectHerbariumMgmtIS.Dialogs
             NewLoan = new PlantLoan();
             cbxBorrower.ItemsSource = new Borrower().GetBorrowerList();
             cbxDuration.ItemsSource = DurationType;
-            lstFamilyList.ItemsSource = new TaxonFamily().GetFamilies();
-            GenusList = new TaxonGenus().GetGenera();
-            SpeciesList = new TaxonSpecies().GetSpeciesWithCheck();
+            lstFamilyList.ItemsSource = new TaxonFamily().GetLoanAvailableFamilies();
+            GenusList = new TaxonGenus().GetLoanAvailableGenera();
+            SpeciesList = new TaxonSpecies().GetLoanAvailableSpecies();
             lstGenusList.ItemsSource = null;
             dgrSpeciesList.ItemsSource = null;
 

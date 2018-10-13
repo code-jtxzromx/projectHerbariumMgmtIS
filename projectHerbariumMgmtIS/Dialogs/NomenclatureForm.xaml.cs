@@ -51,12 +51,12 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             if (this.ValidateForm())
             {
-                if (TransactionForm == "Add Species Nomenclature")
+                if (TransactionForm == "Add Species Basionym")
                 {
                     TransactionResult = NomenclatureData.AddNomenclature();
                     args.Cancel = false;
                 }
-                else if (TransactionForm == "Edit Species Nomenclature")
+                else if (TransactionForm == "Edit Species Basionym")
                 {
                     TransactionResult = NomenclatureData.EditNomenclature();
                     args.Cancel = false;
@@ -108,7 +108,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             NomenclatureData = new SpeciesNomenclature();
             cbxTaxonName.ItemsSource = new TaxonSpecies().GetTaxonList();
 
-            TransactionForm = "Add Species Nomenclature";
+            TransactionForm = "Add Species Basionym";
             PrimaryButtonText = "Save";
         }
     }

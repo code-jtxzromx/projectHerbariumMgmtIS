@@ -26,7 +26,8 @@ CREATE TABLE tblSystemMenu
 	strMainMenu VARCHAR(255) NOT NULL,
 	strSubMenu VARCHAR(255),
 	strPageLocation VARCHAR(255) NOT NULL,
-	strAccessLevel VARCHAR(255) NOT NULL
+	strGlyphCode NVARCHAR(10),
+	intAccessLevel INT NOT NULL
 	CONSTRAINT pk_tblSystemMenu PRIMARY KEY(intMenuID)
 )
 GO
@@ -393,6 +394,23 @@ CREATE TABLE tblAccounts
 )
 
 ALTER TABLE tblAccounts ADD CONSTRAINT df_tblAccounts_boolActive DEFAULT 1 FOR boolActive
+GO
+
+-- Audit Trailing
+IF OBJECT_ID('tblAuditTrailing', 'U') IS NOT NULL
+	DROP TABLE tblAuditTrailing
+GO
+CREATE TABLE tblAuditTrailing
+(
+	intTrailingID INT IDENTITY(1, 1) NOT NULL,
+	intStaffID INT NOT NULL,
+	strModule VARCHAR(50) NOT NULL,
+	strTransactionDesc VARCHAR(MAX) NOT NULL,
+	dateTimeStamp DATETIME NOT NULL,
+	CONSTRAINT pk_tblAuditTrailing PRIMARY KEY(intTrailingID),
+	CONSTRAINT fk_tblAuditTrailing_tblHerbariumStaff FOREIGN KEY (intStaffID)
+		REFERENCES tblHerbariumStaff(intStaffID)
+)
 GO
 
 -- Accession Number Format
@@ -870,6 +888,19 @@ AS
 )
 GO
 
+-- Audit Trailing View
+IF OBJECT_ID('viewAuditTrailing', 'V') IS NOT NULL
+	DROP VIEw viewAuditTrailing
+GO
+CREATE VIEW viewAuditTrailing
+AS
+(
+	SELECT intTrailingID, HS.strFullName AS strStaff, strModule, strTransactionDesc, CONVERT(VARCHAR, dateTimeStamp, 22) AS dateTimeStamp
+	FROM tblAuditTrailing [AT]
+		INNER JOIN viewHerbariumStaff HS ON [AT].intStaffID = HS.intStaffID
+)
+GO
+
 -- Received Deposit View
 IF OBJECT_ID('viewReceivedDeposit', 'V') IS NOT NULL
 	DROP VIEW viewReceivedDeposit
@@ -897,7 +928,8 @@ AS
 (
 	SELECT PD.intPlantDepositID, 
 			CONCAT(AF.strInstitutionCode,'-', PT.strPlantTypeCode, '-', FORMAT(PD.intAccessionNumber, AF.strAccessionFormat), '-', 
-			FORMAT(YEAR(PD.dateDeposited) % POWER(10, LEN(AF.strYearFormat)), AF.strYearFormat)) strAccessionNumber, 
+			FORMAT(YEAR(PD.dateDeposited) % POWER(10, LEN(AF.strYearFormat)), AF.strYearFormat)) strAccessionNumber, PT.strPlantTypeName,
+			(CASE WHEN Lo.strCountry = 'Philippines' THEN Lo.strProvince ELSE 'Other Country' END) strProvince, 
 			PD.intAccessionNumber, Co.strFullName AS strCollector, Lo.strFullLocality,
 			St.strFullName AS strStaff, PD.dateCollected, PD.dateDeposited, PD.strDescription, PD.strStatus
 	FROM tblPlantDeposit PD
@@ -1033,47 +1065,60 @@ AS
 )
 GO
 
+IF OBJECT_ID('viewLoanedSheets', 'V') IS NOT NULL
+	DROP VIEW viewLoanedSheets
+GO
+CREATE VIEW viewLoanedSheets
+AS
+(
+	SELECT LP.intPlantLoanID, PL.strLoanNumber, HS.strAccessionNumber, HS.strScientificName, HS.strStatus
+	FROM tblLoaningPlants LP
+		INNER JOIN viewPlantLoans PL ON LP.intLoanID = PL.intLoanID
+		INNER JOIN viewHerbariumSheet HS ON LP.intHerbariumSheetID = HS.intHerbariumSheetID
+)
+GO
+
 --------- STATIC DATA INSERTION ---------
 -- Do not Overwrite!
 
 SET NOCOUNT ON
 
 -- System Menu
-INSERT INTO tblSystemMenu(strLevel, strMainMenu, strSubMenu, strPageLocation, strAccessLevel)
-VALUES ('A', 'Home',				NULL, 'HomePage',			'STUDENT ASSISTANT'),
-	   ('A', 'Maintenance',			NULL, 'MaintenancePage',	'STUDENT ASSISTANT'),
-	   ('A', 'Transaction',			NULL, 'TransactionPage',	'STUDENT ASSISTANT'),
-	   ('A', 'Management Tools',	NULL, 'UtilitiesPage',		'STUDENT ASSISTANT'),
-	   ('A', 'Queries',				NULL, 'QueriesPage',		'CURATOR'),
-	   ('A', 'Reports',				NULL, 'ReportsPage',		'CURATOR')
+INSERT INTO tblSystemMenu(strLevel, strMainMenu, strSubMenu, strPageLocation, strGlyphCode, intAccessLevel)
+VALUES ('A', 'Home',				NULL, 'HomePage',			N'',	1),
+	   ('A', 'Maintenance',			NULL, 'MaintenancePage',	N'',	1),
+	   ('A', 'Transaction',			NULL, 'TransactionPage',	N'',	1),
+	   ('A', 'Management Tools',	NULL, 'UtilitiesPage',		N'',	1),
+	   ('A', 'Queries',				NULL, 'QueriesPage',		N'',	2),
+	   ('A', 'Reports',				NULL, 'ReportsPage',		N'',	2)
 GO
-INSERT INTO tblSystemMenu(strLevel, strMainMenu, strSubMenu, strPageLocation, strAccessLevel)
-VALUES ('B', 'Maintenance',			'Taxonomic Hierarchy',	'TaxonomicHierarchyPage',	'CURATOR'),
-       ('B', 'Maintenance',			'Species Author',		'SpeciesAuthorPage',		'CURATOR'),
-       ('B', 'Maintenance',			'Species Nomenclature',	'SpeciesNomenclaturePage',	'CURATOR'),
-       ('B', 'Maintenance',			'Plant Types',			'PlantTypePage',			'CURATOR'),
-       ('B', 'Maintenance',			'Herbarium Boxes',		'HerbariumBoxPage',			'STUDENT ASSISTANT'),
-       ('B', 'Maintenance',			'Plant Locality',		'PlantLocalityPage',		'STUDENT ASSISTANT'),
-       ('B', 'Maintenance',			'Collector',			'CollectorPage',			'STUDENT ASSISTANT'),
-       ('B', 'Maintenance',			'Borrower',				'BorrowerPage',				'STUDENT ASSISTANT'),
-       ('B', 'Maintenance',			'External Validator',	'ExternalValidatorPage',	'CURATOR'),
-       ('B', 'Maintenance',			'Herbarium Staff',		'HerbariumStaffPage',		'ADMINISTRATOR'),
-       ('B', 'Maintenance',			'Access Accounts',		'AccessAccountsPage',		'ADMINISTRATOR'),
-       ('B', 'Transaction',			'Plant Deposit',		'PlantDepositPage',			'STUDENT ASSISTANT'),
-       ('B', 'Transaction',			'Plant Receiving',		'PlantReceivingPage',		'CURATOR'),
-       ('B', 'Transaction',			'Plant Resubmission',	'PlantResubmissionPage',	'STUDENT ASSISTANT'),
-       ('B', 'Transaction',			'Plant Verification',	'PlantVerificationPage',	'CURATOR'),
-       ('B', 'Transaction',			'Plant Classification',	'PlantClassificationPage',	'STUDENT ASSISTANT'),
-       ('B', 'Transaction',			'Plant Loaning',		'PlantLoaningPage',			'STUDENT ASSISTANT'),
-       ('B', 'Transaction',			'Plant Loan Returns',	'PlantLoanReturnPage',		'CURATOR'),
-       ('B', 'Management Tools',	'Herbarium Inventory',	'HerbariumInventoryPage',	'STUDENT ASSISTANT'),
-       ('B', 'Management Tools',	'Sheet Tracking',		'SheetTrackingPage',		'CURATOR'),
-       ('B', 'Management Tools',	'Audit Trailing',		'AuditTrailingPage',		'CURATOR')
+
+INSERT INTO tblSystemMenu(strLevel, strMainMenu, strSubMenu, strPageLocation, intAccessLevel)
+VALUES ('B', 'Maintenance',			'Taxonomic Hierarchy',	'TaxonomicHierarchyPage',	2),
+       ('B', 'Maintenance',			'Species Author',		'SpeciesAuthorPage',		2),
+       ('B', 'Maintenance',			'Species Basionym',		'SpeciesNomenclaturePage',	2),
+       ('B', 'Maintenance',			'Plant Types',			'PlantTypePage',			2),
+       ('B', 'Maintenance',			'Herbarium Boxes',		'HerbariumBoxPage',			1),
+       ('B', 'Maintenance',			'Plant Locality',		'PlantLocalityPage',		1),
+       ('B', 'Maintenance',			'Collector',			'CollectorPage',			1),
+       ('B', 'Maintenance',			'Borrower',				'BorrowerPage',				1),
+       ('B', 'Maintenance',			'External Validator',	'ExternalValidatorPage',	2),
+       ('B', 'Maintenance',			'Herbarium Staff',		'HerbariumStaffPage',		3),
+       ('B', 'Maintenance',			'Access Accounts',		'AccessAccountsPage',		3),
+       ('B', 'Transaction',			'Plant Deposit',		'PlantDepositPage',			1),
+       ('B', 'Transaction',			'Plant Receiving',		'PlantReceivingPage',		2),
+       ('B', 'Transaction',			'Plant Resubmission',	'PlantResubmissionPage',	1),
+       ('B', 'Transaction',			'Plant Verification',	'PlantVerificationPage',	2),
+       ('B', 'Transaction',			'Plant Classification',	'PlantClassificationPage',	1),
+       ('B', 'Transaction',			'Plant Loaning',		'PlantLoaningPage',			1),
+       ('B', 'Management Tools',	'Herbarium Inventory',	'HerbariumInventoryPage',	1),
+       ('B', 'Management Tools',	'Sheet Tracking',		'SheetTrackingPage',		1),
+       ('B', 'Management Tools',	'Audit Trailing',		'AuditTrailingPage',		2)
 GO
 
 -- Countries
 INSERT INTO tblCountry(strCountry)
-VALUES ('Afghanistan'), ('Aland Islands'), ('ALbania'), ('Algeria'), ('American Samoa'), 
+VALUES ('Afghanistan'), ('Aland Islands'), ('Albania'), ('Algeria'), ('American Samoa'), 
 	   ('Andorra'), ('Angola'), ('Anguilla'), ('Antarctica'), ('Antigua and Barbuda'), 
 	   ('Argentina'), ('Armenia'), ('Aruba'), ('Australia'), ('Austria'), 
 	   ('Azerbaijan'), ('Bahamas'), ('Bahrain'), ('Bangladesh'), ('Barbados'), 
@@ -1168,8 +1213,8 @@ GO
 
 -- Cities
 INSERT INTO tblCity (intProvinceID, strCity)
-VALUES (1, 'Caloocan City'), (1, 'Las Pi�as, City of'), (1, 'Makati, City of'), (1, 'Malabon, City of'), (1, 'Mandaluyong, City of'), 
-	   (1, 'Manila, City of '), (1, 'Marikina, City of '), (1, 'Muntilupa, City of '), (1, 'Navotas, City of'), (1, 'Para�aque, City of'),
+VALUES (1, 'Caloocan City'), (1, 'Las Piñas, City of'), (1, 'Makati, City of'), (1, 'Malabon, City of'), (1, 'Mandaluyong, City of'), 
+	   (1, 'Manila, City of '), (1, 'Marikina, City of '), (1, 'Muntilupa, City of '), (1, 'Navotas, City of'), (1, 'Parañaque, City of'),
 	   (1, 'Pasay City'), (1, 'Pasig, City of'), (1, 'Pateros'), (1, 'Quezon City'), (1, 'San Juan, City of '), 
 	   (1, 'Taguig City'), (1, 'Valenzuela, City of ')
 

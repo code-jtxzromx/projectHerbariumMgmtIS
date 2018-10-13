@@ -32,7 +32,7 @@
                 <CommandBar Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent">
                     <AppBarButton x:Name="btnView" Click="btnView_Click" Icon="View" Label="View Sheet Information" />
                     <AppBarButton x:Name="btnEdit" Click="btnEdit_Click" Icon="Edit" Label="Update Herbarium Sheet" />
-                    <AppBarButton x:Name="btnChangePhoto" Click="btnChangePhoto_Click" Icon="BrowsePhotos" Label="Change Herbarium Sheet Images" />
+                    <!--<AppBarButton x:Name="btnChangePhoto" Click="btnChangePhoto_Click" Icon="BrowsePhotos" Label="Change Herbarium Sheet Images" />-->
                 </CommandBar>
             </Grid>
             <StackPanel Grid.Row="1" BorderBrush="{StaticResource AppBarBorderThemeBrush}" Margin="5 0" Padding="5" BorderThickness="1">

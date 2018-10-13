@@ -1627,6 +1627,7 @@ IF OBJECT_ID('procInsertPlantDeposit', 'P') IS NOT NULL
 GO
 CREATE PROCEDURE procInsertPlantDeposit
 	@isIDBase			BIT,
+	@isBindedTrans		BIT,
 	@herbariumSheet		VARBINARY(MAX) = NULL,
 	@locality			VARCHAR(MAX),
 	@collector			VARCHAR(255),
@@ -1648,6 +1649,8 @@ BEGIN
 		DECLARE @collectorID INT
 		DECLARE @localityID INT
 		DECLARE @staffID INT
+		DECLARE @transaction VARCHAR(MAX)
+		DECLARE @depositNo VARCHAR(50)
 
 		SET @plantTypeID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @plantType
@@ -1670,14 +1673,26 @@ BEGIN
 		BEGIN
 			INSERT INTO tblReceivedDeposits (intPlantTypeID, picHerbariumSheet, intCollectorID, intLocalityID, intStaffID, dateCollected, dateDeposited, strDescription, strStatus)
 			VALUES (@plantTypeID, @herbariumSheet, @collectorID, @localityID, @staffID, @dateCollected, GETDATE(), @description, 'New Deposit')
+
+			SET @depositNo = (SELECT strDepositNumber FROM viewReceivedDeposit WHERE intDepositID = SCOPE_IDENTITY())
 		END
 		ELSE
 		BEGIN
 			INSERT INTO tblPlantDeposit(intAccessionNumber, intPlantTypeID, intFormatID, intCollectorID, intLocalityID, intStaffID, dateCollected, dateDeposited, strDescription, strStatus)
 			VALUES(@accessionDigits, @plantTypeID, 1, @collectorID, @localityID, @staffID, @dateCollected, @dateDeposited, @description, 'For Verification')
 
+			SET @depositNo = (SELECT strAccessionNumber FROM viewPlantDeposit WHERE intPlantDepositID = SCOPE_IDENTITY())
+
 			INSERT INTO tblHerbariumSheetPicture(intPlantDepositID, picHerbariumSheet, strTagDescription)
 			VALUES (SCOPE_IDENTITY(), @herbariumSheet, 'Main Herbarium Sheet')
+		END
+
+		IF @isBindedTrans = 0
+		BEGIN
+			SET @transaction = (SELECT CASE WHEN @accessionDigits IS NULL THEN 'Deposited New Plant' ELSE 'Encoded Existing Unverified Sheet' END)
+
+			INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+			VALUES (@staffID, 'Plant Deposit', CONCAT(@transaction, ' => PlantDeposit[', @depositNo, ']'), GETDATE())
 		END
 	END TRY
 	BEGIN CATCH
@@ -1698,7 +1713,8 @@ IF OBJECT_ID('procConfirmDeposit', 'P') IS NOT NULL
 GO
 CREATE PROCEDURE procConfirmDeposit
 	@depositNumber		VARCHAR(50),
-	@receiveStatus		VARCHAR(50)
+	@receiveStatus		VARCHAR(50),
+	@staff				VARCHAR(50)
 AS
 BEGIN
 	SET NOCOUNT ON;
@@ -1710,9 +1726,13 @@ BEGIN
 		DECLARE @accessionNumber INT
 		DECLARE @depositID INT
 		DECLARE @newDepositID INT
+		DECLARE @staffID INT
+		DECLARE @transaction VARCHAR(MAX)
 
 		SET @accessionNumber = (SELECT TOP 1 intAccessionNumber FROM tblPlantDeposit ORDER BY intAccessionNumber DESC)
 		SET @depositID = (SELECT intDepositID FROM viewReceivedDeposit WHERE strDepositNumber = @depositNumber);
+		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
+		SET @transaction = (SELECT CASE WHEN @receiveStatus = 'Accepted' THEN 'Accepted Deposit for Verification' ELSE 'Rejected Deposit' END)
 
 		UPDATE tblReceivedDeposits
 		SET strStatus = @receiveStatus
@@ -1736,6 +1756,9 @@ BEGIN
 				SELECT @newDepositID, picHerbariumSheet, 'Main Herbarium Sheet'
 				FROM tblReceivedDeposits
 				WHERE intDepositID = @depositID	
+
+			INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+			VALUES (@staffID, 'Plant Receiving', CONCAT(@transaction, ' => PlantDeposit[', @depositNumber, ']'), GETDATE())
 		END
 	END TRY
 	BEGIN CATCH
@@ -1798,6 +1821,9 @@ BEGIN
 			intPlantTypeID = @plantTypeID,
 			strStatus = 'Resubmitted'
 		WHERE intDepositID = @depositID
+
+		INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+		VALUES (@staffID, 'Plant Resubmission', CONCAT('Resubmitted Rejected Deposit => PlantDeposit[', @depositNumber, ']'), GETDATE())
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION		
@@ -1819,7 +1845,8 @@ CREATE PROCEDURE procExternalVerifyDeposit
 	@isIDBase		BIT,
 	@orgDeposit		VARCHAR(50),
 	@newDeposit		VARCHAR(50) = NULL,
-	@species		VARCHAR(255) = NULL
+	@species		VARCHAR(255) = NULL,
+	@staff			VARCHAR(MAX)
 AS
 BEGIN
 	SET NOCOUNT ON;
@@ -1831,6 +1858,7 @@ BEGIN
 		DECLARE @orgDepositID INT
 		DECLARE @newDepositID INT
 		DECLARE @speciesID INT
+		DECLARE @staffID INT
 
 		SET @orgDepositID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @orgDeposit
@@ -1844,6 +1872,7 @@ BEGIN
 								WHEN @isIDBase = 1 THEN @species
 								ELSE (SELECT intSpeciesID FROM viewTaxonSpecies WHERE strScientificName = @species)
 							END)
+		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 
 		UPDATE tblPlantDeposit
 		SET strStatus = 'Further Verification'
@@ -1854,6 +1883,9 @@ BEGIN
 			INSERT INTO tblVerifyingDeposit (intPlantDepositID, intReferenceDepositID, intSpeciesID)
 			VALUES (@orgDepositID, @newDepositID, @speciesID)
 		END
+
+		INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+		VALUES (@staffID, 'Plant Verification', CONCAT('Didn''t Verified the Plant Deposit => PlantDeposit[', @orgDeposit, ']'), GETDATE())
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION		
@@ -1873,10 +1905,12 @@ IF OBJECT_ID('procVerifyPlantDeposit', 'P') IS NOT NULL
 GO
 CREATE PROCEDURE procVerifyPlantDeposit
 	@isIDBase		BIT,
+	@isBindedTrans	BIT,
 	@orgDeposit		VARCHAR(50),
 	@newDeposit		VARCHAR(50),
 	@species		VARCHAR(255),
 	@validator		VARCHAR(255),
+	@staff			VARCHAR(255),
 	@dateVerified	DATE = NULL
 AS
 BEGIN
@@ -1890,6 +1924,7 @@ BEGIN
 		DECLARE @newDepositID INT
 		DECLARE @speciesID INT
 		DECLARE @validatorID INT
+		DECLARE @staffID INT
 
 		SET @orgDepositID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @orgDeposit
@@ -1907,6 +1942,10 @@ BEGIN
 								WHEN @isIDBase = 1 THEN @validator
 								ELSE (SELECT intValidatorID FROM viewValidator WHERE strFullName = @validator)
 							END)
+		SET @staffID = (SELECT CASE
+								WHEN @isIDBase = 1 THEN @staff
+								ELSE (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
+							END)
 
 		UPDATE tblPlantDeposit
 		SET strStatus = 'Verified'
@@ -1917,6 +1956,12 @@ BEGIN
 
 		INSERT INTO tblHerbariumSheet(intPlantDepositID, intPlantReferenceID, intSpeciesID, intValidatorID, dateVerified)
 		VALUES ( @orgDepositID, @newDepositID, @speciesID, @validatorID, @dateVerified)
+
+		IF @isBindedTrans = 0
+		BEGIN
+			INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+			VALUES (@staffID, 'Plant Verification', CONCAT('Verified the Herbarium Sheet => PlantDeposit [', @orgDeposit, ']'), GETDATE())
+		END
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION		
@@ -1958,20 +2003,26 @@ BEGIN
 	BEGIN TRANSACTION
 
 	BEGIN TRY
-		EXECUTE @Result = procInsertPlantDeposit @isIDBase, @herbariumSheet, @locality, @collector, @staff, @dateCollected, @description, @plantType, @accessionDigits, @dateDeposited
+		EXECUTE @Result = procInsertPlantDeposit @isIDBase, 1, @herbariumSheet, @locality, @collector, @staff, @dateCollected, @description, @plantType, @accessionDigits, @dateDeposited
 		IF @Result = 0
 		BEGIN
 			DECLARE @orgDeposit VARCHAR(50);
+			DECLARE @staffID INT;
+
 			SET @orgDeposit = (SELECT CASE
 									WHEN @isIDBase = 1 
 									THEN CAST((SELECT intPlantDepositID FROM viewPlantDeposit WHERE intAccessionNumber = @accessionDigits) AS VARCHAR(50))
 									ELSE (SELECT strAccessionNumber FROM viewPlantDeposit WHERE intAccessionNumber = @accessionDigits)
 								END) 
+			SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 
 			IF @sameAccession = 1
 				SET @newDeposit = @orgDeposit
 
-			EXECUTE @Result = procVerifyPlantDeposit @isIDBase, @orgDeposit, @newDeposit, @species, @validator, @dateVerified
+			EXECUTE @Result = procVerifyPlantDeposit @isIDBase, 1, @orgDeposit, @newDeposit, @species, @validator, @staff, @dateVerified
+
+			INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+			VALUES (@staffID, 'Plant Deposit', CONCAT('Encoded Existing Verified Sheet => PlantDeposit[', @orgDeposit, ']'), GETDATE())
 		END
 	END TRY
 	BEGIN CATCH
@@ -1993,7 +2044,8 @@ GO
 CREATE PROCEDURE procStoreHerbariumSheet
 	@accessionNumber	VARCHAR(50),
 	@boxNumber			VARCHAR(MAX),
-	@loanAvailable		BIT
+	@loanAvailable		BIT,
+	@staff				VARCHAR(255)
 AS
 BEGIN
 	SET NOCOUNT ON;
@@ -2005,15 +2057,20 @@ BEGIN
 		DECLARE @boxID INT;
 		DECLARE @sheetID INT;
 		DECLARE @depositID INT;
+		DECLARE @staffID INT
 
 		SET @boxID = (SELECT intBoxID FROM viewFamilyBox WHERE strBoxNumber = @boxNumber);
 		SET @sheetID = (SELECT intHerbariumSheetID FROM viewHerbariumSheet WHERE strAccessionNumber = @accessionNumber);
 		SET @depositID = (SELECT intPlantDepositID FROM viewPlantDeposit WHERE strAccessionNumber = @accessionNumber)
+		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 
 		UPDATE tblPlantDeposit SET strStatus = 'Stored' WHERE intPlantDepositID = @depositID;
 
 		INSERT INTO tblStoredHerbarium (intHerbariumSheetID, intBoxID, boolLoanAvailable)
 		VALUES (@sheetID, @boxID, @loanAvailable);
+
+		INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+		VALUES (@staffID, 'Plant Classification', CONCAT('Stored the Herbarium Sheet at ', @boxNumber, ' => HerbariumSheet[', @accessionNumber, ']'), GETDATE())
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION
@@ -2036,7 +2093,8 @@ CREATE PROCEDURE procUpdateHerbariumSheet
 	@accessionNumber	VARCHAR(50),
 	@boxNumber			VARCHAR(50),
 	@description		VARCHAR(255),
-	@loanAvailability	BIT
+	@loanAvailability	BIT,
+	@staff				VARCHAR(255)
 AS
 BEGIN
 	SET NOCOUNT ON;
@@ -2048,6 +2106,7 @@ BEGIN
 		DECLARE @boxID INT;
 		DECLARE @sheetID INT;
 		DECLARE @depositID INT;
+		DECLARE @staffID INT;
 
 		SET @boxID =  (SELECT CASE
 							WHEN @isIDBase = 1 THEN @boxNumber
@@ -2055,6 +2114,7 @@ BEGIN
 						END);
 		SET @sheetID = (SELECT intStoredSheetID FROM viewHerbariumInventory WHERE strAccessionNumber = @accessionNumber);
 		SET @depositID = (SELECT intPlantDepositID FROM viewPlantDeposit WHERE strAccessionNumber = @accessionNumber)
+		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 
 		UPDATE tblPlantDeposit
 		SET strDescription = @description
@@ -2064,6 +2124,9 @@ BEGIN
 		SET intBoxID = @boxID,
 			boolLoanAvailable = @loanAvailability
 		WHERE intStoredSheetID = @sheetID
+
+		INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+		VALUES (@staffID, 'Herbarium Inventory', CONCAT('Modified Details of the Herbarium Sheet => HerbariumSheet[', @accessionNumber, ']'), GETDATE())
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION
@@ -2087,7 +2150,8 @@ CREATE PROCEDURE procProcessLoan
 	@startDate		DATE,
 	@endDate		DATE,
 	@purpose		VARCHAR(255),
-	@status			VARCHAR(50)
+	@status			VARCHAR(50),
+	@staff			VARCHAR(255)
 AS
 BEGIN
 	SET NOCOUNT ON;
@@ -2097,13 +2161,22 @@ BEGIN
 
 	BEGIN TRY
 		DECLARE @borrowerID INT;
+		DECLARE @staffID INT;
+		DECLARE @loanNumber VARCHAR(50)
+
 		SET @borrowerID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @borrower
 								ELSE (SELECT intBorrowerID FROM viewBorrower WHERE strFullName = @borrower)
 							END);
+		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 	
 		INSERT INTO tblPlantLoanTransaction(intBorrowerID, dateLoan, dateReturning, dateProcessed, strPurpose, strStatus)
 		VALUES (@borrowerID, @startDate, @endDate, GETDATE(), @purpose, @status)
+
+		SET @loanNumber = (SELECT strLoanNumber FROM viewPlantLoans WHERE intLoanID = SCOPE_IDENTITY())
+
+		INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+		VALUES (@staffID, 'Plant Loaning', CONCAT('Processed New Loan => PlantLoan[', @loanNumber, ']'), GETDATE())
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION
@@ -2148,10 +2221,11 @@ BEGIN
 		IF @status = 'Approved'
 		BEGIN
 			DECLARE myCursor CURSOR FOR
-				SELECT TOP (@copies) intHerbariumSheetID
-				FROM tblStoredHerbarium
-				WHERE boolLoanAvailable = 1
-				ORDER BY intStoredSheetID ASC;
+				SELECT TOP (@copies) SH.intHerbariumSheetID
+				FROM tblStoredHerbarium SH
+					INNER JOIN tblHerbariumSheet HS ON SH.intHerbariumSheetID = HS.intHerbariumSheetID
+				WHERE SH.boolLoanAvailable = 1 AND HS.intSpeciesID = @speciesID
+				ORDER BY SH.intStoredSheetID ASC;
 
 			OPEN myCursor
 			FETCH NEXT FROM myCursor INTO @sheetID
@@ -2185,6 +2259,173 @@ BEGIN
 
 	IF XACT_STATE() = 1
 		COMMIT TRANSACTION
+
+	RETURN @Result
+END
+GO
+
+-- Approve Loan
+IF OBJECT_ID('procApproveLoan', 'P') IS NOT NULL
+	DROP PROCEDURE procApproveLoan
+GO
+CREATE PROCEDURE procApproveLoan
+	@loanNumber			VARCHAR(50),
+	@status				VARCHAR(50),
+	@staff				VARCHAR(255)
+AS
+BEGIN
+	SET NOCOUNT ON
+	DECLARE @Result INT = 0
+
+	BEGIN TRANSACTION
+		
+	BEGIN TRY
+		DECLARE @loanID INT
+		DECLARE @sheetID INT
+		DECLARE @speciesID INT
+		DECLARE @copies INT
+		DECLARE @cursor_status_A INT
+		DECLARE @cursor_status_B INT
+		DECLARE @staffID INT
+		DECLARE @transaction VARCHAR(MAX)
+
+		SET @loanID = (SELECT intLoanID FROM viewPlantLoans WHERE strLoanNumber = @loanNumber)
+		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
+		SET @transaction = (SELECT CASE WHEN @status = 'Approved' THEN 'Approved Loan Request' ELSE 'Rejected Loan Request' END)
+
+		UPDATE tblPlantLoanTransaction
+		SET strStatus = @status
+		WHERE intLoanID = @loanID
+
+		IF @status = 'Approved'
+		BEGIN
+			DECLARE speciesCursor CURSOR FOR
+				SELECT intSpeciesID, intCopies 
+				FROM tblLoaningSpecies
+				WHERE intLoanID = @loanID
+
+			OPEN speciesCursor
+			FETCH NEXT FROM speciesCursor INTO @speciesID, @copies
+
+			SET @cursor_status_A = @@FETCH_STATUS
+			WHILE @cursor_status_A = 0
+			BEGIN
+				DECLARE sheetCursor CURSOR FOR
+					SELECT TOP (@copies) SH.intHerbariumSheetID
+					FROM tblStoredHerbarium SH
+						INNER JOIN tblHerbariumSheet HS ON SH.intHerbariumSheetID = HS.intHerbariumSheetID
+					WHERE SH.boolLoanAvailable = 1 AND HS.intSpeciesID = @speciesID
+					ORDER BY SH.intStoredSheetID ASC;					
+
+				OPEN sheetCursor
+				FETCH NEXT FROM sheetCursor INTO @sheetID
+
+				SET @cursor_status_B = @@FETCH_STATUS
+				WHILE @cursor_status_B = 0
+				BEGIN
+					INSERT INTO tblLoaningPlants(intLoanID, intHerbariumSheetID)
+					VALUES (@loanID, @sheetID)
+
+					UPDATE tblPlantDeposit
+					SET strStatus = 'Loaned'
+					WHERE intPlantDepositID = (SELECT intPlantDepositID
+											   FROM tblHerbariumSheet
+											   WHERE intHerbariumSheetID = @sheetID)
+
+					UPDATE tblStoredHerbarium
+					SET boolLoanAvailable = 0
+					WHERE intHerbariumSheetID = @sheetID
+
+					FETCH NEXT FROM myCursor INTO @sheetID
+				END
+
+				CLOSE sheetCursor
+				DEALLOCATE sheetCursor
+			END
+
+			CLOSE speciesCursor
+			DEALLOCATE speciesCursor
+		END
+
+		INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+		VALUES (@staffID, 'Plant Loaning', CONCAT(@transaction, ' => PlantLoan[', @loanNumber, ']'), GETDATE())
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRANSACTION
+		SET @Result = 1
+	END CATCH
+
+	IF XACT_STATE() = 1
+		COMMIT TRANSACTION
+
+	RETURN @Result
+END
+GO
+
+-- Return Loan
+IF OBJECT_ID('procReturnLoan', 'P') IS NOT NULL
+	DROP PROCEDURE procReturnLoan
+GO
+CREATE PROCEDURE procReturnLoan
+	@loanNumber			VARCHAR(50),
+	@staff				VARCHAR(255)
+AS
+BEGIN
+	SET NOCOUNT ON
+	DECLARE @Result INT = 0
+
+	BEGIN TRANSACTION
+		
+	BEGIN TRY
+		DECLARE @loanID INT
+		DECLARE @sheetID INT
+		DECLARE @staffID INT
+
+		SET @loanID = (SELECT intLoanID FROM viewPlantLoans WHERE strLoanNumber = @loanNumber)
+		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
+
+		UPDATE tblPlantLoanTransaction
+		SET strStatus = 'Returned'
+		WHERE intLoanID = @loanID
+
+		DECLARE returnCursor CURSOR FOR
+			SELECT intHerbariumSheetID
+			FROM tblLoaningPlants
+			WHERE intLoanID = @loanID
+
+		OPEN myCursor
+		FETCH NEXT FROM myCursor INTO @sheetID
+
+		WHILE @@FETCH_STATUS = 0
+		BEGIN
+			UPDATE tblPlantDeposit
+			SET strStatus = 'Stored'
+			WHERE intPlantDepositID = (SELECT intPlantDepositID
+										FROM tblHerbariumSheet
+										WHERE intHerbariumSheetID = @sheetID)
+
+			UPDATE tblStoredHerbarium
+			SET boolLoanAvailable = 1
+			WHERE intHerbariumSheetID = @sheetID
+
+			FETCH NEXT FROM myCursor INTO @sheetID
+		END
+
+		CLOSE myCursor
+		DEALLOCATE myCursor
+
+		INSERT INTO tblAuditTrailing (intStaffID, strModule, strTransactionDesc, dateTimeStamp)
+		VALUES (@staffID, 'Plant Loaning', CONCAT('Received the Returned Loaned Sheets => PlantLoan[', @loanNumber, ']'), GETDATE())
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRANSACTION
+		SET @Result = 1
+	END CATCH
+
+	IF XACT_STATE() = 1
+		COMMIT TRANSACTION
+
+	RETURN @Result
 END
 GO
 
@@ -2219,13 +2460,90 @@ EXECUTE procInsertAccount 0, 'Althea Nicole Cruz', 'theacruz', 'theacruz'
 EXECUTE procInsertAccount 0, 'Christine Joy Leynes', 'tineleynes', 'tineleynes'
 
 EXECUTE procInsertSpeciesAuthor 'Carl Linneaus', 'L.'
+EXECUTE procInsertSpeciesAuthor 'Peter Forsskål', 'Forssk.'
+EXECUTE procInsertSpeciesAuthor 'Johann Gerhard König', 'J.Koenig'
+EXECUTE procInsertSpeciesAuthor 'George Bentham', 'Benth.'
+EXECUTE procInsertSpeciesAuthor 'Nikolaus Joseph Freiherr von Jacquin', 'Jacq.'
+EXECUTE procInsertSpeciesAuthor 'Antonio Krapovickas', 'Krapov.'
+EXECUTE procInsertSpeciesAuthor 'William Jackson Hooker', 'Hook.'
+EXECUTE procInsertSpeciesAuthor 'Jean-Bapiste Lamarck', 'Lam.'
+EXECUTE procInsertSpeciesAuthor 'Carl Ludwig von Willdenow', 'Willd.'
 
 EXECUTE procInsertPhylum 'Eukaryota', 'Plantae', 'Magnoliophyta'
+EXECUTE procInsertPhylum 'Eukaryota', 'Plantae', 'Spermatophyta'
+
 EXECUTE procInsertClass 0, 'Magnoliophyta', 'Magnoliopsida'
+EXECUTE procInsertClass 0, 'Magnoliophyta', 'Liliospida'
+EXECUTE procInsertClass 0, 'Spermatophyta', 'Dicotyledonae'
+
 EXECUTE procInsertOrder 0, 'Magnoliopsida', 'Lamiales'
+EXECUTE procInsertOrder 0, 'Magnoliopsida', 'Solanales'
+EXECUTE procInsertOrder 0, 'Liliospida', 'Zingiberales'
+EXECUTE procInsertOrder 0, 'Magnoliopsida', 'Fabales'
+EXECUTE procInsertOrder 0, 'Dicotyledonae', 'Scrophulariales'
+EXECUTE procInsertOrder 0, 'Dicotyledonae', 'Rutales'
+EXECUTE procInsertOrder 0, 'Dicotyledonae', 'Euphorbiales'
+EXECUTE procInsertOrder 0, 'Magnoliopsida', 'Myrtales'
+EXECUTE procInsertOrder 0, 'Magnoliospida', 'Geraniales'
+EXECUTE procInsertOrder 0, 'Magnoliospida', 'Malvales'
+
 EXECUTE procInsertFamily 0, 'Lamiales', 'Lamiaceae'
+EXECUTE procInsertFamily 0, 'Solanales', 'Convolvulaceae'
+EXECUTE procInsertFamily 0, 'Zingiberales', 'Costaceae'
+EXECUTE procInsertFamily 0, 'Fabales', 'Fabaceae'
+EXECUTE procInsertFamily 0, 'Scrophulariales', 'Scrophulriaceae'
+EXECUTE procInsertFamily 0, 'Rutales', 'Meliaceae'
+EXECUTE procInsertFamily 0, 'Euphorbiales', 'Euphorbiaceae'
+EXECUTE procInsertFamily 0, 'Myrtales', 'Onagraceae'
+EXECUTE procInsertFamily 0, 'Geraniales', 'Oxalidaceae'
+
 EXECUTE procInsertGenus 0, 'Lamiaceae', 'Vitex'
-EXECUTE procInsertSpecies 0, 'Vitex', 'negundo', 'Chinese chastetree', 'Carl Linneaus', 1
+EXECUTE procInsertGenus 0, 'Convolvulaceae', 'Ipomoea'
+EXECUTE procInsertGenus 0, 'Convolvulaceae', 'Operculina'
+EXECUTE procInsertGenus 0, 'Costaceae', 'Cheilocostus'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Acacia'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Albizia'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Arachis'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Bauhinia'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Centrosema'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Delonix'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Leucaena'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Mimosa'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Pterocarpus'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Senna'
+EXECUTE procInsertGenus 0, 'Fabaceae', 'Tamarindus'
+EXECUTE procInsertGenus 0, 'Scrophulriaceae', 'Lindernia'
+EXECUTE procInsertGenus 0, 'Meliaceae', 'Melia'
+EXECUTE procInsertGenus 0, 'Meliaceae', 'Melia'
+EXECUTE procInsertGenus 0, 'Meliaceae', 'Swietenia'
+EXECUTE procInsertGenus 0, 'Meliaceae', 'Sandoricum'
+EXECUTE procInsertGenus 0, 'Euphorbiaceae', 'Codiaeum'
+EXECUTE procInsertGenus 0, 'Onagraceae', 'Ludwigia'
+EXECUTE procInsertGenus 0, 'Oxalidaceae', 'Averrhoa'
+EXECUTE procInsertGenus 0, 'Oxalidaceae', 'Oxalis'
+
+EXECUTE procInsertSpecies 0, 'Vitex', 'negundo', 'Chinese Chastetree', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Ipomoea', 'aquatica', 'Water Spinach', 'Peter Forsskål', 1
+EXECUTE procInsertSpecies 0, 'Ipomoea', 'batatas', 'Sweet Potato', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Ipomoea', 'tribola', 'Three Lobed Morning Glory', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Operculina', 'turpethum', 'St. Thomas Lidpod', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Cheilocostus', 'speciosus', 'Crepe Ginger', 'Johann Gerhard König', 1
+EXECUTE procInsertSpecies 0, 'Acacia', 'auriculiformis', 'Auri', 'George Bentham', 1
+EXECUTE procInsertSpecies 0, 'Albizia', 'saman', 'Monkeypod', 'Nikolaus Joseph Freiherr von Jacquin', 1
+EXECUTE procInsertSpecies 0, 'Arachis', 'pintoi', 'Pinto Peanut', 'Antonio Krapovickas', 1
+EXECUTE procInsertSpecies 0, 'Bauhinia', 'purpurea', 'Butterfly Tree', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Centrosema', 'pubescens', 'Butterfly Pea', 'George Bentham', 1
+EXECUTE procInsertSpecies 0, 'Delonix', 'regia', 'Royal Poinciana', 'William Jackson Hooker', 1
+EXECUTE procInsertSpecies 0, 'Laucaena', 'leucocephala', 'River Tamarind', 'Jean-Baptiste Lamark', 1
+EXECUTE procInsertSpecies 0, 'Mimosa', 'pudica', 'Shameplant', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Pterocarpus', 'indicus', 'Narra', 'Carl Ludwig von Willdenow', 1
+EXECUTE procInsertSpecies 0, 'Senna', 'alata', 'Emperors Candle', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Tamarindus', 'indica', 'Tamarind', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Lindernia', 'crustacea', 'Malaysian False Pimpernel', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Codiaeum', 'variegatum', 'Garden Croton', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Ludwigia', 'perennis', 'Perennial Water Primrose', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Averrhoa', 'bilimbi', 'Bilimbi', 'Carl Linneaus', 1
+EXECUTE procInsertSpecies 0, 'Oxalis', 'corniculata', 'Creeping Woodsorrel', 'Carl Linneaus', 1
 
 EXECUTE procInsertSpeciesNomenclature 0, 'Vitex negundo L.', 'Filipino', 'Lagundi'
 EXECUTE procInsertFamilyBox 0, 'Lamiaceae', 20, 1, 1, 1

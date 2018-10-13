@@ -95,7 +95,7 @@ namespace projectHerbariumMgmtIS.Model
             return species;
         }
 
-        public List<TaxonSpecies> GetSpeciesWithCheck()
+        public List<TaxonSpecies> GetLoanAvailableSpecies()
         {
             List<TaxonSpecies> species = new List<TaxonSpecies>();
             DatabaseConnection connection = new DatabaseConnection();
@@ -103,7 +103,8 @@ namespace projectHerbariumMgmtIS.Model
             connection.setQuery("SELECT SI.strFamilyName, SI.strGenusName, SI.strScientificName, " +
                                     "SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) " +
                                 "FROM viewSpeciesInventory SI " +
-                                    "LEFT JOIN viewSpeciesLoanCount SL ON SI.strScientificName = SL.strScientificName ");
+                                    "LEFT JOIN viewSpeciesLoanCount SL ON SI.strScientificName = SL.strScientificName " +
+                                "WHERE SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) > 0");
             SqlDataReader sqlData = connection.executeResult();
 
             while (sqlData.Read())

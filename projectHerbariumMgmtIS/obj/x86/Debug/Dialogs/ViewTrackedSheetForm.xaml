@@ -1,0 +1,87 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="projectHerbariumMgmtIS.Dialogs.ViewTrackedSheetForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:projectHerbariumMgmtIS.Model"
+    mc:Ignorable="d"
+    Title="Sheet Tracking Information"
+    CloseButtonText="Close">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="420" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Width="240" Height="320" Margin="5 10" Background="#0F000000" VerticalAlignment="Top">
+            <FlipView x:ConnectionId='3'                                                    >
+                <FlipView.ItemTemplate>
+                    <DataTemplate                                  >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.Row="0" Grid.RowSpan="2" Stretch="Uniform" Source="{Binding HerbariumSheet}" />
+                            <Border VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Padding="10" Background="#CFFFFFFF">
+                                <TextBlock TextAlignment="Center" Text="{Binding Tag}" />
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </FlipView.ItemTemplate>
+            </FlipView>
+        </Border>
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Height="320">
+            <StackPanel x:ConnectionId='2' x:Name="pnlMain">
+                <Grid Margin="10 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" Text="Status: " />
+                    <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" Text="Currently at: " />
+
+                    <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" Text="Accession Number: " />
+                    <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" Text="Date Collected: " />
+                    <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Date Deposited: " />
+                    <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" Text="Location: " />
+                    <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Collector: " />
+                    <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Description: " />
+
+                    <!--<TextBlock Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.AccessionNumber}" />
+                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.ReferenceNumber}" />
+                    <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.BoxLocation}" />
+                    <TextBlock Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.FamilyName}" />
+                    <TextBlock Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.ScientificName}" />
+                    <TextBlock Grid.Column="1" Grid.Row="5" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.TaxonNomenclature}" />
+                    <TextBlock Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.DateCollected}" />
+                    <TextBlock Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind HerbariumSheetData.DateDeposited}" />-->
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</ContentDialog>
+

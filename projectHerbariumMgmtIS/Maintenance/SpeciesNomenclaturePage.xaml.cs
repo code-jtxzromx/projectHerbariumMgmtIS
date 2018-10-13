@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,12 +33,12 @@ namespace projectHerbariumMgmtIS.Maintenance
 
         private void InitializePage() => dgrNomenclatureTable.ItemsSource = new SpeciesNomenclature().GetSpeciesNomenclatures();
 
-        private void btnAddNomenclature_Click(object sender, RoutedEventArgs e) => this.LoadForm("Add Species Nomenclature");
+        private void btnAddNomenclature_Click(object sender, RoutedEventArgs e) => this.LoadForm("Add Species Basionym");
 
         private void btnEditNomenclature_Click(object sender, RoutedEventArgs e)
         {
             if (dgrNomenclatureTable.SelectedIndex != -1)
-                this.LoadForm("Edit Species Nomenclature", dgrNomenclatureTable.SelectedItem as SpeciesNomenclature);
+                this.LoadForm("Edit Species Basionym", dgrNomenclatureTable.SelectedItem as SpeciesNomenclature);
         }
 
         private async void LoadForm(string transaction, SpeciesNomenclature nomenclature = null)
@@ -46,7 +47,7 @@ namespace projectHerbariumMgmtIS.Maintenance
             {
                 TransactionForm = transaction,
                 NomenclatureData = (nomenclature == null) ? new SpeciesNomenclature() : nomenclature,
-                PrimaryButtonText = (transaction == "Add Species Nomenclature") ? "Save" : "Update"
+                PrimaryButtonText = (transaction == "Add Species Basionym") ? "Save" : "Update"
             };
             var result = await form.ShowAsync();
 
@@ -57,7 +58,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add Species Nomenclature") ? "Species Nomenclature Added to the Database" : "Species Nomenclature Updated in the Database";
+                        message = (form.TransactionForm == "Add Species Basionym") ? "Species Basionym Added to the Database" : "Species Basionym Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";
@@ -67,10 +68,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                         break;
                 }
 
-                ResultDialog dialog = new ResultDialog()
-                {
-                    TextContent = message
-                };
+                MessageDialog dialog = new MessageDialog(message);
                 await dialog.ShowAsync();
 
                 this.InitializePage();

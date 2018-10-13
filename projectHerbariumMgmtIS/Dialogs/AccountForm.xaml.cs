@@ -26,22 +26,27 @@ namespace projectHerbariumMgmtIS.Dialogs
         public string TransactionForm
         {
             get { return (string)GetValue(TransactionFormProperty); }
-            set
-            {
-                SetValue(TransactionFormProperty, value);
-                cbxStaffName.IsEnabled = (value == "Add Access Accounts");
-            }
+            set { SetValue(TransactionFormProperty, value); }
         }
         public Account AccountData
         {
             get { return (Account)GetValue(AccountDataProperty); }
             set { SetValue(AccountDataProperty, value); }
         }
+        public bool IsEditTrans
+        {
+            get { return (bool)GetValue(IsEditTransProperty); }
+            set { SetValue(IsEditTransProperty, value); }
+        }
 
         public static readonly DependencyProperty AccountDataProperty =
             DependencyProperty.Register("AccountData", typeof(Account), typeof(AccountForm), new PropertyMetadata(new Account()));
         public static readonly DependencyProperty TransactionFormProperty =
             DependencyProperty.Register("TransactionForm", typeof(string), typeof(AccountForm), new PropertyMetadata(""));
+        public static readonly DependencyProperty IsEditTransProperty =
+            DependencyProperty.Register("IsEditTrans", typeof(bool), typeof(AccountForm), new PropertyMetadata(false));
+
+
 
         // Constructor
         public AccountForm()

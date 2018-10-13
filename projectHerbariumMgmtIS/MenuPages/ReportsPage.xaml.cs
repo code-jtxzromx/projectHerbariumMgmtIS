@@ -26,14 +26,10 @@ namespace projectHerbariumMgmtIS.MenuPages
     {
         private List<SubMenu> ReportsMenu = new List<SubMenu>()
         {
-            new SubMenu() { MenuItem = "List of New Deposits",              TypePage = typeof(ReportNewDeposit) },
-            new SubMenu() { MenuItem = "List of Verified Deposits",         TypePage = typeof(ReportNewDeposit) },
-            new SubMenu() { MenuItem = "List of Rejected Deposits",         TypePage = typeof(ReportNewDeposit) },
-            new SubMenu() { MenuItem = "Collectors who Deposited",          TypePage = typeof(ReportNewDeposit) },
-            new SubMenu() { MenuItem = "Loans for the Month",               TypePage = typeof(ReportNewDeposit) },
-            new SubMenu() { MenuItem = "Externally Verified Collections",   TypePage = typeof(ReportNewDeposit) },
-            new SubMenu() { MenuItem = "New Family Boxes",                  TypePage = typeof(ReportNewDeposit) },
-
+            new SubMenu() { MenuItem = "List of New Deposits",              TypePage = typeof(ReportNewDepositPage) },
+            new SubMenu() { MenuItem = "List of Rejected Deposits",         TypePage = typeof(ReportRejectedDepositPage) },
+            new SubMenu() { MenuItem = "List of Verified Deposits",         TypePage = typeof(ReportVerifiedDepositPage) },
+            new SubMenu() { MenuItem = "Externally Verified Collections",   TypePage = typeof(ReportExternalVerificationPage) },
         };
 
         public ReportsPage()

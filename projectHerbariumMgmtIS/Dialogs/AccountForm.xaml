@@ -36,6 +36,7 @@
                  Text="{x:Bind AccountData.AccountID, Mode=TwoWay}"
                  Grid.Column="0" Grid.Row="0" Margin="5" IsEnabled="False" />
         <ComboBox x:Name="cbxStaffName" Header="Staff Name: *" HeaderTemplate="{StaticResource HeaderTemplate}"
+                  IsEnabled="{x:Bind IsEditTrans, Mode=OneWay}"
                   SelectedItem="{x:Bind AccountData.Staff, Mode=TwoWay}" PlaceholderText="Select Staff"
                  Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch" />
         <TextBlock x:Name="msgStaffName" Grid.Column="1" Grid.Row="1" Margin="5 -2" FlowDirection="RightToLeft"

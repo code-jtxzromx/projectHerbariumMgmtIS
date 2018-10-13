@@ -1,0 +1,77 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="projectHerbariumMgmtIS.Dialogs.ReturnLoanForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Dialogs"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Title="TITLE"
+    PrimaryButtonText="Return Loaned Specimens"
+    CloseButtonText="Cancel"
+                                                         >
+
+    <Grid Width="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="500" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="0 10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Margin="5" Text="Loan Number: " />
+            <TextBlock Grid.Row="2" Margin="5" Text="Borrower: " />
+            <TextBlock Grid.Row="4" Margin="5" Text="Duration: " />
+            <TextBlock Grid.Row="6" Margin="5" Text="Purpose: " />
+            <TextBlock Grid.Row="8" Margin="5" Text="Status: " />
+
+            <TextBlock x:ConnectionId='4' Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"                                          />
+            <TextBlock x:ConnectionId='5' Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"                                        />
+            <TextBlock x:ConnectionId='6' Grid.Row="5" Margin="5" TextWrapping="WrapWholeWords"                                        />
+            <TextBlock x:ConnectionId='7' Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"                                       />
+            <TextBlock x:ConnectionId='8' Grid.Row="9" Margin="5" TextWrapping="WrapWholeWords"
+                                                            />
+
+        </Grid>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock Margin="5" Text="Loaned Species" />
+            <controls:DataGrid x:ConnectionId='3' x:Name="dgrLoanedSpecies" BorderBrush="Black" BorderThickness="1" Margin="5" Height="200" 
+                               AutoGenerateColumns="False" CanUserSortColumns="True">
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn Width="*" Header="Family Name" Binding="{Binding FamilyName}" IsReadOnly="True" />
+                    <controls:DataGridTextColumn Width="2*" Header="Taxon Name" Binding="{Binding ScientificName}" IsReadOnly="True" />
+                    <controls:DataGridTextColumn Width="100" Header="Copies" Binding="{Binding Copies}" IsReadOnly="True" />
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock Margin="5" Text="Loaned Species" />
+            <controls:DataGrid x:ConnectionId='2' x:Name="dgrLoanedSheets" BorderBrush="Black" BorderThickness="1" Margin="5" Height="200" 
+                               AutoGenerateColumns="False" CanUserSortColumns="True">
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn Width="*" Header="Taxon Name" Binding="{Binding ScientificName}" IsReadOnly="True" />
+                    <controls:DataGridTextColumn Width="*" Header="Accession Number" Binding="{Binding AccessionNumber}" IsReadOnly="True" />
+                    <controls:DataGridTextColumn Width="100" Header="Copies" Binding="{Binding Copies}" IsReadOnly="True" />
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
+

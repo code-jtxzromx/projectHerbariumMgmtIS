@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -46,7 +47,8 @@ namespace projectHerbariumMgmtIS.Maintenance
             {
                 TransactionForm = transaction,
                 AccountData = (account == null) ? new Account() : account,
-                PrimaryButtonText = (transaction == "Add Access Account") ? "Save" : "Update"
+                PrimaryButtonText = (transaction == "Add Access Account") ? "Save" : "Update",
+                IsEditTrans = (transaction == "Add Access Account")
             };
             var result = await form.ShowAsync();
 
@@ -67,10 +69,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                         break;
                 }
 
-                ResultDialog dialog = new ResultDialog()
-                {
-                    TextContent = message
-                };
+                MessageDialog dialog = new MessageDialog(message);
                 await dialog.ShowAsync();
 
                 this.InitializePage();

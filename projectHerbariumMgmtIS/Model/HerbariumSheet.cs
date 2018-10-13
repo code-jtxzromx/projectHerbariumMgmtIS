@@ -16,22 +16,24 @@ namespace projectHerbariumMgmtIS.Model
         // Properties
         public string AccessionNumber { get; set; }
         public string ReferenceNumber { get; set; }
+        public string PlantType { get; set; }
+        public string BoxLocation { get; set; }
         public string FamilyName { get; set; }
         public string ScientificName { get; set; }
         public string TaxonNomenclature { get; set; }
         public string DateCollected { get; set; }
         public string DateDeposited { get; set; }
         public string DateValidated { get; set; }
+        public string Province { get; set; }
         public string Locality { get; set; }
         public string Collector { get; set; }
+        public string Staff { get; set; }
         public string Validator { get; set; }
         public string Description { get; set; }
         public string LoanAvailability { get; set; }
         public bool IsAvailable { get; set; }
         public string Status { get; set; }
-        public string BoxLocation { get; set; }
-        public string Account { get; set; }
-
+        
         // Constructor
         public HerbariumSheet()
         {
@@ -50,7 +52,6 @@ namespace projectHerbariumMgmtIS.Model
             this.LoanAvailability = "";
             this.Status = "";
             this.BoxLocation = "";
-            this.Account = "";
         }
 
         // Methods
@@ -125,7 +126,104 @@ namespace projectHerbariumMgmtIS.Model
             connection.closeResult();
             return herbariumSheets;
         }
-        
+
+        public List<HerbariumSheet> GetHerbariumSheetQuery()
+        {
+            List<HerbariumSheet> herbariumSheets = new List<HerbariumSheet>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT PD.strAccessionNumber, ISNULL(HS.strReferenceAccession, ''), PD.strPlantTypeName, " +
+                                    "ISNULL(CONCAT(' [', HS.strFamilyName, ']'), ''), ISNULL(HS.strScientificName, '- not verified yet-'), " +
+                                    "ISNULL(HS.strFullNomenclature, '- not verified yet-'), PD.strProvince, PD.strFullLocality, " +
+                                    "PD.strCollector, PD.strStaff, ISNULL(HS.strValidator, '- not verified yet-'), " +
+                                    "CONVERT(VARCHAR, PD.dateCollected, 107), CONVERT(VARCHAR, PD.dateDeposited, 107), " +
+                                    "ISNULL(CONVERT(VARCHAR, HS.dateVerified, 107), '- not verified yet -'), " +
+                                    "PD.strDescription, ISNULL(HI.strBoxNumber, '- not stored yet-'), " +
+                                    "ISNULL(HI.boolLoanAvailable, 0), PD.strStatus " +
+                                "FROM viewPlantDeposit PD " +
+                                    "LEFT JOIN viewHerbariumSheet HS ON PD.strAccessionNumber = HS.strAccessionNumber " +
+                                    "LEFT JOIN viewHerbariumInventory HI ON HS.strAccessionNumber = HI.strAccessionNumber");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                herbariumSheets.Add(new HerbariumSheet()
+                {
+                    AccessionNumber = sqlData[0].ToString(),
+                    ReferenceNumber = sqlData[1].ToString(),
+                    PlantType = sqlData[2].ToString(),
+                    FamilyName = sqlData[3].ToString(),
+                    ScientificName = sqlData[4].ToString(),
+                    TaxonNomenclature = sqlData[5].ToString().Replace(';', '\n'),
+                    Province = sqlData[6].ToString(),
+                    Locality = sqlData[7].ToString(),
+                    Collector = sqlData[8].ToString(),
+                    Staff = sqlData[9].ToString(),
+                    Validator = sqlData[10].ToString(),
+                    DateCollected = sqlData[11].ToString(),
+                    DateDeposited = sqlData[12].ToString(),
+                    DateValidated = sqlData[13].ToString(),
+                    Description = sqlData[14].ToString(),
+                    BoxLocation = sqlData[15].ToString(),
+                    LoanAvailability = Convert.ToBoolean(sqlData[16]) ? "Available" : "Not Available",
+                    Status = sqlData[17].ToString()
+                });
+            }
+            connection.closeResult();
+            return herbariumSheets;
+        }
+
+        public List<HerbariumSheet> GetVerifiedDepositReport(string startDate, string endDate)
+        {
+            List<HerbariumSheet> herbariumSheets = new List<HerbariumSheet>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strAccessionNumber, strCollector, strScientificName, CONVERT(VARCHAR, dateVerified, 107) " +
+                                "FROM viewHerbariumSheet " +
+                                "WHERE dateVerified BETWEEN @startDate AND @endDate");
+            connection.addQueryParameter("@startDate", SqlDbType.VarChar, startDate);
+            connection.addQueryParameter("@endDate", SqlDbType.VarChar, endDate);
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                herbariumSheets.Add(new HerbariumSheet()
+                {
+                    AccessionNumber = sqlData[0].ToString(),
+                    Collector = sqlData[1].ToString(),
+                    ScientificName = sqlData[2].ToString(),
+                    DateValidated = sqlData[3].ToString(),
+                });
+            }
+            connection.closeResult();
+            return herbariumSheets;
+        }
+
+        public List<HerbariumSheet> GetLoanedSheets(string loanNumber)
+        {
+            List<HerbariumSheet> herbariumSheets = new List<HerbariumSheet>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strAccessionNumber, strScientificName, strStatus " +
+                                "FROM viewLoanedSheets " +
+                                "WHERE strLoanNumber = @loanNumber " +
+                                "ORDER BY strAccessionNumber ASC");
+            connection.addQueryParameter("@loanNumber", SqlDbType.VarChar, loanNumber);
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                herbariumSheets.Add(new HerbariumSheet()
+                {
+                    AccessionNumber = sqlData[0].ToString(),
+                    ScientificName = sqlData[1].ToString(),
+                    Status = sqlData[2].ToString()
+                });
+            }
+            connection.closeResult();
+            return herbariumSheets;
+        }
+
         public int ClassifyHerbariumSheet(string boxnumber)
         {
             int status;
@@ -134,6 +232,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@accessionNumber", SqlDbType.VarChar, AccessionNumber);
             connection.addProcParameter("@boxNumber", SqlDbType.VarChar, boxnumber);
             connection.addProcParameter("@loanAvailable", SqlDbType.Bit, IsAvailable);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
             status = connection.executeProcedure();
             
             return status;
@@ -149,6 +248,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@boxNumber", SqlDbType.VarChar, BoxLocation);
             connection.addProcParameter("@description", SqlDbType.VarChar, Description);
             connection.addProcParameter("@loanAvailability", SqlDbType.Bit, IsAvailable);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
             status = connection.executeProcedure();
 
             return status;

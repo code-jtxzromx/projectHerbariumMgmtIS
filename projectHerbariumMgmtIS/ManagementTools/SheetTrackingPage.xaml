@@ -5,10 +5,35 @@
     xmlns:local="using:projectHerbariumMgmtIS.ManagementTools"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Herbarium Sheets" Margin="5 0" VerticalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}" />
+            <CommandBar Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent">
+                <AppBarButton x:Name="btnView" Click="btnView_Click" Icon="View" Label="View Sheet Information" />
+            </CommandBar>
+        </Grid>
+        <toolkit:DataGrid x:Name="dgrHerbariumSheetsTable" Grid.Row="1" Margin="5" CanUserSortColumns="True"
+                          AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" >
+            <toolkit:DataGrid.Columns>
+                <toolkit:DataGridTextColumn Width="*" Header="Accession Number" Binding="{Binding AccessionNumber}"/>
+                <toolkit:DataGridTextColumn Width="*" Header="Collector" Binding="{Binding Collector}"/>
+                <toolkit:DataGridTextColumn Width="*" Header="Date Collected" Binding="{Binding DateCollected}"/>
+                <toolkit:DataGridTextColumn Width="*" Header="Status" Binding="{Binding Status}"/>
+            </toolkit:DataGrid.Columns>
+        </toolkit:DataGrid>
     </Grid>
 </Page>

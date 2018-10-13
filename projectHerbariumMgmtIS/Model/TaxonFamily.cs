@@ -40,13 +40,53 @@ namespace projectHerbariumMgmtIS.Model
                 families.Add(new TaxonFamily()
                 {
                     FamilyID = sqlData[0].ToString(),
-                    IsChecked = false,
                     OrderName = sqlData[1].ToString(),
                     FamilyName = sqlData[2].ToString()
                 });
             }
             connection.closeResult();
             return families;
+        }
+
+        public List<TaxonFamily> GetLoanAvailableFamilies()
+        {
+            List<TaxonFamily> families = new List<TaxonFamily>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT SI.strFamilyName, " +
+                                    "SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) " +
+                                "FROM viewSpeciesInventory SI " +
+                                    "LEFT JOIN viewSpeciesLoanCount SL ON SI.strScientificName = SL.strScientificName " +
+                                "WHERE SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) > 0");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                families.Add(new TaxonFamily()
+                {
+                    IsChecked = false,
+                    FamilyName = sqlData[0].ToString()
+                });
+            }
+            connection.closeResult();
+            return families;
+        }
+
+        public bool CanProcessLoan()
+        {
+            bool status;
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT SI.strFamilyName, " +
+                                    "SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) " +
+                                "FROM viewSpeciesInventory SI " +
+                                    "LEFT JOIN viewSpeciesLoanCount SL ON SI.strScientificName = SL.strScientificName " +
+                                "WHERE SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) > 0");
+            SqlDataReader sqlData = connection.executeResult();
+            status = sqlData.HasRows;
+
+            connection.closeResult();
+            return status;
         }
 
         public List<string> GetFamilyList()

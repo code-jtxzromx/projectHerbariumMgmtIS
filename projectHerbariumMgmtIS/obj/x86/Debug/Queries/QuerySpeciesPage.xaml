@@ -91,7 +91,7 @@
         <StackPanel Grid.Column="1" Grid.Row="0" Margin="10 5" Orientation="Horizontal" 
                     VerticalAlignment="Center" HorizontalAlignment="Right">
             <TextBlock Text="Search: " Margin="10 0" VerticalAlignment="Center" />
-            <TextBox x:ConnectionId='7' x:Name="txfSearch" Width="250" />
+            <TextBox x:ConnectionId='7' x:Name="txfSearch"                                     Width="250" />
         </StackPanel>
         <Grid Grid.Column="1" Grid.Row="1" Margin="10" >
             <Grid.RowDefinitions>
@@ -107,7 +107,7 @@
                     <controls:DataGridTextColumn Width="*" Header="Common Name" Binding="{Binding CommonName}" />
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
-            <Button x:ConnectionId='6' x:Name="btnResetTable" Grid.Row="1" Content="Clear Selections" Margin="0 10" HorizontalAlignment="Right" />
+            <Button x:ConnectionId='6' x:Name="btnResetTable"                             Grid.Row="1" Content="Clear Filters" Margin="0 10" HorizontalAlignment="Right" />
         </Grid>
     </Grid>
 </Page>

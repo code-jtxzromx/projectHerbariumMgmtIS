@@ -29,6 +29,11 @@ namespace projectHerbariumMgmtIS.Dialogs
             {
                 SetValue(PlantLoanDataProperty, value);
                 dgrLoanedSpecies.ItemsSource = new TaxonSpecies().GetLoanedSpecies(value.LoanNumber);
+
+                if (value.Status == "Approved")
+                    dgrLoanedSheets.ItemsSource = new HerbariumSheet().GetLoanedSheets(value.LoanNumber);
+                else
+                    dgrLoanedSheets.Visibility = Visibility.Collapsed;
             }
         }
 

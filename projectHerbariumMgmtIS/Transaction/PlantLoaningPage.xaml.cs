@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,12 +31,28 @@ namespace projectHerbariumMgmtIS.Transaction
             this.InitializePage();
         }
 
-        private void InitializePage() => dgrLoanTable.ItemsSource = new PlantLoan().GetCurrentLoans();
+        private void InitializePage()
+        {
+            dgrLoanTable.ItemsSource = new PlantLoan().GetCurrentLoans();
+
+            if (StaticAccess.Role == "STUDENT ASSISTANT")
+            {
+                btnApprove.Visibility = Visibility.Collapsed;
+            }
+        }
 
         private void btnNewLoan_Click(object sender, RoutedEventArgs e)
         {
-            RequestLoanForm form = new RequestLoanForm();
-            var result = form.ShowAsync();
+            if (new TaxonFamily().CanProcessLoan())
+            {
+                RequestLoanForm form = new RequestLoanForm();
+                var result = form.ShowAsync();
+            }
+            else
+            {
+                MessageDialog message = new MessageDialog("There are no current herbarium sheet that can be loaned");
+                var result = message.ShowAsync();
+            }
 
             this.InitializePage();
         }
@@ -56,7 +73,7 @@ namespace projectHerbariumMgmtIS.Transaction
             }
         }
 
-        private void btnApprove_Click(object sender, RoutedEventArgs e)
+        private async void btnApprove_Click(object sender, RoutedEventArgs e)
         {
             if (dgrLoanTable.SelectedIndex != -1)
             {
@@ -66,7 +83,15 @@ namespace projectHerbariumMgmtIS.Transaction
                 {
                     PlantLoanData = selectedItem
                 };
-                var result = form.ShowAsync();
+                if (selectedItem.Status == "Approved")
+                {
+                    MessageDialog dialog = new MessageDialog("This is Plant Loan is already approved");
+                    await dialog.ShowAsync();
+                }
+                else
+                {
+                    await form.ShowAsync();
+                }
 
                 this.InitializePage();
             }

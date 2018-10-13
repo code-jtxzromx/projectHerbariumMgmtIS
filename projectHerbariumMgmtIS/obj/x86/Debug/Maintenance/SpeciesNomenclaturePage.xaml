@@ -22,10 +22,10 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Species Nomenclature" Margin="5 0" VerticalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}" />
+                <TextBlock Text="Species Basionym" Margin="5 0" VerticalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}" />
                 <CommandBar Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent">
-                    <AppBarButton x:ConnectionId='3' x:Name="btnAddNomenclature"                                  Icon="Add" Label="Add Nomenclature" />
-                    <AppBarButton x:ConnectionId='4' x:Name="btnEditNomenclature"                                   Icon="Edit" Label="Edit Nomenclature" />
+                    <AppBarButton x:ConnectionId='3' x:Name="btnAddNomenclature"                                  Icon="Add" Label="Add Basionym" />
+                    <AppBarButton x:ConnectionId='4' x:Name="btnEditNomenclature"                                   Icon="Edit" Label="Edit Basionym" />
                 </CommandBar>
             </Grid>
 

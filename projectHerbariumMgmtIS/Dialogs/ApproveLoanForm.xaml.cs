@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -20,8 +21,9 @@ namespace projectHerbariumMgmtIS.Dialogs
 {
     public sealed partial class ApproveLoanForm : ContentDialog
     {
+        public int TransactionResult;
+
         // Properties
-        public List<TaxonSpecies> LoanedSpecies;
         public PlantLoan PlantLoanData
         {
             get { return (PlantLoan)GetValue(PlantLoanDataProperty); }
@@ -43,10 +45,40 @@ namespace projectHerbariumMgmtIS.Dialogs
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
+            string message = "";
+            TransactionResult = PlantLoanData.ConfirmPlantLoan("Approved");
+
+            switch (TransactionResult)
+            {
+                case 0:
+                    message = "Plant Loan will be processed";
+                    break;
+                case 1:
+                    message = "Transaction Failed, The system had run to an Error";
+                    break;
+            }
+
+            MessageDialog dialog = new MessageDialog(message, "Process Done");
+            var result = dialog.ShowAsync();
         }
 
         private void ContentDialog_SecondaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
+            string message = "";
+            TransactionResult = PlantLoanData.ConfirmPlantLoan("Rejected");
+
+            switch (TransactionResult)
+            {
+                case 0:
+                    message = "Plant Loan will not be processed";
+                    break;
+                case 1:
+                    message = "Transaction Failed, The system had run to an Error";
+                    break;
+            }
+
+            MessageDialog dialog = new MessageDialog(message, "Process Done");
+            var result = dialog.ShowAsync();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectHerbariumMgmtIS.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,9 @@ namespace projectHerbariumMgmtIS.ManagementTools
         public AuditTrailingPage()
         {
             this.InitializeComponent();
+            this.InitializePage();
         }
+
+        public void InitializePage() => dgrAuditTrailTable.ItemsSource = new AuditTrails().GetAudits();
     }
 }

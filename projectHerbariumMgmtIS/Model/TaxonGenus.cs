@@ -49,6 +49,31 @@ namespace projectHerbariumMgmtIS.Model
             return genera;
         }
 
+        public List<TaxonGenus> GetLoanAvailableGenera()
+        {
+            List<TaxonGenus> genera = new List<TaxonGenus>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT SI.strFamilyName, SI.strGenusName, " +
+                                    "SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) " +
+                                "FROM viewSpeciesInventory SI " +
+                                    "LEFT JOIN viewSpeciesLoanCount SL ON SI.strScientificName = SL.strScientificName " +
+                                "WHERE SI.intSpeciesCount - ISNULL(SL.intBorrowedCount, 0) > 0");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                genera.Add(new TaxonGenus()
+                {
+                    IsChecked = false,
+                    FamilyName = sqlData[0].ToString(),
+                    GenusName = sqlData[1].ToString()
+                });
+            }
+            connection.closeResult();
+            return genera;
+        }
+
         public List<string> GetGenusList()
         {
             List<string> genera = new List<string>();

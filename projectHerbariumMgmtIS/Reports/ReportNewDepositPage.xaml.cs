@@ -25,7 +25,7 @@ namespace projectHerbariumMgmtIS.Reports
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ReportNewDeposit : Page
+    public sealed partial class ReportNewDepositPage : Page
     {
         private PrintHelper printHelper;
         private DateTime MonthStart, MonthEnd;
@@ -33,7 +33,7 @@ namespace projectHerbariumMgmtIS.Reports
         List<string> Months = new List<string>()
             { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
-        public ReportNewDeposit()
+        public ReportNewDepositPage()
         {
             this.InitializeComponent();
             this.InitializePage();

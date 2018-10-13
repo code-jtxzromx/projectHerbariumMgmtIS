@@ -22,7 +22,7 @@
             <PivotItem Header="Family">
                 <local:TaxonFamilyPage />
             </PivotItem>
-            <PivotItem Header="Order">
+            <PivotItem Header="Genus">
                 <local:TaxonGenusPage />
             </PivotItem>
             <PivotItem Header="Species">

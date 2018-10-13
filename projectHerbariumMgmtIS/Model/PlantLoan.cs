@@ -62,11 +62,6 @@ namespace projectHerbariumMgmtIS.Model
             return loans;
         }
 
-        public List<PlantLoan> GetReturningLoans()
-        {
-            return new List<PlantLoan>();
-        }
-
         public int ProcessNewLoan(List<TaxonSpecies> loaningSpecies)
         {
             int status;
@@ -81,6 +76,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@endDate", SqlDbType.Date, ReturningDate);
             connection.addProcParameter("@purpose", SqlDbType.VarChar, Purpose);
             connection.addProcParameter("@status", SqlDbType.VarChar, Status);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
             status = connection.executeProcedure();
 
             if (status == 0)
@@ -110,6 +106,33 @@ namespace projectHerbariumMgmtIS.Model
             }
             else
                 return -1;
+        }
+
+        public int ConfirmPlantLoan(string loanstatus)
+        {
+            int status;
+
+            DatabaseConnection connection = new DatabaseConnection();
+            connection.setStoredProc("dbo.procApproveLoan");
+            connection.addProcParameter("@loanNumber", SqlDbType.Bit, LoanNumber);
+            connection.addProcParameter("@status", SqlDbType.VarChar, Status);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
+            status = connection.executeProcedure();
+
+            return status;
+        }
+
+        public int ReturnPlantLoan()
+        {
+            int status;
+
+            DatabaseConnection connection = new DatabaseConnection();
+            connection.setStoredProc("dbo.procReturnLoan");
+            connection.addProcParameter("@loanNumber", SqlDbType.Bit, LoanNumber);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
+            status = connection.executeProcedure();
+
+            return status;
         }
     }
 }

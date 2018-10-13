@@ -19,7 +19,7 @@
                 <Image x:ConnectionId='31' x:Name="picHerbariumSheet" Height="360" Width="270" Stretch="Uniform" />
             </Border>
             <Button x:ConnectionId='29' x:Name="btnUploadPhoto"                              Margin= "10 5" HorizontalAlignment="Stretch" Content="Upload Herbarium Sheet" />
-            <Button x:ConnectionId='30' x:Name="btnCapturePhoto"                               Margin="10 5" HorizontalAlignment="Stretch" Content="Capture Photo" />
+            <Button x:ConnectionId='30' x:Name="btnCapturePhoto"                               Margin="10 5" HorizontalAlignment="Stretch" Visibility="Collapsed" Content="Capture Photo" />
         </StackPanel>
         <Grid Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <Grid.RowDefinitions>

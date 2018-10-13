@@ -5,11 +5,121 @@
     xmlns:local="using:projectHerbariumMgmtIS.Queries"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="CheckListItemTemplate"                                >
+            <CheckBox Margin="10 5" IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding Item}" />
+        </DataTemplate>
+        <DataTemplate x:Key="RowDetailsTemplate">
+            <StackPanel>
+                <TextBlock FontSize="12" Margin="15 10 15 0" FontWeight="Bold" Text="Herbarium Sheet Full Information" />
+                <Grid Margin="10" Padding="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="0" Margin="5 2" Text="Accession Number: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="1" Margin="5 2" Text="Reference Number: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="2" Margin="5 2" Text="Plant Type: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="3" Margin="5 2" Text="Box Number: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="4" Margin="5 2" Text="Status: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="5" Margin="5 2" Text="Loan Availability: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="6" Margin="5 2" Text="Scientific Name: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="7" Margin="5 2" Text="Species Basionym: "/>
+                    <TextBlock FontSize="12" Grid.Column="0" Grid.Row="8" Margin="5 2" Text="Location: "/>
+                    
+                    <TextBlock FontSize="12" Grid.Column="2" Grid.Row="0" Margin="5 2" Text="Collected by: "/>
+                    <TextBlock FontSize="12" Grid.Column="2" Grid.Row="1" Margin="5 2" Text="Processed by: "/>
+                    <TextBlock FontSize="12" Grid.Column="2" Grid.Row="2" Margin="5 2" Text="Verified by: "/>
+                    <TextBlock FontSize="12" Grid.Column="2" Grid.Row="3" Margin="5 2" Text="Date Collected: "/>
+                    <TextBlock FontSize="12" Grid.Column="2" Grid.Row="4" Margin="5 2" Text="Date Deposited: "/>
+                    <TextBlock FontSize="12" Grid.Column="2" Grid.Row="5" Margin="5 2" Text="Date Verified: "/>
+                    <TextBlock FontSize="12" Grid.Column="2" Grid.Row="6" Margin="5 2" Text="Description: "/>
+
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="0" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding AccessionNumber}"/>
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="1" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding ReferenceNumber}"/>
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="2" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding PlantType}"/>
+                    <StackPanel Grid.Column="1" Grid.Row="3" Margin="5 2" Orientation="Horizontal">
+                        <TextBlock FontSize="12" Grid.Column="1" Grid.Row="3" TextWrapping="WrapWholeWords" Text="{Binding BoxLocation}"/>
+                        <TextBlock FontSize="12" Grid.Column="1" Grid.Row="3" TextWrapping="WrapWholeWords" Text="{Binding FamilyName}"/>
+                    </StackPanel>
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="4" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding Status}"/>
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="5" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding LoanAvailability}"/>
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="6" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding ScientificName}"/>
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="7" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding TaxonNomenclature}"/>
+                    <TextBlock FontSize="12" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="3" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding Locality}"/>
+
+                    <TextBlock FontSize="12" Grid.Column="3" Grid.Row="0" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding Collector}"/>
+                    <TextBlock FontSize="12" Grid.Column="3" Grid.Row="1" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding Staff}"/>
+                    <TextBlock FontSize="12" Grid.Column="3" Grid.Row="2" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding Validator}"/>
+                    <TextBlock FontSize="12" Grid.Column="3" Grid.Row="3" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding DateCollected}"/>
+                    <TextBlock FontSize="12" Grid.Column="3" Grid.Row="4" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding DateDeposited}"/>
+                    <TextBlock FontSize="12" Grid.Column="3" Grid.Row="5" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding DateValidated}"/>
+                    <TextBlock FontSize="12" Grid.Column="3" Grid.Row="6" Margin="5 2" TextWrapping="WrapWholeWords" Text="{Binding Description}"/>
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
+        <ComboBox x:ConnectionId='4' x:Name="cbxCategory" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Stretch" Margin="10" 
+                                                                  />
+        <Grid Grid.Column="0" Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ListView x:ConnectionId='8' x:Name="lstCategoryResult" Grid.Row="0" BorderBrush="Black" BorderThickness="1" ItemTemplate="{StaticResource CheckListItemTemplate}" />
+            <Button x:ConnectionId='9' x:Name="btnLoadTable"                             Grid.Row="1" Content="Load Table" Margin="0 10" HorizontalAlignment="Right" />
+        </Grid>
+        <StackPanel Grid.Column="1" Grid.Row="0" Margin="10 5" Orientation="Horizontal" 
+                    VerticalAlignment="Center" HorizontalAlignment="Right">
+            <TextBlock Text="Search: " Margin="10 0" VerticalAlignment="Center" />
+            <TextBox x:ConnectionId='7' x:Name="txfSearch"                                      Width="250" />
+        </StackPanel>
+        <Grid Grid.Column="1" Grid.Row="1" Margin="10" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <controls:DataGrid x:ConnectionId='5' x:Name="dgrSheetsTable" Grid.Row="0" BorderBrush="Black" BorderThickness="1" AutoGenerateColumns="False" IsReadOnly="True"
+                               RowDetailsTemplate="{StaticResource RowDetailsTemplate}" RowDetailsVisibilityMode="VisibleWhenSelected">
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn Width="*" Header="Accession Number" Binding="{Binding AccessionNumber}" />
+                    <controls:DataGridTextColumn Width="*" Header="Collector" Binding="{Binding Collector}" />
+                    <controls:DataGridTextColumn Width="*" Header="Date Collected" Binding="{Binding DateCollected}" />
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+            <Button x:ConnectionId='6' x:Name="btnResetTable"                              Grid.Row="1" Content="Clear Filters" Margin="0 10" HorizontalAlignment="Right" />
+        </Grid>
     </Grid>
 </Page>
 

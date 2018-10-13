@@ -131,5 +131,106 @@ namespace projectHerbariumMgmtIS.Model
 
             return listItems;
         }
+
+        public List<CheckBoxList> GetSpeciesList()
+        {
+            List<CheckBoxList> listItems = new List<CheckBoxList>();
+            DatabaseConnection connection = new DatabaseConnection();
+            connection.setQuery("SELECT strScientificName FROM viewTaxonSpecies");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                listItems.Add(new CheckBoxList()
+                {
+                    IsChecked = false,
+                    Item = sqlData[0].ToString()
+                });
+            }
+            connection.closeResult();
+
+            return listItems;
+        }
+
+        public List<CheckBoxList> GetPlantTypeList()
+        {
+            List<CheckBoxList> listItems = new List<CheckBoxList>();
+            DatabaseConnection connection = new DatabaseConnection();
+            connection.setQuery("SELECT strPlantTypeName FROM tblPlantType");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                listItems.Add(new CheckBoxList()
+                {
+                    IsChecked = false,
+                    Item = sqlData[0].ToString()
+                });
+            }
+            connection.closeResult();
+
+            return listItems;
+        }
+
+        public List<CheckBoxList> GetProvinceList()
+        {
+            List<CheckBoxList> listItems = new List<CheckBoxList>();
+            DatabaseConnection connection = new DatabaseConnection();
+            listItems.Add(new CheckBoxList() { IsChecked = false, Item = "Other Province" });
+            connection.setQuery("SELECT strProvince FROM tblProvince");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                listItems.Add(new CheckBoxList()
+                {
+                    IsChecked = false,
+                    Item = sqlData[0].ToString()
+                });
+            }
+            connection.closeResult();
+
+            return listItems;
+        }
+
+        public List<CheckBoxList> GetCollectorList()
+        {
+            List<CheckBoxList> listItems = new List<CheckBoxList>();
+            DatabaseConnection connection = new DatabaseConnection();
+            connection.setQuery("SELECT strFullname FROM viewCollector");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                listItems.Add(new CheckBoxList()
+                {
+                    IsChecked = false,
+                    Item = sqlData[0].ToString()
+                });
+            }
+            connection.closeResult();
+
+            return listItems;
+        }
+
+        public List<CheckBoxList> GetHerbariumBoxList()
+        {
+            List<CheckBoxList> listItems = new List<CheckBoxList>();
+            DatabaseConnection connection = new DatabaseConnection();
+            connection.setQuery("SELECT strBoxNumber FROM viewFamilyBox");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                listItems.Add(new CheckBoxList()
+                {
+                    IsChecked = false,
+                    Item = sqlData[0].ToString()
+                });
+            }
+            connection.closeResult();
+
+            return listItems;
+        }
     }
 }

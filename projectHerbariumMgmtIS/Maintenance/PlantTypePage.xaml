@@ -22,7 +22,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Species Nomenclature" Margin="5 0" VerticalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}" />
+                <TextBlock Text="Plant Type" Margin="5 0" VerticalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}" />
                 <CommandBar Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent">
                     <AppBarButton x:Name="btnAddPlantType" Click="btnAddPlantType_Click" Icon="Add" Label="Add Plant Type" />
                     <AppBarButton x:Name="btnEditPlantType" Click="btnEditPlantType_Click" Icon="Edit" Label="Edit Plant Type" />

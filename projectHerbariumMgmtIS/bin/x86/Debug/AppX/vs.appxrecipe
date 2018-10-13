@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>3A21F6BD1AE64E18C4FAF2BE5CDDD107219EDFD2212FB0726BF39A701393DA96</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>BE01E0C51FF4797B0CF64574127FB9819DCE9731FA06F99923C8A21CF128510C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9e63dcab-a96d-404d-a890-81def48d6c2b_1.0.0.0_x86__jp5kr8zm1da4m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9e63dcab-a96d-404d-a890-81def48d6c2b_jp5kr8zm1da4m!App</RegisteredUserModeAppID>
     <RegisteredPackageID>9e63dcab-a96d-404d-a890-81def48d6c2b</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-11T11:58:11.471</Modified>
+      <Modified>2018-10-13T03:57:54.062</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\projectHerbariumMgmtIS.exe">
       <PackagePath>entrypoint\projectHerbariumMgmtIS.exe</PackagePath>
-      <Modified>2018-10-11T11:58:05.082</Modified>
+      <Modified>2018-10-13T03:57:46.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\colorcode.core\2.0.5\lib\netstandard1.4\ColorCode.Core.dll">
       <PackagePath>ColorCode.Core.dll</PackagePath>
@@ -775,6 +775,11 @@
       <PackagePath>Assets\background-1.png</PackagePath>
       <Modified>2018-09-28T06:23:43.067</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-10-12T04:35:57.802</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\herbarium_banner.png">
       <PackagePath>Assets\herbarium_banner.png</PackagePath>
       <Modified>2018-10-10T03:47:39.908</Modified>
@@ -791,6 +796,35 @@
       <PackagePath>Assets\herbarium_banner_white_padded.png</PackagePath>
       <Modified>2018-09-30T08:37:49.893</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-10-12T04:35:57.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\pup_logo.png">
+      <PackagePath>Assets\pup_logo.png</PackagePath>
+      <Modified>2018-10-13T01:11:44.943</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-10-12T04:35:57.153</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-10-12T04:35:57.712</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-10-12T04:35:57.671</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-10-12T04:35:57.842</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2018-09-28T06:23:42.988</Modified>
@@ -798,32 +832,27 @@
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-28T06:23:42.993</Modified>
+      <Modified>2018-10-12T04:33:44.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-28T06:23:43.009</Modified>
+      <Modified>2018-10-12T04:35:57.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-28T06:23:43.015</Modified>
+      <Modified>2018-10-12T04:35:57.636</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-09-28T06:23:43.022</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-28T06:23:43.026</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-28T06:23:43.032</Modified>
+      <Modified>2018-10-12T04:33:44.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\background-2.jpg">
       <PackagePath>Assets\background-2.jpg</PackagePath>
@@ -841,281 +870,317 @@
       <PackagePath>Assets\background-5.jpg</PackagePath>
       <Modified>2018-09-30T11:34:30.989</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\college_of_science_logo.jpg">
+      <PackagePath>Assets\college_of_science_logo.jpg</PackagePath>
+      <Modified>2018-10-13T01:11:45.011</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-09-28T06:23:45.128</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\projectHerbariumMgmtIS.xr.xml">
       <PackagePath>projectHerbariumMgmtIS.xr.xml</PackagePath>
-      <Modified>2018-10-11T11:42:38.037</Modified>
+      <Modified>2018-10-13T03:19:41.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.342</Modified>
+      <Modified>2018-10-13T03:57:42.408</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\AccountForm.xbf">
       <PackagePath>Dialogs\AccountForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.347</Modified>
+      <Modified>2018-10-13T03:57:42.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ApproveLoanForm.xbf">
       <PackagePath>Dialogs\ApproveLoanForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.352</Modified>
+      <Modified>2018-10-13T03:57:42.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\BorrowerForm.xbf">
       <PackagePath>Dialogs\BorrowerForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.354</Modified>
+      <Modified>2018-10-13T03:57:42.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ClassForm.xbf">
       <PackagePath>Dialogs\ClassForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.356</Modified>
+      <Modified>2018-10-13T03:57:42.418</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ClassifySheetForm.xbf">
       <PackagePath>Dialogs\ClassifySheetForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.360</Modified>
+      <Modified>2018-10-13T03:57:42.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\CollectorForm.xbf">
       <PackagePath>Dialogs\CollectorForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.364</Modified>
+      <Modified>2018-10-13T03:57:42.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ConfirmDepositForm.xbf">
       <PackagePath>Dialogs\ConfirmDepositForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.366</Modified>
+      <Modified>2018-10-13T03:57:42.424</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\EditSheetForm.xbf">
       <PackagePath>Dialogs\EditSheetForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.368</Modified>
+      <Modified>2018-10-13T03:57:42.427</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\FamilyForm.xbf">
       <PackagePath>Dialogs\FamilyForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.371</Modified>
+      <Modified>2018-10-13T03:57:42.429</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\GenusForm.xbf">
       <PackagePath>Dialogs\GenusForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.373</Modified>
+      <Modified>2018-10-13T03:57:42.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\HerbariumBoxForm.xbf">
       <PackagePath>Dialogs\HerbariumBoxForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.376</Modified>
+      <Modified>2018-10-13T03:57:42.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\LocalityForm.xbf">
       <PackagePath>Dialogs\LocalityForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.378</Modified>
+      <Modified>2018-10-13T03:57:42.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\NomenclatureForm.xbf">
       <PackagePath>Dialogs\NomenclatureForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.382</Modified>
+      <Modified>2018-10-13T03:57:42.437</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\PhylumForm.xbf">
       <PackagePath>Dialogs\PhylumForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.385</Modified>
+      <Modified>2018-10-13T03:57:42.439</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\PlantTypeForm.xbf">
       <PackagePath>Dialogs\PlantTypeForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.388</Modified>
+      <Modified>2018-10-13T03:57:42.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\RequestLoanForm.xbf">
       <PackagePath>Dialogs\RequestLoanForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.390</Modified>
+      <Modified>2018-10-13T03:57:42.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ResubmitDepositForm.xbf">
       <PackagePath>Dialogs\ResubmitDepositForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.392</Modified>
+      <Modified>2018-10-13T03:57:42.447</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ResultDialog.xbf">
       <PackagePath>Dialogs\ResultDialog.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.394</Modified>
+      <Modified>2018-10-13T03:57:42.449</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ReturnLoanForm.xbf">
+      <PackagePath>Dialogs\ReturnLoanForm.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.451</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\SampleDialog.xbf">
       <PackagePath>Dialogs\SampleDialog.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.398</Modified>
+      <Modified>2018-10-13T03:57:42.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\SpeciesAuthorForm.xbf">
       <PackagePath>Dialogs\SpeciesAuthorForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.402</Modified>
+      <Modified>2018-10-13T03:57:42.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\SpeciesForm.xbf">
       <PackagePath>Dialogs\SpeciesForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.404</Modified>
+      <Modified>2018-10-13T03:57:42.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\StaffForm.xbf">
       <PackagePath>Dialogs\StaffForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.406</Modified>
+      <Modified>2018-10-13T03:57:42.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ValidatorForm.xbf">
       <PackagePath>Dialogs\ValidatorForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.409</Modified>
+      <Modified>2018-10-13T03:57:42.462</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\VerifyDepositForm.xbf">
       <PackagePath>Dialogs\VerifyDepositForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.412</Modified>
+      <Modified>2018-10-13T03:57:42.464</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewLoanForm.xbf">
       <PackagePath>Dialogs\ViewLoanForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.414</Modified>
+      <Modified>2018-10-13T03:57:42.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewSheetForm.xbf">
       <PackagePath>Dialogs\ViewSheetForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.416</Modified>
+      <Modified>2018-10-13T03:57:42.469</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewTrackedSheetForm.xbf">
+      <PackagePath>Dialogs\ViewTrackedSheetForm.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.471</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.419</Modified>
+      <Modified>2018-10-13T03:57:42.473</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\OrderForm.xbf">
       <PackagePath>Dialogs\OrderForm.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.421</Modified>
+      <Modified>2018-10-13T03:57:42.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\AccessAccountsPage.xbf">
       <PackagePath>Maintenance\AccessAccountsPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.424</Modified>
+      <Modified>2018-10-13T03:57:42.478</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\BorrowerPage.xbf">
       <PackagePath>Maintenance\BorrowerPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.426</Modified>
+      <Modified>2018-10-13T03:57:42.480</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\CollectorPage.xbf">
       <PackagePath>Maintenance\CollectorPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.429</Modified>
+      <Modified>2018-10-13T03:57:42.483</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\ExternalValidatorPage.xbf">
       <PackagePath>Maintenance\ExternalValidatorPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.432</Modified>
+      <Modified>2018-10-13T03:57:42.485</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\HerbariumBoxPage.xbf">
       <PackagePath>Maintenance\HerbariumBoxPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.434</Modified>
+      <Modified>2018-10-13T03:57:42.488</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\HerbariumStaffPage.xbf">
       <PackagePath>Maintenance\HerbariumStaffPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.436</Modified>
+      <Modified>2018-10-13T03:57:42.492</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\PlantLocalityPage.xbf">
       <PackagePath>Maintenance\PlantLocalityPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.440</Modified>
+      <Modified>2018-10-13T03:57:42.494</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\PlantTypePage.xbf">
       <PackagePath>Maintenance\PlantTypePage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.443</Modified>
+      <Modified>2018-10-13T03:57:42.496</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\SpeciesAuthorPage.xbf">
       <PackagePath>Maintenance\SpeciesAuthorPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.445</Modified>
+      <Modified>2018-10-13T03:57:42.498</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\SpeciesNomenclaturePage.xbf">
       <PackagePath>Maintenance\SpeciesNomenclaturePage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.447</Modified>
+      <Modified>2018-10-13T03:57:42.500</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonClassPage.xbf">
       <PackagePath>Maintenance\TaxonClassPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.449</Modified>
+      <Modified>2018-10-13T03:57:42.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonFamilyPage.xbf">
       <PackagePath>Maintenance\TaxonFamilyPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.451</Modified>
+      <Modified>2018-10-13T03:57:42.512</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonGenusPage.xbf">
       <PackagePath>Maintenance\TaxonGenusPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.453</Modified>
+      <Modified>2018-10-13T03:57:42.514</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonomicHierarchyPage.xbf">
       <PackagePath>Maintenance\TaxonomicHierarchyPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.455</Modified>
+      <Modified>2018-10-13T03:57:42.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonOrderPage.xbf">
       <PackagePath>Maintenance\TaxonOrderPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.457</Modified>
+      <Modified>2018-10-13T03:57:42.520</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonPhylumPage.xbf">
       <PackagePath>Maintenance\TaxonPhylumPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.461</Modified>
+      <Modified>2018-10-13T03:57:42.522</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonSpeciesPage.xbf">
       <PackagePath>Maintenance\TaxonSpeciesPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.463</Modified>
+      <Modified>2018-10-13T03:57:42.524</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\ManagementTools\AuditTrailingPage.xbf">
       <PackagePath>ManagementTools\AuditTrailingPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.466</Modified>
+      <Modified>2018-10-13T03:57:42.527</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\ManagementTools\HerbariumInventoryPage.xbf">
       <PackagePath>ManagementTools\HerbariumInventoryPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.467</Modified>
+      <Modified>2018-10-13T03:57:42.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\ManagementTools\SheetTrackingPage.xbf">
       <PackagePath>ManagementTools\SheetTrackingPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.470</Modified>
+      <Modified>2018-10-13T03:57:42.533</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\HomePage.xbf">
       <PackagePath>MenuPages\HomePage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.473</Modified>
+      <Modified>2018-10-13T03:57:42.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\MaintenancePage.xbf">
       <PackagePath>MenuPages\MaintenancePage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.475</Modified>
+      <Modified>2018-10-13T03:57:42.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\QueriesPage.xbf">
       <PackagePath>MenuPages\QueriesPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.477</Modified>
+      <Modified>2018-10-13T03:57:42.539</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\ReportsPage.xbf">
       <PackagePath>MenuPages\ReportsPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.479</Modified>
+      <Modified>2018-10-13T03:57:42.542</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\TransactionPage.xbf">
       <PackagePath>MenuPages\TransactionPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.481</Modified>
+      <Modified>2018-10-13T03:57:42.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\UtilitiesPage.xbf">
       <PackagePath>MenuPages\UtilitiesPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.483</Modified>
+      <Modified>2018-10-13T03:57:42.546</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Queries\QueryHerbariumSheetPage.xbf">
       <PackagePath>Queries\QueryHerbariumSheetPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.485</Modified>
+      <Modified>2018-10-13T03:57:42.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Queries\QuerySpeciesPage.xbf">
       <PackagePath>Queries\QuerySpeciesPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.487</Modified>
+      <Modified>2018-10-13T03:57:42.550</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentExternalVerification.xbf">
+      <PackagePath>Reports\DocumentExternalVerification.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.553</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentNewDeposit.xbf">
       <PackagePath>Reports\DocumentNewDeposit.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.489</Modified>
+      <Modified>2018-10-13T03:57:42.556</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportNewDeposit.xbf">
-      <PackagePath>Reports\ReportNewDeposit.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.491</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentRejectedDeposit.xbf">
+      <PackagePath>Reports\DocumentRejectedDeposit.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.558</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentVerifiedDeposit.xbf">
+      <PackagePath>Reports\DocumentVerifiedDeposit.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.560</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportExternalVerificationPage.xbf">
+      <PackagePath>Reports\ReportExternalVerificationPage.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.562</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportNewDepositPage.xbf">
+      <PackagePath>Reports\ReportNewDepositPage.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.566</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportRejectedDepositPage.xbf">
+      <PackagePath>Reports\ReportRejectedDepositPage.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.568</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportVerifiedDepositPage.xbf">
+      <PackagePath>Reports\ReportVerifiedDepositPage.xbf</PackagePath>
+      <Modified>2018-10-13T03:57:42.570</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\DepositTransactionPage.xbf">
       <PackagePath>Transaction\DepositTransactionPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.494</Modified>
+      <Modified>2018-10-13T03:57:42.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\ExcelDepositPage.xbf">
       <PackagePath>Transaction\ExcelDepositPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.496</Modified>
+      <Modified>2018-10-13T03:57:42.576</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantClassificationPage.xbf">
       <PackagePath>Transaction\PlantClassificationPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.499</Modified>
+      <Modified>2018-10-13T03:57:42.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantDepositPage.xbf">
       <PackagePath>Transaction\PlantDepositPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.501</Modified>
+      <Modified>2018-10-13T03:57:42.580</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantLoaningPage.xbf">
       <PackagePath>Transaction\PlantLoaningPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.503</Modified>
+      <Modified>2018-10-13T03:57:42.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantReceivingPage.xbf">
       <PackagePath>Transaction\PlantReceivingPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.505</Modified>
+      <Modified>2018-10-13T03:57:42.585</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantResubmissionPage.xbf">
       <PackagePath>Transaction\PlantResubmissionPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.507</Modified>
+      <Modified>2018-10-13T03:57:42.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantVerificationPage.xbf">
       <PackagePath>Transaction\PlantVerificationPage.xbf</PackagePath>
-      <Modified>2018-10-11T11:57:59.509</Modified>
+      <Modified>2018-10-13T03:57:42.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1312,11 +1377,11 @@
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-11T10:19:17.476</Modified>
+      <Modified>2018-10-13T03:19:53.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Core\projectHerbariumMgmtIS.exe">
       <PackagePath>projectHerbariumMgmtIS.exe</PackagePath>
-      <Modified>2018-10-11T11:58:11.441</Modified>
+      <Modified>2018-10-13T03:57:54.039</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

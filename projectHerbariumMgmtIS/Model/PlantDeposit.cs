@@ -48,6 +48,35 @@ namespace projectHerbariumMgmtIS.Model
         }
 
         // Method
+        public List<PlantDeposit> GetPlantDeposits()
+        {
+            List<PlantDeposit> plantDeposits = new List<PlantDeposit>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strAccessionNumber, strCollector, strFullLocality, strStaff, " +
+                                    "CONVERT(VARCHAR, dateCollected, 107), CONVERT(VARCHAR, dateDeposited, 107), " +
+                                    "strDescription, strStatus " +
+                                "FROM viewPlantDeposit ");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                plantDeposits.Add(new PlantDeposit()
+                {
+                    AccessionNumber = sqlData[0].ToString(),
+                    Collector = sqlData[1].ToString(),
+                    Locality = sqlData[2].ToString(),
+                    Staff = sqlData[3].ToString(),
+                    DateCollected = sqlData[4].ToString(),
+                    DateDeposited = sqlData[5].ToString(),
+                    Description = sqlData[6].ToString(),
+                    Status = sqlData[7].ToString()
+                });
+            }
+            connection.closeResult();
+            return plantDeposits;
+        }
+
         public List<PlantDeposit> GetReceivedDeposits()
         {
             List<PlantDeposit> plantDeposits = new List<PlantDeposit>();
@@ -166,6 +195,54 @@ namespace projectHerbariumMgmtIS.Model
             return plantDeposits;
         }
 
+        public List<PlantDeposit> GetRejectedDepositReport(string startDate, string endDate)
+        {
+            List<PlantDeposit> plantDeposits = new List<PlantDeposit>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strDepositNumber, strCollector, CONVERT(VARCHAR, dateDeposited, 107), strStatus " +
+                                "FROM viewReceivedDeposit   " +
+                                "WHERE strStatus = 'Rejected' AND dateDeposited BETWEEN @startDate AND @endDate");
+            connection.addQueryParameter("@startDate", SqlDbType.VarChar, startDate);
+            connection.addQueryParameter("@endDate", SqlDbType.VarChar, endDate);
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                plantDeposits.Add(new PlantDeposit()
+                {
+                    DepositNumber = sqlData[0].ToString(),
+                    Collector = sqlData[1].ToString(),
+                    DateDeposited = sqlData[2].ToString()
+                });
+            }
+            connection.closeResult();
+            return plantDeposits;
+        }
+
+        public List<PlantDeposit> GetFurtherVerifyDepositReport()
+        {
+            List<PlantDeposit> plantDeposits = new List<PlantDeposit>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strAccessionNumber, strCollector, CONVERT(VARCHAR, dateDeposited, 107) " +
+                                "FROM viewVerifyingDeposit ");
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                plantDeposits.Add(new PlantDeposit()
+                {
+                    AccessionNumber = sqlData[0].ToString(),
+                    Collector = sqlData[1].ToString(),
+                    DateDeposited = sqlData[2].ToString()
+                });
+            }
+            connection.closeResult();
+            return plantDeposits;
+        }
+
+
         public List<string> GetVerifiedAccessions(string taxonName)
         {
             List<string> accessionNumbers = new List<string>();
@@ -237,6 +314,7 @@ namespace projectHerbariumMgmtIS.Model
             DatabaseConnection connection = new DatabaseConnection();
             connection.setStoredProc("dbo.procInsertPlantDeposit");
             connection.addProcParameter("@isIDBase", SqlDbType.Bit, 0);
+            connection.addProcParameter("@isBindedTrans", SqlDbType.Bit, 0);
             if (pictureEmpty)
                 connection.addProcParameter("@herbariumSheet", SqlDbType.VarBinary, picture);
             connection.addProcParameter("@locality", SqlDbType.VarChar, Locality);
@@ -258,6 +336,7 @@ namespace projectHerbariumMgmtIS.Model
             DatabaseConnection connection = new DatabaseConnection();
             connection.setStoredProc("dbo.procInsertPlantDeposit");
             connection.addProcParameter("@isIDBase", SqlDbType.Bit, 0);
+            connection.addProcParameter("@isBindedTrans", SqlDbType.Bit, 0);
             connection.addProcParameter("@accessionDigits", SqlDbType.Int, accessionDigit);
             if (pictureAvailable)
                 connection.addProcParameter("@herbariumSheet", SqlDbType.VarBinary, picture);
@@ -310,6 +389,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.setStoredProc("dbo.procConfirmDeposit");
             connection.addProcParameter("@depositNumber", SqlDbType.VarChar, DepositNumber);
             connection.addProcParameter("@receiveStatus", SqlDbType.VarChar, acceptStatus);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
             status = connection.executeProcedure();
             
             return status;
@@ -325,7 +405,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@depositNumber", SqlDbType.VarChar, DepositNumber);
             connection.addProcParameter("@herbariumSheet", SqlDbType.VarBinary, bytestream);
             connection.addProcParameter("@locality", SqlDbType.VarChar, Locality);
-            connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
             connection.addProcParameter("@description", SqlDbType.VarChar, Description);
             connection.addProcParameter("@plantType", SqlDbType.VarChar, PlantType);
             status = connection.executeProcedure();
@@ -340,11 +420,13 @@ namespace projectHerbariumMgmtIS.Model
             DatabaseConnection connection = new DatabaseConnection();
             connection.setStoredProc("dbo.procVerifyPlantDeposit");
             connection.addProcParameter("@isIDBase", SqlDbType.Bit, 0);
+            connection.addProcParameter("@isBindedTrans", SqlDbType.Bit, 0);
             connection.addProcParameter("@orgDeposit", SqlDbType.VarChar, AccessionNumber);
             connection.addProcParameter("@newDeposit", SqlDbType.VarChar, newDeposit);
             connection.addProcParameter("@species", SqlDbType.VarChar, taxonName);
-            connection.addProcParameter("@validator", SqlDbType.VarChar, StaticAccess.StaffName);
-            
+            connection.addProcParameter("@validator", SqlDbType.VarChar, Staff);
+            connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
+
             status = connection.executeProcedure();
 
             return status;
@@ -364,6 +446,7 @@ namespace projectHerbariumMgmtIS.Model
                 connection.addProcParameter("@newDeposit", SqlDbType.VarChar, refAccession);
                 connection.addProcParameter("@species", SqlDbType.VarChar, taxonName);
             }
+            connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
             status = connection.executeProcedure();
 
             return status;

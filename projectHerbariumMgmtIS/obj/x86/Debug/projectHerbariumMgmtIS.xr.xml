@@ -9,6 +9,7 @@
     <RootPropertyPathName Name="Specimens" />
     <RootPropertyPathName Name="IsChecked" />
     <RootPropertyPathName Name="GenusName" />
+    <RootPropertyPathName Name="AccessionNumber" />
     <RootPropertyPathName Name="Menu" />
     <RootPropertyPathName Name="GlyphCode" />
     <RootPropertyPathName Name="Role" />
@@ -44,20 +45,31 @@
     <RootPropertyPathName Name="IdentifiedStatus" />
     <RootPropertyPathName Name="CommonName" />
     <RootPropertyPathName Name="SpeciesID" />
+    <RootPropertyPathName Name="TransactionDescription" />
+    <RootPropertyPathName Name="Module" />
+    <RootPropertyPathName Name="Timestamp" />
     <RootPropertyPathName Name="Collector" />
-    <RootPropertyPathName Name="AccessionNumber" />
     <RootPropertyPathName Name="BoxLimit" />
     <RootPropertyPathName Name="CurrentNo" />
+    <RootPropertyPathName Name="DateCollected" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Count" />
     <RootPropertyPathName Name="MenuItem" />
+    <RootPropertyPathName Name="Description" />
+    <RootPropertyPathName Name="DateValidated" />
+    <RootPropertyPathName Name="DateDeposited" />
+    <RootPropertyPathName Name="Validator" />
+    <RootPropertyPathName Name="Locality" />
+    <RootPropertyPathName Name="TaxonNomenclature" />
+    <RootPropertyPathName Name="LoanAvailability" />
+    <RootPropertyPathName Name="BoxLocation" />
+    <RootPropertyPathName Name="PlantType" />
+    <RootPropertyPathName Name="ReferenceNumber" />
+    <RootPropertyPathName Name="Item" />
     <RootPropertyPathName Name="SpeciesAuthor" />
     <RootPropertyPathName Name="SpeciesName" />
-    <RootPropertyPathName Name="Item" />
-    <RootPropertyPathName Name="DateDeposited" />
     <RootPropertyPathName Name="DepositNumber" />
     <RootPropertyPathName Name="IsOn" />
-    <RootPropertyPathName Name="DateValidated" />
     <RootPropertyPathName Name="Duration" />
     <RootPropertyPathName Name="Borrower" />
     <RootPropertyPathName Name="LoanNumber" />
@@ -129,8 +141,8 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Background" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootMethod Name="GetColumn" />
@@ -162,18 +174,19 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="AcceptsReturn" />
       <RootEvent Name="KeyDown" />
+      <RootEvent Name="TextChanged" />
       <RootEvent Name="LostFocus" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Header" />
       <RootProperty Name="HeaderTemplate" />
+      <RootProperty Name="IsEnabled" />
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Width" />
-      <RootProperty Name="IsEnabled" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -317,6 +330,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Visibility" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
@@ -335,6 +349,7 @@
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.RequestLoanForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ResubmitDepositForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ResultDialog" />
+    <RootType FullName="projectHerbariumMgmtIS.Dialogs.ReturnLoanForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.SampleDialog" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.SpeciesAuthorForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.SpeciesForm" />
@@ -343,6 +358,7 @@
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.VerifyDepositForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ViewLoanForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ViewSheetForm" />
+    <RootType FullName="projectHerbariumMgmtIS.Dialogs.ViewTrackedSheetForm" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Resources" />
@@ -478,14 +494,21 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.MaintenancePage" />
+    <RootType FullName="projectHerbariumMgmtIS.Queries.QueryHerbariumSheetPage" />
     <RootType FullName="projectHerbariumMgmtIS.Queries.QuerySpeciesPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.QueriesPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.ReportsPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.TransactionPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.UtilitiesPage" />
-    <RootType FullName="projectHerbariumMgmtIS.Queries.QueryHerbariumSheetPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutSeparator" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentExternalVerification" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentNewDeposit" />
-    <RootType FullName="projectHerbariumMgmtIS.Reports.ReportNewDeposit" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentRejectedDeposit" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentVerifiedDeposit" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.ReportExternalVerificationPage" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.ReportNewDepositPage" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.ReportRejectedDepositPage" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.ReportVerifiedDepositPage" />
     <RootType FullName="projectHerbariumMgmtIS.Transaction.DepositTransactionPage">
       <RootProperty Name="IsExisting" />
     </RootType>

@@ -24,6 +24,7 @@ namespace projectHerbariumMgmtIS.Queries
     public sealed partial class QuerySpeciesPage : Page
     {
         private List<TaxonSpecies> SpeciesList = new List<TaxonSpecies>();
+        private List<TaxonSpecies> TempList = new List<TaxonSpecies>();
         private List<string> Categories = new List<string>() { "Phylum", "Class", "Order", "Family", "Genus", "Author" };
 
         public QuerySpeciesPage()
@@ -35,8 +36,12 @@ namespace projectHerbariumMgmtIS.Queries
         public void IniitializePage()
         {
             SpeciesList = new TaxonSpecies().GetSpeciesQuery();
+            TempList = new TaxonSpecies().GetSpeciesQuery();
             cbxCategory.ItemsSource = Categories;
             dgrSpeciesTable.ItemsSource = SpeciesList;
+
+            cbxCategory.SelectedIndex = -1;
+            lstCategoryResult.ItemsSource = null;
         }
 
         private void cbxCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -69,7 +74,7 @@ namespace projectHerbariumMgmtIS.Queries
 
         private void btnLoadTable_Click(object sender, RoutedEventArgs e)
         {
-            if (cbxCategory.SelectedIndex != 1)
+            if (cbxCategory.SelectedIndex != -1)
             {
                 List<string> selectedItems = new List<string>();
                 foreach (CheckBoxList item in lstCategoryResult.Items)
@@ -79,9 +84,31 @@ namespace projectHerbariumMgmtIS.Queries
                         selectedItems.Add(item.Item);
                     }
                 }
-                dgrSpeciesTable.ItemsSource = GetSpeciesList(cbxCategory.SelectedItem.ToString(), selectedItems);
+                TempList = GetSpeciesList(cbxCategory.SelectedItem.ToString(), selectedItems);
+                dgrSpeciesTable.ItemsSource = TempList;
             }
         }
+
+        private void txfSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string input = txfSearch.Text.ToUpper();
+
+            var result = from species in TempList
+                         where species.DomainName.ToUpper().Contains(input) ||
+                               species.KingdomName.ToUpper().Contains(input) ||
+                               species.PhylumName.ToUpper().Contains(input) ||
+                               species.ClassName.ToUpper().Contains(input) ||
+                               species.OrderName.ToUpper().Contains(input) ||
+                               species.FamilyName.ToUpper().Contains(input) ||
+                               species.GenusName.ToUpper().Contains(input) ||
+                               species.SpeciesName.ToUpper().Contains(input) ||
+                               species.CommonName.ToUpper().Contains(input) ||
+                               species.SpeciesAuthor.ToUpper().Contains(input)
+                         select species;
+            dgrSpeciesTable.ItemsSource = result;
+        }
+
+        private void btnResetTable_Click(object sender, RoutedEventArgs e) => this.IniitializePage();
 
         private List<TaxonSpecies> GetSpeciesList(string category, List<string> selectedItems)
         {
@@ -147,13 +174,7 @@ namespace projectHerbariumMgmtIS.Queries
                         break;
                 }
             }
-
-            //foreach (var line in resultSpecies)
-            //{
-            //    Windows.UI.Popups.MessageDialog dialog = new Windows.UI.Popups.MessageDialog(line.ScientificName);
-            //    var result = dialog.ShowAsync();
-            //}
-
+            
             return resultSpecies;
         }
     }
