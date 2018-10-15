@@ -114,7 +114,7 @@ namespace projectHerbariumMgmtIS.Model
 
             DatabaseConnection connection = new DatabaseConnection();
             connection.setStoredProc("dbo.procApproveLoan");
-            connection.addProcParameter("@loanNumber", SqlDbType.Bit, LoanNumber);
+            connection.addProcParameter("@loanNumber", SqlDbType.VarChar, LoanNumber);
             connection.addProcParameter("@status", SqlDbType.VarChar, Status);
             connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
             status = connection.executeProcedure();
@@ -128,7 +128,7 @@ namespace projectHerbariumMgmtIS.Model
 
             DatabaseConnection connection = new DatabaseConnection();
             connection.setStoredProc("dbo.procReturnLoan");
-            connection.addProcParameter("@loanNumber", SqlDbType.Bit, LoanNumber);
+            connection.addProcParameter("@loanNumber", SqlDbType.VarChar, LoanNumber);
             connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
             status = connection.executeProcedure();
 

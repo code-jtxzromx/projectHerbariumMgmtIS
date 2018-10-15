@@ -15,10 +15,37 @@
     <ContentDialog.Resources>
         <DataTemplate x:Key="HeaderTemplate">
             <StackPanel>
-                <TextBlock Text="{Binding}" TextWrapping="WrapWholeWords" />
+                <TextBlock Text="{Binding}" FontWeight="Bold" TextWrapping="WrapWholeWords" />
             </StackPanel>
         </DataTemplate>
     </ContentDialog.Resources>
+    <ContentDialog.Background>
+        <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+            <GradientStop Color="#AF55CC55" Offset="1"/>
+            <GradientStop Color="#BF005500" Offset="0"/>
+        </LinearGradientBrush>
+    </ContentDialog.Background>
+    <ContentDialog.PrimaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFF998"/>
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.PrimaryButtonStyle>
+    <ContentDialog.SecondaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFCCFFCC"/>
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.SecondaryButtonStyle>
+    <ContentDialog.CloseButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFE06D56"/>
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.CloseButtonStyle>
 
     <Grid>
         <Grid.RowDefinitions>

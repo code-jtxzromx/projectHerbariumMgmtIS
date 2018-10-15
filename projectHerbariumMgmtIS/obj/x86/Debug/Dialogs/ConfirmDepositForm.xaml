@@ -6,12 +6,50 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    RequestedTheme="Dark"
     Title="Confirm Plant Deposit"
     PrimaryButtonText="Accept Deposit"
     SecondaryButtonText="Reject Deposit"
     CloseButtonText="Cancel"
                                                          
                                                              >
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" FontWeight="Bold" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+    <ContentDialog.Background>
+        <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+            <GradientStop Color="#FF55CC55" Offset="1"/>
+            <GradientStop Color="#FF339933" Offset="0"/>
+        </LinearGradientBrush>
+    </ContentDialog.Background>
+    <ContentDialog.PrimaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFF998"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.PrimaryButtonStyle>
+    <ContentDialog.SecondaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFCCFFCC"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.SecondaryButtonStyle>
+    <ContentDialog.CloseButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFE06D56"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.CloseButtonStyle>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,7 +58,7 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="0" Width="240" Height="320" Margin="5 10" Background="#0F000000" VerticalAlignment="Top">
-            <Image x:ConnectionId='11' x:Name="picHerbariumSheet"                                               />
+            <Image x:ConnectionId='12' x:Name="picHerbariumSheet"                                               />
         </Border>
         <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Height="320">
             <Grid Margin="10 0">
@@ -51,23 +89,23 @@
                 <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Processed by: " />
                 <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Status: " />
 
-                <TextBlock x:ConnectionId='2' Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='3' Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords"
                                                                                           />
-                <TextBlock x:ConnectionId='3' Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='4' Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"
                                                                                       />
-                <TextBlock x:ConnectionId='4' Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='5' Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"
                                                                                       />
-                <TextBlock x:ConnectionId='5' Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='6' Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"
                                                                                           />
-                <TextBlock x:ConnectionId='6' Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='7' Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
                                                                                           />
-                <TextBlock x:ConnectionId='7' Grid.Column="1" Grid.Row="5" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='8' Grid.Column="1" Grid.Row="5" Margin="5" TextWrapping="WrapWholeWords"
                                                                                      />
-                <TextBlock x:ConnectionId='8' Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='9' Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
                                                                                         />
-                <TextBlock x:ConnectionId='9' Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='10' Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
                                                                                   />
-                <TextBlock x:ConnectionId='10' Grid.Column="1" Grid.Row="8" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='11' Grid.Column="1" Grid.Row="8" Margin="5" TextWrapping="WrapWholeWords"
                                                                                    />
                 <CheckBox Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" Margin="5" IsChecked="true" IsEnabled="True"
                           Content="Plant Deposit Received in Good Condition" />

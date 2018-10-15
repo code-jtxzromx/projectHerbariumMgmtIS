@@ -37,7 +37,7 @@ namespace projectHerbariumMgmtIS.Transaction
 
             if (StaticAccess.Role == "STUDENT ASSISTANT")
             {
-                btnApprove.Visibility = Visibility.Collapsed;
+                //btnApprove.Visibility = Visibility.Collapsed;
             }
         }
 

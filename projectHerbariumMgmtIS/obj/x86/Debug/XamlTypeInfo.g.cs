@@ -3365,7 +3365,7 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
         private void set_134_ViewTrackedSheetForm_HerbariumSheetData(object instance, object Value)
         {
             var that = (global::projectHerbariumMgmtIS.Dialogs.ViewTrackedSheetForm)instance;
-            that.HerbariumSheetData = (global::projectHerbariumMgmtIS.Model.PlantDeposit)Value;
+            that.HerbariumSheetData = (global::projectHerbariumMgmtIS.Model.HerbariumSheet)Value;
         }
         private object get_135_ViewTrackedSheetForm_HerbariumSheet(object instance)
         {
@@ -4626,7 +4626,7 @@ namespace projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo
                 break;
             case "projectHerbariumMgmtIS.Dialogs.ViewTrackedSheetForm.HerbariumSheetData":
                 userType = (global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlUserType)GetXamlTypeByName("projectHerbariumMgmtIS.Dialogs.ViewTrackedSheetForm");
-                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheetData", "projectHerbariumMgmtIS.Model.PlantDeposit");
+                xamlMember = new global::projectHerbariumMgmtIS.projectHerbariumMgmtIS_XamlTypeInfo.XamlMember(this, "HerbariumSheetData", "projectHerbariumMgmtIS.Model.HerbariumSheet");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_134_ViewTrackedSheetForm_HerbariumSheetData;
                 xamlMember.Setter = set_134_ViewTrackedSheetForm_HerbariumSheetData;

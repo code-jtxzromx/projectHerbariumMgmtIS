@@ -26,12 +26,12 @@
                 <CommandBar Grid.Column="1" DefaultLabelPosition="Right" Background="Transparent">
                     <AppBarButton x:ConnectionId='3' x:Name="btnNewLoan"                          Icon="Add" Label="New Loan Transaction" />
                     <AppBarButton x:ConnectionId='4' x:Name="btnViewLoan"                           Icon="View" Label="View Loan Transaction" />
-                    <AppBarButton x:ConnectionId='5' x:Name="btnApprove"                          Icon="Accept" Label="Approve Loan Transaction" />
-                    <AppBarButton x:ConnectionId='6' x:Name="btnReturn"                         Label="Return Loaned Specimens">
+                    <!--<AppBarButton x:Name="btnApprove" Click="btnApprove_Click" Icon="Accept" Label="Approve Loan Transaction" />-->
+                    <!--<AppBarButton x:Name="btnReturn" Click="btnReturn_Click" Label="Return Loaned Specimens">
                         <AppBarButton.Icon>
                             <FontIcon Glyph="&#xE944;" />
                         </AppBarButton.Icon>
-                    </AppBarButton>
+                    </AppBarButton>-->
                 </CommandBar>
             </Grid>
 

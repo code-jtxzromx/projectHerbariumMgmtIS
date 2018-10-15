@@ -7,8 +7,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
+    RequestedTheme="Dark"
     Title="Sheet Tracking Information"
     CloseButtonText="Close">
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" FontWeight="Bold" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+    <ContentDialog.Background>
+        <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+            <GradientStop Color="#FF55CC55" Offset="1"/>
+            <GradientStop Color="#FF339933" Offset="0"/>
+        </LinearGradientBrush>
+    </ContentDialog.Background>
+    <ContentDialog.PrimaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFF998"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.PrimaryButtonStyle>
+    <ContentDialog.SecondaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFCCFFCC"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.SecondaryButtonStyle>
+    <ContentDialog.CloseButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFE06D56"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.CloseButtonStyle>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -27,9 +65,9 @@
                             </Grid.RowDefinitions>
 
                             <Image Grid.Row="0" Grid.RowSpan="2" Stretch="Uniform" Source="{Binding HerbariumSheet}" />
-                            <Border VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Padding="10" Background="#CFFFFFFF">
+                            <!--<Border VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Padding="10" Background="#CFFFFFFF">
                                 <TextBlock TextAlignment="Center" Text="{Binding Tag}" />
-                            </Border>
+                            </Border>-->
                         </Grid>
                     </DataTemplate>
                 </FlipView.ItemTemplate>
@@ -43,42 +81,97 @@
                         <ColumnDefinition Width="3*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
+                        <RowDefinition x:Name="Row00" Height="auto" />
+                        <RowDefinition x:Name="Row01" Height="auto" />
+                        <RowDefinition x:Name="Row02" Height="auto" />
+                        <RowDefinition x:Name="Row03" Height="auto" />
+                        <RowDefinition x:Name="Row04" Height="auto" />
+                        <RowDefinition x:Name="Row05" Height="auto" />
+                        <RowDefinition x:Name="Row06" Height="auto" />
+                        <RowDefinition x:Name="Row07" Height="auto" />
+                        <RowDefinition x:Name="Row08" Height="auto" />
+                        <RowDefinition x:Name="Row09" Height="auto" />
+                        <RowDefinition x:Name="Row10" Height="auto" />
+                        <RowDefinition x:Name="Row11" Height="auto" />
+                        <RowDefinition x:Name="Row12" Height="auto" />
+                        <RowDefinition x:Name="Row13" Height="auto" />
+                        <RowDefinition x:Name="Row14" Height="auto" />
+                        <RowDefinition x:Name="Row15" Height="auto" />
+                        <RowDefinition x:Name="Row16" Height="auto" />
+                        <RowDefinition x:Name="Row17" Height="auto" />
+                        <RowDefinition x:Name="Row18" Height="auto" />
+                        <RowDefinition x:Name="Row19" Height="auto" />
+                        <RowDefinition x:Name="Row20" Height="auto" />
+                        <RowDefinition x:Name="Row21" Height="auto" />
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" Text="Status: " />
                     <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" Text="Currently at: " />
 
                     <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" Text="Accession Number: " />
-                    <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" Text="Date Collected: " />
-                    <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Date Deposited: " />
-                    <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" Text="Location: " />
-                    <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Collector: " />
-                    <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Description: " />
+                    <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" Text="Reference Number: " />
+                    <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Possible Reference: " />
+                    <TextBlock Grid.Column="0" Grid.Row="5" Margin="5" Text="Box Number: " />
+                    <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Loan Number: " />
+                    <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Taxon Name: " />
+                    <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Possible Taxon Name: " />
+                    <TextBlock Grid.Column="0" Grid.Row="9" Margin="5" Text="Species Basionym: " />
+                    <TextBlock Grid.Column="0" Grid.Row="10" Margin="5" Text="Plant Type: " />
+                    <TextBlock Grid.Column="0" Grid.Row="11" Margin="5" Text="Full Locality: " />
+                    <TextBlock Grid.Column="0" Grid.Row="12" Margin="5" Text="Borrower: " />
+                    <TextBlock Grid.Column="0" Grid.Row="13" Margin="5" Text="Collected by: " />
+                    <TextBlock Grid.Column="0" Grid.Row="14" Margin="5" Text="Processed by: " />
+                    <TextBlock Grid.Column="0" Grid.Row="15" Margin="5" Text="Verified by: " />
+                    <TextBlock Grid.Column="0" Grid.Row="16" Margin="5" Text="Date Collected: " />
+                    <TextBlock Grid.Column="0" Grid.Row="17" Margin="5" Text="Date Deposited: " />
+                    <TextBlock Grid.Column="0" Grid.Row="18" Margin="5" Text="Date Verified: " />
+                    <TextBlock Grid.Column="0" Grid.Row="19" Margin="5" Text="Description: " />
+                    <TextBlock Grid.Column="0" Grid.Row="20" Margin="5" Text="Duration: " />
+                    <TextBlock Grid.Column="0" Grid.Row="21" Margin="5" Text="Loan Availability: " />
 
-                    <!--<TextBlock Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.AccessionNumber}" />
-                    <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.ReferenceNumber}" />
+                    <TextBlock Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Status}" />
+                    <TextBlock x:Name="lblLocation" Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords" />
                     <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.BoxLocation}" />
+                               Text="{x:Bind HerbariumSheetData.AccessionNumber}" />
                     <TextBlock Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.FamilyName}" />
+                               Text="{x:Bind HerbariumSheetData.ReferenceNumber}" />
                     <TextBlock Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.ScientificName}" />
+                               Text="{x:Bind HerbariumSheetData.ReferenceNumber}" />
                     <TextBlock Grid.Column="1" Grid.Row="5" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.TaxonNomenclature}" />
+                               Text="{x:Bind HerbariumSheetData.BoxLocation}" />
                     <TextBlock Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.DateCollected}" />
+                               Text="{x:Bind HerbariumSheetData.LoanNumber}" />
                     <TextBlock Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind HerbariumSheetData.DateDeposited}" />-->
+                               Text="{x:Bind HerbariumSheetData.ScientificName}" />
+                    <TextBlock Grid.Column="1" Grid.Row="8" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.ScientificName}" />
+                    <TextBlock Grid.Column="1" Grid.Row="9" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.TaxonNomenclature}" />
+                    <TextBlock Grid.Column="1" Grid.Row="10" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.PlantType}" />
+                    <TextBlock Grid.Column="1" Grid.Row="11" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Locality}" />
+                    <TextBlock Grid.Column="1" Grid.Row="12" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Borrower}" />
+                    <TextBlock Grid.Column="1" Grid.Row="13" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Collector}" />
+                    <TextBlock Grid.Column="1" Grid.Row="14" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Staff}" />
+                    <TextBlock Grid.Column="1" Grid.Row="15" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Validator}" />
+                    <TextBlock Grid.Column="1" Grid.Row="16" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.DateCollected}" />
+                    <TextBlock Grid.Column="1" Grid.Row="17" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.DateDeposited}" />
+                    <TextBlock Grid.Column="1" Grid.Row="18" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.DateValidated}" />
+                    <TextBlock Grid.Column="1" Grid.Row="19" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Description}" />
+                    <TextBlock Grid.Column="1" Grid.Row="20" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.Duration}" />
+                    <TextBlock Grid.Column="1" Grid.Row="21" Margin="5" TextWrapping="WrapWholeWords"
+                               Text="{x:Bind HerbariumSheetData.LoanAvailability}" />
                 </Grid>
             </StackPanel>
         </ScrollViewer>

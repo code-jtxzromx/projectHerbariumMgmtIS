@@ -7,10 +7,48 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
+    RequestedTheme="Dark"
     Title="Update Herbarium Sheet Information"
     PrimaryButtonText="Save Changes"
     CloseButtonText="Cancel"
     PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" FontWeight="Bold" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+    <ContentDialog.Background>
+        <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+            <GradientStop Color="#FF55CC55" Offset="1"/>
+            <GradientStop Color="#FF339933" Offset="0"/>
+        </LinearGradientBrush>
+    </ContentDialog.Background>
+    <ContentDialog.PrimaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFF998"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.PrimaryButtonStyle>
+    <ContentDialog.SecondaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFCCFFCC"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.SecondaryButtonStyle>
+    <ContentDialog.CloseButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFE06D56"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.CloseButtonStyle>
 
     <Grid>
         <Grid.ColumnDefinitions>

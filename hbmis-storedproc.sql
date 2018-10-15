@@ -2336,8 +2336,10 @@ BEGIN
 					SET boolLoanAvailable = 0
 					WHERE intHerbariumSheetID = @sheetID
 
-					FETCH NEXT FROM myCursor INTO @sheetID
+					FETCH NEXT FROM sheetCursor INTO @sheetID
 				END
+		
+				FETCH NEXT FROM speciesCursor INTO @speciesID, @copies
 
 				CLOSE sheetCursor
 				DEALLOCATE sheetCursor

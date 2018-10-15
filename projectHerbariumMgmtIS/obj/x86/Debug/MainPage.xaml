@@ -38,12 +38,16 @@
                     </animations:ScalarAnimation>
                 </animations:Implicit.HideAnimations>
 
-
-                <Image Source="Assets/background-1.png" Stretch="UniformToFill" />
+                <!--<Image Source="Assets/background-1.png" Stretch="UniformToFill" />
                 <Image Source="Assets/background-2.jpg" Stretch="UniformToFill" />
                 <Image Source="Assets/background-3.jpg" Stretch="UniformToFill" />
                 <Image Source="Assets/background-4.jpg" Stretch="UniformToFill" />
-                <Image Source="Assets/background-5.jpg" Stretch="UniformToFill" />
+                <Image Source="Assets/background-5.jpg" Stretch="UniformToFill" />-->
+
+                <Image Source="Assets/wallp1.png" Stretch="UniformToFill" />
+                <Image Source="Assets/wallp2.png" Stretch="UniformToFill" />
+                <Image Source="Assets/wallp3.png" Stretch="UniformToFill" />
+                <Image Source="Assets/wallp4.png" Stretch="UniformToFill" />
             </FlipView>
             <Grid>
                 <animations:Implicit.ShowAnimations>

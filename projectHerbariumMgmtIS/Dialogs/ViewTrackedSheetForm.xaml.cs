@@ -21,10 +21,14 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class ViewTrackedSheetForm : ContentDialog
     {
         // Properties
-        public PlantDeposit HerbariumSheetData
+        public HerbariumSheet HerbariumSheetData
         {
-            get { return (PlantDeposit)GetValue(HerbariumSheetDataProperty); }
-            set { SetValue(HerbariumSheetDataProperty, value); }
+            get { return (HerbariumSheet)GetValue(HerbariumSheetDataProperty); }
+            set
+            {
+                SetValue(HerbariumSheetDataProperty, value);
+                this.ToggleStatus(value);
+            }
         }
         public List<HerbariumImage> HerbariumSheet
         {
@@ -33,7 +37,7 @@ namespace projectHerbariumMgmtIS.Dialogs
         }
 
         public static readonly DependencyProperty HerbariumSheetDataProperty =
-            DependencyProperty.Register("HerbariumSheetData", typeof(PlantDeposit), typeof(ViewSheetForm), new PropertyMetadata(new PlantDeposit()));
+            DependencyProperty.Register("HerbariumSheetData", typeof(HerbariumSheet), typeof(ViewSheetForm), new PropertyMetadata(new HerbariumSheet()));
         public static readonly DependencyProperty HerbariumSheetProperty =
             DependencyProperty.Register("HerbariumSheet", typeof(List<HerbariumImage>), typeof(ViewSheetForm), new PropertyMetadata(new List<HerbariumImage>()));
 
@@ -41,6 +45,65 @@ namespace projectHerbariumMgmtIS.Dialogs
         public ViewTrackedSheetForm()
         {
             this.InitializeComponent();
+        }
+
+        // Methods
+        public void ToggleStatus(HerbariumSheet sheet)
+        {
+            switch (sheet.Status)
+            {
+                case "For Verification":
+                    lblLocation.Text = "Plant Verification";
+                    Row03.Height = new GridLength(0);
+                    Row04.Height = new GridLength(0);
+                    Row05.Height = new GridLength(0);
+                    Row06.Height = new GridLength(0);
+                    Row07.Height = new GridLength(0);
+                    Row08.Height = new GridLength(0);
+                    Row09.Height = new GridLength(0);
+                    Row12.Height = new GridLength(0);
+                    Row15.Height = new GridLength(0);
+                    Row18.Height = new GridLength(0);
+                    Row20.Height = new GridLength(0);
+                    Row21.Height = new GridLength(0);
+                    break;
+                case "Further Verification":
+                    lblLocation.Text = "External Verification";
+                    Row03.Height = new GridLength(0);
+                    Row05.Height = new GridLength(0);
+                    Row06.Height = new GridLength(0);
+                    Row07.Height = new GridLength(0);
+                    Row09.Height = new GridLength(0);
+                    Row12.Height = new GridLength(0);
+                    Row15.Height = new GridLength(0);
+                    Row18.Height = new GridLength(0);
+                    Row20.Height = new GridLength(0);
+                    Row21.Height = new GridLength(0);
+                    break;
+                case "Verified":
+                    lblLocation.Text = "Plant Classification";
+                    Row04.Height = new GridLength(0);
+                    Row05.Height = new GridLength(0);
+                    Row08.Height = new GridLength(0);
+                    Row12.Height = new GridLength(0);
+                    Row20.Height = new GridLength(0);
+                    Row21.Height = new GridLength(0);
+                    break;
+                case "Stored":
+                    lblLocation.Text = "Herbarium Inventory at " + sheet.BoxLocation;
+                    Row04.Height = new GridLength(0);
+                    Row08.Height = new GridLength(0);
+                    Row12.Height = new GridLength(0);
+                    Row20.Height = new GridLength(0);
+                    break;
+                case "Loaned":
+                    lblLocation.Text = "Loaned by " + sheet.Borrower;
+                    Row04.Height = new GridLength(0);
+                    Row08.Height = new GridLength(0);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

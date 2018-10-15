@@ -1,4 +1,5 @@
-﻿using projectHerbariumMgmtIS.Model;
+﻿using projectHerbariumMgmtIS.Dialogs;
+using projectHerbariumMgmtIS.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,11 +30,30 @@ namespace projectHerbariumMgmtIS.ManagementTools
             this.InitializePage();
         }
 
-        public void InitializePage() => dgrHerbariumSheetsTable.ItemsSource = new PlantDeposit().GetPlantDeposits();
+        public void InitializePage() => dgrHerbariumSheetsTable.ItemsSource = new HerbariumSheet().GetHerbariumTraces();
 
-        private void btnView_Click(object sender, RoutedEventArgs e)
+        private async void btnView_Click(object sender, RoutedEventArgs e)
         {
+            if (dgrHerbariumSheetsTable.SelectedIndex != -1)
+            {
+                var SelectedDeposit = dgrHerbariumSheetsTable.SelectedItem as HerbariumSheet;
+                List<HerbariumImage> HerbariumImage;
+                try
+                {
+                    HerbariumImage = await new HerbariumImage().GetHerbariumSheets(SelectedDeposit.AccessionNumber);
+                }
+                catch (Exception)
+                {
+                    HerbariumImage = new List<HerbariumImage>();
+                }
 
+                ViewTrackedSheetForm form = new ViewTrackedSheetForm()
+                {
+                    HerbariumSheet = HerbariumImage,
+                    HerbariumSheetData = SelectedDeposit
+                };
+                var result = await form.ShowAsync();
+            }
         }
     }
 }

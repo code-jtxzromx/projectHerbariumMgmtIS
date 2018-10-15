@@ -9,12 +9,50 @@
     xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
     xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
+    RequestedTheme="Dark"
     Title="New Loan Transaction"
     PrimaryButtonText="Process Loan"
     SecondaryButtonText="Clear"
     CloseButtonText="Cancel"
                                                          
                                                              >
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" FontWeight="Bold" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+    <ContentDialog.Background>
+        <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+            <GradientStop Color="#FF55CC55" Offset="1"/>
+            <GradientStop Color="#FF339933" Offset="0"/>
+        </LinearGradientBrush>
+    </ContentDialog.Background>
+    <ContentDialog.PrimaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFF998"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.PrimaryButtonStyle>
+    <ContentDialog.SecondaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFCCFFCC"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.SecondaryButtonStyle>
+    <ContentDialog.CloseButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFE06D56"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.CloseButtonStyle>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -36,25 +74,25 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <ComboBox x:ConnectionId='18' x:Name="cbxBorrower" Margin="5" Header="Borrower's Name:" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
+                <ComboBox x:ConnectionId='19' x:Name="cbxBorrower" Margin="5" Header="Borrower's Name:" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" 
                           HorizontalAlignment="Stretch" />
-                <TextBlock x:ConnectionId='19' x:Name="msgBorrower" Grid.Column="1" Grid.Row="1" Margin="5 -2" FlowDirection="RightToLeft"
+                <TextBlock x:ConnectionId='20' x:Name="msgBorrower" Grid.Column="1" Grid.Row="1" Margin="5 -2" FlowDirection="RightToLeft"
                            Text="This Field is Required" FontSize="10" Foreground="Red" />
-                <DatePicker x:ConnectionId='20' x:Name="dpkLoanDate" Margin="5" Header="Loan Date" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
+                <DatePicker x:ConnectionId='21' x:Name="dpkLoanDate" Margin="5" Header="Loan Date" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
                             HorizontalAlignment="Stretch"                                      />
-                <TextBox x:ConnectionId='21' x:Name="txfDuration" Margin="5" Header="Duration:"  Grid.Column="0" Grid.Row="3" 
+                <TextBox x:ConnectionId='22' x:Name="txfDuration" Margin="5" Header="Duration:"  Grid.Column="0" Grid.Row="3" 
                          extensions:TextBoxRegex.ValidationType="Number"/>
-                <ComboBox x:ConnectionId='22' x:Name="cbxDuration" Margin="5" Header="  " Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" />
-                <TextBlock x:ConnectionId='23' x:Name="msgDuration" Grid.Column="1" Grid.Row="4" Margin="5 -2" FlowDirection="RightToLeft"
+                <ComboBox x:ConnectionId='23' x:Name="cbxDuration" Margin="5" Header="  " Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" />
+                <TextBlock x:ConnectionId='24' x:Name="msgDuration" Grid.Column="1" Grid.Row="4" Margin="5 -2" FlowDirection="RightToLeft"
                            Text="This Field is Required" FontSize="10" Foreground="Red" />
             </Grid>
             <StackPanel>
                 <TextBlock Text="Purpose of Loan:" Margin="5" />
-                <RadioButton x:ConnectionId='13' x:Name="rbtPurpose1" GroupName="LoanPurpose"                                  Margin="5 0" Content="Research" />
-                <RadioButton x:ConnectionId='14' x:Name="rbtPurpose2" GroupName="LoanPurpose"                                  Margin="5 0" Content="Academic" />
-                <RadioButton x:ConnectionId='15' x:Name="rbtPurpose3" GroupName="LoanPurpose"                                  Margin="5 0" Content="Other Purpose" />
-                <TextBox x:ConnectionId='16' x:Name="txfOtherPurpose" Margin="5" Header="Other Purpose:" />
-                <TextBlock x:ConnectionId='17' x:Name="msgOtherPurpose" Margin="5 -2" FlowDirection="RightToLeft"
+                <RadioButton x:ConnectionId='14' x:Name="rbtPurpose1" GroupName="LoanPurpose"                                  Margin="5 0" Content="Research" />
+                <RadioButton x:ConnectionId='15' x:Name="rbtPurpose2" GroupName="LoanPurpose"                                  Margin="5 0" Content="Academic" />
+                <RadioButton x:ConnectionId='16' x:Name="rbtPurpose3" GroupName="LoanPurpose"                                  Margin="5 0" Content="Other Purpose" />
+                <TextBox x:ConnectionId='17' x:Name="txfOtherPurpose" Margin="5" Header="Other Purpose:" />
+                <TextBlock x:ConnectionId='18' x:Name="msgOtherPurpose" Margin="5 -2" FlowDirection="RightToLeft"
                            Text="This Field is Required" FontSize="10" Foreground="Red" />
             </StackPanel>
         </StackPanel>
@@ -77,9 +115,9 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="Taxon Families:" Margin="5 0 5 5" />
-                <TextBlock x:ConnectionId='9' x:Name="msgFamilyList" Grid.Row="1" Margin="5 -2"
+                <TextBlock x:ConnectionId='10' x:Name="msgFamilyList" Grid.Row="1" Margin="5 -2"
                            Text="Must Select At least one Record" FontSize="10" Foreground="Red" />
-                <ListView x:ConnectionId='10' x:Name="lstFamilyList" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="5" 
+                <ListView x:ConnectionId='11' x:Name="lstFamilyList" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="5" 
                           ScrollViewer.VerticalScrollMode="Auto">
                     <ListView.ItemTemplate>
                         <DataTemplate                               >
@@ -89,7 +127,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button x:ConnectionId='11' x:Name="btnLoadGenus"                            Grid.Row="3" HorizontalAlignment="Right" 
+                <Button x:ConnectionId='12' x:Name="btnLoadGenus"                            Grid.Row="3" HorizontalAlignment="Right" 
                         Content="Load Genus" Margin="5" />
             </Grid>
             <Grid Grid.Column="1" Grid.Row="0">
@@ -101,9 +139,9 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="Taxon Genera:" Margin="5 0 5 5" />
-                <TextBlock x:ConnectionId='5' x:Name="msgGenusList" Grid.Row="1" Margin="5 -2"
+                <TextBlock x:ConnectionId='6' x:Name="msgGenusList" Grid.Row="1" Margin="5 -2"
                            Text="Must Select At least one Record" FontSize="10" Foreground="Red" />
-                <ListView x:ConnectionId='6' x:Name="lstGenusList" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="5" 
+                <ListView x:ConnectionId='7' x:Name="lstGenusList" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="5" 
                           ScrollViewer.VerticalScrollMode="Auto">
                     <ListView.ItemTemplate>
                         <DataTemplate                              >
@@ -113,7 +151,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button x:ConnectionId='7' x:Name="btnLoadSpecies"                              Grid.Row="3" HorizontalAlignment="Right" 
+                <Button x:ConnectionId='8' x:Name="btnLoadSpecies"                              Grid.Row="3" HorizontalAlignment="Right" 
                         Content="Load Species" Margin="5" />
             </Grid>
             <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
@@ -124,9 +162,9 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="Taxon Species:" Margin="5 0 5 5" />
-                <TextBlock x:ConnectionId='2' x:Name="msgSpeciesList" Grid.Row="1" Margin="5 -2"
+                <TextBlock x:ConnectionId='3' x:Name="msgSpeciesList" Grid.Row="1" Margin="5 -2"
                            Text="Must Select At least one Record" FontSize="10" Foreground="Red" />
-                <controls:DataGrid x:ConnectionId='3' x:Name="dgrSpeciesList" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="5"
+                <controls:DataGrid x:ConnectionId='4' x:Name="dgrSpeciesList" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="5"
                                    CanUserSortColumns="True" AutoGenerateColumns="False" SelectionMode="Single">
                     <controls:DataGrid.Columns>
                         <controls:DataGridCheckBoxColumn Width="50" 

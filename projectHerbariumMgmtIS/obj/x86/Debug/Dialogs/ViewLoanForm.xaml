@@ -7,8 +7,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
+    RequestedTheme="Dark"
     Title="Plant Loan Information"
     CloseButtonText="Close">
+    <ContentDialog.Resources>
+        <DataTemplate x:Key="HeaderTemplate">
+            <StackPanel>
+                <TextBlock Text="{Binding}" FontWeight="Bold" TextWrapping="WrapWholeWords" />
+            </StackPanel>
+        </DataTemplate>
+    </ContentDialog.Resources>
+    <ContentDialog.Background>
+        <LinearGradientBrush EndPoint="1,1" StartPoint="1,0">
+            <GradientStop Color="#FF55CC55" Offset="1"/>
+            <GradientStop Color="#FF339933" Offset="0"/>
+        </LinearGradientBrush>
+    </ContentDialog.Background>
+    <ContentDialog.PrimaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFFFF998"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.PrimaryButtonStyle>
+    <ContentDialog.SecondaryButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFCCFFCC"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.SecondaryButtonStyle>
+    <ContentDialog.CloseButtonStyle>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFE06D56"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
+    </ContentDialog.CloseButtonStyle>
 
     <Grid Width="800">
         <Grid.RowDefinitions>
@@ -44,17 +82,17 @@
             <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" Text="Purpose: " />
             <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Status: " />
 
-            <TextBlock x:ConnectionId='4' Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords"                                          />
-            <TextBlock x:ConnectionId='5' Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"                                        />
-            <TextBlock x:ConnectionId='6' Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"                                        />
-            <TextBlock x:ConnectionId='7' Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"                                       />
-            <TextBlock x:ConnectionId='8' Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
+            <TextBlock x:ConnectionId='5' Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords"                                          />
+            <TextBlock x:ConnectionId='6' Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"                                        />
+            <TextBlock x:ConnectionId='7' Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"                                        />
+            <TextBlock x:ConnectionId='8' Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords"                                       />
+            <TextBlock x:ConnectionId='9' Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
                                                             />
 
         </Grid>
         <StackPanel Grid.Row="0" Grid.Column="1">
             <TextBlock Margin="5" Text="Loaned Species" />
-            <controls:DataGrid x:ConnectionId='3' x:Name="dgrLoanedSpecies" BorderBrush="Black" BorderThickness="1" Margin="5" Height="200" 
+            <controls:DataGrid x:ConnectionId='4' x:Name="dgrLoanedSpecies" BorderBrush="Black" BorderThickness="1" Margin="5" Height="200" 
                                AutoGenerateColumns="False" CanUserSortColumns="True">
                 <controls:DataGrid.Columns>
                     <controls:DataGridTextColumn Width="*" Header="Family Name" Binding="{Binding FamilyName}" IsReadOnly="True" />
@@ -65,7 +103,7 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1">
             <TextBlock Margin="5" Text="Loaned Species" />
-            <controls:DataGrid x:ConnectionId='2' x:Name="dgrLoanedSheets" BorderBrush="Black" BorderThickness="1" Margin="5" Height="200" 
+            <controls:DataGrid x:ConnectionId='3' x:Name="dgrLoanedSheets" BorderBrush="Black" BorderThickness="1" Margin="5" Height="200" 
                                AutoGenerateColumns="False" CanUserSortColumns="True">
                 <controls:DataGrid.Columns>
                     <controls:DataGridTextColumn Width="*" Header="Taxon Name" Binding="{Binding ScientificName}" IsReadOnly="True" />
