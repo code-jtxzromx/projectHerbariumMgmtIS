@@ -51,7 +51,7 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </Grid>
-            <Grid Width="340">
+            <!--<Grid Width="340">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
@@ -134,7 +134,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </Grid>
+            </Grid>-->
         </StackPanel>
     </Grid>
 </Page>

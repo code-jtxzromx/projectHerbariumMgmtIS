@@ -32,6 +32,27 @@ CREATE TABLE tblSystemMenu
 )
 GO
 
+-- Taxon Species Data
+IF OBJECT_ID('tblSpeciesData', 'U') IS NOT NULL
+	DROP TABLE tblSpeciesData
+GO
+CREATE TABLE tblSpeciesData
+(
+	intSpeciesID INT IDENTITY(1, 1) NOT NULL,
+	strDomainName VARCHAR(50) NOT NULL,
+	strKingdomName VARCHAR(50) NOT NULL,
+	strPhylumName VARCHAR(50) NOT NULL,
+	strClassName VARCHAR(50) NOT NULL,
+	strOrderName VARCHAR(50) NOT NULL,
+	strFamilyName VARCHAR(50) NOT NULL,
+	strGenusName VARCHAR(50) NOT NULL,
+	strSpeciesName VARCHAR(50) NOT NULL,
+	strCommonName VARCHAR(255) NOT NULL,
+	strAuthorsName VARCHAR(255) NOT NULL
+	CONSTRAINT pk_tblSpeciesData PRIMARY KEY(intSpeciesID)
+)
+GO
+
 -- Taxonomic Hierarchy : Phylum
 IF OBJECT_ID('tblPhylum', 'U') IS NOT NULL
 	DROP TABLE tblPhylum
@@ -572,8 +593,9 @@ CREATE TABLE tblPlantLoanTransaction
 	dateLoan DATE NOT NULL,
 	dateReturning DATE NOT NULL,
 	dateProcessed DATETIME NOT NULL,
+	dateReturned DATE,
 	strPurpose VARCHAR(255) NOT NULL,
-	strStatus VARCHAR(10) NOT NULL,
+	strStatus VARCHAR(50) NOT NULL,
 	CONSTRAINT pk_tblPlantLoanTransaction PRIMARY KEY(intLoanID),
 	CONSTRAINT fk_tblPlantLoanTransaction_tblBorrower FOREIGN KEY(intBorrowerID)
 		REFERENCES tblBorrower(intBorrowerID)
@@ -589,6 +611,7 @@ CREATE TABLE tblLoaningPlants
 	intPlantLoanID INT IDENTITY(1, 1) NOT NULL,
 	intLoanID INT NOT NULL,
 	intHerbariumSheetID INT NOT NULL,
+	boolCondition BIT,
 	CONSTRAINT pk_tblLoaningPlants PRIMARY KEY(intPlantLoanID),
 	CONSTRAINT fk_tblLoaningPlants_tblPlantLoanTransaction FOREIGN KEY(intLoanID)
 		REFERENCES tblPlantLoanTransaction(intLoanID),
@@ -612,6 +635,7 @@ CREATE TABLE tblLoaningSpecies
 	CONSTRAINT fk_tblLoaningSpecies_tblSpecies FOREIGN KEY(intSpeciesID)
 		REFERENCES tblSpecies(intSpeciesID)
 )
+GO
 
 -------------- VIEWS CREATION --------------
 
@@ -1019,7 +1043,7 @@ AS
 (
 	SELECT PL.intLoanID, CONCAT('HB-', FORMAT(PL.intLoanID, '00000#')) as strLoanNumber, Bo.strFullName AS strBorrower, 
 		PL.dateLoan, PL.dateReturning, CONCAT(CONVERT(VARCHAR, PL.dateLoan, 107), ' - ', CONVERT(VARCHAR, PL.dateReturning, 107)) as strDuration, 
-		PL.dateProcessed, PL.strPurpose, PL.strStatus
+		PL.dateProcessed, PL.dateReturned, PL.strPurpose, PL.strStatus
 	FROM tblPlantLoanTransaction PL
 		INNER JOIN viewBorrower Bo ON PL.intBorrowerID = Bo.intBorrowerID
 )
@@ -1071,7 +1095,7 @@ GO
 CREATE VIEW viewLoanedSheets
 AS
 (
-	SELECT LP.intPlantLoanID, PL.strLoanNumber, PL.strBorrower, PL.strDuration, HS.strAccessionNumber, HS.strScientificName, HS.strStatus
+	SELECT LP.intPlantLoanID, PL.strLoanNumber, PL.strBorrower, PL.strDuration, PL.dateReturned, HS.strAccessionNumber, HS.strScientificName, HS.strStatus, LP.boolCondition
 	FROM tblLoaningPlants LP
 		INNER JOIN viewPlantLoans PL ON LP.intLoanID = PL.intLoanID
 		INNER JOIN viewHerbariumSheet HS ON LP.intHerbariumSheetID = HS.intHerbariumSheetID
@@ -1093,7 +1117,7 @@ AS
 		LEFT JOIN viewVerifyingDeposit VD ON PD.strAccessionNumber = VD.strAccessionNumber
 		LEFT JOIN viewHerbariumSheet HS ON PD.strAccessionNumber = HS.strAccessionNumber
 		LEFT JOIN viewHerbariumInventory HI ON HS.strAccessionNumber = HI.strAccessionNumber
-		LEFT JOIN viewLoanedSheets LS ON HI.strAccessionNumber = LS.strAccessionNumber
+		LEFT JOIN viewLoanedSheets LS ON HI.strAccessionNumber = LS.strAccessionNumber AND LS.strStatus = 'Loaned'
 )
 GO
  
@@ -1133,6 +1157,97 @@ VALUES ('B', 'Maintenance',			'Taxonomic Hierarchy',	'TaxonomicHierarchyPage',	2
        ('B', 'Management Tools',	'Herbarium Inventory',	'HerbariumInventoryPage',	1),
        ('B', 'Management Tools',	'Sheet Tracking',		'SheetTrackingPage',		1),
        ('B', 'Management Tools',	'Audit Trailing',		'AuditTrailingPage',		2)
+GO
+
+-- Species Data
+INSERT INTO tblSpeciesData (strDomainName, strKingdomName, strPhylumName, strClassName, strOrderName, strFamilyName, strGenusName, strSpeciesName, strCommonName, strAuthorsName)
+VALUES  ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Solanes', 'Convolvulaceae', 'Ipomoea', 'aquatica', 'Water spinach', 'Peter Forsskål'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Solanes', 'Convolvulaceae', 'Ipomoea', 'batatas', 'Sweet potato', 'Carl Linneaus, Jean-Baptiste Lamarck'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Solanes', 'Convolvulaceae', 'Ipomoea', 'triloba', 'Aiea Morning Glory', 'Carl Linneaus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Solanes', 'Convolvulaceae', 'Operculina', 'turpethum', 'Turpeth', 'Carl Linneaus, Silva Manso'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Zingiberales', 'Costaceae', 'Cheilocostus', 'speciosus', 'Wild ginger', 'Johann Gerhard König'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Acacia', 'auriculiformis', 'Acacia tree', 'George Bentham'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Albizia', 'saman', 'Rain tree', 'Ferdinand von Mueller'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Arachis', 'pintoi', 'Pinto peanut', 'Krapovickas & WC Gregory'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Bauhinia', 'purpurea', 'Orchid tree', 'Carl Linnaeus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Centrosema', 'pubescens', 'Butterfly pea', 'George Bentham'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Delonix', 'regia', 'Flame tree', 'William Jackson Hooker, Constantine Samuel Rafinesque'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Leucenia', 'leucocephala', 'White leadtree', 'Jean-Baptiste Lamarck, Hendrik de Wit'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Mimosa', 'pudica', 'Sensitive plant', 'Carl Linnaeus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Pterocarpus', 'indicus', 'Philippine mahogany', 'Carl Ludwig Willdenow'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Senna', 'alata', 'Ringworm bush', 'Carl Linnaeus, William Roxburgh'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Fabales', 'Fabaceae', 'Tamarindus', 'indica', 'Tamarind', 'Carl Linneaus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Scrophulariales', 'Linderniaceae', 'Linderia', 'crustacea', 'Malaysian False Pimpernel', 'Carl Linneaus, Ferdinand von Mueller'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Polygalales', 'Malpighiaceae', 'Malpighia', 'coccigera', 'Singaporean Holly', 'Carl Linnaeus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Sapindales', 'Meliaceae', 'Azardirachta', 'indica', 'Indian lilac', 'Adrien-Henri de Jussieu'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Sapindales', 'Meliaceae', 'Melia', 'azedarach', 'Chinaberry Tree', 'Carl Linnaeus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Sapindales', 'Meliaceae', 'Swietenia', 'macrophylla', 'Big Leaf Mahogany', 'George King'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Sapindales', 'Meliaceae', 'Sandoricum', 'koetjape', 'Santol', 'Adrien-Henri de Jussieu'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Artocarpus', 'camansi', 'Breadfruit', 'Francisco Manuel Blanco'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Artocarpus', 'heterophyllus', 'Jackfruit', 'Jean-Baptiste Lamarck'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Broussonetia', 'luzonica', 'Birch flower', 'Francisco Manuel Blanco'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Ficus', 'benjamina', 'Weeping fig', 'Carl Linnaeus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Ficus', 'cumingii', 'Fig', 'Friedrich Anton Wilheim Miquel'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Ficus', 'elastica', 'Indian rubberplant', 'William Roxburgh, Jens Wilken Hornemann'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Ficus', 'religiosa', 'Sacred fig', 'Carl Linnaeus'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Ficus', 'septica', 'Hauli tree', 'Nicolaas Laurens Burman'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Moraceae', 'Ficus', 'ulmifolia', 'isis', 'Jean-Baptiste Lamarck'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Sapindales', 'Rutaceae', 'Citrus', 'maxima', 'Pomelo', 'Nicolaas Laurens Burman, Elmer Drew Merrill'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Sapindales', 'Rutaceae', 'Citrus', 'microcarpa', 'Calamansi', 'Friedrich Georg von Burge'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Sapindales', 'Rutaceae', 'Murraya', 'paniculata', 'Kamuning', 'Carl Linnaeus, William Jack'),
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Urticales', 'Urticaceae', 'Pilea', 'microphylla', 'Artillery plant', 'Carl Linnaeus, Frederik Liebmann')
+INSERT INTO tblSpeciesData (strDomainName, strKingdomName, strPhylumName, strClassName, strOrderName, strFamilyName, strGenusName, strSpeciesName, strCommonName, strAuthorsName)
+VALUES  ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Codiaeum', 'variegatum', 'Garden Croton', 'Carl Linnaeus, Adrien-Henri de Jussieu'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Ricinus', 'communis', 'Castor Bean', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Macaranga', 'grandifolia', 'Coral tree', 'Johann Baptist Emanuel Pohl'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Euphorbia', 'hirta', 'Asthma plant', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Jatropha', 'integerrina', 'Peregrina', 'Nikolaus Joseph von Jacquin'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Codiaeum', 'variegatum', 'Garden Croton', 'Carl Linnaeus, Adrien-Henri de Jussieu'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Manihot', 'esculenta', 'Cassava', 'Heinrich Johann Nepomuk von Crantz'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Macaranga', 'tanarius', 'Parasol Leaf Tree', 'Carl Linnaeus, Johannes Müller Argoviensis'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Excoecaria', 'cochinchinensis', 'Blindness Tree', 'João de Loureiro'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Euphorbia', 'heterophylla', 'Kaliko Plant', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Euphorbia', 'tirucalli', 'Indiantree Spurge', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Euphorbia', 'hypericifolia', 'Baby''s-Breath Euphorbia', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Pedilanthus', 'tithymaloides', 'Redbird Flower', 'Carl Linnaeus, Pierre Antoine Poiteau'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Euphorbiales', 'Euphorbiaceae', 'Antidesma', 'bunius', 'Salamander Tree', 'Carl Linnaeus, Kurt Polycarp Joachim Sprengel'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Vitex', 'parviflora', 'Molave Tree', 'Antoine Laurent de Jussieu'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Premma', 'odorata', 'Fragrant Premma', 'Francisco Manuel Blanco'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Origanum', 'vulgare', 'Oregano', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Plectranthus', 'scutellarioides', 'Painted nettle', 'Carl Linnaeus, Robert Brown'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Orthosiphon', 'aristatus', 'Cat''s Whiskers', 'Carl Ludwig Blume, Friedrich Anton Wilheim Miquel'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Vitex', 'negundo', 'Lagundi', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Lamiales', 'Lamiaceae', 'Gmelina', 'arborea', 'Kashmir Tree', 'William Roxburgh'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Myrtales', 'Onagraceae', 'Ludwigia', 'perennis', 'Perennial Water Primrose', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Geraniales', 'Oxalidaceae', 'Averrhoa', 'bilimbi', 'Kamias', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Geraniales', 'Oxalidaceae', 'Oxalis', 'corniculata', 'Sleeping Beauty', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Caryophyllales', 'Phytolaccaceae', 'Rivina', 'humilis', 'Bloodberry', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Saccharum', 'officinarum', 'Sugarcane', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Bambusa', 'vulgaris', 'Common Bamboo', 'Heinrich Schrader'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Eleusine', 'indica', 'Goosegrass', 'Carl Linnaeus, Joseph Gaertner'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Chrysopogon', 'aciculatus', 'Amorseco', 'Anders Jahan Retzius, Carl Bernhard von Trinius'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Chloris', 'barbata', 'Purpletop Chloris', 'Olof Peter Swartz'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Dactylocenium', 'aegyptium', 'Egyptian crowfoot grass', 'Carl Linnaeus, Carl Ludwig Willdenow'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Digitaria', 'ciliaris', 'Summer Grass', 'Anders Jahan Retzius, Georg Ludwig Koeler'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Ageratum', 'conyzoides', 'Chickweed', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Eragrostis', 'amabilis', 'Feathery Eragrostis', 'Carl Linnaeus, Robert Wight, George Arnott Walker Arnott'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Chloris', 'sp.', 'Windmill Grass', ''), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Cynodon', 'dactylon', 'Wire grass', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Melinis', 'repens', 'Natal grass', 'Carl Ludwig Willdenow, Žižka'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Rottboellia', 'cochinchinensis', 'Itch grass', 'João de Loureiro'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Cenchrus', 'echinatus', 'Southern sandbur', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Cyperales', 'Poaceae', 'Saccharum', 'spontaneum', 'Wild Sugarcane', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Rubiales', 'Rubiaceae', 'Ixora', 'coccinea', 'Santan-pula', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Rubiales', 'Rubiaceae', 'Morinda', 'citrifolia', 'Noni', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Rubiales', 'Rubiaceae', 'Spermacoce', 'ocymoides', 'Purple-leaved Button Weed', 'Nicolaas Laurens Burman'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Rubiales', 'Rubiaceae', 'Hamelia', 'patens', 'Scarlet bush', 'Nikolaus Joseph von Jacquin'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Rubiales', 'Rubiaceae', 'Ixora', 'chinensis', 'Chinese Ixora', 'Jean-Baptiste Lamarck'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Rubiales', 'Rubiaceae', 'Oldenlandia', 'corymbosa', 'Flat-top mille graines', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Zingiberales', 'Maranathaceae', 'Calathea', 'majestica', 'Prayer Plant', 'Jean Jules Linden'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Zingiberales', 'Maranathaceae', 'Calathea', 'makoyana', 'Peacock Plant', 'Charles Jacques Édouard Morren'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Zingiberales', 'Maranathaceae', 'Maranta', 'arundinacea', 'Arrowroot', 'Carl Linnaeus'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Zingiberales', 'Heliconiaceae', 'Heliconia', 'psittacorum', 'Parakeet Flower', 'Carl Linnaeus the Younger'), 
+        ('Eurkaryota', 'Plantae', 'Magnoliophyta', 'Magnoliopsida', 'Caryophyllales', 'Portulacaceae', 'Portulaca', 'grandiflora', 'Rose moss', 'William Jackson Hooker')
 GO
 
 -- Countries

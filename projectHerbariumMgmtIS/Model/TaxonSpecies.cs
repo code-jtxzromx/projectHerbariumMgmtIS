@@ -116,7 +116,7 @@ namespace projectHerbariumMgmtIS.Model
                     GenusName = sqlData[1].ToString(),
                     ScientificName = sqlData[2].ToString(),
                     Specimens = Convert.ToInt32(sqlData[3]),
-                    Copies = 0
+                    Copies = 1
                 });
             }
             connection.closeResult();
@@ -157,6 +157,22 @@ namespace projectHerbariumMgmtIS.Model
                     IdentifiedStatus = Convert.ToBoolean(sqlData[12]),
                     Specimens = Convert.ToInt32(sqlData[13])
                 });
+            }
+            connection.closeResult();
+            return species;
+        }
+
+        public List<string> GetVerifiedSpecies()
+        {
+            List<string> species = new List<string>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT strSpeciesName FROM tblSpeciesData ORDER BY strSpeciesName");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                species.Add(sqlData[0].ToString());
             }
             connection.closeResult();
             return species;

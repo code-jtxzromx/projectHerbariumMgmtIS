@@ -82,9 +82,13 @@
         <TextBlock x:ConnectionId='8' x:Name="msgKingdomName" Grid.Column="1" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft" 
                    Text="This Field is Required" FontSize="10" Foreground="Red" />
 
-        <TextBox x:ConnectionId='9' x:Name="txfPhylumName" Header="Phylum Name: *" HeaderTemplate="{StaticResource HeaderTemplate}"  
-                                                                    PlaceholderText="Enter Phylum Name"
-                 Grid.Column="0" Grid.Row="3" Margin="5" />
+        <AutoSuggestBox x:ConnectionId='9' x:Name="txfPhylumName"                                        
+                                                                           PlaceholderText="Enter Phylum Name"
+                        Grid.Column="0" Grid.Row="3" Margin="5">
+            <AutoSuggestBox.Header>
+                <TextBlock Text="Phylum Name: *" FontWeight="Bold" TextWrapping="WrapWholeWords" />
+            </AutoSuggestBox.Header>
+        </AutoSuggestBox>
         <TextBlock x:ConnectionId='10' x:Name="msgPhylumName" Grid.Column="0" Grid.Row="4" Margin="5 -2" FlowDirection="RightToLeft"
                    Text="This Field is Required" FontSize="10" Foreground="Red" />
     </Grid>

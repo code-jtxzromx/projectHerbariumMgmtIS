@@ -852,6 +852,15 @@
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Queries\QuerySpeciesPage.xbf">
       <PackagePath>Queries\QuerySpeciesPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentDamageReturnsByBorrower.xbf">
+      <PackagePath>Reports\DocumentDamageReturnsByBorrower.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentDamageReturnsByLoan.xbf">
+      <PackagePath>Reports\DocumentDamageReturnsByLoan.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentDamageReturnsByMonth.xbf">
+      <PackagePath>Reports\DocumentDamageReturnsByMonth.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentExternalVerification.xbf">
       <PackagePath>Reports\DocumentExternalVerification.xbf</PackagePath>
     </AppxPackagedFile>
@@ -863,6 +872,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentVerifiedDeposit.xbf">
       <PackagePath>Reports\DocumentVerifiedDeposit.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportDamagedReturns.xbf">
+      <PackagePath>Reports\ReportDamagedReturns.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportExternalVerificationPage.xbf">
       <PackagePath>Reports\ReportExternalVerificationPage.xbf</PackagePath>

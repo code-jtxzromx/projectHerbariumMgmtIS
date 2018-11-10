@@ -38,6 +38,9 @@ namespace projectHerbariumMgmtIS.Dialogs
                 cbxFamilyBox.ItemsSource = result;
 
                 SetValue(HerbariumSheetDataProperty, value);
+
+                if (value.Status == "Loaned" || value.Status == "Damaged")
+                    btnLoanAvailable.IsEnabled = false;
             }
         }
         public List<HerbariumImage> HerbariumSheet

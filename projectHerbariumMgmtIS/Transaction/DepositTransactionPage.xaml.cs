@@ -67,11 +67,15 @@ namespace projectHerbariumMgmtIS.Transaction
 
         private void txfOrgAccessionNo_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (new PlantDeposit().IsAccessionUnique(Convert.ToInt32(txfOrgAccessionNo.Text)))
+            int accessionNumber;
+            if (Int32.TryParse(txfOrgAccessionNo.Text, out accessionNumber))
             {
-                txfOrgAccessionNo.Text = "";
-                MessageDialog dialog = new MessageDialog("Accession Number already existed in the database");
-                var result = dialog.ShowAsync();
+                if (new PlantDeposit().IsAccessionUnique(accessionNumber))
+                {
+                    txfOrgAccessionNo.Text = "";
+                    MessageDialog dialog = new MessageDialog("Accession Number already existed in the database");
+                    var result = dialog.ShowAsync();
+                }
             }
         }
 

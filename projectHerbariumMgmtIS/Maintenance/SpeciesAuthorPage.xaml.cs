@@ -58,7 +58,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add Species Author") ? "Species Author Added to the Database" : "Species Author Updated in the Database";
+                        message = (form.TransactionForm == "Add Species Author") ? "Species Author Inserted to the Database" : "Species Author Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";

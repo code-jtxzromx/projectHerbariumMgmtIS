@@ -74,6 +74,22 @@ namespace projectHerbariumMgmtIS.Model
             return genera;
         }
 
+        public List<string> GetVerifiedGenera()
+        {
+            List<string> genera = new List<string>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT strGenusName FROM tblSpeciesData ORDER BY strGenusName");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                genera.Add(sqlData[0].ToString());
+            }
+            connection.closeResult();
+            return genera;
+        }
+
         public List<string> GetGenusList()
         {
             List<string> genera = new List<string>();

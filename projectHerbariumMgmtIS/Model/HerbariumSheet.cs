@@ -33,8 +33,10 @@ namespace projectHerbariumMgmtIS.Model
         public string LoanNumber { get; set; }
         public string Borrower { get; set; }
         public string Duration { get; set; }
+        public string LoanReturned { get; set; }
         public string LoanAvailability { get; set; }
         public bool IsAvailable { get; set; }
+        public bool IsChecked { get; set; }
         public string Status { get; set; }
         
         // Constructor
@@ -246,6 +248,94 @@ namespace projectHerbariumMgmtIS.Model
             return herbariumSheets;
         }
 
+        public List<HerbariumSheet> GetDamagedSheetReport(string startDate, string endDate)
+        {
+            List<HerbariumSheet> herbariumSheets = new List<HerbariumSheet>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strLoanNumber, strBorrower, strDuration, CONVERT(VARCHAR, dateReturned, 107), " +
+                                        "strAccessionNumber, strScientificName, strStatus " +
+                                "FROM viewLoanedSheets " +
+                                "WHERE dateReturned BETWEEN @startDate AND @endDate AND boolCondition = 0");
+            connection.addQueryParameter("@startDate", SqlDbType.VarChar, startDate);
+            connection.addQueryParameter("@endDate", SqlDbType.VarChar, endDate);
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                herbariumSheets.Add(new HerbariumSheet()
+                {
+                    LoanNumber = sqlData[0].ToString(),
+                    Borrower = sqlData[1].ToString(),
+                    Duration = sqlData[2].ToString(),
+                    LoanReturned = sqlData[3].ToString(),
+                    AccessionNumber = sqlData[4].ToString(),
+                    ScientificName = sqlData[5].ToString(),
+                    Status = sqlData[6].ToString(),
+                });
+            }
+            connection.closeResult();
+            return herbariumSheets;
+        }
+
+        public List<HerbariumSheet> GetDamagedSheetReportByBorrower(string borrower)
+        {
+            List<HerbariumSheet> herbariumSheets = new List<HerbariumSheet>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strLoanNumber, strBorrower, strDuration, CONVERT(VARCHAR, dateReturned, 107), " +
+                                        "strAccessionNumber, strScientificName, strStatus " +
+                                "FROM viewLoanedSheets " +
+                                "WHERE strBorrower = @borrower AND boolCondition = 0");
+            connection.addQueryParameter("@borrower", SqlDbType.VarChar, borrower);
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                herbariumSheets.Add(new HerbariumSheet()
+                {
+                    LoanNumber = sqlData[0].ToString(),
+                    Borrower = sqlData[1].ToString(),
+                    Duration = sqlData[2].ToString(),
+                    LoanReturned = sqlData[3].ToString(),
+                    AccessionNumber = sqlData[4].ToString(),
+                    ScientificName = sqlData[5].ToString(),
+                    Status = sqlData[6].ToString(),
+                });
+            }
+            connection.closeResult();
+            return herbariumSheets;
+        }
+
+        public List<HerbariumSheet> GetDamagedSheetReportByLoan(string loanNumber)
+        {
+            List<HerbariumSheet> herbariumSheets = new List<HerbariumSheet>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strLoanNumber, strBorrower, strDuration, CONVERT(VARCHAR, dateReturned, 107), " +
+                                        "strAccessionNumber, strScientificName, strStatus " +
+                                "FROM viewLoanedSheets " +
+                                "WHERE strLoanNumber = @loanNumber AND boolCondition = 0");
+            connection.addQueryParameter("@loanNumber", SqlDbType.VarChar, loanNumber);
+
+            SqlDataReader sqlData = connection.executeResult();
+            while (sqlData.Read())
+            {
+                herbariumSheets.Add(new HerbariumSheet()
+                {
+                    LoanNumber = sqlData[0].ToString(),
+                    Borrower = sqlData[1].ToString(),
+                    Duration = sqlData[2].ToString(),
+                    LoanReturned = sqlData[3].ToString(),
+                    AccessionNumber = sqlData[4].ToString(),
+                    ScientificName = sqlData[5].ToString(),
+                    Status = sqlData[6].ToString(),
+                });
+            }
+            connection.closeResult();
+            return herbariumSheets;
+        }
+
         public List<HerbariumSheet> GetLoanedSheets(string loanNumber)
         {
             List<HerbariumSheet> herbariumSheets = new List<HerbariumSheet>();
@@ -264,7 +354,8 @@ namespace projectHerbariumMgmtIS.Model
                 {
                     AccessionNumber = sqlData[0].ToString(),
                     ScientificName = sqlData[1].ToString(),
-                    Status = sqlData[2].ToString()
+                    Status = sqlData[2].ToString(),
+                    IsChecked = false
                 });
             }
             connection.closeResult();
@@ -296,6 +387,19 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@description", SqlDbType.VarChar, Description);
             connection.addProcParameter("@loanAvailability", SqlDbType.Bit, IsAvailable);
             connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
+            status = connection.executeProcedure();
+
+            return status;
+        }
+
+        public int UpdateReturnedSheets(string loanNumber)
+        {
+            int status;
+            DatabaseConnection connection = new DatabaseConnection();
+            connection.setStoredProc("dbo.procReturnPlantCondition");
+            connection.addProcParameter("@loanNumber", SqlDbType.VarChar, loanNumber);
+            connection.addProcParameter("@sheetNo", SqlDbType.VarChar, AccessionNumber);
+            connection.addProcParameter("@condition", SqlDbType.Bit, IsChecked);
             status = connection.executeProcedure();
 
             return status;

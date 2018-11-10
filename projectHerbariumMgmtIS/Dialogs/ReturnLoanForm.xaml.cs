@@ -43,24 +43,47 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             this.InitializeComponent();
         }
-
+        
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
+            bool WithDamage = false;
             string message = "";
-            TransactionResult = PlantLoanData.ReturnPlantLoan();
+            int UpdateSheetResult = 0;
 
-            switch (TransactionResult)
+            foreach (var item in dgrLoanedSheets.ItemsSource)
             {
-                case 0:
-                    message = "Loaned Species are now returned to the center";
-                    break;
-                case 1:
-                    message = "Transaction Failed, The system had run to an Error";
+                HerbariumSheet Record = item as HerbariumSheet;
+                Record.IsChecked = !Record.IsChecked;
+                
+                UpdateSheetResult = Record.UpdateReturnedSheets(PlantLoanData.LoanNumber);
+                if (!Record.IsChecked)
+                    WithDamage = true;
+                if (UpdateSheetResult == 1)
                     break;
             }
 
-            MessageDialog dialog = new MessageDialog(message, "Process Done");
-            var result = dialog.ShowAsync();
+            if (UpdateSheetResult == 0)
+            {
+                TransactionResult = PlantLoanData.ReturnPlantLoan(WithDamage);
+
+                switch (TransactionResult)
+                {
+                    case 0:
+                        message = "Loaned Species are now returned to the center";
+                        break;
+                    case 1:
+                        message = "[2/2] Transaction Failed, The system had run to an Error";
+                        break;
+                }
+
+                MessageDialog dialog = new MessageDialog(message, "Process Done");
+                var result = dialog.ShowAsync();
+            }
+            else
+            {
+                MessageDialog dialog = new MessageDialog("[1/2] Transaction Failed, The system had run to an Error", "Process Done");
+                var result = dialog.ShowAsync();
+            }
         }
     }
 }

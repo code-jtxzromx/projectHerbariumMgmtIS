@@ -1,0 +1,91 @@
+﻿<Page
+    x:Class="projectHerbariumMgmtIS.Reports.ReportDamagedReturns"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:projectHerbariumMgmtIS.Reports"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock Text="Report Type: " Margin="20 10" VerticalAlignment="Center" />
+            <RadioButton x:Name="rbtByMonth" Margin="0 10" Content="By Month" GroupName="ReportType" 
+                         Checked="rbtReportType_CheckChanged" Unchecked="rbtReportType_CheckChanged"/>
+            <RadioButton x:Name="rbtByBorrower" Margin="0 10" Width="130" Content="By Borrower" GroupName="ReportType"  
+                         Checked="rbtReportType_CheckChanged" Unchecked="rbtReportType_CheckChanged"/>
+            <RadioButton x:Name="rbtByLoan" Margin="0 10" Content="By Loan Transaction" GroupName="ReportType"  
+                         Checked="rbtReportType_CheckChanged" Unchecked="rbtReportType_CheckChanged"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Visibility="{Binding ElementName=rbtByMonth, Path=IsChecked}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+                <TextBlock Margin="10 0" Text="Select Month: " VerticalAlignment="Center" />
+                <ComboBox x:Name="cbxMonth" Margin="5 0" Width="120" />
+                <ComboBox x:Name="cbxYear" Margin="5 0" Width="100" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <Button x:Name="btnLoadA" Click="btnLoadA_Click" Width="120" Margin="5 0" Content="Load Table" />
+                <Button x:Name="btnPrintA" Click="btnPrintA_Click" Width="120" Margin="5 0" Content="Print Report" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="2" Visibility="{Binding ElementName=rbtByBorrower, Path=IsChecked}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+                <TextBlock Margin="10 0" Text="Select Borrower: " VerticalAlignment="Center" />
+                <AutoSuggestBox x:Name="txfBorrower" TextChanged="txfBorrower_TextChanged" Width="200" Margin="5 0" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <Button x:Name="btnLoadB" Click="btnLoadB_Click" Width="120" Margin="5 0" Content="Load Table" />
+                <Button x:Name="btnPrintB" Click="btnPrintB_Click" Width="120" Margin="5 0" Content="Print Report" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="3" Visibility="{Binding ElementName=rbtByLoan, Path=IsChecked}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+                <TextBlock Margin="10 0" Text="Select Loan Number: " VerticalAlignment="Center" />
+                <AutoSuggestBox x:Name="txfLoanNumber" TextChanged="txfLoanNumber_TextChanged" Width="200" Margin="5 0" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <Button x:Name="btnLoadC" Click="btnLoadC_Click" Width="120" Margin="5 0" Content="Load Table" />
+                <Button x:Name="btnPrintC" Click="btnPrintC_Click" Width="120" Margin="5 0" Content="Print Report" />
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="PrintContainer" Grid.Row="4" />
+        <Grid x:Name="DataContainer" Grid.Row="4">
+            <controls:DataGrid x:Name="dgrReportResult" Margin="10 5" AutoGenerateColumns="False" CanUserSortColumns="True" IsReadOnly="True">
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn Width="2*" Header="Accession Number" Binding="{Binding AccessionNumber}" />
+                    <controls:DataGridTextColumn Width="3*" Header="Scientific Name" Binding="{Binding ScientificName}" />
+                    <controls:DataGridTextColumn Width="2*" Header="Loan Number" Binding="{Binding LoanNumber}" />
+                    <controls:DataGridTextColumn Width="2*" Header="Date Returned" Binding="{Binding Status}" />
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+        </Grid>
+    </Grid>
+</Page>

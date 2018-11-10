@@ -86,10 +86,14 @@ MenuPages\UtilitiesPage.xbf
 projectHerbariumMgmtIS.xr.xml
 Queries\QueryHerbariumSheetPage.xbf
 Queries\QuerySpeciesPage.xbf
+Reports\DocumentDamageReturnsByBorrower.xbf
+Reports\DocumentDamageReturnsByLoan.xbf
+Reports\DocumentDamageReturnsByMonth.xbf
 Reports\DocumentExternalVerification.xbf
 Reports\DocumentNewDeposit.xbf
 Reports\DocumentRejectedDeposit.xbf
 Reports\DocumentVerifiedDeposit.xbf
+Reports\ReportDamagedReturns.xbf
 Reports\ReportExternalVerificationPage.xbf
 Reports\ReportNewDepositPage.xbf
 Reports\ReportRejectedDepositPage.xbf

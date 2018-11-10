@@ -17,7 +17,7 @@
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#7F77DD77" Padding="20 10">
             <TextBlock FontSize="16" Text="Welcome, " />
-            <TextBlock x:ConnectionId='10' x:Name="lblUser" FontSize="16" Margin="5 0 0 0" Text="[user]" />
+            <TextBlock x:ConnectionId='4' x:Name="lblUser" FontSize="16" Margin="5 0 0 0" Text="[user]" />
             <TextBlock FontSize="16" Text="!" />
         </StackPanel>
         <StackPanel Grid.Row="1" ScrollViewer.VerticalScrollMode="Auto">
@@ -33,7 +33,7 @@
 
                 <TextBlock Text="System Status" Margin="20 5" FontSize="16" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
                 <CalendarView Margin="20 5" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" />
-                <GridView x:ConnectionId='8' Grid.Column="1" Grid.Row="1" x:Name="grvCard" Padding="20 5" >
+                <GridView x:ConnectionId='2' Grid.Column="1" Grid.Row="1" x:Name="grvCard" Padding="20 5" >
                     <GridView.ItemTemplate>
                         <DataTemplate                                >
                             <Grid Width="200" Margin="5 0 5 5" Background="#FFEEEEEE">
@@ -51,7 +51,7 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </Grid>
-            <Grid Width="340">
+            <!--<Grid Width="340">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
@@ -63,10 +63,10 @@
                             This is the List of Herbarium Boxes that have less 
                             Available Slots that need to create additional box
                 </TextBlock>
-                <ListView x:ConnectionId='6' Grid.Row="2" x:Name="lstCriticaBoxes" Margin="20 10" 
+                <ListView Grid.Row="2" x:Name="lstCriticaBoxes" Margin="20 10" 
                                   Background="#FFEEEEEE">
                     <ListView.ItemTemplate>
-                        <DataTemplate                                >
+                        <DataTemplate x:DataType="model:HerbariumBox">
                             <StackPanel>
                                 <TextBlock Text="{Binding BoxNumber}" />
                                 <TextBlock Text="{Binding Family}" />
@@ -91,10 +91,10 @@
                             This is the List of Herbarium Boxes that have less 
                             Available Slots that need to create additional box
                 </TextBlock>
-                <ListView x:ConnectionId='4' Grid.Row="2" x:Name="lstPlantLoan" Margin="20 10" 
+                <ListView Grid.Row="2" x:Name="lstPlantLoan" Margin="20 10" 
                                   Background="#FFEEEEEE">
                     <ListView.ItemTemplate>
-                        <DataTemplate                                >
+                        <DataTemplate x:DataType="model:HerbariumBox">
                             <StackPanel>
                                 <TextBlock Text="{Binding BoxNumber}" />
                                 <TextBlock Text="{Binding Family}" />
@@ -119,10 +119,10 @@
                             This is the List of Herbarium Boxes that have less 
                             Available Slots that need to create additional box
                 </TextBlock>
-                <ListView x:ConnectionId='2' Grid.Row="2" x:Name="lstExternalVerification" Margin="20 10" 
+                <ListView Grid.Row="2" x:Name="lstExternalVerification" Margin="20 10" 
                                   Background="#FFEEEEEE">
                     <ListView.ItemTemplate>
-                        <DataTemplate                                >
+                        <DataTemplate x:DataType="model:HerbariumBox">
                             <StackPanel>
                                 <TextBlock Text="{Binding BoxNumber}" />
                                 <TextBlock Text="{Binding Family}" />
@@ -134,7 +134,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-            </Grid>
+            </Grid>-->
         </StackPanel>
     </Grid>
 </Page>

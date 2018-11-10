@@ -50,6 +50,22 @@ namespace projectHerbariumMgmtIS.Model
             return phyla;
         }
 
+        public List<string> GetVerifiedPhyla()
+        {
+            List<string> phyla = new List<string>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT strPhylumName FROM tblSpeciesData ORDER BY strPhylumName");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                phyla.Add(sqlData[0].ToString());
+            }
+            connection.closeResult();
+            return phyla;
+        }
+
         public List<string> GetPhylumList()
         {
             List<string> phyla = new List<string>();

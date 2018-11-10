@@ -58,7 +58,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add Species Basionym") ? "Species Basionym Added to the Database" : "Species Basionym Updated in the Database";
+                        message = (form.TransactionForm == "Add Species Basionym") ? "Species Basionym Inserted to the Database" : "Species Basionym Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";

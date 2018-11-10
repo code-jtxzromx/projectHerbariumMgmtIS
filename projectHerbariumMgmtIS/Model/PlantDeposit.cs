@@ -283,17 +283,10 @@ namespace projectHerbariumMgmtIS.Model
             bool result;
 
             DatabaseConnection connection = new DatabaseConnection();
-            connection.setQuery("SELECT DISTINCT strReferenceAccession " +
+            connection.setQuery("SELECT DISTINCT TOP 1 strReferenceAccession " +
                                 "FROM viewHerbariumSheet " +
-                                "WHERE strCollector = @collector " +
-                                    "AND strFullLocality = @locality " +
-                                    "AND CONVERT(VARCHAR, dateCollected, 107) = @dateCollected " +
-                                    "AND strDescription = @description " +
-                                    "AND strScientificName = @taxonName");
-            connection.addQueryParameter("@collector", SqlDbType.VarChar, Collector);
+                                "WHERE strFullLocality = @locality AND strScientificName = @taxonName");
             connection.addQueryParameter("@locality", SqlDbType.VarChar, Locality);
-            connection.addQueryParameter("@dateCollected", SqlDbType.VarChar, DateCollected);
-            connection.addQueryParameter("@description", SqlDbType.VarChar, Description);
             connection.addQueryParameter("@taxonName", SqlDbType.VarChar, taxonName);
 
             SqlDataReader sqlData = connection.executeResult();

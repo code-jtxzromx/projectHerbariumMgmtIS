@@ -21,6 +21,7 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class OrderForm : ContentDialog
     {
         public int TransactionResult;
+        private List<string> VerifiedOrders;
 
         // Properties
         public string TransactionForm
@@ -47,6 +48,21 @@ namespace projectHerbariumMgmtIS.Dialogs
         }
 
         // Event Methods
+        private void txfOrderName_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suggestions = from order in VerifiedOrders
+                                  where order.ToUpper().StartsWith(sender.Text.ToUpper())
+                                  select order;
+
+                if (suggestions.Count() > 0)
+                    sender.ItemsSource = suggestions;
+                else
+                    sender.ItemsSource = null;
+            }
+        }
+
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             if (this.ValidateForm())
@@ -99,6 +115,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             msgOrderName.Visibility = Visibility.Collapsed;
 
             OrderData = new TaxonOrder();
+            VerifiedOrders = new TaxonOrder().GetVerifiedOrders();
             cbxClassName.ItemsSource = new TaxonClass().GetClassList();
 
             TransactionForm = "Add Order";

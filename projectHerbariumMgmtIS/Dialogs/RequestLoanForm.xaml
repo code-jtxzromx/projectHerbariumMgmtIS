@@ -167,9 +167,13 @@
                 <controls:DataGrid x:Name="dgrSpeciesList" Grid.Row="2" BorderBrush="Black" BorderThickness="1" Margin="5"
                                    CanUserSortColumns="True" AutoGenerateColumns="False" SelectionMode="Single">
                     <controls:DataGrid.Columns>
-                        <controls:DataGridCheckBoxColumn Width="50" 
-                                                         Binding="{Binding IsChecked, Mode=TwoWay}" />
-                        <controls:DataGridTextColumn Width="*" Header="Taxon Name" Binding="{Binding ScientificName}" IsReadOnly="True" />
+                        <controls:DataGridTemplateColumn Width="*" Header="Taxon Name">
+                            <controls:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox Margin="10 0" IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="{Binding ScientificName}" />
+                                </DataTemplate>
+                            </controls:DataGridTemplateColumn.CellTemplate>
+                        </controls:DataGridTemplateColumn>
                         <controls:DataGridTextColumn Width="100" Header="Specimens" 
                                                      Binding="{Binding Specimens, Mode=TwoWay}" IsReadOnly="True" />
                         <controls:DataGridTemplateColumn Width="100" Header="Copies" >

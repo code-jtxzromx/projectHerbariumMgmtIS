@@ -47,6 +47,22 @@ namespace projectHerbariumMgmtIS.Model
             return classes;
         }
 
+        public List<string> GetVerifiedClasses()
+        {
+            List<string> classes = new List<string>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT strClassName FROM tblSpeciesData ORDER BY strClassName");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                classes.Add(sqlData[0].ToString());
+            }
+            connection.closeResult();
+            return classes;
+        }
+
         public List<string> GetClassList()
         {
             List<string> classes = new List<string>();

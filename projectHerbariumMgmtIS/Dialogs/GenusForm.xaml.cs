@@ -21,6 +21,7 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class GenusForm : ContentDialog
     {
         public int TransactionResult;
+        private List<string> VerifiedGenera;
 
         // Properties
         public string TransactionForm
@@ -44,6 +45,21 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             this.InitializeComponent();
             this.ClearForm();
+        }
+
+        private void txfGenusName_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suggestions = from genus in VerifiedGenera
+                                  where genus.ToUpper().StartsWith(sender.Text.ToUpper())
+                                  select genus;
+
+                if (suggestions.Count() > 0)
+                    sender.ItemsSource = suggestions;
+                else
+                    sender.ItemsSource = null;
+            }
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
@@ -98,6 +114,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             msgGenusName.Visibility = Visibility.Collapsed;
 
             GenusData = new TaxonGenus();
+            VerifiedGenera = new TaxonGenus().GetVerifiedGenera();
             cbxFamilyName.ItemsSource = new TaxonFamily().GetFamilyList();
 
             TransactionForm = "Add Genus";

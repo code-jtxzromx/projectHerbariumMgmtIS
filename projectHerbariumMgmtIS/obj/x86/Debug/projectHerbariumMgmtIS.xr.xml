@@ -68,11 +68,11 @@
     <RootPropertyPathName Name="Item" />
     <RootPropertyPathName Name="SpeciesAuthor" />
     <RootPropertyPathName Name="SpeciesName" />
+    <RootPropertyPathName Name="LoanNumber" />
     <RootPropertyPathName Name="DepositNumber" />
     <RootPropertyPathName Name="IsOn" />
     <RootPropertyPathName Name="Duration" />
     <RootPropertyPathName Name="Borrower" />
-    <RootPropertyPathName Name="LoanNumber" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -268,6 +268,14 @@
       <RootMethod Name="SetHorizontalScrollMode" />
     </RootType>
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.BorrowerForm" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="Width" />
+      <RootEvent Name="TextChanged" />
+    </RootType>
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.ClassForm" />
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Width" />
@@ -329,11 +337,6 @@
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.NomenclatureForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.PhylumForm" />
     <RootType FullName="projectHerbariumMgmtIS.Dialogs.PlantTypeForm" />
-    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Binding" />
-      <RootProperty Name="Header" />
-    </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn">
       <RootProperty Name="Width" />
       <RootProperty Name="Header" />
@@ -354,7 +357,6 @@
       <RootProperty Name="Padding" />
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemsPanel" />
-      <RootProperty Name="Background" />
       <RootProperty Name="ItemContainerStyle" />
       <RootEvent Name="ItemClick" />
     </RootType>
@@ -362,7 +364,9 @@
       <RootProperty Name="GroupName" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Width" />
       <RootEvent Name="Checked" />
+      <RootEvent Name="Unchecked" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Margin" />
@@ -492,6 +496,11 @@
     <RootType FullName="projectHerbariumMgmtIS.Maintenance.TaxonOrderPage" />
     <RootType FullName="projectHerbariumMgmtIS.Maintenance.TaxonPhylumPage" />
     <RootType FullName="projectHerbariumMgmtIS.Maintenance.TaxonomicHierarchyPage" />
+    <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridCheckBoxColumn">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Binding" />
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="projectHerbariumMgmtIS.ManagementTools.AuditTrailingPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
@@ -519,10 +528,14 @@
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.TransactionPage" />
     <RootType FullName="projectHerbariumMgmtIS.MenuPages.UtilitiesPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutSeparator" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentDamageReturnsByBorrower" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentDamageReturnsByLoan" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentDamageReturnsByMonth" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentExternalVerification" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentNewDeposit" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentRejectedDeposit" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.DocumentVerifiedDeposit" />
+    <RootType FullName="projectHerbariumMgmtIS.Reports.ReportDamagedReturns" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.ReportExternalVerificationPage" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.ReportNewDepositPage" />
     <RootType FullName="projectHerbariumMgmtIS.Reports.ReportRejectedDepositPage" />

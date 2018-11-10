@@ -297,6 +297,15 @@
     <Compile Include="Queries\QuerySpeciesPage.xaml.cs">
       <DependentUpon>QuerySpeciesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DocumentDamageReturnsByBorrower.xaml.cs">
+      <DependentUpon>DocumentDamageReturnsByBorrower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DocumentDamageReturnsByLoan.xaml.cs">
+      <DependentUpon>DocumentDamageReturnsByLoan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DocumentDamageReturnsByMonth.xaml.cs">
+      <DependentUpon>DocumentDamageReturnsByMonth.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DocumentExternalVerification.xaml.cs">
       <DependentUpon>DocumentExternalVerification.xaml</DependentUpon>
     </Compile>
@@ -308,6 +317,9 @@
     </Compile>
     <Compile Include="Reports\DocumentVerifiedDeposit.xaml.cs">
       <DependentUpon>DocumentVerifiedDeposit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportDamagedReturns.xaml.cs">
+      <DependentUpon>ReportDamagedReturns.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportExternalVerificationPage.xaml.cs">
       <DependentUpon>ReportExternalVerificationPage.xaml</DependentUpon>
@@ -619,6 +631,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Reports\DocumentDamageReturnsByBorrower.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\DocumentDamageReturnsByLoan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\DocumentDamageReturnsByMonth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Reports\DocumentExternalVerification.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -632,6 +656,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Reports\DocumentVerifiedDeposit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\ReportDamagedReturns.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

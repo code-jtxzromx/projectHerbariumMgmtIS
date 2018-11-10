@@ -30,6 +30,7 @@ namespace projectHerbariumMgmtIS.MenuPages
             new SubMenu() { MenuItem = "List of Rejected Deposits",         TypePage = typeof(ReportRejectedDepositPage) },
             new SubMenu() { MenuItem = "List of Verified Deposits",         TypePage = typeof(ReportVerifiedDepositPage) },
             new SubMenu() { MenuItem = "Externally Verified Collections",   TypePage = typeof(ReportExternalVerificationPage) },
+            new SubMenu() { MenuItem = "List of Damaged Returns",           TypePage = typeof(ReportDamagedReturns) },
         };
 
         public ReportsPage()

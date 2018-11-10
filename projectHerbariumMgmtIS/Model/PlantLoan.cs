@@ -39,9 +39,10 @@ namespace projectHerbariumMgmtIS.Model
             DatabaseConnection connection = new DatabaseConnection();
             
             connection.setQuery("SELECT strLoanNumber, strBorrower, dateLoan, dateReturning, strDuration, " +
-                                    "dateProcessed, strPurpose, strStatus " +
+                                    "CONVERT(VARCHAR, dateProcessed, 22), strPurpose, strStatus " +
                                 "FROM viewPlantLoans " +
-                                "WHERE strStatus IN ('Requesting', 'Approved')");
+                                "WHERE strStatus IN ('Requesting', 'Approved') " +
+                                "ORDER BY strStatus DESC");
             SqlDataReader sqlData = connection.executeResult();
 
             while (sqlData.Read())
@@ -60,6 +61,22 @@ namespace projectHerbariumMgmtIS.Model
             }
             connection.closeResult();
             return loans;
+        }
+
+        public List<string> GetPastLoanList()
+        {
+            List<string> LoanNumbers = new List<string>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT strLoanNumber FROM viewPlantLoans WHERE strStatus IN ('Returned', 'Returned with Damage')");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                LoanNumbers.Add(sqlData[0].ToString());
+            }
+            connection.closeResult();
+            return LoanNumbers;
         }
 
         public int ProcessNewLoan(List<TaxonSpecies> loaningSpecies)
@@ -122,13 +139,14 @@ namespace projectHerbariumMgmtIS.Model
             return status;
         }
 
-        public int ReturnPlantLoan()
+        public int ReturnPlantLoan(bool WithDamage)
         {
             int status;
 
             DatabaseConnection connection = new DatabaseConnection();
             connection.setStoredProc("dbo.procReturnLoan");
             connection.addProcParameter("@loanNumber", SqlDbType.VarChar, LoanNumber);
+            connection.addProcParameter("@withDamage", SqlDbType.Bit, WithDamage);
             connection.addProcParameter("@staff", SqlDbType.VarChar, StaticAccess.StaffName);
             status = connection.executeProcedure();
 

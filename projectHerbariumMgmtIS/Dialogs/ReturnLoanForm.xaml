@@ -61,12 +61,11 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Margin="0 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
@@ -74,17 +73,17 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Margin="5" Text="Loan Number: " />
-            <TextBlock Grid.Row="2" Margin="5" Text="Borrower: " />
-            <TextBlock Grid.Row="4" Margin="5" Text="Duration: " />
-            <TextBlock Grid.Row="6" Margin="5" Text="Purpose: " />
-            <TextBlock Grid.Row="8" Margin="5" Text="Status: " />
-
-            <TextBlock Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.LoanNumber}" />
-            <TextBlock Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.Borrower}" />
-            <TextBlock Grid.Row="5" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.Duration}" />
-            <TextBlock Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.Purpose}" />
-            <TextBlock Grid.Row="9" Margin="5" TextWrapping="WrapWholeWords"
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" Text="Loan Number: " />
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" Text="Borrower: " />
+            <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" Text="Duration: " />
+            <TextBlock Grid.Column="0" Grid.Row="3" Margin="5" Text="Purpose: " />
+            <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Status: " />
+            
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.LoanNumber}" />
+            <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.Borrower}" />
+            <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.Duration}" />
+            <TextBlock Grid.Column="1" Grid.Row="3" Margin="5" TextWrapping="WrapWholeWords" Text="{x:Bind PlantLoanData.Purpose}" />
+            <TextBlock Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
                        Text="{x:Bind PlantLoanData.Status}" />
 
         </Grid>
@@ -100,13 +99,19 @@
             </controls:DataGrid>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <TextBlock Margin="5" Text="Loaned Species" />
+            <TextBlock Margin="5" Text="Loaned Sheets" />
             <controls:DataGrid x:Name="dgrLoanedSheets" BorderBrush="Black" BorderThickness="1" Margin="5" Height="200" 
                                AutoGenerateColumns="False" CanUserSortColumns="True">
                 <controls:DataGrid.Columns>
+                    <controls:DataGridTemplateColumn Width="auto" Header="Condition">
+                        <controls:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox x:Name="chkReturnCondition" Margin="10 0" IsChecked="{Binding IsChecked, Mode=TwoWay}" Content="Damaged" />
+                            </DataTemplate>
+                        </controls:DataGridTemplateColumn.CellTemplate>
+                    </controls:DataGridTemplateColumn>
                     <controls:DataGridTextColumn Width="*" Header="Taxon Name" Binding="{Binding ScientificName}" IsReadOnly="True" />
                     <controls:DataGridTextColumn Width="*" Header="Accession Number" Binding="{Binding AccessionNumber}" IsReadOnly="True" />
-                    <controls:DataGridTextColumn Width="100" Header="Copies" Binding="{Binding Copies}" IsReadOnly="True" />
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
         </StackPanel>

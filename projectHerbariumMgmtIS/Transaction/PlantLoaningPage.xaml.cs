@@ -41,20 +41,22 @@ namespace projectHerbariumMgmtIS.Transaction
             }
         }
 
-        private void btnNewLoan_Click(object sender, RoutedEventArgs e)
+        private async void btnNewLoan_Click(object sender, RoutedEventArgs e)
         {
             if (new TaxonFamily().CanProcessLoan())
             {
                 RequestLoanForm form = new RequestLoanForm();
-                var result = form.ShowAsync();
+                await form.ShowAsync();
+
+                this.InitializePage();
             }
             else
             {
                 MessageDialog message = new MessageDialog("There are no current herbarium sheet that can be loaned");
-                var result = message.ShowAsync();
-            }
+                await message.ShowAsync();
 
-            this.InitializePage();
+                this.InitializePage();
+            }
         }
 
         private void btnViewLoan_Click(object sender, RoutedEventArgs e)
@@ -87,19 +89,42 @@ namespace projectHerbariumMgmtIS.Transaction
                 {
                     MessageDialog dialog = new MessageDialog("This is Plant Loan is already approved");
                     await dialog.ShowAsync();
+                    
+                    this.InitializePage();
                 }
                 else
                 {
                     await form.ShowAsync();
-                }
 
-                this.InitializePage();
+                    this.InitializePage();
+                }
             }
         }
 
-        private void btnReturn_Click(object sender, RoutedEventArgs e)
+        private async void btnReturn_Click(object sender, RoutedEventArgs e)
         {
+            if (dgrLoanTable.SelectedIndex != -1)
+            {
+                var selectedItem = dgrLoanTable.SelectedItem as PlantLoan;
 
+                ReturnLoanForm form = new ReturnLoanForm()
+                {
+                    PlantLoanData = selectedItem
+                };
+                if (selectedItem.Status == "Requesting")
+                {
+                    MessageDialog dialog = new MessageDialog("This is Plant Loan is still pending for approval");
+                    await dialog.ShowAsync();
+
+                    this.InitializePage();
+                }
+                else
+                {
+                    await form.ShowAsync();
+
+                    this.InitializePage();
+                }
+            }
         }
     }
 }

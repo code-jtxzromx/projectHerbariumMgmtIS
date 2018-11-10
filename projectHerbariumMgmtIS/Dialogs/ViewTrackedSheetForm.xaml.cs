@@ -101,6 +101,13 @@ namespace projectHerbariumMgmtIS.Dialogs
                     Row04.Height = new GridLength(0);
                     Row08.Height = new GridLength(0);
                     break;
+                case "Damaged":
+                    lblLocation.Text = "Herbarium Inventory at " + sheet.BoxLocation;
+                    Row04.Height = new GridLength(0);
+                    Row08.Height = new GridLength(0);
+                    Row12.Height = new GridLength(0);
+                    Row20.Height = new GridLength(0);
+                    break;
                 default:
                     break;
             }

@@ -119,7 +119,7 @@
                                                                                                                                   />
                 <TextBox x:ConnectionId='8' Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="Wrap" Height="90"
                                                                                                                           />
-                <ToggleSwitch x:ConnectionId='9' Grid.Column="1" Grid.Row="7" Margin="5 0" 
+                <ToggleSwitch x:ConnectionId='9' x:Name="btnLoanAvailable" Grid.Column="1" Grid.Row="7" Margin="5 0" 
                               OnContent="Available for Loaning" OffContent="Not Available for Loaning" 
                                                                                                                               />
             </Grid>

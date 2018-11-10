@@ -59,7 +59,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add Access Account") ? "Access Account Added to the Database" : "Access Account Updated in the Database";
+                        message = (form.TransactionForm == "Add Access Account") ? "Access Account Inserted to the Database" : "Access Account Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";

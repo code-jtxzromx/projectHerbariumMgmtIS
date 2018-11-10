@@ -21,6 +21,7 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class PhylumForm : ContentDialog
     {
         public int TransactionResult;
+        private List<string> VerifiedPhyla;
 
         // Properties
         public string TransactionForm
@@ -58,6 +59,21 @@ namespace projectHerbariumMgmtIS.Dialogs
             txfKingdomName.IsEnabled = !(chkIsKingdomPlant.IsChecked == true);
             txfDomainName.Text = (chkIsKingdomPlant.IsChecked == true) ? "Eukaryota" : "";
             txfKingdomName.Text = (chkIsKingdomPlant.IsChecked == true) ? "Plantae" : "";
+        }
+
+        private void txfPhylumName_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suggestions = from phylum in VerifiedPhyla
+                                  where phylum.ToUpper().StartsWith(sender.Text.ToUpper())
+                                  select phylum;
+                
+                if (suggestions.Count() > 0)
+                    sender.ItemsSource = suggestions;
+                else
+                    sender.ItemsSource = null;
+            }
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
@@ -119,6 +135,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             msgPhylumName.Visibility = Visibility.Collapsed;
 
             PhylumData = new TaxonPhylum();
+            VerifiedPhyla = new TaxonPhylum().GetVerifiedPhyla();
 
             chkIsKingdomPlant.IsChecked = true;
             chkIsKingdomPlant_CheckChanged(chkIsKingdomPlant, null);

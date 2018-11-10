@@ -21,6 +21,7 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class FamilyForm : ContentDialog
     {
         public int TransactionResult;
+        private List<string> VerifiedFamilies;
 
         // Properties
         public string TransactionForm
@@ -44,6 +45,21 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             this.InitializeComponent();
             this.ClearForm();
+        }
+
+        private void txfFamilyName_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suggestions = from family in VerifiedFamilies
+                                  where family.ToUpper().StartsWith(sender.Text.ToUpper())
+                                  select family;
+
+                if (suggestions.Count() > 0)
+                    sender.ItemsSource = suggestions;
+                else
+                    sender.ItemsSource = null;
+            }
         }
 
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
@@ -98,6 +114,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             msgFamilyName.Visibility = Visibility.Collapsed;
 
             FamilyData = new TaxonFamily();
+            VerifiedFamilies = new TaxonFamily().GetVerifiedFamilies();
             cbxOrderName.ItemsSource = new TaxonOrder().GetOrderList();
 
             TransactionForm = "Add Family";

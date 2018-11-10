@@ -58,7 +58,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add Plant Locality") ? "Plant Locality Added to the Database" : "Plant Locality Updated in the Database";
+                        message = (form.TransactionForm == "Add Plant Locality") ? "Plant Locality Inserted to the Database" : "Plant Locality Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";

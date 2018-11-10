@@ -69,9 +69,13 @@
         <ComboBox x:ConnectionId='4' x:Name="cbxFamilyName" Header="Family Name: *" HeaderTemplate="{StaticResource HeaderTemplate}"
                                                                             PlaceholderText="Select Family Name"
                   Grid.Column="0" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch" />
-        <TextBox x:ConnectionId='5' x:Name="txfGenusName" Header="Genus Name: *" HeaderTemplate="{StaticResource HeaderTemplate}"
-                                                                  PlaceholderText="Enter Genus Name"
-                 Grid.Column="1" Grid.Row="1" Margin="5" />
+        <AutoSuggestBox x:ConnectionId='5' x:Name="txfGenusName"                                       
+                                                                         PlaceholderText="Enter Genus Name"
+                        Grid.Column="1" Grid.Row="1" Margin="5">
+            <AutoSuggestBox.Header>
+                <TextBlock Text="Genus Name: *" FontWeight="Bold" TextWrapping="WrapWholeWords" />
+            </AutoSuggestBox.Header>
+        </AutoSuggestBox>
         <TextBlock x:ConnectionId='6' x:Name="msgFamilyName" Grid.Column="0" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft"
                    Text="This Field is Required" FontSize="10" Foreground="Red" />
         <TextBlock x:ConnectionId='7' x:Name="msgGenusName" Grid.Column="1" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft" 

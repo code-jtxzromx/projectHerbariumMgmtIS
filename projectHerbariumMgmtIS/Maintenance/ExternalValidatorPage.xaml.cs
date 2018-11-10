@@ -58,7 +58,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add External Validator") ? "External Validator Added to the Database" : "External Validator Updated in the Database";
+                        message = (form.TransactionForm == "Add External Validator") ? "External Validator Inserted to the Database" : "External Validator Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";

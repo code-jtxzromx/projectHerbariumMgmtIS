@@ -1925,6 +1925,7 @@ BEGIN
 		DECLARE @speciesID INT
 		DECLARE @validatorID INT
 		DECLARE @staffID INT
+		DECLARE @plantTypeID INT
 
 		SET @orgDepositID = (SELECT CASE
 								WHEN @isIDBase = 1 THEN @orgDeposit
@@ -1946,9 +1947,11 @@ BEGIN
 								WHEN @isIDBase = 1 THEN @staff
 								ELSE (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 							END)
+		SET @plantTypeID = (SELECT intPlantTypeID FROM tblPlantDeposit WHERE intPlantDepositID = @newDepositID)
 
 		UPDATE tblPlantDeposit
-		SET strStatus = 'Verified'
+		SET strStatus = 'Verified',
+			intPlantTypeID = @plantTypeID
 		WHERE intPlantDepositID = @orgDepositID;
 
 		IF @dateVerified IS NULL
@@ -2232,8 +2235,8 @@ BEGIN
 
 			WHILE @@FETCH_STATUS = 0
 			BEGIN
-				INSERT INTO tblLoaningPlants(intLoanID, intHerbariumSheetID)
-				VALUES (@loanID, @sheetID)
+				INSERT INTO tblLoaningPlants(intLoanID, intHerbariumSheetID, boolCondition)
+				VALUES (@loanID, @sheetID, 1)
 
 				UPDATE tblPlantDeposit
 				SET strStatus = 'Loaned'
@@ -2364,12 +2367,51 @@ BEGIN
 END
 GO
 
+-- Update Return Plants
+IF OBJECT_ID('procReturnPlantCondition', 'P') IS NOT NULL
+	DROP PROCEDURE procReturnPlantCondition
+GO
+CREATE PROCEDURE procReturnPlantCondition
+	@loanNumber			VARCHAR(50),
+	@sheetNo			VARCHAR(50),
+	@condition			BIT
+AS
+BEGIN
+	SET NOCOUNT ON
+	DECLARE @Result INT = 0
+
+	BEGIN TRANSACTION
+		
+	BEGIN TRY
+		DECLARE @sheetID INT
+		DECLARE @loanID INT
+		
+		SET @sheetID = (SELECT intHerbariumSheetID FROM viewHerbariumSheet WHERE strAccessionNumber = @sheetNo)
+		SET @loanID = (SELECT intLoanID FROM viewPlantLoans WHERE strLoanNumber = @loanNumber)
+
+		UPDATE tblLoaningPlants
+		SET boolCondition = @condition
+		WHERE intHerbariumSheetID = @sheetID AND intLoanID = @loanID
+	END TRY
+	BEGIN CATCH
+		ROLLBACK TRANSACTION
+		SET @Result = 1
+	END CATCH
+
+	IF XACT_STATE() = 1
+		COMMIT TRANSACTION
+
+	RETURN @Result
+END
+GO
+
 -- Return Loan
 IF OBJECT_ID('procReturnLoan', 'P') IS NOT NULL
 	DROP PROCEDURE procReturnLoan
 GO
 CREATE PROCEDURE procReturnLoan
 	@loanNumber			VARCHAR(50),
+	@withDamage			BIT,
 	@staff				VARCHAR(255)
 AS
 BEGIN
@@ -2382,15 +2424,17 @@ BEGIN
 		DECLARE @loanID INT
 		DECLARE @sheetID INT
 		DECLARE @staffID INT
+		DECLARE @condition BIT
 
 		SET @loanID = (SELECT intLoanID FROM viewPlantLoans WHERE strLoanNumber = @loanNumber)
 		SET @staffID = (SELECT intStaffID FROM viewHerbariumStaff WHERE strFullName = @staff)
 
 		UPDATE tblPlantLoanTransaction
-		SET strStatus = 'Returned'
+		SET strStatus = (CASE WHEN @withDamage = 0 THEN 'Returned' ELSE 'Returned with Damage' END),
+			dateReturned = GETDATE()
 		WHERE intLoanID = @loanID
 
-		DECLARE returnCursor CURSOR FOR
+		DECLARE myCursor CURSOR FOR
 			SELECT intHerbariumSheetID
 			FROM tblLoaningPlants
 			WHERE intLoanID = @loanID
@@ -2400,14 +2444,14 @@ BEGIN
 
 		WHILE @@FETCH_STATUS = 0
 		BEGIN
+			SET @condition = (SELECT boolCondition FROM tblLoaningPlants WHERE intLoanID = @loanID AND intHerbariumSheetID = @sheetID)
+
 			UPDATE tblPlantDeposit
-			SET strStatus = 'Stored'
-			WHERE intPlantDepositID = (SELECT intPlantDepositID
-										FROM tblHerbariumSheet
-										WHERE intHerbariumSheetID = @sheetID)
+			SET strStatus = CASE WHEN @condition = 1 THEN 'Stored' ELSE 'Damaged' END
+			WHERE intPlantDepositID = (SELECT intPlantDepositID FROM tblHerbariumSheet WHERE intHerbariumSheetID = @sheetID)
 
 			UPDATE tblStoredHerbarium
-			SET boolLoanAvailable = 1
+			SET boolLoanAvailable = @condition
 			WHERE intHerbariumSheetID = @sheetID
 
 			FETCH NEXT FROM myCursor INTO @sheetID
@@ -2433,8 +2477,8 @@ GO
 
 -------------- SAMPLE DATA INITIALIZATION --------------
 
-EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Manila, City of', 'Polytechnic University of the Philippines - Sta. Mesa (Main) Campus', 'PUP Main Campus, Sta. Mesa, Manila', '', '014° 35'' 52.44" N', '121° 00'' 38.88" E'
-EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Manila, City of', 'University of Sto. Tomas - Espana', 'UST Espana, Sampaloc, Manila', '', '', ''
+EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Manila', 'Polytechnic University of the Philippines - Sta. Mesa (Main) Campus', 'PUP Main Campus, Sta. Mesa, Manila', '', '014° 35'' 52.44" N', '121° 00'' 38.88" E'
+EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Manila', 'University of Sto. Tomas - Espana', 'UST Espana, Sampaloc, Manila', '', '', ''
 EXECUTE procInsertLocality 0, 'Philippines', 'Metro Manila', 'Quezon City', 'University of the Philippines - Diliman Campus', 'UP Diliman, Diliman, Quezon City', '', '', ''
 
 EXECUTE procInsertCollector 'Jake', 'M', 'Magpantay', 'M', '', 'Quezon City', '09991357924', 'jakemagpantay@yahoo.com', 'College of Engineering'

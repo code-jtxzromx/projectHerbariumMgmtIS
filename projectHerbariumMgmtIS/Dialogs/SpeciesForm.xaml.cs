@@ -21,6 +21,7 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class SpeciesForm : ContentDialog
     {
         public int TransactionResult;
+        private List<string> VerifiedSpecies;
 
         // Properties
         public string TransactionForm
@@ -51,6 +52,21 @@ namespace projectHerbariumMgmtIS.Dialogs
         }
 
         // Event Methods
+        private void txfSpeciesName_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suggestions = from species in VerifiedSpecies
+                                  where species.ToUpper().StartsWith(sender.Text.ToUpper())
+                                  select species;
+
+                if (suggestions.Count() > 0)
+                    sender.ItemsSource = suggestions;
+                else
+                    sender.ItemsSource = null;
+            }
+        }
+
         private void chkIsKnownSpecies_CheckChanged(object sender, RoutedEventArgs e)
         {
             txfSpeciesName.IsEnabled = (chkIsKnownSpecies.IsChecked == true);
@@ -128,6 +144,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             cbxAuthorsName.ItemsSource = new SpeciesAuthor().GetAuthorList();
 
             SpeciesData = new TaxonSpecies() { IdentifiedStatus = true };
+            VerifiedSpecies = new TaxonSpecies().GetVerifiedSpecies();
             chkIsKnownSpecies_CheckChanged(chkIsKnownSpecies, null);
 
             TransactionForm = "Add Species";

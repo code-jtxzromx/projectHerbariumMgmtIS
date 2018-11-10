@@ -89,6 +89,22 @@ namespace projectHerbariumMgmtIS.Model
             return status;
         }
 
+        public List<string> GetVerifiedFamilies()
+        {
+            List<string> families = new List<string>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT strFamilyName FROM tblSpeciesData ORDER BY strFamilyName");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                families.Add(sqlData[0].ToString());
+            }
+            connection.closeResult();
+            return families;
+        }
+
         public List<string> GetFamilyList()
         {
             List<string> families = new List<string>();

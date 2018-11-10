@@ -47,6 +47,22 @@ namespace projectHerbariumMgmtIS.Model
             return orders;
         }
 
+        public List<string> GetVerifiedOrders()
+        {
+            List<string> orders = new List<string>();
+            DatabaseConnection connection = new DatabaseConnection();
+
+            connection.setQuery("SELECT DISTINCT strOrderName FROM tblSpeciesData ORDER BY strOrderName");
+            SqlDataReader sqlData = connection.executeResult();
+
+            while (sqlData.Read())
+            {
+                orders.Add(sqlData[0].ToString());
+            }
+            connection.closeResult();
+            return orders;
+        }
+
         public List<string> GetOrderList()
         {
             List<string> orders = new List<string>();

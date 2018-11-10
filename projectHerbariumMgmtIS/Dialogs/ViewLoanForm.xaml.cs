@@ -33,7 +33,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if (value.Status == "Approved")
                     dgrLoanedSheets.ItemsSource = new HerbariumSheet().GetLoanedSheets(value.LoanNumber);
                 else
-                    dgrLoanedSheets.Visibility = Visibility.Collapsed;
+                    pnlLoanedSheets.Visibility = Visibility.Collapsed;
             }
         }
 

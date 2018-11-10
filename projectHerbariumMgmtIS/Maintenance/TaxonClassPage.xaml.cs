@@ -58,7 +58,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add Class") ? "Class Added to the Database" : "Class Updated in the Database";
+                        message = (form.TransactionForm == "Add Class") ? "Class Inserted to the Database" : "Class Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";

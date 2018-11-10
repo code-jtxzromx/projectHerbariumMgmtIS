@@ -58,7 +58,7 @@ namespace projectHerbariumMgmtIS.Maintenance
                 switch (form.TransactionResult)
                 {
                     case 0:
-                        message = (form.TransactionForm == "Add Herbarium Box") ? "Herbarium Box Added to the Database" : "Herbarium Box Updated in the Database";
+                        message = (form.TransactionForm == "Add Herbarium Box") ? "Herbarium Box Inserted to the Database" : "Herbarium Box Updated in the Database";
                         break;
                     case 1:
                         message = "The System had run to an Error";

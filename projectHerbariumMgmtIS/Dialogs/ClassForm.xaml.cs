@@ -21,6 +21,7 @@ namespace projectHerbariumMgmtIS.Dialogs
     public sealed partial class ClassForm : ContentDialog
     {
         public int TransactionResult;
+        private List<string> VerifiedClasses;
 
         // Properties
         public string TransactionForm
@@ -47,6 +48,21 @@ namespace projectHerbariumMgmtIS.Dialogs
         }
 
         // Event Methods
+        private void txfClassName_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                var suggestions = from tclass in VerifiedClasses
+                                  where tclass.ToUpper().StartsWith(sender.Text.ToUpper())
+                                  select tclass;
+                
+                if (suggestions.Count() > 0)
+                    sender.ItemsSource = suggestions;
+                else
+                    sender.ItemsSource = null;
+            }
+        }
+
         private void ContentDialog_PrimaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             if (this.ValidateForm())
@@ -99,6 +115,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             msgClassName.Visibility = Visibility.Collapsed;
 
             ClassData = new TaxonClass();
+            VerifiedClasses = new TaxonClass().GetVerifiedClasses();
             cbxPhylumName.ItemsSource = new TaxonPhylum().GetPhylumList();
 
             TransactionForm = "Add Class";
