@@ -29,7 +29,11 @@ namespace projectHerbariumMgmtIS.Dialogs
         public HerbariumSheet VerifiedSheetData
         {
             get { return (HerbariumSheet)GetValue(VerifiedSheetDataProperty); }
-            set { SetValue(VerifiedSheetDataProperty, value); }
+            set
+            {
+                SetValue(VerifiedSheetDataProperty, value);
+                btnAvailable.Visibility = (value.AccessionNumber == value.ReferenceNumber) ? Visibility.Collapsed : Visibility.Visible;
+            }
         }
         public BitmapImage HerbariumSheet
         {
@@ -78,7 +82,7 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             var result = from family in FamilyBoxes
                          where family.Family == VerifiedSheetData.FamilyName
-                         where family.CurrentNo > 0
+                         where family.CurrentNo != family.BoxLimit
                          select family.BoxNumber;
 
             if (result.Count() == 0)

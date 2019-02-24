@@ -33,11 +33,18 @@ namespace projectHerbariumMgmtIS.Dialogs
             get { return (Collector)GetValue(CollectorDataProperty); }
             set { SetValue(CollectorDataProperty, value); }
         }
+        public bool IsMaintenance
+        {
+            get { return (bool)GetValue(IsMaintenanceProperty); }
+            set { SetValue(IsMaintenanceProperty, value); }
+        }
 
         public static readonly DependencyProperty TransactionFormProperty =
             DependencyProperty.Register("TransactionForm", typeof(string), typeof(CollectorForm), new PropertyMetadata(""));
         public static readonly DependencyProperty CollectorDataProperty =
             DependencyProperty.Register("CollectorData", typeof(Collector), typeof(CollectorForm), new PropertyMetadata(new Collector()));
+        public static readonly DependencyProperty IsMaintenanceProperty =
+            DependencyProperty.Register("IsMaintenance", typeof(bool), typeof(CollectorForm), new PropertyMetadata(true));
 
         // Constructor
         public CollectorForm()
@@ -50,16 +57,14 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             if (this.ValidateForm())
             {
-                if (TransactionForm == "Add Collector")
+                if (IsMaintenance)
                 {
-                    TransactionResult = CollectorData.AddCollector();
-                    args.Cancel = false;
+                    if (TransactionForm == "Add Collector")
+                        TransactionResult = CollectorData.AddCollector();
+                    else if (TransactionForm == "Edit Collector")
+                        TransactionResult = CollectorData.EditCollector();
                 }
-                else if (TransactionForm == "Edit Collector")
-                {
-                    TransactionResult = CollectorData.EditCollector();
-                    args.Cancel = false;
-                }
+                args.Cancel = false;
             }
             else
                 args.Cancel = true;

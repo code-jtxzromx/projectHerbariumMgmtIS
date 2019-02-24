@@ -100,7 +100,7 @@
                     <TextBlock x:ConnectionId='16' TextWrapping="WrapWholeWords"                                                           />
                     <TextBlock Text="]" />
                 </control:WrapPanel>
-                <ToggleSwitch x:ConnectionId='3' Grid.Column="1" Grid.Row="1" Margin="5 0" 
+                <ToggleSwitch x:ConnectionId='3' x:Name="btnAvailable" Grid.Column="1" Grid.Row="1" Margin="5 0" 
                               OnContent="Available for Loaning" OffContent="Not Available for Loaning" 
                                                                                                                              />
                 <TextBlock x:ConnectionId='4' Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"

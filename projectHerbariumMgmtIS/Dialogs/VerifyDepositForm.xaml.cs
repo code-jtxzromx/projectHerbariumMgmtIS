@@ -122,6 +122,7 @@ namespace projectHerbariumMgmtIS.Dialogs
         private void ClearForm()
         {
             cbxTaxonName.ItemsSource = new TaxonSpecies().GetTaxonList();
+            cbxValidator.ItemsSource = new Validator().GetValidatorList();
             cbxReferenceAccession.ItemsSource = null;
 
             VerifyingDepositData = new PlantDeposit();
@@ -136,6 +137,11 @@ namespace projectHerbariumMgmtIS.Dialogs
             if (cbxTaxonName.SelectedIndex == -1)
             {
                 msgTaxonName.Visibility = Visibility.Visible;
+                formOK = false;
+            }
+            if (cbxValidator.SelectedIndex == -1)
+            {
+                msgValidator.Visibility = Visibility.Visible;
                 formOK = false;
             }
             if (chkSameAccession.IsChecked == true && cbxReferenceAccession.SelectedIndex == -1)

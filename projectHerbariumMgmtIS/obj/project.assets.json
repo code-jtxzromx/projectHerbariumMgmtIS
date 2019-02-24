@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.16299": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -14,11 +14,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -282,96 +281,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -1331,10 +1326,37 @@
             "rid": "win10-x86"
           }
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -1346,11 +1368,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -1615,96 +1636,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -3010,10 +3027,37 @@
         "native": {
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     },
     "UAP,Version=v10.0.16299/win10-arm-aot": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -3025,11 +3069,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -3294,96 +3337,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -4732,10 +4771,37 @@
         "native": {
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     },
     "UAP,Version=v10.0.16299/win10-arm64-aot": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -4747,11 +4813,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -5015,96 +5080,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -6228,10 +6289,37 @@
         "runtime": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     },
     "UAP,Version=v10.0.16299/win10-x64": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -6243,11 +6331,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -6512,96 +6599,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -7907,10 +7990,37 @@
         "native": {
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     },
     "UAP,Version=v10.0.16299/win10-x64-aot": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -7922,11 +8032,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -8191,96 +8300,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -9629,10 +9734,37 @@
         "native": {
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     },
     "UAP,Version=v10.0.16299/win10-x86": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -9644,11 +9776,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -9913,96 +10044,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -11308,10 +11435,37 @@
         "native": {
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     },
     "UAP,Version=v10.0.16299/win10-x86-aot": {
-      "ColorCode.Core/2.0.5": {
+      "ColorCode.Core/2.0.6": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
@@ -11323,11 +11477,10 @@
           "lib/netstandard1.4/ColorCode.Core.dll": {}
         }
       },
-      "ColorCode.UWP/2.0.5": {
+      "ColorCode.UWP/2.0.6": {
         "type": "package",
         "dependencies": {
-          "ColorCode.Core": "2.0.5",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+          "ColorCode.Core": "2.0.6"
         },
         "compile": {
           "lib/uap10.0/ColorCode.UWP.dll": {}
@@ -11592,96 +11745,92 @@
           "ref/uap10.0.15138/netstandard.dll": {}
         }
       },
-      "Microsoft.Toolkit/4.0.0": {
+      "Microsoft.Toolkit/5.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.dll": {}
         }
       },
-      "Microsoft.Toolkit.Parsers/4.0.0": {
+      "Microsoft.Toolkit.Parsers/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit": "4.0.0",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Toolkit": "5.0.0"
         },
         "compile": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll": {}
+          "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp/4.0.0": {
+      "Microsoft.Toolkit.Uwp/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Identity.Client": "1.1.2-preview0008",
-          "Microsoft.Toolkit": "4.0.0",
+          "Microsoft.Toolkit": "5.0.0",
           "Newtonsoft.Json": "10.0.3"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp": "4.0.0",
+          "Microsoft.Toolkit.Uwp": "5.0.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Toolkit.Uwp.UI": "4.0.0",
+          "Microsoft.Toolkit.Uwp.UI": "5.0.0",
           "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
           "System.ValueTuple": "4.4.0",
           "Win2D.uwp": "1.21.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
         "type": "package",
         "dependencies": {
-          "ColorCode.UWP": "2.0.5",
-          "Microsoft.Toolkit.Parsers": "4.0.0",
-          "Microsoft.Toolkit.Uwp.UI.Animations": "4.0.0",
+          "ColorCode.UWP": "2.0.6",
+          "Microsoft.Toolkit.Parsers": "5.0.0",
+          "Microsoft.Toolkit.Uwp.UI.Animations": "5.0.0",
           "Robmikh.CompositionSurfaceFactory": "0.7.3",
           "System.ValueTuple": "4.4.0"
         },
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll": {}
         }
       },
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         },
         "runtime": {
-          "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
+          "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll": {}
         }
       },
       "Microsoft.Xaml.Behaviors.Uwp.Managed/1.1.0": {
@@ -13030,27 +13179,58 @@
         "native": {
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
         }
+      },
+      "WinRTXamlToolkit/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit": "2.3.0"
+        },
+        "compile": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll": {}
+        }
+      },
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "WinRTXamlToolkit.Controls.DataVisualization": "2.3.0"
+        }
       }
     }
   },
   "libraries": {
-    "ColorCode.Core/2.0.5": {
-      "sha512": "GUXpkFiiJpjkImG/V64ih7yK40IyttTtWgdMc0XosowxJ56ngB4Nn6M6AcLYzU5jD2PVTKS7viG/jn3JsSFnbg==",
+    "ColorCode.Core/2.0.6": {
+      "sha512": "Fn3CE3fyeql2Vj7+0H4QTAlceWsQvas3flzE2dRJ7JW6XBmPUR/zx69XhX0HPcDzoelfy2qh/wgG3rjDzqu2BQ==",
       "type": "package",
-      "path": "colorcode.core/2.0.5",
+      "path": "colorcode.core/2.0.6",
       "files": [
-        "colorcode.core.2.0.5.nupkg.sha512",
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "colorcode.core.2.0.6.nupkg.sha512",
         "colorcode.core.nuspec",
         "lib/netstandard1.4/ColorCode.Core.dll",
         "lib/netstandard1.4/ColorCode.Core.pdb"
       ]
     },
-    "ColorCode.UWP/2.0.5": {
-      "sha512": "N9ECFoEDJk/HqbNKCTEXfCWXEz77Nc9ULHpcwYjrfEk5MwZoHxWmmebxzpd1Io5O/+n2LmUP0d/q033OHK630Q==",
+    "ColorCode.UWP/2.0.6": {
+      "sha512": "HEJWP0qttXPjUCtvcqDe2PtMa5r3foWZd2Vx56U1Irl+LppuKXMpM2CrPqFAA+8Te3KDzH+YyBqlYKy79LFfvQ==",
       "type": "package",
-      "path": "colorcode.uwp/2.0.5",
+      "path": "colorcode.uwp/2.0.6",
       "files": [
-        "colorcode.uwp.2.0.5.nupkg.sha512",
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "colorcode.uwp.2.0.6.nupkg.sha512",
         "colorcode.uwp.nuspec",
         "lib/uap10.0/ColorCode.UWP.dll",
         "lib/uap10.0/ColorCode.UWP.pdb",
@@ -13079,6 +13259,7 @@
       "type": "package",
       "path": "microsoft.csharp/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -13136,6 +13317,7 @@
       "type": "package",
       "path": "microsoft.identity.client/1.1.2-preview0008",
       "files": [
+        ".nupkg.metadata",
         "Microsoft.Identity.Client.dll",
         "Microsoft.Identity.Client.pri",
         "Microsoft.Identity.Client.xml",
@@ -13150,14 +13332,17 @@
       ]
     },
     "Microsoft.Net.Native.Compiler/2.1.8": {
-      "sha512": "7836QmE441s7vynQ4M3clWsbZIn3kzM9OqxZfhPTFTpqntHT5qt/T/2Qcg6gO+xlYqfCqaBq6TN0doGn2Ggc2Q==",
+      "sha512": "XhelL0kagNwYtUOQVsdCOO963yiDVgh8W8Dr0W0pKEn3aJCVMkvHUK07sRDpPbzBlbEtMXXvm/epFHKZ4NVt2Q==",
       "type": "package",
       "path": "microsoft.net.native.compiler/2.1.8",
+      "hasTools": true,
       "files": [
-        "Microsoft.Net.Native.Compiler.2.1.8.nupkg.sha512",
-        "Microsoft.Net.Native.Compiler.nuspec",
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/Microsoft.Net.Native.Compiler.props",
         "build/Microsoft.Net.Native.Compiler.targets",
+        "microsoft.net.native.compiler.2.1.8.nupkg.sha512",
+        "microsoft.net.native.compiler.nuspec",
         "tools/LibraryXML/Callisto.rd.xml",
         "tools/LibraryXML/GalaSoft.MvvmLight.Extras.Win8.rd.xml",
         "tools/LibraryXML/GalaSoft.MvvmLight.Win8.rd.xml",
@@ -13200,15 +13385,18 @@
       ]
     },
     "Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
-      "sha512": "Lgwh58rl1g15JBcRYlEZjqNrfyOxf/RCZoxiC4x9A3ssXNOUdLrQiaWEyJYfxNQppKL/qE3M2CDg67W38Fz2Yw==",
+      "sha512": "AxVKlbHOIQbgHE7bbxo++qrXao3f3APPBXch/E0RYETmhmTlxSSssXcowGk3dch8K6VUpd77by87RysEogT6JQ==",
       "type": "package",
       "path": "microsoft.net.uwpcoreruntimesdk/2.1.2",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
-        "Microsoft.Net.UWPCoreRuntimeSdk.2.1.2.nupkg.sha512",
-        "Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.Net.UWPCoreRuntimeSdk.props",
+        "microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/CoreRuntime/Microsoft.Build.Net.CoreRuntimeTask.dll",
         "tools/CoreRuntime/Microsoft.Cci.dll",
         "tools/CoreRuntime/Microsoft.Net.CoreRuntime.settings.targets",
@@ -13216,15 +13404,17 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+      "sha512": "CCf4NjmDOoise7FAij2VPuHIgKKsu696vkTwhOkPVQfLsTmB2WLFfQ4yeO5Udtk8FD636UBMx6Y9eovzJKT76A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
-        "Microsoft.NETCore.Platforms.2.0.0.nupkg.sha512",
-        "Microsoft.NETCore.Platforms.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -13244,15 +13434,16 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.1.7": {
-      "sha512": "QoL3lJwDRFvUAWXSuIN43s56MD/SPplHdV821aM10hX7yTRQOgrHoy4PaP/SYNmZD8MdevUh2I3tKDC2kk5Xig==",
+      "sha512": "Yl7UU5EP5E0FVV5pAfVnO2FNRPWPWPskW8M6fz0laPE+QPM/na83UDHKtXErV4yGj839auCjWOxuRz7mIfVpjg==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.1.7",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
-        "Microsoft.NETCore.UniversalWindowsPlatform.6.1.7.nupkg.sha512",
-        "Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
+        "microsoft.netcore.universalwindowsplatform.6.1.7.nupkg.sha512",
+        "microsoft.netcore.universalwindowsplatform.nuspec",
         "ref/netcore50/_._",
         "ref/uap10.0.15138/Microsoft.CSharp.dll",
         "ref/uap10.0.15138/Microsoft.CSharp.xml",
@@ -13531,203 +13722,147 @@
         "runtime.json"
       ]
     },
-    "Microsoft.Toolkit/4.0.0": {
-      "sha512": "rqjwmWBLABgsj2zr4P9U6Ka6tWg+fM5K2Vi2S9jQe9GPcVa95xKAv7vZ1RGXNz7+jWvkuetZ+kJwftTUDrj4jg==",
+    "Microsoft.Toolkit/5.0.0": {
+      "sha512": "/Iu3+Ypcl6TrWdYMIc8bd2hFT7X5Bs7dlzuWjtoj/NbEjFy5QUOP4qMI6c4eryF9JwoxvrOLAz06g6GYbCVndw==",
       "type": "package",
-      "path": "microsoft.toolkit/4.0.0",
+      "path": "microsoft.toolkit/5.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.4/Microsoft.Toolkit.dll",
-        "lib/netstandard1.4/Microsoft.Toolkit.pdb",
-        "lib/netstandard1.4/Microsoft.Toolkit.xml",
-        "microsoft.toolkit.4.0.0.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Toolkit.dll",
+        "lib/netstandard2.0/Microsoft.Toolkit.pdb",
+        "lib/netstandard2.0/Microsoft.Toolkit.xml",
+        "microsoft.toolkit.5.0.0.nupkg.sha512",
         "microsoft.toolkit.nuspec"
       ]
     },
-    "Microsoft.Toolkit.Parsers/4.0.0": {
-      "sha512": "STC/AHeEMsrqdc1V7tFwXlL2Szh/d91X7nOB4HFA2JwAN9Ush1ZoAJKWnDC6MlAMtYtaa1Vtx6S2DXhI5qw3rA==",
+    "Microsoft.Toolkit.Parsers/5.0.0": {
+      "sha512": "Y1LMRJaWA56UzXzpGmcRlJCo4hMjGurBwO6Rd/57jU3lXq/YVgJmE1jo8AVIGpSPGKZNhiGT2/ZBjFhfwZaVUw==",
       "type": "package",
-      "path": "microsoft.toolkit.parsers/4.0.0",
+      "path": "microsoft.toolkit.parsers/5.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.4/Microsoft.Toolkit.Parsers.dll",
-        "lib/netstandard1.4/Microsoft.Toolkit.Parsers.pdb",
-        "lib/netstandard1.4/Microsoft.Toolkit.Parsers.xml",
-        "microsoft.toolkit.parsers.4.0.0.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Toolkit.Parsers.dll",
+        "lib/netstandard2.0/Microsoft.Toolkit.Parsers.pdb",
+        "lib/netstandard2.0/Microsoft.Toolkit.Parsers.xml",
+        "microsoft.toolkit.parsers.5.0.0.nupkg.sha512",
         "microsoft.toolkit.parsers.nuspec"
       ]
     },
-    "Microsoft.Toolkit.Uwp/4.0.0": {
-      "sha512": "eowqHVerJz3eW18NY6f/gKgyXSXnJoONpShK8kTg+SnmjjfAD4yFmodqwji0mudbLH5aPGz1EMmWpxuPoFA8ww==",
+    "Microsoft.Toolkit.Uwp/5.0.0": {
+      "sha512": "ZN8+4W35nfAuy6mlhjurlQycZUODpTNPYYkcxqF4x2nPb8rnECpWxmksnG6772rZeW5LJicyNQO1aSJjHBNBFw==",
       "type": "package",
-      "path": "microsoft.toolkit.uwp/4.0.0",
+      "path": "microsoft.toolkit.uwp/5.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.dll",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.pdb",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.pri",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.xml",
-        "microsoft.toolkit.uwp.4.0.0.nupkg.sha512",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.pdb",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.pri",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.xml",
+        "microsoft.toolkit.uwp.5.0.0.nupkg.sha512",
         "microsoft.toolkit.uwp.nuspec"
       ]
     },
-    "Microsoft.Toolkit.Uwp.UI/4.0.0": {
-      "sha512": "HFSbtDa77Dj2MJZf9JgYQNnWIHlIHoKx6bn1mtsr4DI8qSQ/4cinSE9OY6Xc3NDJEPDzL1CZ/dPXnWgoCnf3Fg==",
+    "Microsoft.Toolkit.Uwp.UI/5.0.0": {
+      "sha512": "imC7PI+eB1r1E1Q88JKjOQdA2+D4b/TD420Q73Tshi6JNkrLLqtJPVOxpTLzbxs1+igth/7mBv8xhiM1qY34AQ==",
       "type": "package",
-      "path": "microsoft.toolkit.uwp.ui/4.0.0",
+      "path": "microsoft.toolkit.uwp.ui/5.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.dll",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.pdb",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.pri",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.xml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/NavigationView.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/NavigationView.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/Styles/VSCodeActivityBarStyle.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/Styles/VSCodeActivityBarStyle.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Microsoft.Toolkit.Uwp.UI.xr.xml",
-        "microsoft.toolkit.uwp.ui.4.0.0.nupkg.sha512",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.pdb",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.pri",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.xml",
+        "microsoft.toolkit.uwp.ui.5.0.0.nupkg.sha512",
         "microsoft.toolkit.uwp.ui.nuspec"
       ]
     },
-    "Microsoft.Toolkit.Uwp.UI.Animations/4.0.0": {
-      "sha512": "b9fCb/0811NGna0dgVk1Yaa0Y5xBJZXuO44I48WzWQlNSeBWyIr6COhvXbWnq57qkFU30C8Ti+SFODQXhO7r3w==",
+    "Microsoft.Toolkit.Uwp.UI.Animations/5.0.0": {
+      "sha512": "5YOMsmVWf6gbVczbE7Fp70D4CiQN1pxC25rTYtE+IkMsvECPo7gXxEjgw20ByyyJN11oBGUMLijQsbFpKtWI1A==",
       "type": "package",
-      "path": "microsoft.toolkit.uwp.ui.animations/4.0.0",
+      "path": "microsoft.toolkit.uwp.ui.animations/5.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.dll",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.pdb",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.pri",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Animations.xml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/NavigationView.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/NavigationView.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/Styles/VSCodeActivityBarStyle.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/Styles/VSCodeActivityBarStyle.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Microsoft.Toolkit.Uwp.UI.xr.xml",
-        "microsoft.toolkit.uwp.ui.animations.4.0.0.nupkg.sha512",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.pdb",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.pri",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Animations.xml",
+        "microsoft.toolkit.uwp.ui.animations.5.0.0.nupkg.sha512",
         "microsoft.toolkit.uwp.ui.animations.nuspec"
       ]
     },
-    "Microsoft.Toolkit.Uwp.UI.Controls/4.0.0": {
-      "sha512": "YkOZfOFiKhAG95joAy0Ivy0H9bryweX8GIREIWPHkXcKIbzuRPFDgwdfPf0spTagOPDuQMwRLpM6ROe5Wket+A==",
+    "Microsoft.Toolkit.Uwp.UI.Controls/5.0.0": {
+      "sha512": "aXfeSOfmRME49xs2wa79TskLLv0Dtp9oNHGN5I6dmIENO0m7cciO8beMTeZZBCOr4+IxhRWhjNfSzSMTOh1CgA==",
       "type": "package",
-      "path": "microsoft.toolkit.uwp.ui.controls/4.0.0",
+      "path": "microsoft.toolkit.uwp.ui.controls/5.0.0",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "lib/uap10.0/Design/Microsoft.Toolkit.Uwp.UI.Controls.Design.dll",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.dll",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.pdb",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.pri",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.xml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/BladeView/BladeView.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/BladeView/BladeView.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/CameraPreview/CameraPreview.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/CameraPreview/CameraPreview.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Carousel/Carousel.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Carousel/Carousel.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Expander/Expander.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Expander/Expander.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/GridSplitter/GridSplitter.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/GridSplitter/GridSplitter.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenu.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenu.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenuNavViewTemplate.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenuNavViewTemplate.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenuTemplate.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HamburgerMenu/HamburgerMenuTemplate.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedContentControl/HeaderedContentControl.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedContentControl/HeaderedContentControl.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedItemsControl/HeaderedItemsControl.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedItemsControl/HeaderedItemsControl.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedTextBlock/HeaderedTextBlock.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedTextBlock/HeaderedTextBlock.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/ImageEx.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/ImageEx.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/RoundImageEx.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/RoundImageEx.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/InAppNotification.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/InAppNotification.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/Styles/MSEdgeNotificationStyle.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/Styles/MSEdgeNotificationStyle.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/Styles/VSCodeNotificationStyle.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/Styles/VSCodeNotificationStyle.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InfiniteCanvas/InfiniteCanvas.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/InfiniteCanvas/InfiniteCanvas.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/LayoutTransformControl/LayoutTransformControl.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/LayoutTransformControl/LayoutTransformControl.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Loading/Loading.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Loading/Loading.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/MarkdownTextBlock/MarkdownTextBlock.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/MarkdownTextBlock/MarkdownTextBlock.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/MasterDetailsView/MasterDetailsView.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/MasterDetailsView/MasterDetailsView.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Menu/Menu.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Menu/Menu.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Microsoft.Toolkit.Uwp.UI.Controls.xr.xml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/OrbitView/OrbitView.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/OrbitView/OrbitView.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListView.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListView.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListViewRefreshContainerTemplate.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListViewRefreshContainerTemplate.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListViewTemplate.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/PullToRefreshListView/PullToRefreshListViewTemplate.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RadialGauge/RadialGauge.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RadialGauge/RadialGauge.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RadialProgressBar/RadialProgressBar.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RadialProgressBar/RadialProgressBar.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RangeSelector/RangeSelector.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RangeSelector/RangeSelector.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RotatorTile/RotatorTile.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/RotatorTile/RotatorTile.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/ScrollHeader/ScrollHeader.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/ScrollHeader/ScrollHeader.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/SlidableListItem/SlidableListItem.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/SlidableListItem/SlidableListItem.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/SlidableListItem/SlidableListItemSwipeControlTemplate.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/SlidableListItem/SlidableListItemSwipeControlTemplate.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/Symbols/Symbols.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/Symbols/Symbols.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/TextToolbar.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/TextToolbar.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarButton.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarButton.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarSeparator.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarSeparator.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Themes/Generic.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/Themes/Generic.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TileControl/TileControl.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls/TileControl/TileControl.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/NavigationView.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/NavigationView.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/Styles/VSCodeActivityBarStyle.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Extensions/NavigationView/Styles/VSCodeActivityBarStyle.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI/Microsoft.Toolkit.Uwp.UI.xr.xml",
-        "microsoft.toolkit.uwp.ui.controls.4.0.0.nupkg.sha512",
+        "lib/uap10.0.16299/Design/Microsoft.Toolkit.Uwp.UI.Controls.Design.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.pdb",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.pri",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.xml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/BladeView/BladeView.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/CameraPreview/CameraPreview.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/Carousel/Carousel.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/Expander/Expander.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/GridSplitter/GridSplitter.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedContentControl/HeaderedContentControl.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedItemsControl/HeaderedItemsControl.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/HeaderedTextBlock/HeaderedTextBlock.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/ImageEx/ImageEx.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/InAppNotification.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/Styles/MSEdgeNotificationStyle.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/InAppNotification/Styles/VSCodeNotificationStyle.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/InfiniteCanvas/InfiniteCanvas.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/LayoutTransformControl/LayoutTransformControl.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/Loading/Loading.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/MarkdownTextBlock/MarkdownTextBlock.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/MasterDetailsView/MasterDetailsView.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/Menu/Menu.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/Microsoft.Toolkit.Uwp.UI.Controls.xr.xml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/OrbitView/OrbitView.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/RadialGauge/RadialGauge.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/RadialProgressBar/RadialProgressBar.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/RangeSelector/RangeSelector.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/RotatorTile/RotatorTile.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/ScrollHeader/ScrollHeader.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/TabView/TabView.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/Symbols/Symbols.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/TextToolbar.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarButton.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/TextToolbar/ToolbarItems/ToolbarSeparator.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/Themes/Generic.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls/TileControl/TileControl.xaml",
+        "microsoft.toolkit.uwp.ui.controls.5.0.0.nupkg.sha512",
         "microsoft.toolkit.uwp.ui.controls.nuspec",
         "tools/VisualStudioToolsManifest.xml"
       ]
     },
-    "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/4.0.0": {
-      "sha512": "nU13sOIGFIdQeUCRHLn34pKS0YnyYJ+P0IWUczTDsc7BGlXPgT0vzJS/FW2WzIvJ/8fdllN5WppAtGgsk8f/1Q==",
+    "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/5.0.0": {
+      "sha512": "0E8zAHz82IG3PFJ6R7HWh5SiBy89CzjInT++b9zdhGYlPl+4qsIuAN+mG38akaR6FbMLvMJw1S7n4y8DCZ3ErQ==",
       "type": "package",
-      "path": "microsoft.toolkit.uwp.ui.controls.datagrid/4.0.0",
+      "path": "microsoft.toolkit.uwp.ui.controls.datagrid/5.0.0",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
-        "lib/uap10.0/Design/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.Design.dll",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pdb",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pri",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/DataGrid/DataGrid.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/DataGrid/DataGrid.xbf",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Themes/Generic.xaml",
-        "lib/uap10.0/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Themes/Generic.xbf",
-        "microsoft.toolkit.uwp.ui.controls.datagrid.4.0.0.nupkg.sha512",
+        "lib/uap10.0.16299/Design/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.Design.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pdb",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pri",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/DataGrid/DataGrid.xaml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml",
+        "lib/uap10.0.16299/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Themes/Generic.xaml",
+        "microsoft.toolkit.uwp.ui.controls.datagrid.5.0.0.nupkg.sha512",
         "microsoft.toolkit.uwp.ui.controls.datagrid.nuspec",
         "tools/VisualStudioToolsManifest.xml"
       ]
@@ -13737,6 +13872,7 @@
       "type": "package",
       "path": "microsoft.xaml.behaviors.uwp.managed/1.1.0",
       "files": [
+        ".nupkg.metadata",
         "lib/uap10.0/Design/Microsoft.Xaml.Interactions.Design.dll",
         "lib/uap10.0/Design/Microsoft.Xaml.Interactivity.Design.dll",
         "lib/uap10.0/Microsoft.Xaml.Interactions.dll",
@@ -13754,6 +13890,7 @@
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
+        ".nupkg.metadata",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -13880,7 +14017,9 @@
       "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -13908,6 +14047,7 @@
       "type": "package",
       "path": "robmikh.compositionsurfacefactory/0.7.3",
       "files": [
+        ".nupkg.metadata",
         "build/native/Robmikh.CompositionSurfaceFactory.props",
         "build/native/Robmikh.CompositionSurfaceFactory.targets",
         "lib/uap10.0/Robmikh.CompositionSurfaceFactory.winmd",
@@ -14554,16 +14694,17 @@
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.1.7": {
-      "sha512": "sKS9GWR1elC5HMxDyYrONWJkBdcfOkRsRCVsnn3Ed1j9SAglZy2xJ0KjW0xz0UZuCkga0s0nUwas1A8Aomo5RA==",
+      "sha512": "KiGfGE6tfIkGSdTDuFOZlDuQr6f93FCaDKlbj0iMxb8hr/nnlEgjhuib192BAJ+LCtsThUGisvppGbpdMLJAkg==",
       "type": "package",
       "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.1.7",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.1.7.nupkg.sha512",
-        "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.1.7.nupkg.sha512",
+        "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -14732,14 +14873,17 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.1.8": {
-      "sha512": "Vr1fDE+Brc5mqmbWIvKizavQRA0Eh/uIGP0zHQ2/BI4PnS0Gz6FvbuonlI8kYDZWg0tGFK9IIO2dGYCR+ez5zg==",
+      "sha512": "rtnjgxFoFFOmCPTtYYWU4qSKjJmTNFnHwPDgQBAbloXXzos2DSwmPvLulOdZyVEZQAAM5wjeuWbQGPcWA0OkwA==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.native.compiler/2.1.8",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/runtime.win10-arm.Microsoft.Net.Native.Compiler.props",
         "build/runtime.win10-arm.Microsoft.Net.Native.Compiler.targets",
-        "runtime.win10-arm.Microsoft.Net.Native.Compiler.2.1.8.nupkg.sha512",
-        "runtime.win10-arm.Microsoft.Net.Native.Compiler.nuspec",
+        "runtime.win10-arm.microsoft.net.native.compiler.2.1.8.nupkg.sha512",
+        "runtime.win10-arm.microsoft.net.native.compiler.nuspec",
         "tools/Runtime/arm/CommandProvider.dll",
         "tools/Runtime/arm/Microsoft.NET.Native.Runtime.2.1.appx",
         "tools/Runtime/arm/SymbolProvider.dll",
@@ -15028,14 +15172,17 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.Native.SharedLibrary/2.1.8": {
-      "sha512": "+GFQKkeiSFLATafE00gey9D//DipituX3RurkzDZL0v2jT3KQv0kWrtIT2xPIL7TLbtUnXDIHty+ULKtaJ+yIA==",
+      "sha512": "AgZE8ap24GXzm3P8HA0GefOwej4rTGOD94aSnnJZ28jj9hKdZM7UmcS90+/kLKkzkFBZLRK7+UMHn2SPFPoTug==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.native.sharedlibrary/2.1.8",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.props",
         "build/runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.targets",
-        "runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.2.1.8.nupkg.sha512",
-        "runtime.win10-arm.Microsoft.Net.Native.SharedLibrary.nuspec",
+        "runtime.win10-arm.microsoft.net.native.sharedlibrary.2.1.8.nupkg.sha512",
+        "runtime.win10-arm.microsoft.net.native.sharedlibrary.nuspec",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltoc",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltocpdb",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.iltoc",
@@ -15419,16 +15566,19 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
-      "sha512": "J4XdbbcvE2iUCsup3rwOsZYaohWLIuP1IW/etf0bwQ9vWCqccuHO3yAWiaWZmWn7nn53PEJ9lZTfNNAiIm/bBw==",
+      "sha512": "IasONRto6AAl6LdG/usV/CsC+gCvl3+oan4PmRiwhbtQnr8SOzN4L7OP3e78OjbcU99bzUoyWkYBD3C3WOOwag==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk/2.1.2",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.2.1.2.nupkg.sha512",
-        "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
+        "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
         "tools/Appx/Microsoft.NET.CoreRuntime.2.1.appx",
@@ -15436,16 +15586,17 @@
       ]
     },
     "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.1.7": {
-      "sha512": "/IpVWKTfetFmRJrtm9hqw1u6lm/i6P3+DxKu5JEmpG7FhLHPKU+MCrJE1ZjeRJwVwCmpGQVIOdbXiNZEbIx1FA==",
+      "sha512": "mGRVNh1YnRawebaYVtJZuYFqX69QSLQgTgWzftEPGeYKt3FZATbgkpYQ8j33hEsqJ+sdC1XByISwvIz00+5eIw==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.1.7",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.6.1.7.nupkg.sha512",
-        "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.6.1.7.nupkg.sha512",
+        "runtime.win10-arm.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-arm/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -15613,16 +15764,17 @@
       ]
     },
     "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.1.7": {
-      "sha512": "iWfRwTyWtFfy0SEdSHV90Qz3hyhV/psELSKp7BocjDkTbM0nCvF4LDq6vf8D3hZXlA2ng4KM7LRIJN0Gw7aOcg==",
+      "sha512": "5uD9CymLkTC1vfpEWy7fsE2xkmGKefKzuITI8IKx9oDiRJFarwhr2iGn2TeMHyGqwLK82oxHLz1YOvB/kByOrw==",
       "type": "package",
       "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.1.7",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.1.7.nupkg.sha512",
-        "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.6.1.7.nupkg.sha512",
+        "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -15791,14 +15943,17 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.Native.Compiler/2.1.8": {
-      "sha512": "E3i4dyU1QeWuA4Y6FUaAZuKv0g8hGH84AF+aMZF1OmalZg10iEg7Cz9KW49XpOyFY7T4Gw2852TE00nsakm5xA==",
+      "sha512": "qVsevH8UVs8G6wKRoAeXWzwfmllWURi/acPZdK8qHFH4a2/dzNo30UxJdaglTYXjTqqaO8ZL5JvBnK1B1wK9aA==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.native.compiler/2.1.8",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/runtime.win10-x64.Microsoft.Net.Native.Compiler.props",
         "build/runtime.win10-x64.Microsoft.Net.Native.Compiler.targets",
-        "runtime.win10-x64.Microsoft.Net.Native.Compiler.2.1.8.nupkg.sha512",
-        "runtime.win10-x64.Microsoft.Net.Native.Compiler.nuspec",
+        "runtime.win10-x64.microsoft.net.native.compiler.2.1.8.nupkg.sha512",
+        "runtime.win10-x64.microsoft.net.native.compiler.nuspec",
         "tools/Runtime/x64/CommandProvider.dll",
         "tools/Runtime/x64/Microsoft.NET.Native.Runtime.2.1.appx",
         "tools/Runtime/x64/SymbolProvider.dll",
@@ -16081,14 +16236,17 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.Native.SharedLibrary/2.1.8": {
-      "sha512": "B9U0uEaDWqw7niAffdT7K340GEz888ADwiZ+KqxC6kCCINxvkdF5pXgPGKD4maZt6cz/eoteiUVE/n119+6iVg==",
+      "sha512": "aUTYTKqelLL5dQOTWld3aVFamtazKyf0UgVCFRlb6/WAaIg2e+W6elf66y+uy76CYTQuKJ7zrQqzB6Cokko3fA==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.native.sharedlibrary/2.1.8",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.props",
         "build/runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.targets",
-        "runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.2.1.8.nupkg.sha512",
-        "runtime.win10-x64.Microsoft.Net.Native.SharedLibrary.nuspec",
+        "runtime.win10-x64.microsoft.net.native.sharedlibrary.2.1.8.nupkg.sha512",
+        "runtime.win10-x64.microsoft.net.native.sharedlibrary.nuspec",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltoc",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltocpdb",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.iltoc",
@@ -16472,16 +16630,19 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
-      "sha512": "Mj9j4vg9yIdvppce0eC8+EIhLmv3Uv3CNKi2v84Fl5zeSs26w9l2svE2LTixB5OTE/pj2p7cW2lUMHeWWm1tgg==",
+      "sha512": "O3ykUbGKlY3bdapcCEyUCRH/dR2ylrtnLnVOpzv33PPtZvorKWcrB8DNuaBmfAzTCNKMSSbtR0/3yYysUpXbFg==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk/2.1.2",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.2.1.2.nupkg.sha512",
-        "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
+        "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
         "tools/Appx/Microsoft.NET.CoreRuntime.2.1.appx",
@@ -16489,16 +16650,17 @@
       ]
     },
     "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.1.7": {
-      "sha512": "25p/SlG1nfkQIyAp8n7bI5U6DXBt5rUfydeqnIgnRMhbFJBaetbg8VJiJ4bTU82yFTsAcGX8IpkOGFbE/xEZ/g==",
+      "sha512": "GgZz+qCyXB9ayDvm1Y4+2RWVsZwX6opg2YbNQAVMMHJWT8nUJ9eivdX1LSq+mQ/JdJC8kFA/wBTiu7mIDdz91g==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.1.7",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.6.1.7.nupkg.sha512",
-        "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.6.1.7.nupkg.sha512",
+        "runtime.win10-x64.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x64/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -16666,16 +16828,17 @@
       ]
     },
     "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.1.7": {
-      "sha512": "siNB9D+pYO5AsgSW/FvHhN91H5OkpIW37G3jq+Ra1ZZvs9YFRkaiwlfkeQSiQrMOWJfm8OCZhKATaRnMboaZHw==",
+      "sha512": "aamKyWHE2rR/csz12n5U+KEQWAda2fTwK5NbcbGEuPtLGNLGZl2QsKNTgvyCve9ae8DqypZ1vW5j47j/MeBY1w==",
       "type": "package",
       "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.1.7",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.6.1.7.nupkg.sha512",
-        "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.6.1.7.nupkg.sha512",
+        "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86-aot/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -16844,14 +17007,17 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.Native.Compiler/2.1.8": {
-      "sha512": "jU4nh95M1a+4AsPJcKcK1ddrVIJ1yi8kGKvaC0L4N/aTZokh2IeFD0qr0I8aGjivzgqKw6AM+JyoOT5dlXp7sw==",
+      "sha512": "ikLCf5erXpW0vwppcZN77EcK6v6CSS0Z9DuFif2FfXuCsWbbcARqoBnM/4a1n6Ug4MXhhr9YSPtM3gUmpJrWrQ==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.native.compiler/2.1.8",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/runtime.win10-x86.Microsoft.Net.Native.Compiler.props",
         "build/runtime.win10-x86.Microsoft.Net.Native.Compiler.targets",
-        "runtime.win10-x86.Microsoft.Net.Native.Compiler.2.1.8.nupkg.sha512",
-        "runtime.win10-x86.Microsoft.Net.Native.Compiler.nuspec",
+        "runtime.win10-x86.microsoft.net.native.compiler.2.1.8.nupkg.sha512",
+        "runtime.win10-x86.microsoft.net.native.compiler.nuspec",
         "tools/Runtime/x86/CommandProvider.dll",
         "tools/Runtime/x86/Microsoft.NET.Native.Runtime.2.1.appx",
         "tools/Runtime/x86/SymbolProvider.dll",
@@ -17134,14 +17300,17 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.Native.SharedLibrary/2.1.8": {
-      "sha512": "79ZCjEsNc1Fe9B+CmzDOSIPBF9CYFaK1qphCbgGHryIdDvMtRpEnkm8pWxR8q/2MTO5JuT0vBW42LVsW5VYVfg==",
+      "sha512": "4VD4rfGFJ9SJxVXkbRFuQUSj583VHg6BK7ZyKA+OYjjU7bqxvqk2hD2o/yBALPSPO/30uIkzzrmONOAiwJBbqQ==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.native.sharedlibrary/2.1.8",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.props",
         "build/runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.targets",
-        "runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.2.1.8.nupkg.sha512",
-        "runtime.win10-x86.Microsoft.Net.Native.SharedLibrary.nuspec",
+        "runtime.win10-x86.microsoft.net.native.sharedlibrary.2.1.8.nupkg.sha512",
+        "runtime.win10-x86.microsoft.net.native.sharedlibrary.nuspec",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltoc",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltocpdb",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.iltoc",
@@ -17525,16 +17694,19 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.2": {
-      "sha512": "MeYqB6D7vA9eRb2fDjN9LWTLAY+m5Ocg4SBoEtG1oLPXgfuJcUNUb+etdsid/V3j7jgr4ito60Wr8U03mmJGuA==",
+      "sha512": "7FFnETsDe+tu8JllHnJ+eGAqGG+8JSneCPKfwilk1gwAngzCw3+5g097LyomIjcHhCYMo3wjHFDP5sI2gvXrQA==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk/2.1.2",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props",
         "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets",
-        "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.2.1.2.nupkg.sha512",
-        "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.nuspec",
+        "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+        "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.nuspec",
         "tools/AppLocal/consoleuwpshim.exe",
         "tools/AppLocal/uwpshim.exe",
         "tools/Appx/Microsoft.NET.CoreRuntime.2.1.appx",
@@ -17542,16 +17714,17 @@
       ]
     },
     "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.1.7": {
-      "sha512": "ub7zmqQTMhlaYf4o27/8LLMmhoHq3f5x5CMFur5eDvILRqcd53r3rTQMkp1KU6wmk0VAHW9P0490UBgo9d3r4A==",
+      "sha512": "OOqKBLyVOffzjLH+dOk9xscSoEgv2KQFfdU19fHomdagRHBIr3LeRz25809fpWM4WdqqN89gD1Pxs1pXSMS7tA==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.1.7",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
-        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.6.1.7.nupkg.sha512",
-        "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform.nuspec",
+        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.1.7.nupkg.sha512",
+        "runtime.win10-x86.microsoft.netcore.universalwindowsplatform.nuspec",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.CSharp.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.VisualBasic.dll",
         "runtimes/win10-x86/lib/uap10.0.15138/Microsoft.Win32.Primitives.dll",
@@ -17883,6 +18056,7 @@
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -17920,6 +18094,7 @@
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -18238,6 +18413,7 @@
       "type": "package",
       "path": "system.dynamic.runtime/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -18865,10 +19041,11 @@
       ]
     },
     "System.Reflection.Emit/4.3.0": {
-      "sha512": "/rKEzbnRq6H1LUkLmlqT6YaD8S625rZIuK+EQvBwfdHjJbLni0c9SP0XSM2gv1Khnn9ehU5MSz/WmH7gwt2QGQ==",
+      "sha512": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
       "type": "package",
       "path": "system.reflection.emit/4.3.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -19503,6 +19680,7 @@
       "type": "package",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -20117,6 +20295,7 @@
       "type": "package",
       "path": "system.valuetuple/4.4.0",
       "files": [
+        ".nupkg.metadata",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -20404,6 +20583,7 @@
       "type": "package",
       "path": "win2d.uwp/1.21.0",
       "files": [
+        ".nupkg.metadata",
         "Win2d.githash.txt",
         "build/native/Win2D.uwp.targets",
         "include/Microsoft.Graphics.Canvas.h",
@@ -20416,16 +20596,754 @@
         "win2d.uwp.1.21.0.nupkg.sha512",
         "win2d.uwp.nuspec"
       ]
+    },
+    "WinRTXamlToolkit/2.3.0": {
+      "sha512": "YFwCbHglEIfPUQks6HCdKEfI7tHzCJ7mpRJjgQAn7CVL/3DGezGcw9Xgnj4/eVT1adwZ72UWUvfLc4goOAJfyQ==",
+      "type": "package",
+      "path": "winrtxamltoolkit/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/uap10.0/WinRTXamlToolkit.dll",
+        "lib/uap10.0/WinRTXamlToolkit.pri",
+        "lib/uap10.0/WinRTXamlToolkit/Async/_._",
+        "lib/uap10.0/WinRTXamlToolkit/AwaitableUI/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Common/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AlternativeFrame/AlternativeFrame.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AlternativeFrame/AlternativeFrame.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AnimatingContainer/AnimatingContainer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AnimatingContainer/AnimatingContainer.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AutoCompleteTextBox/Algorithm/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AutoCompleteTextBox/AutoCompleteTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AutoCompleteTextBox/AutoCompleteTextBox.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/AutoOrientingStackPanel/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/Behaviors/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CameraCaptureControl/CameraCaptureControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CameraCaptureControl/CameraCaptureControl.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CascadingImageControl/CascadingImageControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CascadingImageControl/CascadingImageControl.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CascadingTextBlock/CascadingTextBlock.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CascadingTextBlock/CascadingTextBlock.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ColorPicker/ColorPicker.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ColorPicker/ColorPicker.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/Common/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CountdownControl/CountdownControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CountdownControl/CountdownControl.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CustomAppBar/CustomAppBar.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CustomAppBar/CustomAppBar.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CustomGridSplitter/CustomGridSplitter.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/CustomGridSplitter/CustomGridSplitter.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/Data/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/DelayedLoadControl/DelayedLoadControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/DelayedLoadControl/DelayedLoadControl.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/DockPanel/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/Extensions/Forms/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/FocusVisualizer/FocusVisualizer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/FocusVisualizer/FocusVisualizer.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/FxContentControl/FxContentControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/FxContentControl/FxContentControl.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/HeaderedItemsControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ImageButton/ImageButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ImageButton/ImageButton.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ImageToggleButton/ImageToggleButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ImageToggleButton/ImageToggleButton.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/InputDialog/InputDialog.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/InputDialog/InputDialog.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/LayoutTransformControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ListItemButton/ListItemButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ListItemButton/ListItemButton.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/NumericUpDown/NumericUpDown.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/NumericUpDown/NumericUpDown.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/PieSlice/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/RingSlice/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/SquareGrid/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ToolStrip/ToolStrip.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ToolStrip/ToolStrip.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ToolWindow/ToolWindow.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/ToolWindow/ToolWindow.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeView.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeView.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeViewItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeViewItem.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeViewMouse.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeViewMouse.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeViewTouch.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/TreeView/TreeViewTouch.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/UniformGrid/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/WatermarkPasswordBox/WatermarkPasswordBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/WatermarkPasswordBox/WatermarkPasswordBox.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/WatermarkTextBox/WatermarkTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/WatermarkTextBox/WatermarkTextBox.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/WebBrowser/WebBrowser.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/WebBrowser/WebBrowser.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Controls/WrapPanel/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Converters/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Device/_._",
+        "lib/uap10.0/WinRTXamlToolkit/IO/Extensions/_._",
+        "lib/uap10.0/WinRTXamlToolkit/IO/Serialization/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Imaging/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Input/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Interactivity/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Licensing/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Net/_._",
+        "lib/uap10.0/WinRTXamlToolkit/Properties/WinRTXamlToolkit.rd.xml",
+        "lib/uap10.0/WinRTXamlToolkit/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/Themes/Generic.xbf",
+        "lib/uap10.0/WinRTXamlToolkit/Tools/_._",
+        "lib/uap10.0/WinRTXamlToolkit/WinRTXamlToolkit.xr.xml",
+        "lib/uap10.0/WinRTXamlToolkit/bin/ARM/Debug/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/ARM/Release/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Debug/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/Release/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Debug/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x64/Release/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Debug/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/bin/x86/Release/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/ARM/Debug/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/AlternativeFrame/AlternativeFrame.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/AnimatingContainer/AnimatingContainer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/AutoCompleteTextBox/AutoCompleteTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/CameraCaptureControl/CameraCaptureControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/CascadingImageControl/CascadingImageControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/CascadingTextBlock/CascadingTextBlock.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/ColorPicker/ColorPicker.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/CountdownControl/CountdownControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/CustomAppBar/CustomAppBar.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/CustomGridSplitter/CustomGridSplitter.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/DelayedLoadControl/DelayedLoadControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/FocusVisualizer/FocusVisualizer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/FxContentControl/FxContentControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/ImageButton/ImageButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/ImageToggleButton/ImageToggleButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/InputDialog/InputDialog.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/ListItemButton/ListItemButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/NumericUpDown/NumericUpDown.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/ToolStrip/ToolStrip.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/ToolWindow/ToolWindow.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/TreeView/TreeView.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/TreeView/TreeViewItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/TreeView/TreeViewMouse.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/TreeView/TreeViewTouch.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/WatermarkPasswordBox/WatermarkPasswordBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/WatermarkTextBox/WatermarkTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Controls/WebBrowser/WebBrowser.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/WinRTXamlToolkit/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/Release/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/AlternativeFrame/AlternativeFrame.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/AnimatingContainer/AnimatingContainer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/AutoCompleteTextBox/AutoCompleteTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/CameraCaptureControl/CameraCaptureControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/CascadingImageControl/CascadingImageControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/CascadingTextBlock/CascadingTextBlock.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/ColorPicker/ColorPicker.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/CountdownControl/CountdownControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/CustomAppBar/CustomAppBar.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/CustomGridSplitter/CustomGridSplitter.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/DelayedLoadControl/DelayedLoadControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/FocusVisualizer/FocusVisualizer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/FxContentControl/FxContentControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/ImageButton/ImageButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/ImageToggleButton/ImageToggleButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/InputDialog/InputDialog.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/ListItemButton/ListItemButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/NumericUpDown/NumericUpDown.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/ToolStrip/ToolStrip.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/ToolWindow/ToolWindow.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/TreeView/TreeView.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/TreeView/TreeViewItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/TreeView/TreeViewMouse.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/TreeView/TreeViewTouch.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/WatermarkPasswordBox/WatermarkPasswordBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/WatermarkTextBox/WatermarkTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Controls/WebBrowser/WebBrowser.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/WinRTXamlToolkit/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Debug/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/AlternativeFrame/AlternativeFrame.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/AnimatingContainer/AnimatingContainer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/AutoCompleteTextBox/AutoCompleteTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/CameraCaptureControl/CameraCaptureControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/CascadingImageControl/CascadingImageControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/CascadingTextBlock/CascadingTextBlock.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/ColorPicker/ColorPicker.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/CountdownControl/CountdownControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/CustomAppBar/CustomAppBar.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/CustomGridSplitter/CustomGridSplitter.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/DelayedLoadControl/DelayedLoadControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/FocusVisualizer/FocusVisualizer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/FxContentControl/FxContentControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/ImageButton/ImageButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/ImageToggleButton/ImageToggleButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/InputDialog/InputDialog.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/ListItemButton/ListItemButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/NumericUpDown/NumericUpDown.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/ToolStrip/ToolStrip.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/ToolWindow/ToolWindow.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/TreeView/TreeView.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/TreeView/TreeViewItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/TreeView/TreeViewMouse.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/TreeView/TreeViewTouch.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/WatermarkPasswordBox/WatermarkPasswordBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/WatermarkTextBox/WatermarkTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Controls/WebBrowser/WebBrowser.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/WinRTXamlToolkit/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x64/Release/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/AlternativeFrame/AlternativeFrame.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/AnimatingContainer/AnimatingContainer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/AutoCompleteTextBox/AutoCompleteTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/CameraCaptureControl/CameraCaptureControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/CascadingImageControl/CascadingImageControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/CascadingTextBlock/CascadingTextBlock.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/ColorPicker/ColorPicker.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/CountdownControl/CountdownControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/CustomAppBar/CustomAppBar.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/CustomGridSplitter/CustomGridSplitter.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/DelayedLoadControl/DelayedLoadControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/FocusVisualizer/FocusVisualizer.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/FxContentControl/FxContentControl.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/ImageButton/ImageButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/ImageToggleButton/ImageToggleButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/InputDialog/InputDialog.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/ListItemButton/ListItemButton.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/NumericUpDown/NumericUpDown.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/ToolStrip/ToolStrip.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/ToolWindow/ToolWindow.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/TreeView/TreeView.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/TreeView/TreeViewItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/TreeView/TreeViewMouse.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/TreeView/TreeViewTouch.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/WatermarkPasswordBox/WatermarkPasswordBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/WatermarkTextBox/WatermarkTextBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Controls/WebBrowser/WebBrowser.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/WinRTXamlToolkit/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Debug/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/AlternativeFrame/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/AnimatingContainer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/AutoCompleteTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/CameraCaptureControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/CascadingImageControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/CascadingTextBlock/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/ColorPicker/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/CountdownControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/CustomAppBar/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/CustomGridSplitter/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/DelayedLoadControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/FocusVisualizer/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/FxContentControl/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/ImageButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/ImageToggleButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/InputDialog/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/ListItemButton/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/NumericUpDown/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/ToolStrip/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/ToolWindow/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/TreeView/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/WatermarkPasswordBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/WatermarkTextBox/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Controls/WebBrowser/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit/obj/x86/Release/intermediatexaml/_._",
+        "winrtxamltoolkit.2.3.0.nupkg.sha512",
+        "winrtxamltoolkit.nuspec"
+      ]
+    },
+    "WinRTXamlToolkit.Controls.DataVisualization/2.3.0": {
+      "sha512": "1dM6qXlOQJI8Xb+jiw+qwIVrRH8G7isuogxZXNxOKb9kSi4sWc3A6mx6RqZGxLQu53FhmaMlWyXsnEzk1MnQrg==",
+      "type": "package",
+      "path": "winrtxamltoolkit.controls.datavisualization/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.dll",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization.pri",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/AxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/AxisLabel.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/DateTimeAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/DateTimeAxisLabel.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/DisplayAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/DisplayAxis.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/NumericAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/NumericAxisLabel.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/RangeAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/RangeAxis.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Chart/Chart.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Chart/Chart.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/AreaDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/AreaDataPoint.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/BarDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/BarDataPoint.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/BubbleDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/BubbleDataPoint.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/ColumnDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/ColumnDataPoint.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/LineDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/LineDataPoint.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/PieDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/PieDataPoint.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/ScatterDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/ScatterDataPoint.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPointSeriesDragDropTarget.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Primitives/DelegatingListBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Primitives/DelegatingListBox.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/AreaSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/AreaSeries.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/Compatible/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/DataPointSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/DataPointSeries.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/DefinitionSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/DefinitionSeries.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/LegendItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/LegendItem.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/LineSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/LineSeries.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/PieSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/PieSeries.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Collections/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Legend/Legend.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Legend/Legend.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Properties/WinRTXamlToolkit.Controls.DataVisualization.rd.xml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Themes/Generic.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Title/Title.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/Title/Title.xbf",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/WinRTXamlToolkit.Controls.DataVisualization.xr.xml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/ARM/Debug/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/ARM/Release/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Debug/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/Release/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Debug/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x64/Release/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Debug/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/bin/x86/Release/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/ARM/Debug/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Axis/AxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Axis/DateTimeAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Axis/DisplayAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Axis/NumericAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Axis/RangeAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Chart/Chart.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/DataPoint/AreaDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/DataPoint/BarDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/DataPoint/BubbleDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/DataPoint/ColumnDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/DataPoint/LineDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/DataPoint/PieDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/DataPoint/ScatterDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Primitives/DelegatingListBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Series/AreaSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Series/DataPointSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Series/DefinitionSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Series/LegendItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Series/LineSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Charting/Series/PieSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Legend/Legend.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/Title/Title.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/WinRTXamlToolkit.Controls.DataVisualization/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/Release/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Axis/AxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Axis/DateTimeAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Axis/DisplayAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Axis/NumericAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Axis/RangeAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Chart/Chart.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/DataPoint/AreaDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/DataPoint/BarDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/DataPoint/BubbleDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/DataPoint/ColumnDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/DataPoint/LineDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/DataPoint/PieDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/DataPoint/ScatterDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Primitives/DelegatingListBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Series/AreaSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Series/DataPointSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Series/DefinitionSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Series/LegendItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Series/LineSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Charting/Series/PieSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Legend/Legend.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/Title/Title.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/WinRTXamlToolkit.Controls.DataVisualization/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Debug/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Axis/AxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Axis/DateTimeAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Axis/DisplayAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Axis/NumericAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Axis/RangeAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Chart/Chart.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/DataPoint/AreaDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/DataPoint/BarDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/DataPoint/BubbleDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/DataPoint/ColumnDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/DataPoint/LineDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/DataPoint/PieDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/DataPoint/ScatterDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Primitives/DelegatingListBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Series/AreaSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Series/DataPointSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Series/DefinitionSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Series/LegendItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Series/LineSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Charting/Series/PieSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Legend/Legend.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/Title/Title.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/WinRTXamlToolkit.Controls.DataVisualization/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x64/Release/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Axis/AxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Axis/DateTimeAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Axis/DisplayAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Axis/NumericAxisLabel.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Axis/RangeAxis.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Chart/Chart.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/DataPoint/AreaDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/DataPoint/BarDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/DataPoint/BubbleDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/DataPoint/ColumnDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/DataPoint/LineDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/DataPoint/PieDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/DataPoint/ScatterDataPoint.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Primitives/DelegatingListBox.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Series/AreaSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Series/DataPointSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Series/DefinitionSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Series/LegendItem.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Series/LineSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Charting/Series/PieSeries.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Legend/Legend.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Themes/Generic.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/Title/Title.xaml",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/WinRTXamlToolkit.Controls.DataVisualization/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Debug/intermediatexaml/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Charting/Axis/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Charting/Chart/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Charting/DataPoint/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Charting/Primitives/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Charting/Series/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Legend/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/TempPE/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Themes/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/Title/_._",
+        "lib/uap10.0/WinRTXamlToolkit.Controls.DataVisualization/obj/x86/Release/intermediatexaml/_._",
+        "winrtxamltoolkit.controls.datavisualization.2.3.0.nupkg.sha512",
+        "winrtxamltoolkit.controls.datavisualization.nuspec"
+      ]
+    },
+    "WinRTXamlToolkit.Controls.DataVisualization.UWP/2.3.0": {
+      "sha512": "rK710Wi5kWRaXRmeoGu6IbmxUlAFP6ohYGXA9LVk5mJwOGIWyNtkv35nxgh755yupaDCkbDzbmxeOn0UZcHGow==",
+      "type": "package",
+      "path": "winrtxamltoolkit.controls.datavisualization.uwp/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "winrtxamltoolkit.controls.datavisualization.uwp.2.3.0.nupkg.sha512",
+        "winrtxamltoolkit.controls.datavisualization.uwp.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
       "DocumentFormat.OpenXml >= 2.8.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.7",
-      "Microsoft.Toolkit.Uwp.UI >= 4.0.0",
-      "Microsoft.Toolkit.Uwp.UI.Animations >= 4.0.0",
-      "Microsoft.Toolkit.Uwp.UI.Controls >= 4.0.0",
-      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid >= 4.0.0"
+      "Microsoft.Toolkit.Uwp.UI >= 5.0.0",
+      "Microsoft.Toolkit.Uwp.UI.Animations >= 5.0.0",
+      "Microsoft.Toolkit.Uwp.UI.Controls >= 5.0.0",
+      "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid >= 5.0.0",
+      "WinRTXamlToolkit.Controls.DataVisualization.UWP >= 2.3.0"
     ]
   },
   "packageFolders": {
@@ -20475,19 +21393,23 @@
           },
           "Microsoft.Toolkit.Uwp.UI": {
             "target": "Package",
-            "version": "[4.0.0, )"
+            "version": "[5.0.0, )"
           },
           "Microsoft.Toolkit.Uwp.UI.Animations": {
             "target": "Package",
-            "version": "[4.0.0, )"
+            "version": "[5.0.0, )"
           },
           "Microsoft.Toolkit.Uwp.UI.Controls": {
             "target": "Package",
-            "version": "[4.0.0, )"
+            "version": "[5.0.0, )"
           },
           "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid": {
             "target": "Package",
-            "version": "[4.0.0, )"
+            "version": "[5.0.0, )"
+          },
+          "WinRTXamlToolkit.Controls.DataVisualization.UWP": {
+            "target": "Package",
+            "version": "[2.3.0, )"
           }
         },
         "imports": [

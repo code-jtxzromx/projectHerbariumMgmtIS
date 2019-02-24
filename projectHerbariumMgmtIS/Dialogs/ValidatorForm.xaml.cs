@@ -33,11 +33,18 @@ namespace projectHerbariumMgmtIS.Dialogs
             get { return (Validator)GetValue(ValidatorDataProperty); }
             set { SetValue(ValidatorDataProperty, value); }
         }
+        public bool IsMaintenance
+        {
+            get { return (bool)GetValue(IsMaintenanceProperty); }
+            set { SetValue(IsMaintenanceProperty, value); }
+        }
 
         public static readonly DependencyProperty TransactionFormProperty =
             DependencyProperty.Register("TransactionForm", typeof(string), typeof(ValidatorForm), new PropertyMetadata(""));
         public static readonly DependencyProperty ValidatorDataProperty =
             DependencyProperty.Register("ValidatorData", typeof(Validator), typeof(ValidatorForm), new PropertyMetadata(new Validator()));
+        public static readonly DependencyProperty IsMaintenanceProperty =
+            DependencyProperty.Register("IsMaintenance", typeof(bool), typeof(ValidatorForm), new PropertyMetadata(true));
 
         // Constructor
         public ValidatorForm()
@@ -51,16 +58,14 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             if (this.ValidateForm())
             {
-                if (TransactionForm == "Add External Validator")
+                if (IsMaintenance)
                 {
-                    TransactionResult = ValidatorData.AddValidator();
-                    args.Cancel = false;
+                    if (TransactionForm == "Add External Validator")
+                        TransactionResult = ValidatorData.AddValidator();
+                    else if (TransactionForm == "Edit External Validator")
+                        TransactionResult = ValidatorData.EditValidator();
                 }
-                else if (TransactionForm == "Edit External Validator")
-                {
-                    TransactionResult = ValidatorData.EditValidator();
-                    args.Cancel = false;
-                }
+                args.Cancel = false;
             }
             else
                 args.Cancel = true;

@@ -33,11 +33,20 @@ namespace projectHerbariumMgmtIS.Dialogs
             get { return (PlantType)GetValue(PlantTypeDataProperty); }
             set { SetValue(PlantTypeDataProperty, value); }
         }
+        public bool IsMaintenance
+        {
+            get { return (bool)GetValue(IsMaintenanceProperty); }
+            set { SetValue(IsMaintenanceProperty, value); }
+        }
 
         public static readonly DependencyProperty PlantTypeDataProperty =
             DependencyProperty.Register("PlantTypeData", typeof(PlantType), typeof(PlantTypeForm), new PropertyMetadata(new PlantType()));
         public static readonly DependencyProperty TransactionFormProperty =
             DependencyProperty.Register("TransactionForm", typeof(string), typeof(PlantTypeForm), new PropertyMetadata(""));
+        public static readonly DependencyProperty IsMaintenanceProperty =
+            DependencyProperty.Register("IsMaintenance", typeof(bool), typeof(PlantTypeForm), new PropertyMetadata(true));
+
+
 
         // Constructor
         public PlantTypeForm()
@@ -50,16 +59,14 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             if (this.ValidateForm())
             {
-                if (TransactionForm == "Add Plant Type")
+                if (IsMaintenance)
                 {
-                    TransactionResult = PlantTypeData.AddPlantType();
-                    args.Cancel = false;
+                    if (TransactionForm == "Add Plant Type")
+                        TransactionResult = PlantTypeData.AddPlantType();
+                    else if (TransactionForm == "Edit Plant Type")
+                        TransactionResult = PlantTypeData.EditPlantType();                    
                 }
-                else if (TransactionForm == "Edit Plant Type")
-                {
-                    TransactionResult = PlantTypeData.EditPlantType();
-                    args.Cancel = false;
-                }
+                args.Cancel = false;
             }
             else
                 args.Cancel = true;

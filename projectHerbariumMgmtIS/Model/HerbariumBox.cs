@@ -70,9 +70,7 @@ namespace projectHerbariumMgmtIS.Model
             List<HerbariumBox> familyBoxes = new List<HerbariumBox>();
             DatabaseConnection connection = new DatabaseConnection();
 
-            connection.setQuery("SELECT FB.strBoxNumber, FB.strFamilyName, FB.intBoxLimit, FB.intBoxLimit - COUNT(HI.intStoredSheetID) " +
-                                "FROM viewFamilyBox FB LEFT JOIN viewHerbariumInventory HI ON FB.strFamilyName = HI.strFamilyName " +
-                                "GROUP BY FB.strBoxNumber, FB.strFamilyName, FB.intBoxLimit");
+            connection.setQuery("SELECT strBoxNumber, strFamilyName, intBoxLimit, intCurrentNo FROM viewFamilyBox");
             SqlDataReader sqlData = connection.executeResult();
 
             while (sqlData.Read())
@@ -88,31 +86,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.closeResult();
             return familyBoxes;
         }
-
-        public List<HerbariumBox> GetCriticalBoxes()
-        {
-            List<HerbariumBox> familyBoxes = new List<HerbariumBox>();
-            DatabaseConnection connection = new DatabaseConnection();
-
-            connection.setQuery("SELECT FB.strBoxNumber, FB.strFamilyName, FB.intBoxLimit - COUNT(HI.intStoredSheetID) " +
-                                "FROM viewFamilyBox FB LEFT JOIN viewHerbariumInventory HI ON FB.strFamilyName = HI.strFamilyName " +
-                                "GROUP BY FB.strBoxNumber, FB.strFamilyName, FB.intBoxLimit " +
-                                "HAVING FB.intBoxLimit - COUNT(HI.intStoredSheetID) <= 5");
-            SqlDataReader sqlData = connection.executeResult();
-
-            while (sqlData.Read())
-            {
-                familyBoxes.Add(new HerbariumBox()
-                {
-                    BoxNumber = sqlData[0].ToString(),
-                    Family = sqlData[1].ToString(),
-                    CurrentNo = Convert.ToInt32(sqlData[2])
-                });
-            }
-            connection.closeResult();
-            return familyBoxes;
-        }
-
+        
         public int AddHerbariumBox()
         {
             int status;

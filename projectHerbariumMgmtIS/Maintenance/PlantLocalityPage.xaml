@@ -34,8 +34,8 @@
                     <toolkit:DataGridTemplateColumn Header="Full Locality" Width="4*" IsReadOnly="True">
                         <toolkit:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <StackPanel>
-                                    <TextBlock Text="{Binding FullLocation}" TextWrapping="WrapWholeWords" />
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding FullLocation}" Padding="12 0" MinHeight="35" TextWrapping="WrapWholeWords" />
                                 </StackPanel>
                             </DataTemplate>
                         </toolkit:DataGridTemplateColumn.CellTemplate>

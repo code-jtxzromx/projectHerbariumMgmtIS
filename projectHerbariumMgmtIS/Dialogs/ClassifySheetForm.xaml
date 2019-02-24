@@ -100,7 +100,7 @@
                     <TextBlock TextWrapping="WrapWholeWords" Text="{x:Bind VerifiedSheetData.FamilyName, Mode=OneWay}" />
                     <TextBlock Text="]" />
                 </control:WrapPanel>
-                <ToggleSwitch Grid.Column="1" Grid.Row="1" Margin="5 0" 
+                <ToggleSwitch x:Name="btnAvailable" Grid.Column="1" Grid.Row="1" Margin="5 0" 
                               OnContent="Available for Loaning" OffContent="Not Available for Loaning" 
                               IsOn="{x:Bind VerifiedSheetData.IsAvailable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Grid.Column="1" Grid.Row="2" Margin="5" TextWrapping="WrapWholeWords"

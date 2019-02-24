@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace projectHerbariumMgmtIS.Model
 {
@@ -25,11 +26,10 @@ namespace projectHerbariumMgmtIS.Model
 
         public List<MainMenu> GetMenus()
         {
-            int accessLv = (StaticAccess.Role == "ADMINISTRATOR") ? 3 : ((StaticAccess.Role == "CURATOR") ? 2 : 1 );
-            
+            int accessLv = (StaticAccess.Role == "ADMINISTRATOR") ? 3 : ((StaticAccess.Role == "CURATOR") ? 2 : 1);
             List<MainMenu> menus = new List<MainMenu>();
-            DatabaseConnection connection = new DatabaseConnection();
 
+            DatabaseConnection connection = new DatabaseConnection();
             connection.setQuery("SELECT strMainMenu, strPageLocation, strGlyphCode " +
                                 "FROM tblSystemMenu " +
                                 "WHERE strLevel = 'A' AND intAccessLevel <= @accessLevel");
@@ -46,6 +46,22 @@ namespace projectHerbariumMgmtIS.Model
                 });
             }
             connection.closeResult();
+
+            //XElement xelement = XElement.Load("Model\\MainMenu.xml");
+            //var main_menu = from element in xelement.Elements("MainMenu")
+            //                where (int)element.Element("AccessLevel") <= accessLv
+            //                select element;
+
+            //foreach (var menu in main_menu)
+            //{
+            //    menus.Add(new MainMenu()
+            //    {
+            //        Menu = menu.Element("MenuName").Value,
+            //        TagPage = menu.Element("Page").Value,
+            //        GlyphCode = menu.Element("Icon").Value
+            //    });
+            //}
+
             return menus;
         }
     }

@@ -5,11 +5,24 @@
     xmlns:local="using:projectHerbariumMgmtIS.MenuPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:chart="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    xmlns:series="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    xmlns:datavisual="using:WinRTXamlToolkit.Controls.DataVisualization"
     xmlns:model="using:projectHerbariumMgmtIS.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid >
+    <Grid Padding="10" RequestedTheme="Light">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0" StartPoint="1,1">
+                <!-- Earthly -->
+                <GradientStop Color="#DF649173" Offset="1"/>
+                <GradientStop Color="#DFDBD5A4" Offset="0"/>
+                <!-- Under the Lake -->
+                <!--<GradientStop Color="#DF093028" Offset="1"/>
+                <GradientStop Color="#7F237A57" Offset="0"/>-->
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
@@ -27,29 +40,65 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="500" />
+                    <ColumnDefinition Width="300" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="System Status" Margin="20 5" FontSize="16" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
-                <CalendarView Margin="20 5" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" />
-                <GridView Grid.Column="1" Grid.Row="1" x:Name="grvCard" Padding="20 5" >
-                    <GridView.ItemTemplate>
-                        <DataTemplate x:DataType="model:GridViewList">
-                            <Grid Width="200" Margin="5 0 5 5" Background="#FFEEEEEE">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto" />
-                                    <RowDefinition Height="50" />
-                                </Grid.RowDefinitions>
+                <ListView Grid.Column="0" Grid.Row="1" x:Name="grvCard" Padding="5" SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="model:ItemListView">
+                            <Grid Width="400" Margin="0 5">
+                                <Grid.Background>
+                                    <LinearGradientBrush EndPoint="0,0.5" StartPoint="0.5,0.5">
+                                        <GradientStop Color="#FF215F00" Offset="1"/>
+                                        <GradientStop Color="#FFE4E4D9" Offset="0"/>
+                                    </LinearGradientBrush>
+                                </Grid.Background>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="350" />
+                                </Grid.ColumnDefinitions>
 
-                                <TextBlock Grid.Row="0" Margin="10 5" Text="{Binding Count}" FontSize="48" />
-                                <Border Grid.Row="1"  Background="#FFDDDDDD">
-                                    <TextBlock Margin="10" FontSize="12" Text="{Binding Title}" TextWrapping="WrapWholeWords"/>
+                                <TextBlock Grid.Column="0" FontWeight="Bold" FontSize="12" Margin="10 5" Text="{Binding Count}" 
+                                           Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" />
+                                <Border Grid.Column="1"  Background="#7FDDDDDD">
+                                    <TextBlock Margin="10" FontWeight="Bold" FontSize="12" Text="{Binding Title}" TextWrapping="WrapWholeWords"/>
                                 </Border>
                             </Grid>
                         </DataTemplate>
-                    </GridView.ItemTemplate>
-                </GridView>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <chart:Chart Title="Title #1" Grid.Column="0" Grid.Row="0">
+                        <chart:Chart.Series>
+                            
+                        </chart:Chart.Series>
+                    </chart:Chart>
+                    <chart:Chart Title="Title #2" Grid.Column="1" Grid.Row="0">
+                        <chart:Chart.Series>
+
+                        </chart:Chart.Series>
+                    </chart:Chart>
+                    <chart:Chart Title="Title #3" Grid.Column="0" Grid.Row="1">
+                        <chart:Chart.Series>
+
+                        </chart:Chart.Series>
+                    </chart:Chart>
+                    <chart:Chart Title="Title #4" Grid.Column="1" Grid.Row="1">
+                        <chart:Chart.Series>
+
+                        </chart:Chart.Series>
+                    </chart:Chart>
+                </Grid>
             </Grid>
             <!--<Grid Width="340">
                 <Grid.RowDefinitions>

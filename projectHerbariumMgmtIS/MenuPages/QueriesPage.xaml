@@ -9,7 +9,17 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Padding="10" RequestedTheme="Light">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0" StartPoint="1,1">
+                <!-- Earthly -->
+                <GradientStop Color="#DF649173" Offset="1"/>
+                <GradientStop Color="#DFDBD5A4" Offset="0"/>
+                <!-- Under the Lake -->
+                <!--<GradientStop Color="#DF093028" Offset="1"/>
+                <GradientStop Color="#7F237A57" Offset="0"/>-->
+            </LinearGradientBrush>
+        </Grid.Background>
         <Pivot>
             <PivotItem Header="Taxon Species">
                 <query:QuerySpeciesPage />

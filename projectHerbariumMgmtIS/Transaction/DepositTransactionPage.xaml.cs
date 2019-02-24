@@ -1,4 +1,5 @@
-﻿using projectHerbariumMgmtIS.Model;
+﻿using projectHerbariumMgmtIS.Dialogs;
+using projectHerbariumMgmtIS.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,27 +31,86 @@ namespace projectHerbariumMgmtIS.Transaction
         private bool isFileUpload = false;
         private byte[] imageBinary;
         private int TransactionResult;
-
+        
         // Properties
         public bool IsExisting
         {
             get { return (bool)GetValue(IsExistingProperty); }
-            set
-            {
-                SetValue(IsExistingProperty, value);
-            }
+            set { SetValue(IsExistingProperty, value); }
         }
         public PlantDeposit NewDepositData
         {
             get { return (PlantDeposit)GetValue(NewDepositDataProperty); }
             set { SetValue(NewDepositDataProperty, value); }
         }
+        public PlantType NewPlantType
+        {
+            get { return (PlantType)GetValue(NewPlantTypeProperty); }
+            set { SetValue(NewPlantTypeProperty, value); }
+        }
+        public TaxonSpecies NewSpecies
+        {
+            get { return (TaxonSpecies)GetValue(NewSpeciesProperty); }
+            set { SetValue(NewSpeciesProperty, value); }
+        }
+        public Collector NewCollector
+        {
+            get { return (Collector)GetValue(NewCollectorProperty); }
+            set { SetValue(NewCollectorProperty, value); }
+        }
+        public Validator NewValidator
+        {
+            get { return (Validator)GetValue(NewValidatorProperty); }
+            set { SetValue(NewValidatorProperty, value); }
+        }
+        public PlantLocality NewLocality
+        {
+            get { return (PlantLocality)GetValue(NewLocalityProperty); }
+            set { SetValue(NewLocalityProperty, value); }
+        }
+        public bool IsVerified
+        {
+            get { return (bool)GetValue(IsVerifiedProperty); }
+            set
+            {
+                SetValue(IsVerifiedProperty, value);
+                int SpanCol = (value) ? 3 : 1;
 
-        public static readonly DependencyProperty IsExistingProperty =
-            DependencyProperty.Register("IsExisting", typeof(bool), typeof(DepositTransactionPage), new PropertyMetadata(false));
+                Grid.SetColumnSpan(cbxLocality, SpanCol);
+                Grid.SetColumnSpan(msgLocality, SpanCol);
+                Grid.SetColumnSpan(txfLocality, SpanCol);
+                Grid.SetColumnSpan(txfDescription, SpanCol);
+                Grid.SetColumnSpan(msgDescription, SpanCol);
+                Grid.SetColumn(btnAddLocality, SpanCol);
+                Grid.SetColumn(btnDeleteLocality, SpanCol);
+
+                msgOrgAccessionNo.Visibility = Visibility.Collapsed;
+                msgNewAccessionNo.Visibility = Visibility.Collapsed;
+                msgPlantType.Visibility = Visibility.Collapsed;
+                msgScientifcName.Visibility = Visibility.Collapsed;
+                msgCollector.Visibility = Visibility.Collapsed;
+                msgValidator.Visibility = Visibility.Collapsed;
+                msgLocality.Visibility = Visibility.Collapsed;
+                msgDescription.Visibility = Visibility.Collapsed;
+            }
+        }
+        public static readonly DependencyProperty IsVerifiedProperty =
+            DependencyProperty.Register("IsVerified", typeof(bool), typeof(DepositTransactionPage), new PropertyMetadata(false));
         public static readonly DependencyProperty NewDepositDataProperty =
             DependencyProperty.Register("NewDepositData", typeof(PlantDeposit), typeof(DepositTransactionPage), new PropertyMetadata(new PlantDeposit()));
-        
+        public static readonly DependencyProperty NewPlantTypeProperty =
+            DependencyProperty.Register("NewPlantType", typeof(PlantType), typeof(DepositTransactionPage), new PropertyMetadata(new PlantType()));
+        public static readonly DependencyProperty NewSpeciesProperty =
+            DependencyProperty.Register("NewSpecies", typeof(TaxonSpecies), typeof(DepositTransactionPage), new PropertyMetadata(new TaxonSpecies()));
+        public static readonly DependencyProperty NewCollectorProperty =
+            DependencyProperty.Register("NewCollector", typeof(Collector), typeof(DepositTransactionPage), new PropertyMetadata(new Collector()));
+        public static readonly DependencyProperty NewValidatorProperty =
+            DependencyProperty.Register("NewValidator", typeof(Validator), typeof(Validator), new PropertyMetadata(new Validator()));
+        public static readonly DependencyProperty NewLocalityProperty =
+            DependencyProperty.Register("NewLocality", typeof(PlantLocality), typeof(DepositTransactionPage), new PropertyMetadata(new PlantLocality()));
+        public static readonly DependencyProperty IsExistingProperty =
+            DependencyProperty.Register("IsExisting", typeof(bool), typeof(DepositTransactionPage), new PropertyMetadata(false));
+
         // Constructor
         public DepositTransactionPage()
         {
@@ -59,6 +119,110 @@ namespace projectHerbariumMgmtIS.Transaction
         }
 
         // Event Methods
+        private async void btnAddPlantType_Click(object sender, RoutedEventArgs e)
+        {
+            PlantTypeForm form = new PlantTypeForm()
+            {
+                TransactionForm = "Add Plant Type",
+                IsMaintenance = false,
+                PrimaryButtonText = "Save"
+            };
+            var result = await form.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                NewPlantType = form.PlantTypeData;
+                cbxPlantType.Visibility = Visibility.Collapsed;
+                btnAddPlantType.Visibility = Visibility.Collapsed;
+                txfPlantType.Visibility = Visibility.Visible;
+                btnDeletePlantType.Visibility = Visibility.Visible;
+            }
+        }
+
+        private async void btnAddTaxon_Click(object sender, RoutedEventArgs e)
+        {
+            SpeciesForm form = new SpeciesForm()
+            {
+                TransactionForm = "Add Species",
+                IsMaintenance = false,
+                PrimaryButtonText = "Save"
+            };
+            var result = await form.ShowAsync();
+        }
+
+        private async void btnAddCollector_Click(object sender, RoutedEventArgs e)
+        {
+            CollectorForm form = new CollectorForm()
+            {
+                TransactionForm = "Add Collector",
+                IsMaintenance = false,
+                PrimaryButtonText = "Save"
+            };
+            var result = await form.ShowAsync();
+        }
+
+        private async void btnAddValidator_Click(object sender, RoutedEventArgs e)
+        {
+            ValidatorForm form = new ValidatorForm()
+            {
+                TransactionForm = "Add External Validator",
+                IsMaintenance = false,
+                PrimaryButtonText = "Save"
+            };
+            var result = await form.ShowAsync();
+        }
+
+        private async void btnAddLocality_Click(object sender, RoutedEventArgs e)
+        {
+            LocalityForm form = new LocalityForm()
+            {
+                TransactionForm = "Add Plant Locality",
+                IsMaintenance = false,
+                PrimaryButtonText = "Save"
+            };
+            var result = await form.ShowAsync();
+        }
+
+        private void btnDeletePlantType_Click(object sender, RoutedEventArgs e)
+        {
+            cbxPlantType.Visibility = Visibility.Visible;
+            btnAddPlantType.Visibility = Visibility.Visible;
+            txfPlantType.Visibility = Visibility.Collapsed;
+            btnDeletePlantType.Visibility = Visibility.Collapsed;
+        }
+
+        private void btnDeleteTaxon_Click(object sender, RoutedEventArgs e)
+        {
+            cbxScientificName.Visibility = Visibility.Visible;
+            btnAddTaxon.Visibility = Visibility.Visible;
+            txfScientificName.Visibility = Visibility.Collapsed;
+            btnDeleteTaxon.Visibility = Visibility.Collapsed;
+        }
+
+        private void btnDeleteCollector_Click(object sender, RoutedEventArgs e)
+        {
+            cbxCollector.Visibility = Visibility.Visible;
+            btnAddCollector.Visibility = Visibility.Visible;
+            txfCollector.Visibility = Visibility.Collapsed;
+            btnDeleteCollector.Visibility = Visibility.Collapsed;
+        }
+
+        private void btnDeleteValidator_Click(object sender, RoutedEventArgs e)
+        {
+            cbxValidator.Visibility = Visibility.Visible;
+            btnAddValidator.Visibility = Visibility.Visible;
+            txfValidator.Visibility = Visibility.Collapsed;
+            btnDeleteValidator.Visibility = Visibility.Collapsed;
+        }
+
+        private void btnDeleteLocality_Click(object sender, RoutedEventArgs e)
+        {
+            cbxLocality.Visibility = Visibility.Visible;
+            btnAddLocality.Visibility = Visibility.Visible;
+            txfLocality.Visibility = Visibility.Collapsed;
+            btnDeleteLocality.Visibility = Visibility.Collapsed;
+        }
+
         private void cbxScientificName_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cbxScientificName.SelectedIndex != -1)
@@ -103,13 +267,17 @@ namespace projectHerbariumMgmtIS.Transaction
 
             if (ValidateForm())
             {
+                NewDepositData.PlantType = (cbxPlantType.Visibility == Visibility.Visible) ? cbxPlantType.SelectedItem.ToString() : txfPlantType.Text;
+                NewDepositData.TaxonName = (cbxScientificName.Visibility == Visibility.Visible) ? cbxScientificName.SelectedItem.ToString() : txfScientificName.Text;
+                NewDepositData.Collector = (cbxCollector.Visibility == Visibility.Visible) ? cbxCollector.SelectedItem.ToString() : txfCollector.Text;
+                NewDepositData.Validator = (cbxValidator.Visibility == Visibility.Visible) ? cbxValidator.SelectedItem.ToString() : txfValidator.Text;
+                NewDepositData.Locality = (cbxLocality.Visibility == Visibility.Visible) ? cbxLocality.SelectedItem.ToString() : txfLocality.Text;
                 NewDepositData.DateCollected = dpkDateCollected.Date.ToString();
                 NewDepositData.DateDeposited = dpkDateDeposited.Date.ToString();
                 NewDepositData.DateVerified = dpkDateVerified.Date.ToString();
 
                 if (IsExisting && btnIsVerifiedDeposit.IsOn)                
-                    TransactionResult = NewDepositData.SaveVerifiedDeposit((chkSameAccession.IsChecked == true), 
-                                                                            isFileUpload, imageBinary);
+                    TransactionResult = NewDepositData.SaveVerifiedDeposit((chkSameAccession.IsChecked == true), isFileUpload, imageBinary);
                 else if (IsExisting)
                     TransactionResult = NewDepositData.SaveUnverifiedDeposit(isFileUpload, imageBinary);
                 else
@@ -170,10 +338,7 @@ namespace projectHerbariumMgmtIS.Transaction
             }
         }
 
-        private void btnCapturePhoto_Click(object sender, RoutedEventArgs e)
-        {
-            isFileUpload = false;
-        }
+        private void btnCapturePhoto_Click(object sender, RoutedEventArgs e) => isFileUpload = false;
 
         // Methods
         private void ClearForm()

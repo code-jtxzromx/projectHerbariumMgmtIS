@@ -56,6 +56,7 @@ namespace projectHerbariumMgmtIS.Dialogs
 
         private async void ContentDialog_SecondaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
+            args.Cancel = true;
             FileOpenPicker filePicker = new FileOpenPicker
             {
                 ViewMode = PickerViewMode.Thumbnail,
@@ -82,8 +83,6 @@ namespace projectHerbariumMgmtIS.Dialogs
                     this.image = byteArray;
                 }
             }
-
-            args.Cancel = true;
         }
 
         // Methods

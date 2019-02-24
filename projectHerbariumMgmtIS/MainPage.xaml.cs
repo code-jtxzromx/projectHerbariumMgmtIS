@@ -1,4 +1,5 @@
-﻿using projectHerbariumMgmtIS.Dialogs;
+﻿using Microsoft.Toolkit.Uwp.UI.Controls;
+using projectHerbariumMgmtIS.Dialogs;
 using projectHerbariumMgmtIS.MenuPages;
 using projectHerbariumMgmtIS.Model;
 using System;
@@ -7,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using System.Xml;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -18,6 +20,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
@@ -80,8 +83,8 @@ namespace projectHerbariumMgmtIS
             var selectedItem = (MainMenu)args.SelectedItem;
             string pageName = "projectHerbariumMgmtIS.MenuPages." + ((string)selectedItem.TagPage);
             Type pageType = Type.GetType(pageName);
-            frmPageContent.Navigate(pageType);
-            navMainMenu.Header = selectedItem.Menu;
+            //frmPageContent.Navigate(pageType);
+            //navMainMenu.Header = selectedItem.Menu;
         }
 
         private void KeyBoardEnter_KeyDown(object sender, KeyRoutedEventArgs e)
@@ -119,12 +122,39 @@ namespace projectHerbariumMgmtIS
 
                 foreach (var item in new MainMenu().GetMenus())
                 {
-                    navMainMenu.MenuItems.Add(item);
+                    Page menu = new Page();
+                    switch(item.TagPage)
+                    {
+                        case "HomePage":
+                            menu = new HomePage();
+                            break;
+                        case "MaintenancePage":
+                            menu = new MaintenancePage();
+                            break;
+                        case "TransactionPage":
+                            menu = new TransactionPage();
+                            break;
+                        case "UtilitiesPage":
+                            menu = new UtilitiesPage();
+                            break;
+                        case "QueriesPage":
+                            menu = new QueriesPage();
+                            break;
+                        case "ReportsPage":
+                            menu = new ReportsPage();
+                            break;
+                    }
+                    string pageName = "projectHerbariumMgmtIS.MenuPages." + item.TagPage;
+                    Type pageType = Type.GetType(pageName);
+
+                    tnvMainMenu.Items.Add(new TabViewItem()
+                    {
+                        Header = item.Menu,
+                        Icon = new FontIcon { Glyph = item.GlyphCode },
+                        Content = menu
+                    });
                 }
-
-                frmPageContent.Navigate(typeof(HomePage));
-                navMainMenu.Header = "Homepage";
-
+                
                 LoginScreen.Visibility = Visibility.Collapsed;
                 MainNavigation.Visibility = Visibility.Visible;
             }
@@ -148,7 +178,8 @@ namespace projectHerbariumMgmtIS
             StaffName = "";
             btnClear_Click(btnClear, null);
 
-            navMainMenu.MenuItems.Clear();
+            tnvMainMenu.Items.Clear();
+            //navMainMenu.MenuItems.Clear();
 
             MainNavigation.Visibility = Visibility.Collapsed;
             LoginScreen.Visibility = Visibility.Visible;

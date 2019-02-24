@@ -417,7 +417,7 @@ namespace projectHerbariumMgmtIS.Model
             connection.addProcParameter("@orgDeposit", SqlDbType.VarChar, AccessionNumber);
             connection.addProcParameter("@newDeposit", SqlDbType.VarChar, newDeposit);
             connection.addProcParameter("@species", SqlDbType.VarChar, taxonName);
-            connection.addProcParameter("@validator", SqlDbType.VarChar, Staff);
+            connection.addProcParameter("@validator", SqlDbType.VarChar, Validator);
             connection.addProcParameter("@staff", SqlDbType.VarChar, Staff);
 
             status = connection.executeProcedure();

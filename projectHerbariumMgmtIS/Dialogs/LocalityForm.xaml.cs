@@ -39,11 +39,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                 cbxProvince_SelectionChanged(cbxProvince, null);
             }
         }
-
+        public bool IsMaintenance
+        {
+            get { return (bool)GetValue(IsMaintenanceProperty); }
+            set { SetValue(IsMaintenanceProperty, value); }
+        }
+        
         public static readonly DependencyProperty LocalityDataProperty =
             DependencyProperty.Register("LocalityData", typeof(PlantLocality), typeof(LocalityForm), new PropertyMetadata(new PlantLocality()));
         public static readonly DependencyProperty TransactionFormProperty =
             DependencyProperty.Register("TransactionForm", typeof(string), typeof(LocalityForm), new PropertyMetadata(""));
+        public static readonly DependencyProperty IsMaintenanceProperty =
+            DependencyProperty.Register("IsMaintenance", typeof(bool), typeof(LocalityForm), new PropertyMetadata(true));
 
         // Constructor
         public LocalityForm()
@@ -85,16 +92,14 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             if (this.ValidateForm())
             {
-                if (TransactionForm == "Add Plant Locality")
+                if (IsMaintenance)
                 {
-                    TransactionResult = LocalityData.AddLocality();
-                    args.Cancel = false;
+                    if (TransactionForm == "Add Plant Locality")
+                        TransactionResult = LocalityData.AddLocality();
+                    else if (TransactionForm == "Edit Plant Locality")
+                        TransactionResult = LocalityData.EditLocality();
                 }
-                else if (TransactionForm == "Edit Plant Locality")
-                {
-                    TransactionResult = LocalityData.EditLocality();
-                    args.Cancel = false;
-                }
+                args.Cancel = false;
             }
             else
                 args.Cancel = true;

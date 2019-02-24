@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SubMenus>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Taxonomic Hierarchy </MenuName>
+    <Page> TaxonomicHierarchyPage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Species Author </MenuName>
+    <Page> SpeciesAuthorPage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Species Basionym </MenuName>
+    <Page> SpeciesNomenclaturePage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Plant Types </MenuName>
+    <Page> PlantTypePage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Herbarium Boxes </MenuName>
+    <Page> HerbariumBoxPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Plant Locality </MenuName>
+    <Page> PlantLocalityPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Collector </MenuName>
+    <Page> CollectorPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Borrower </MenuName>
+    <Page> BorrowerPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> External Validator </MenuName>
+    <Page> ExternalValidatorPage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Herbarium Staff </MenuName>
+    <Page> HerbariumStaffPage </Page>
+    <AccessLevel> 3 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Maintenance </MainMenu>
+    <MenuName> Access Accounts </MenuName>
+    <Page> AccessAccountsPage </Page>
+    <AccessLevel> 3 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Transactions </MainMenu>
+    <MenuName> Plant Deposit </MenuName>
+    <Page> PlantDepositPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Transactions </MainMenu>
+    <MenuName> Plant Receiving </MenuName>
+    <Page> PlantReceivingPage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Transactions </MainMenu>
+    <MenuName> Plant Resubmission </MenuName>
+    <Page> PlantResubmissionPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Transactions </MainMenu>
+    <MenuName> Plant Verification </MenuName>
+    <Page> PlantVerificationPage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Transactions </MainMenu>
+    <MenuName> Plant Classification </MenuName>
+    <Page> PlantClassificationPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Transactions </MainMenu>
+    <MenuName> Plant Loaning </MenuName>
+    <Page> PlantLoaningPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Management Tools </MainMenu>
+    <MenuName> Herbarium Inventory </MenuName>
+    <Page> HerbariumInventoryPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Management Tools </MainMenu>
+    <MenuName> Sheet Tracking </MenuName>
+    <Page> SheetTrackingPage </Page>
+    <AccessLevel> 1 </AccessLevel>
+  </SubMenu>
+  <SubMenu>
+    <MainMenu> Management Tools </MainMenu>
+    <MenuName> Audit Trailing </MenuName>
+    <Page> AuditTrailingPage </Page>
+    <AccessLevel> 2 </AccessLevel>
+  </SubMenu>
+</SubMenus>

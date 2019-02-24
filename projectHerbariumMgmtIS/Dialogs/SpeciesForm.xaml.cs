@@ -38,11 +38,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                 chkIsKnownSpecies.IsChecked = value.IdentifiedStatus;
             }
         }
+        public bool IsMaintenance
+        {
+            get { return (bool)GetValue(IsMaintenanceProperty); }
+            set { SetValue(IsMaintenanceProperty, value); }
+        }
 
         public static readonly DependencyProperty SpeciesDataProperty =
             DependencyProperty.Register("SpeciesData", typeof(TaxonSpecies), typeof(SpeciesForm), new PropertyMetadata(new TaxonSpecies()));
         public static readonly DependencyProperty TransactionFormProperty =
             DependencyProperty.Register("TransactionForm", typeof(string), typeof(SpeciesForm), new PropertyMetadata(""));
+        public static readonly DependencyProperty IsMaintenanceProperty =
+            DependencyProperty.Register("IsMaintenance", typeof(bool), typeof(SpeciesForm), new PropertyMetadata(true));
 
         // Constructor
         public SpeciesForm()
@@ -79,16 +86,14 @@ namespace projectHerbariumMgmtIS.Dialogs
         {
             if (this.ValidateForm())
             {
-                if (TransactionForm == "Add Species")
+                if (IsMaintenance)
                 {
-                    TransactionResult = SpeciesData.AddSpecies();
-                    args.Cancel = true;
+                    if (TransactionForm == "Add Species")
+                        TransactionResult = SpeciesData.AddSpecies();
+                    else if (TransactionForm == "Edit Species")
+                        TransactionResult = SpeciesData.EditSpecies();
                 }
-                else if (TransactionForm == "Edit Species")
-                {
-                    TransactionResult = SpeciesData.EditSpecies();
-                    args.Cancel = false;
-                }
+                args.Cancel = false;
             }
             else
                 args.Cancel = true;

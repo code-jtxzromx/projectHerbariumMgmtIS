@@ -72,45 +72,55 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
+                    
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" Text="Scientific Name: " />
-                <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" Text="Accession Number: " />
-                <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Reference Accession: " 
+                <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" Text="Validated by: " />
+                <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Accession Number: " />
+                <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Reference Accession: " 
                            Visibility="{Binding ElementName=chkSameAccession, Path=IsChecked}"/>
-                <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Date Collected: " />
-                <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Date Deposited: " />
-                <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Location: " />
-                <TextBlock Grid.Column="0" Grid.Row="9" Margin="5" Text="Collector: " />
-                <TextBlock Grid.Column="0" Grid.Row="10" Margin="5" Text="Description: " />
+                <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Date Collected: " />
+                <TextBlock Grid.Column="0" Grid.Row="9" Margin="5" Text="Date Deposited: " />
+                <TextBlock Grid.Column="0" Grid.Row="10" Margin="5" Text="Location: " />
+                <TextBlock Grid.Column="0" Grid.Row="11" Margin="5" Text="Collector: " />
+                <TextBlock Grid.Column="0" Grid.Row="12" Margin="5" Text="Description: " />
 
                 <ComboBox x:Name="cbxTaxonName" Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"
                           SelectionChanged="cbxTaxonName_SelectionChanged"/>
-                <TextBlock Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:Name="msgTaxonName" Grid.Column="1" Grid.Row="1" Margin="5 -2" TextAlignment="Right" 
+                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
+                <ComboBox x:Name="cbxValidator" Grid.Column="1" Grid.Row="2" Margin="5" HorizontalAlignment="Stretch"
+                          SelectionChanged="cbxTaxonName_SelectionChanged" 
+                          SelectedItem="{x:Bind VerifyingDepositData.Validator, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock x:Name="msgValidator" Grid.Column="1" Grid.Row="3" Margin="5 -2" TextAlignment="Right" 
+                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
+                <TextBlock Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
                            Text="{x:Bind VerifyingDepositData.AccessionNumber, Mode=OneWay}" />
-                <TextBlock x:Name="msgTaxonName" Grid.Column="1" Grid.Row="2" Margin="5 -2" TextAlignment="Right" 
-                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
-                <CheckBox x:Name="chkSameAccession" Grid.Column="1" Grid.Row="3" Margin="5"
+                <CheckBox x:Name="chkSameAccession" Grid.Column="1" Grid.Row="5" Margin="5"
                           Content="Duplicate Herbarium Sheet" />
-                <ComboBox x:Name="cbxReferenceAccession" Grid.Column="1" Grid.Row="4" Margin="5" HorizontalAlignment="Stretch"
+                <ComboBox x:Name="cbxReferenceAccession" Grid.Column="1" Grid.Row="6" Margin="5" HorizontalAlignment="Stretch"
                           Visibility="{Binding ElementName=chkSameAccession, Path=IsChecked}" />
-                <TextBlock x:Name="msgReferenceAccession" Grid.Column="1" Grid.Row="5" Margin="5 -2" TextAlignment="Right" 
+                <TextBlock x:Name="msgReferenceAccession" Grid.Column="1" Grid.Row="7" Margin="5 -2" TextAlignment="Right" 
                            Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
-                <TextBlock Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind VerifyingDepositData.DateCollected, Mode=OneWay}" />
-                <TextBlock Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind VerifyingDepositData.DateDeposited, Mode=OneWay}" />
                 <TextBlock Grid.Column="1" Grid.Row="8" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind VerifyingDepositData.Locality, Mode=OneWay}" />
+                           Text="{x:Bind VerifyingDepositData.DateCollected, Mode=OneWay}" />
                 <TextBlock Grid.Column="1" Grid.Row="9" Margin="5" TextWrapping="WrapWholeWords"
-                           Text="{x:Bind VerifyingDepositData.Collector, Mode=OneWay}" />
+                           Text="{x:Bind VerifyingDepositData.DateDeposited, Mode=OneWay}" />
                 <TextBlock Grid.Column="1" Grid.Row="10" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.Locality, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="11" Margin="5" TextWrapping="WrapWholeWords"
+                           Text="{x:Bind VerifyingDepositData.Collector, Mode=OneWay}" />
+                <TextBlock Grid.Column="1" Grid.Row="12" Margin="5" TextWrapping="WrapWholeWords"
                            Text="{x:Bind VerifyingDepositData.Description, Mode=OneWay}" />
             </Grid>
         </ScrollViewer>

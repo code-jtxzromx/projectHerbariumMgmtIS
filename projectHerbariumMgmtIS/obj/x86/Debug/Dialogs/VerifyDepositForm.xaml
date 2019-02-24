@@ -58,7 +58,7 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="0" Width="240" Height="320" Margin="5 10" Background="#0F000000" VerticalAlignment="Top">
-            <Image x:ConnectionId='14' x:Name="picHerbariumSheet"                                               />
+            <Image x:ConnectionId='16' x:Name="picHerbariumSheet"                                               />
         </Border>
         <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Height="320">
             <Grid Margin="10 0">
@@ -72,45 +72,55 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
+                    
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Column="0" Grid.Row="0" Margin="5" Text="Scientific Name: " />
-                <TextBlock Grid.Column="0" Grid.Row="1" Margin="5" Text="Accession Number: " />
-                <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Reference Accession: " 
+                <TextBlock Grid.Column="0" Grid.Row="2" Margin="5" Text="Validated by: " />
+                <TextBlock Grid.Column="0" Grid.Row="4" Margin="5" Text="Accession Number: " />
+                <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Reference Accession: " 
                            Visibility="{Binding ElementName=chkSameAccession, Path=IsChecked}"/>
-                <TextBlock Grid.Column="0" Grid.Row="6" Margin="5" Text="Date Collected: " />
-                <TextBlock Grid.Column="0" Grid.Row="7" Margin="5" Text="Date Deposited: " />
-                <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Location: " />
-                <TextBlock Grid.Column="0" Grid.Row="9" Margin="5" Text="Collector: " />
-                <TextBlock Grid.Column="0" Grid.Row="10" Margin="5" Text="Description: " />
+                <TextBlock Grid.Column="0" Grid.Row="8" Margin="5" Text="Date Collected: " />
+                <TextBlock Grid.Column="0" Grid.Row="9" Margin="5" Text="Date Deposited: " />
+                <TextBlock Grid.Column="0" Grid.Row="10" Margin="5" Text="Location: " />
+                <TextBlock Grid.Column="0" Grid.Row="11" Margin="5" Text="Collector: " />
+                <TextBlock Grid.Column="0" Grid.Row="12" Margin="5" Text="Description: " />
 
                 <ComboBox x:ConnectionId='3' x:Name="cbxTaxonName" Grid.Column="1" Grid.Row="0" Margin="5" HorizontalAlignment="Stretch"
                                                                           />
-                <TextBlock x:ConnectionId='4' Grid.Column="1" Grid.Row="1" Margin="5" TextWrapping="WrapWholeWords"
+                <TextBlock x:ConnectionId='4' x:Name="msgTaxonName" Grid.Column="1" Grid.Row="1" Margin="5 -2" TextAlignment="Right" 
+                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
+                <ComboBox x:ConnectionId='5' x:Name="cbxValidator" Grid.Column="1" Grid.Row="2" Margin="5" HorizontalAlignment="Stretch"
+                                                                           
+                                                                                                                                  />
+                <TextBlock x:ConnectionId='6' x:Name="msgValidator" Grid.Column="1" Grid.Row="3" Margin="5 -2" TextAlignment="Right" 
+                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
+                <TextBlock x:ConnectionId='7' Grid.Column="1" Grid.Row="4" Margin="5" TextWrapping="WrapWholeWords"
                                                                                              />
-                <TextBlock x:ConnectionId='5' x:Name="msgTaxonName" Grid.Column="1" Grid.Row="2" Margin="5 -2" TextAlignment="Right" 
-                           Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
-                <CheckBox x:ConnectionId='6' x:Name="chkSameAccession" Grid.Column="1" Grid.Row="3" Margin="5"
+                <CheckBox x:ConnectionId='8' x:Name="chkSameAccession" Grid.Column="1" Grid.Row="5" Margin="5"
                           Content="Duplicate Herbarium Sheet" />
-                <ComboBox x:ConnectionId='7' x:Name="cbxReferenceAccession" Grid.Column="1" Grid.Row="4" Margin="5" HorizontalAlignment="Stretch"
+                <ComboBox x:ConnectionId='9' x:Name="cbxReferenceAccession" Grid.Column="1" Grid.Row="6" Margin="5" HorizontalAlignment="Stretch"
                           Visibility="{Binding ElementName=chkSameAccession, Path=IsChecked}" />
-                <TextBlock x:ConnectionId='8' x:Name="msgReferenceAccession" Grid.Column="1" Grid.Row="5" Margin="5 -2" TextAlignment="Right" 
+                <TextBlock x:ConnectionId='10' x:Name="msgReferenceAccession" Grid.Column="1" Grid.Row="7" Margin="5 -2" TextAlignment="Right" 
                            Text="This Field is Required" Foreground="Red" Visibility="Collapsed" />
-                <TextBlock x:ConnectionId='9' Grid.Column="1" Grid.Row="6" Margin="5" TextWrapping="WrapWholeWords"
-                                                                                           />
-                <TextBlock x:ConnectionId='10' Grid.Column="1" Grid.Row="7" Margin="5" TextWrapping="WrapWholeWords"
-                                                                                           />
                 <TextBlock x:ConnectionId='11' Grid.Column="1" Grid.Row="8" Margin="5" TextWrapping="WrapWholeWords"
-                                                                                      />
+                                                                                           />
                 <TextBlock x:ConnectionId='12' Grid.Column="1" Grid.Row="9" Margin="5" TextWrapping="WrapWholeWords"
-                                                                                       />
+                                                                                           />
                 <TextBlock x:ConnectionId='13' Grid.Column="1" Grid.Row="10" Margin="5" TextWrapping="WrapWholeWords"
+                                                                                      />
+                <TextBlock x:ConnectionId='14' Grid.Column="1" Grid.Row="11" Margin="5" TextWrapping="WrapWholeWords"
+                                                                                       />
+                <TextBlock x:ConnectionId='15' Grid.Column="1" Grid.Row="12" Margin="5" TextWrapping="WrapWholeWords"
                                                                                          />
             </Grid>
         </ScrollViewer>

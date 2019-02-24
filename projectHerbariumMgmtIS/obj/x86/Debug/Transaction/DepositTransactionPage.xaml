@@ -11,15 +11,15 @@
     <Grid x:ConnectionId='2' x:Name="pnlDepositRoot" HorizontalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:ConnectionId='3' x:Name="PicturePane" Width="auto" />
-            <ColumnDefinition x:ConnectionId='4' x:Name="DetailPane" Width="480" MaxWidth="680"/>
+            <ColumnDefinition x:ConnectionId='4' x:Name="DetailPane" Width="auto" MaxWidth="1080"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-            <Border Height="360" Width="270" Margin="10" Background="#0FFFFFFF">
-                <Image x:ConnectionId='31' x:Name="picHerbariumSheet" Height="360" Width="270" Stretch="Uniform" />
+            <Border Height="360" Width="270" Margin="10" Background="#5F555555">
+                <Image x:ConnectionId='46' x:Name="picHerbariumSheet" Height="360" Width="270" Stretch="Uniform" />
             </Border>
-            <Button x:ConnectionId='29' x:Name="btnUploadPhoto"                              Margin= "10 5" HorizontalAlignment="Stretch" Content="Upload Herbarium Sheet" />
-            <Button x:ConnectionId='30' x:Name="btnCapturePhoto"                               Margin="10 5" HorizontalAlignment="Stretch" Visibility="Collapsed" Content="Capture Photo" />
+            <Button x:ConnectionId='44' x:Name="btnUploadPhoto"                              Margin= "10 5" HorizontalAlignment="Stretch" Content="Upload Herbarium Sheet" />
+            <Button x:ConnectionId='45' x:Name="btnCapturePhoto"                               Margin="10 5" HorizontalAlignment="Stretch" Visibility="Collapsed" Content="Capture Photo" />
         </StackPanel>
         <Grid Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <Grid.RowDefinitions>
@@ -35,93 +35,154 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
+                        
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
+                        
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
+
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
+                        
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" MaxWidth="350" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" MaxWidth="350" />
+                        <ColumnDefinition Width="auto" />
                     </Grid.ColumnDefinitions>
 
                     <ToggleSwitch x:ConnectionId='7' x:Name="btnIsVerifiedDeposit" Grid.Row="0" Grid.ColumnSpan="2" Margin="10 5"
                                   OnContent="Verified Deposit" OffContent="Unverified Deposit"
+                                                                                                              
                                                                                />
-                    <ComboBox x:ConnectionId='8' x:Name="cbxPlantType" Grid.Row="1" Margin="5" 
-                              Header="Plant Type: *" HorizontalAlignment="Stretch"
-                                                                                                                                />
-                    <TextBlock x:ConnectionId='9' x:Name="msgPlantType" Grid.Row="2" Margin="5 -2" FlowDirection="RightToLeft"
+
+                    <ComboBox x:ConnectionId='8' x:Name="cbxPlantType" Grid.Row="1" Grid.Column="0" Margin="5" 
+                              Header="Plant Type: *" HorizontalAlignment="Stretch" />
+                    <Button x:ConnectionId='9' x:Name="btnAddPlantType"                              
+                            Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE710;" FontSize="14" FontFamily="Segoe MDL2 Assets"  />
+                    <TextBox x:ConnectionId='10' x:Name="txfPlantType" Grid.Row="1" Grid.Column="0" Margin="5" Visibility="Collapsed"
+                             Header="Plant Type:" HorizontalAlignment="Stretch" IsReadOnly="True"
+                                                                           />
+                    <Button x:ConnectionId='11' x:Name="btnDeletePlantType"                                  Visibility="Collapsed"
+                            Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
+                    <TextBlock x:ConnectionId='12' x:Name="msgPlantType" Grid.Row="2" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <ComboBox x:ConnectionId='10' x:Name="cbxScientificName" Grid.Row="3" Margin="5" 
+
+                    <ComboBox x:ConnectionId='13' x:Name="cbxScientificName" Grid.Row="1" Grid.Column="2" Margin="5" 
                               Header="Scientific Name: *" HorizontalAlignment="Stretch" 
                                                                                    
-                              Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"
-                                                                                                                                />
-                    <TextBlock x:ConnectionId='11' x:Name="msgScientifcName" Grid.Row="4" Margin="5 -2" FlowDirection="RightToLeft"
+                              Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}" />
+                    <Button x:ConnectionId='14' x:Name="btnAddTaxon"                           
+                            Grid.Row="1" Grid.Column="3" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE710;" FontSize="14" FontFamily="Segoe MDL2 Assets" 
+                            Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"  />
+                    <TextBox x:ConnectionId='15' x:Name="txfScientificName" Grid.Row="1" Grid.Column="2" Margin="5" Visibility="Collapsed"
+                             Header="Scientific Name:" HorizontalAlignment="Stretch" IsReadOnly="True"
+                                                                                    />
+                    <Button x:ConnectionId='16' x:Name="btnDeleteTaxon"                              Visibility="Collapsed"
+                            Grid.Row="1" Grid.Column="3" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
+                    <TextBlock x:ConnectionId='17' x:Name="msgScientifcName" Grid.Row="2" Grid.Column="2" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <TextBox x:ConnectionId='12' x:Name="txfOrgAccessionNo" Grid.Row="5" Margin="5"
+
+                    <TextBox x:ConnectionId='18' x:Name="txfOrgAccessionNo" Grid.Row="5" Grid.Column="0" Margin="5"
                              Header="Original Accession Number: *"
                                                                     
                                                                           
                                                                                                                            />
-                    <TextBlock x:ConnectionId='13' x:Name="msgOrgAccessionNo" Grid.Row="6" Margin="5 -2" FlowDirection="RightToLeft"
+                    <TextBlock x:ConnectionId='19' x:Name="msgOrgAccessionNo" Grid.Row="6" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <ComboBox x:ConnectionId='14' x:Name="cbxNewAccessionNo" Grid.Row="7" Margin="5"
+                    
+                    <ComboBox x:ConnectionId='20' x:Name="cbxNewAccessionNo" Grid.Row="5" Grid.Column="2" Margin="5"
                               Header="Verified Accession Number: *" HorizontalAlignment="Stretch"
                               IsEnabled="{Binding ElementName=chkSameAccession, Path=IsChecked, Mode=OneWay}" 
                               Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"
                                                                                                                                   />
-                    <TextBlock x:ConnectionId='15' x:Name="msgNewAccessionNo" Grid.Row="8" Margin="5 -2" FlowDirection="RightToLeft"
+                    <TextBlock x:ConnectionId='21' x:Name="msgNewAccessionNo" Grid.Row="6" Grid.Column="2" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <CheckBox x:ConnectionId='16' x:Name="chkSameAccession" Grid.Row="9" Grid.ColumnSpan="2" Margin="5"
+                    
+                    <CheckBox x:ConnectionId='22' x:Name="chkSameAccession" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
                               Content="This Herbarium Sheet is a Duplicate"
                               Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"/>
-                    <ComboBox x:ConnectionId='17' x:Name="cbxCollector" Grid.Row="10" Margin="5"
-                              Header="Collector's Name: *" HorizontalAlignment="Stretch" 
-                                                                                                                                />
-                    <TextBlock x:ConnectionId='18' x:Name="msgCollector" Grid.Row="11" Margin="5 -2" FlowDirection="RightToLeft"
+                    
+                    <ComboBox x:ConnectionId='23' x:Name="cbxCollector" Grid.Row="10" Grid.Column="0" Margin="5"
+                              Header="Collector's Name: *" HorizontalAlignment="Stretch" />
+                    <Button x:ConnectionId='24' x:Name="btnAddCollector"                              
+                            Grid.Row="10" Grid.Column="1" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE710;" FontSize="14" FontFamily="Segoe MDL2 Assets"  />
+                    <TextBox x:ConnectionId='25' x:Name="txfCollector" Grid.Row="10" Grid.Column="0" Margin="5" Visibility="Collapsed"
+                             Header="Collector's Name: " HorizontalAlignment="Stretch" IsReadOnly="True"
+                                                                               />
+                    <Button x:ConnectionId='26' x:Name="btnDeleteCollector"                                  Visibility="Collapsed"
+                            Grid.Row="10" Grid.Column="1" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
+                    <TextBlock x:ConnectionId='27' x:Name="msgCollector" Grid.Row="11" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <ComboBox x:ConnectionId='19' x:Name="cbxValidator" Grid.Row="12" Margin="5"
+                    
+                    <ComboBox x:ConnectionId='28' x:Name="cbxValidator" Grid.Row="10" Grid.Column="2" Margin="5"
                               Header="Validator's Name: *" HorizontalAlignment="Stretch"
-                                                                                                                                
                               Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"/>
-                    <TextBlock x:ConnectionId='20' x:Name="msgValidator" Grid.Row="13" Margin="5 -2" FlowDirection="RightToLeft"
+                    <Button x:ConnectionId='29' x:Name="btnAddValidator"                              
+                            Grid.Row="10" Grid.Column="3" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE710;" FontSize="14" FontFamily="Segoe MDL2 Assets"
+                            Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"  />
+                    <TextBox x:ConnectionId='30' x:Name="txfValidator" Grid.Row="10" Grid.Column="2" Margin="5" Visibility="Collapsed"
+                             Header="Validator's Name: " HorizontalAlignment="Stretch" IsReadOnly="True" 
+                                                                               />
+                    <Button x:ConnectionId='31' x:Name="btnDeleteValidator"                                  Visibility="Collapsed"
+                            Grid.Row="10" Grid.Column="3" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
+                    <TextBlock x:ConnectionId='32' x:Name="msgValidator" Grid.Row="11" Grid.Column="2" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <DatePicker x:ConnectionId='21' x:Name="dpkDateCollected" Grid.Row="14" Margin="5"
+                    
+                    <DatePicker x:ConnectionId='33' x:Name="dpkDateCollected" Grid.Row="14" Grid.Column="0" Margin="5"
                                 Header="Date Collected: *" HorizontalAlignment="Stretch"
                                                                           />
-                    <DatePicker x:ConnectionId='22' x:Name="dpkDateDeposited" Grid.Row="15" Margin="5"
+                    <DatePicker x:ConnectionId='34' x:Name="dpkDateDeposited" Grid.Row="15" Grid.Column="0" Margin="5"
                                 Header="Date Deposited: *" HorizontalAlignment="Stretch"
                                                                           
                                                                              />
-                    <DatePicker x:ConnectionId='23' x:Name="dpkDateVerified" Grid.Row="16" Margin="5"
+                    <DatePicker x:ConnectionId='35' x:Name="dpkDateVerified" Grid.Row="15" Grid.Column="2" Margin="5"
                                 Header="Date Verified: *" HorizontalAlignment="Stretch"
                                                                          
                                 Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"/>
-                    <ComboBox x:ConnectionId='24' x:Name="cbxLocality" Grid.Row="17" Grid.ColumnSpan="2" Margin="5" 
-                              Header="Location: *" HorizontalAlignment="Stretch"
-                                                                                                                               />
-                    <TextBlock x:ConnectionId='25' x:Name="msgLocality" Grid.Row="18" Margin="5 -2" FlowDirection="RightToLeft"                               
+                    
+                    <ComboBox x:ConnectionId='36' x:Name="cbxLocality" Grid.Row="17" Grid.Column="0" Margin="5" 
+                              Header="Location: *" HorizontalAlignment="Stretch"/>
+                    <Button x:ConnectionId='37' x:Name="btnAddLocality"                             
+                            Grid.Row="17" Grid.Column="1" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE710;" FontSize="14" FontFamily="Segoe MDL2 Assets"  />
+                    <TextBox x:ConnectionId='38' x:Name="txfLocality" Grid.Row="17" Grid.Column="0" Margin="5" Visibility="Collapsed"
+                             Header="Location: " HorizontalAlignment="Stretch" IsReadOnly="True" 
+                                                                                  />
+                    <Button x:ConnectionId='39' x:Name="btnDeleteLocality"                                 Visibility="Collapsed"
+                            Grid.Row="17" Grid.Column="1" Margin="5" VerticalAlignment="Bottom" Height="32"
+                            Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
+                    <TextBlock x:ConnectionId='40' x:Name="msgLocality" Grid.Row="18" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"                               
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <TextBox x:ConnectionId='26' x:Name="txfDescription" Grid.Row="19" Grid.ColumnSpan="2" Margin="5"
+                    
+                    <TextBox x:ConnectionId='41' x:Name="txfDescription" Grid.Row="19" Grid.Column="0" Margin="5"
                              Header="Description:" Height="90" AcceptsReturn="True" TextWrapping="Wrap"
                                                                                                                          />
-                    <TextBlock x:ConnectionId='27' x:Name="msgDescription" Grid.Row="20" Margin="5 -2" FlowDirection="RightToLeft"
+                    <TextBlock x:ConnectionId='42' x:Name="msgDescription" Grid.Row="20" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    <CheckBox x:ConnectionId='28' x:Name="chkIsGoodCondition" Grid.Row="21" Grid.ColumnSpan="2" Margin="5"
+                    
+                    <CheckBox x:ConnectionId='43' x:Name="chkIsGoodCondition" Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
                               Content="Plant Deposit is in Good Condtion" />
                 </Grid>
             </ScrollViewer>

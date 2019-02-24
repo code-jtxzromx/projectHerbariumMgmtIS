@@ -16,8 +16,8 @@
 						</Candidate>
 					</NamedResource>
 					<NamedResource name="DataGrid.xbf" uri="ms-resource://Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Files/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/DataGrid/DataGrid.xbf">
-						<Candidate type="Path">
-							<Value>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\DataGrid\DataGrid.xbf</Value>
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
 						</Candidate>
 					</NamedResource>
 				</ResourceMapSubtree>
@@ -28,8 +28,8 @@
 						</Candidate>
 					</NamedResource>
 					<NamedResource name="Generic.xbf" uri="ms-resource://Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Files/Microsoft.Toolkit.Uwp.UI.Controls.DataGrid/Themes/Generic.xbf">
-						<Candidate type="Path">
-							<Value>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Themes\Generic.xbf</Value>
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
 						</Candidate>
 					</NamedResource>
 				</ResourceMapSubtree>
