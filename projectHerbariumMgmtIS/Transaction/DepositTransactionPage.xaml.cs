@@ -31,7 +31,8 @@ namespace projectHerbariumMgmtIS.Transaction
         private bool isFileUpload = false;
         private byte[] imageBinary;
         private int TransactionResult;
-        
+        private List<SpeciesAuthor> speciesAuthors;
+
         // Properties
         public bool IsExisting
         {
@@ -148,6 +149,27 @@ namespace projectHerbariumMgmtIS.Transaction
                 PrimaryButtonText = "Save"
             };
             var result = await form.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                var NewData = form.SpeciesData;
+                string authorCode = "";
+                try
+                {
+                    authorCode = (from data in speciesAuthors
+                                  where data.AuthorName == NewData.SpeciesAuthor
+                                  select data.AuthorSuffix).First();
+                }
+                catch (Exception) {  }
+
+                NewData.ScientificName = (NewData.GenusName + " " + NewData.SpeciesName + " " + authorCode).Trim();
+                NewSpecies = NewData;
+
+                cbxScientificName.Visibility = Visibility.Collapsed;
+                btnAddTaxon.Visibility = Visibility.Collapsed;
+                txfScientificName.Visibility = Visibility.Visible;
+                btnDeleteTaxon.Visibility = Visibility.Visible;
+            }
         }
 
         private async void btnAddCollector_Click(object sender, RoutedEventArgs e)
@@ -159,6 +181,18 @@ namespace projectHerbariumMgmtIS.Transaction
                 PrimaryButtonText = "Save"
             };
             var result = await form.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                var NewData = form.CollectorData;
+                NewData.FullName = (NewData.FirstName + " " + NewData.LastName + " " + NewData.NameSuffix).Trim();
+                NewCollector = NewData;
+
+                cbxCollector.Visibility = Visibility.Collapsed;
+                btnAddCollector.Visibility = Visibility.Collapsed;
+                txfCollector.Visibility = Visibility.Visible;
+                btnDeleteCollector.Visibility = Visibility.Visible;
+            }
         }
 
         private async void btnAddValidator_Click(object sender, RoutedEventArgs e)
@@ -170,6 +204,18 @@ namespace projectHerbariumMgmtIS.Transaction
                 PrimaryButtonText = "Save"
             };
             var result = await form.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                var NewData = form.ValidatorData;
+                NewData.FullName = (NewData.FirstName + " " + NewData.LastName + " " + NewData.NameSuffix).Trim();
+                NewValidator = NewData;
+
+                cbxValidator.Visibility = Visibility.Collapsed;
+                btnAddValidator.Visibility = Visibility.Collapsed;
+                txfValidator.Visibility = Visibility.Visible;
+                btnDeleteValidator.Visibility = Visibility.Visible;
+            }
         }
 
         private async void btnAddLocality_Click(object sender, RoutedEventArgs e)
@@ -181,6 +227,16 @@ namespace projectHerbariumMgmtIS.Transaction
                 PrimaryButtonText = "Save"
             };
             var result = await form.ShowAsync();
+
+            if (result == ContentDialogResult.Primary)
+            {
+                NewLocality = form.LocalityData;
+
+                cbxLocality.Visibility = Visibility.Collapsed;
+                btnAddLocality.Visibility = Visibility.Collapsed;
+                txfLocality.Visibility = Visibility.Visible;
+                btnDeleteLocality.Visibility = Visibility.Visible;
+            }
         }
 
         private void btnDeletePlantType_Click(object sender, RoutedEventArgs e)
@@ -263,45 +319,90 @@ namespace projectHerbariumMgmtIS.Transaction
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            bool MaintenanceOK = true;
             string message = "";
 
             if (ValidateForm())
             {
-                NewDepositData.PlantType = (cbxPlantType.Visibility == Visibility.Visible) ? cbxPlantType.SelectedItem.ToString() : txfPlantType.Text;
-                NewDepositData.TaxonName = (cbxScientificName.Visibility == Visibility.Visible) ? cbxScientificName.SelectedItem.ToString() : txfScientificName.Text;
-                NewDepositData.Collector = (cbxCollector.Visibility == Visibility.Visible) ? cbxCollector.SelectedItem.ToString() : txfCollector.Text;
-                NewDepositData.Validator = (cbxValidator.Visibility == Visibility.Visible) ? cbxValidator.SelectedItem.ToString() : txfValidator.Text;
-                NewDepositData.Locality = (cbxLocality.Visibility == Visibility.Visible) ? cbxLocality.SelectedItem.ToString() : txfLocality.Text;
-                NewDepositData.DateCollected = dpkDateCollected.Date.ToString();
-                NewDepositData.DateDeposited = dpkDateDeposited.Date.ToString();
-                NewDepositData.DateVerified = dpkDateVerified.Date.ToString();
-
-                if (IsExisting && btnIsVerifiedDeposit.IsOn)                
-                    TransactionResult = NewDepositData.SaveVerifiedDeposit((chkSameAccession.IsChecked == true), isFileUpload, imageBinary);
-                else if (IsExisting)
-                    TransactionResult = NewDepositData.SaveUnverifiedDeposit(isFileUpload, imageBinary);
-                else
-                    TransactionResult = NewDepositData.SaveNewDeposit(isFileUpload, imageBinary);
-
-                switch (TransactionResult)
+                if (txfPlantType.Visibility == Visibility.Visible)
                 {
-                    case 0:
-                        if (IsExisting && btnIsVerifiedDeposit.IsOn)
-                            message = "Plant Deposit Received and Verified";
-                        else if (IsExisting)
-                            message = "Existing Plant Deposit Recorded";
-                        else
-                            message = "New Plant Deposit Received";
-                        break;
-                    case 1:
-                        message = "Transaction Failed, The system had run to an Error";
-                        break;
+                    var result = NewPlantType.AddPlantType();
+
+                    if (result == 1)
+                        MaintenanceOK = false;
+                }
+                if (MaintenanceOK && txfScientificName.Visibility == Visibility.Visible)
+                {
+                    var result = NewSpecies.AddSpecies();
+
+                    if (result == 1)
+                        MaintenanceOK = false;
+                }
+                if (MaintenanceOK && txfCollector.Visibility == Visibility.Visible)
+                {
+                    var result = NewCollector.AddCollector();
+
+                    if (result == 1)
+                        MaintenanceOK = false;
+                }
+                if (MaintenanceOK && txfValidator.Visibility == Visibility.Visible)
+                {
+                    var result = NewValidator.AddValidator();
+
+                    if (result == 1)
+                        MaintenanceOK = false;
+                }
+                if (MaintenanceOK && txfLocality.Visibility == Visibility.Visible)
+                {
+                    var result = NewLocality.AddLocality();
+
+                    if (result == 1)
+                        MaintenanceOK = false;
                 }
 
-                MessageDialog dialog = new MessageDialog(message, "Process Done");
-                var result = dialog.ShowAsync();
+                if (MaintenanceOK)
+                {
+                    NewDepositData.PlantType = (cbxPlantType.Visibility == Visibility.Visible) ? cbxPlantType.SelectedItem.ToString() : txfPlantType.Text;
+                    NewDepositData.TaxonName = (cbxScientificName.Visibility == Visibility.Visible) ? cbxScientificName.SelectedItem.ToString() : txfScientificName.Text;
+                    NewDepositData.Collector = (cbxCollector.Visibility == Visibility.Visible) ? cbxCollector.SelectedItem.ToString() : txfCollector.Text;
+                    NewDepositData.Validator = (cbxValidator.Visibility == Visibility.Visible) ? cbxValidator.SelectedItem.ToString() : txfValidator.Text;
+                    NewDepositData.Locality = (cbxLocality.Visibility == Visibility.Visible) ? cbxLocality.SelectedItem.ToString() : txfLocality.Text;
+                    NewDepositData.DateCollected = dpkDateCollected.Date.ToString();
+                    NewDepositData.DateDeposited = dpkDateDeposited.Date.ToString();
+                    NewDepositData.DateVerified = dpkDateVerified.Date.ToString();
 
-                this.ClearForm();
+                    if (IsExisting && btnIsVerifiedDeposit.IsOn)
+                        TransactionResult = NewDepositData.SaveVerifiedDeposit((chkSameAccession.IsChecked == true), isFileUpload, imageBinary);
+                    else if (IsExisting)
+                        TransactionResult = NewDepositData.SaveUnverifiedDeposit(isFileUpload, imageBinary);
+                    else
+                        TransactionResult = NewDepositData.SaveNewDeposit(isFileUpload, imageBinary);
+
+                    switch (TransactionResult)
+                    {
+                        case 0:
+                            if (IsExisting && btnIsVerifiedDeposit.IsOn)
+                                message = "Plant Deposit Received and Verified";
+                            else if (IsExisting)
+                                message = "Existing Plant Deposit Recorded";
+                            else
+                                message = "New Plant Deposit Received";
+                            break;
+                        case 1:
+                            message = "Transaction Failed, The system had run to an Error";
+                            break;
+                    }
+
+                    MessageDialog dialog = new MessageDialog(message, "Process Done");
+                    var result = dialog.ShowAsync();
+
+                    this.ClearForm();
+                }
+                else
+                {
+                    MessageDialog dialog = new MessageDialog("Some data were save but the Plant Deposit Form had run to an Error", "Process Run to an Error");
+                    var result = dialog.ShowAsync();
+                }
             }
         }
 
@@ -362,6 +463,7 @@ namespace projectHerbariumMgmtIS.Transaction
             cbxPlantType.ItemsSource = new PlantType().GetPlantTypeList();
             cbxScientificName.ItemsSource = new TaxonSpecies().GetTaxonList();
             cbxValidator.ItemsSource = new Validator().GetValidatorList();
+            speciesAuthors = new SpeciesAuthor().GetAuthors();
         }
 
         private bool ValidateForm()
@@ -377,7 +479,7 @@ namespace projectHerbariumMgmtIS.Transaction
             msgValidator.Visibility = Visibility.Collapsed;
             msgLocality.Visibility = Visibility.Collapsed;
             msgDescription.Visibility = Visibility.Collapsed;
-            
+
             if (IsExisting && txfOrgAccessionNo.Text == "")
             {
                 msgOrgAccessionNo.Visibility = Visibility.Visible;
@@ -388,27 +490,27 @@ namespace projectHerbariumMgmtIS.Transaction
                 msgNewAccessionNo.Visibility = Visibility.Visible;
                 formOK = false;
             }
-            if (cbxPlantType.SelectedIndex == -1)
+            if (cbxPlantType.SelectedIndex == -1 && txfPlantType.Text == "")
             {
                 msgPlantType.Visibility = Visibility.Visible;
                 formOK = false;
             }
-            if (IsExisting && IsVerified && cbxScientificName.SelectedIndex == -1)
+            if (IsExisting && IsVerified && cbxScientificName.SelectedIndex == -1 && txfScientificName.Text == "")
             {
                 msgScientifcName.Visibility = Visibility.Visible;
                 formOK = false;
             }
-            if (cbxCollector.SelectedIndex == -1)
+            if (cbxCollector.SelectedIndex == -1 && txfCollector.Text == "")
             {
                 msgCollector.Visibility = Visibility.Visible;
                 formOK = false;
             }
-            if (IsExisting && IsVerified && cbxValidator.SelectedIndex == -1)
+            if (IsExisting && IsVerified && cbxValidator.SelectedIndex == -1 && txfValidator.Text == "")
             {
                 msgValidator.Visibility = Visibility.Visible;
                 formOK = false;
             }
-            if (cbxLocality.SelectedIndex == -1)
+            if (cbxLocality.SelectedIndex == -1 && txfLocality.Text == "")
             {
                 msgLocality.Visibility = Visibility.Visible;
                 formOK = false;

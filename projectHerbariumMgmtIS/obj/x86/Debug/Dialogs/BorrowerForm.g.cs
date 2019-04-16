@@ -40,6 +40,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class BorrowerForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IBorrowerForm_Bindings
         {
@@ -61,11 +63,72 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBox obj15;
             private global::Windows.UI.Xaml.Controls.TextBox obj18;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4TextDisabled = false;
+            private static bool isobj5TextDisabled = false;
+            private static bool isobj8TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+            private static bool isobj10TextDisabled = false;
+            private static bool isobj12TextDisabled = false;
+            private static bool isobj14TextDisabled = false;
+            private static bool isobj15TextDisabled = false;
+            private static bool isobj18TextDisabled = false;
+
             private BorrowerForm_obj1_BindingsTracking bindingsTracking;
 
             public BorrowerForm_obj1_Bindings()
             {
                 this.bindingsTracking = new BorrowerForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 76 && columnNumber == 22)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 80 && columnNumber == 22)
+                {
+                    isobj4TextDisabled = true;
+                }
+                else if (lineNumber == 83 && columnNumber == 22)
+                {
+                    isobj5TextDisabled = true;
+                }
+                else if (lineNumber == 91 && columnNumber == 18)
+                {
+                    isobj8TextDisabled = true;
+                }
+                else if (lineNumber == 94 && columnNumber == 18)
+                {
+                    isobj9TextDisabled = true;
+                }
+                else if (lineNumber == 97 && columnNumber == 18)
+                {
+                    isobj10TextDisabled = true;
+                }
+                else if (lineNumber == 103 && columnNumber == 22)
+                {
+                    isobj12TextDisabled = true;
+                }
+                else if (lineNumber == 109 && columnNumber == 22)
+                {
+                    isobj14TextDisabled = true;
+                }
+                else if (lineNumber == 112 && columnNumber == 22)
+                {
+                    isobj15TextDisabled = true;
+                }
+                else if (lineNumber == 120 && columnNumber == 22)
+                {
+                    isobj18TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -120,6 +183,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IBorrowerForm_Bindings
@@ -183,9 +258,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -213,7 +291,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 75
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_BorrowerData_FirstName(global::System.String obj, int phase)
@@ -221,7 +302,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 79
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj4, obj, null);
+                    if (!isobj4TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_MiddleName(global::System.String obj, int phase)
@@ -229,7 +313,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 82
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    if (!isobj5TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_LastName(global::System.String obj, int phase)
@@ -237,7 +324,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 90
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj, null);
+                    if (!isobj8TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_MiddleInitial(global::System.String obj, int phase)
@@ -245,7 +335,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 93
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_NameSuffix(global::System.String obj, int phase)
@@ -253,7 +346,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 96
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    if (!isobj10TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_HomeAddress(global::System.String obj, int phase)
@@ -261,7 +357,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 102
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    if (!isobj12TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_ContactNumber(global::System.String obj, int phase)
@@ -269,7 +368,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 108
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj14, obj, null);
+                    if (!isobj14TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj14, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_Email(global::System.String obj, int phase)
@@ -277,7 +379,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 111
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj15, obj, null);
+                    if (!isobj15TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj15, obj, null);
+                    }
                 }
             }
             private void Update_BorrowerData_Affiliation(global::System.String obj, int phase)
@@ -285,77 +390,140 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\BorrowerForm.xaml line 119
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj18, obj, null);
+                    if (!isobj18TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj18, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.BorrowerID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.BorrowerID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.FirstName = this.obj4.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.FirstName = this.obj4.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_5_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.MiddleName = this.obj5.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.MiddleName = this.obj5.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_8_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.LastName = this.obj8.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.LastName = this.obj8.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_9_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.MiddleInitial = this.obj9.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.MiddleInitial = this.obj9.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_10_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.NameSuffix = this.obj10.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.NameSuffix = this.obj10.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_12_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.HomeAddress = this.obj12.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.HomeAddress = this.obj12.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_14_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.ContactNumber = this.obj14.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.ContactNumber = this.obj14.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_15_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.Email = this.obj15.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.Email = this.obj15.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_18_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BorrowerData.Affiliation = this.obj18.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BorrowerData != null)
+                        {
+                            this.dataRoot.BorrowerData.Affiliation = this.obj18.Text;
+                        }
+                    }
                 }
             }
 
@@ -671,6 +839,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

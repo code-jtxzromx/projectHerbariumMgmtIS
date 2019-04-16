@@ -64,10 +64,9 @@
                             <media:BackdropBlurBrush Amount="10.0" />
                         </StackPanel.Background>
                         <Image Source="Assets/herbarium_banner_white.png" Height="75" Margin="10 50 10 10" />
-                        <TextBlock Margin="30 10 30 30" RequestedTheme="Dark" TextWrapping="WrapWholeWords" TextAlignment="Center" FontSize="14">
-                            HERBARIUM MANAGEMENT INFORMATION SYSTEM
-                        </TextBlock>
-
+                        <TextBlock Margin="30 10 30 30" RequestedTheme="Dark" TextWrapping="WrapWholeWords" TextAlignment="Center" FontSize="14" 
+                                   Text="HERBARIUM MANAGEMENT INFORMATION SYSTEM"/>
+                        
                         <Border x:Name="lblLoginError" Background="#BF800000" Margin="0 0 0 10" Visibility="Collapsed">
                             <TextBlock Margin="10 5" RequestedTheme="Dark" TextAlignment="Center" Text="Invalid Username or Password" />
                         </Border>
@@ -118,8 +117,9 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Grid.Column="0" Source="Assets/herbarium_banner_white.png" Margin="10" />
-                    <TextBlock Grid.Column="1" VerticalAlignment="Center" Padding="5 10" FontWeight="Bold" Foreground="White"> HERBARIUM MANAGEMENT INFORMATION SYSTEM </TextBlock>
-
+                    <TextBlock Grid.Column="1" VerticalAlignment="Center" Padding="5 10" FontWeight="Bold" Foreground="White" 
+                               Text="HERBARIUM MANAGEMENT INFORMATION SYSTEM"/>
+                    
                     <Grid Grid.Column="3" RequestedTheme="Dark">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50" />
@@ -145,11 +145,24 @@
                         </CommandBar>
                     </Grid>
                 </Grid>
-                <controls:TabView x:Name="tnvMainMenu" RequestedTheme="Dark" Grid.Row="1" Margin="10">
-                    <controls:TabView.Background>
+                <Pivot x:Name="pvtMainMenu" RequestedTheme="Dark" Grid.Row="1" Margin="5">
+                    <Pivot.Background>
                         <media:BackdropBlurBrush Amount="1.0" />
-                    </controls:TabView.Background>
-                </controls:TabView>
+                    </Pivot.Background>
+                    <Pivot.HeaderTemplate>
+                        <DataTemplate x:DataType="model:MainMenu">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontSize="18" FontFamily="Segoe MDL2 Assets" Text="{x:Bind GlyphCode}" Margin="5 0" />
+                                <TextBlock FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center" Text="{x:Bind Menu}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </Pivot.HeaderTemplate>
+                    <Pivot.ItemTemplate>
+                        <DataTemplate x:DataType="model:MainMenu">
+                            <Frame SourcePageType="{x:Bind TagPage}" Margin="-5 5" />
+                        </DataTemplate>
+                    </Pivot.ItemTemplate>
+                </Pivot>
             </Grid>
             
         </Grid>        

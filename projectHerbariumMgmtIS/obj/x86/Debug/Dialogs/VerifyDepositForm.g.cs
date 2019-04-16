@@ -48,6 +48,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class VerifyDepositForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IVerifyDepositForm_Bindings
         {
@@ -66,11 +68,57 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBlock obj15;
             private global::Windows.UI.Xaml.Controls.Image obj16;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj5SelectedItemDisabled = false;
+            private static bool isobj7TextDisabled = false;
+            private static bool isobj11TextDisabled = false;
+            private static bool isobj12TextDisabled = false;
+            private static bool isobj13TextDisabled = false;
+            private static bool isobj14TextDisabled = false;
+            private static bool isobj15TextDisabled = false;
+            private static bool isobj16SourceDisabled = false;
+
             private VerifyDepositForm_obj1_BindingsTracking bindingsTracking;
 
             public VerifyDepositForm_obj1_Bindings()
             {
                 this.bindingsTracking = new VerifyDepositForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 104 && columnNumber == 27)
+                {
+                    isobj5SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 108 && columnNumber == 28)
+                {
+                    isobj7TextDisabled = true;
+                }
+                else if (lineNumber == 116 && columnNumber == 28)
+                {
+                    isobj11TextDisabled = true;
+                }
+                else if (lineNumber == 118 && columnNumber == 28)
+                {
+                    isobj12TextDisabled = true;
+                }
+                else if (lineNumber == 120 && columnNumber == 28)
+                {
+                    isobj13TextDisabled = true;
+                }
+                else if (lineNumber == 122 && columnNumber == 28)
+                {
+                    isobj14TextDisabled = true;
+                }
+                else if (lineNumber == 124 && columnNumber == 28)
+                {
+                    isobj15TextDisabled = true;
+                }
+                else if (lineNumber == 61 && columnNumber == 47)
+                {
+                    isobj16SourceDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -107,6 +155,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IVerifyDepositForm_Bindings
@@ -186,7 +246,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 102
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj5, obj, null);
+                    if (!isobj5SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_VerifyingDepositData_AccessionNumber(global::System.String obj, int phase)
@@ -194,7 +257,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 107
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    if (!isobj7TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    }
                 }
             }
             private void Update_VerifyingDepositData_DateCollected(global::System.String obj, int phase)
@@ -202,7 +268,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 115
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj11, obj, null);
+                    if (!isobj11TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj11, obj, null);
+                    }
                 }
             }
             private void Update_VerifyingDepositData_DateDeposited(global::System.String obj, int phase)
@@ -210,7 +279,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 117
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj12, obj, null);
+                    if (!isobj12TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj12, obj, null);
+                    }
                 }
             }
             private void Update_VerifyingDepositData_Locality(global::System.String obj, int phase)
@@ -218,7 +290,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 119
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj13, obj, null);
+                    if (!isobj13TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj13, obj, null);
+                    }
                 }
             }
             private void Update_VerifyingDepositData_Collector(global::System.String obj, int phase)
@@ -226,7 +301,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 121
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj14, obj, null);
+                    if (!isobj14TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj14, obj, null);
+                    }
                 }
             }
             private void Update_VerifyingDepositData_Description(global::System.String obj, int phase)
@@ -234,7 +312,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 123
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj15, obj, null);
+                    if (!isobj15TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj15, obj, null);
+                    }
                 }
             }
             private void Update_HerbariumSheet(global::Windows.UI.Xaml.Media.Imaging.BitmapImage obj, int phase)
@@ -242,14 +323,23 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\VerifyDepositForm.xaml line 61
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Image_Source(this.obj16, obj, null);
+                    if (!isobj16SourceDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Image_Source(this.obj16, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_5_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.VerifyingDepositData.Validator = (global::System.String)this.obj5.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.VerifyingDepositData != null)
+                        {
+                            this.dataRoot.VerifyingDepositData.Validator = (global::System.String)this.obj5.SelectedItem;
+                        }
+                    }
                 }
             }
 
@@ -423,6 +513,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

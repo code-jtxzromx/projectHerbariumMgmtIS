@@ -32,6 +32,8 @@ namespace projectHerbariumMgmtIS.Reports
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class DocumentDamageReturnsByBorrower_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IDocumentDamageReturnsByBorrower_Bindings
         {
@@ -43,8 +45,19 @@ namespace projectHerbariumMgmtIS.Reports
             // Fields for each control that has bindings.
             private global::Windows.UI.Xaml.Controls.TextBlock obj3;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj3TextDisabled = false;
+
             public DocumentDamageReturnsByBorrower_obj1_Bindings()
             {
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 53 && columnNumber == 104)
+                {
+                    isobj3TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -59,6 +72,18 @@ namespace projectHerbariumMgmtIS.Reports
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IDocumentDamageReturnsByBorrower_Bindings
@@ -117,7 +142,10 @@ namespace projectHerbariumMgmtIS.Reports
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Reports\DocumentDamageReturnsByBorrower.xaml line 53
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj3, obj, null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj3, obj, null);
+                    }
                 }
             }
         }
@@ -159,6 +187,7 @@ namespace projectHerbariumMgmtIS.Reports
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

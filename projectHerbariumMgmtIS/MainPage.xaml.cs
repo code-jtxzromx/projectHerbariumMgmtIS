@@ -77,16 +77,7 @@ namespace projectHerbariumMgmtIS
             };
             Timer.Start();
         }
-
-        private void navMainMenu_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
-        {
-            var selectedItem = (MainMenu)args.SelectedItem;
-            string pageName = "projectHerbariumMgmtIS.MenuPages." + ((string)selectedItem.TagPage);
-            Type pageType = Type.GetType(pageName);
-            //frmPageContent.Navigate(pageType);
-            //navMainMenu.Header = selectedItem.Menu;
-        }
-
+        
         private void KeyBoardEnter_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == Windows.System.VirtualKey.Enter)
@@ -120,41 +111,8 @@ namespace projectHerbariumMgmtIS
                 StaffName = StaticAccess.StaffName;
                 AccountLevel = StaticAccess.Role;
 
-                foreach (var item in new MainMenu().GetMenus())
-                {
-                    Page menu = new Page();
-                    switch(item.TagPage)
-                    {
-                        case "HomePage":
-                            menu = new HomePage();
-                            break;
-                        case "MaintenancePage":
-                            menu = new MaintenancePage();
-                            break;
-                        case "TransactionPage":
-                            menu = new TransactionPage();
-                            break;
-                        case "UtilitiesPage":
-                            menu = new UtilitiesPage();
-                            break;
-                        case "QueriesPage":
-                            menu = new QueriesPage();
-                            break;
-                        case "ReportsPage":
-                            menu = new ReportsPage();
-                            break;
-                    }
-                    string pageName = "projectHerbariumMgmtIS.MenuPages." + item.TagPage;
-                    Type pageType = Type.GetType(pageName);
+                pvtMainMenu.ItemsSource = new MainMenu().GetMenus();
 
-                    tnvMainMenu.Items.Add(new TabViewItem()
-                    {
-                        Header = item.Menu,
-                        Icon = new FontIcon { Glyph = item.GlyphCode },
-                        Content = menu
-                    });
-                }
-                
                 LoginScreen.Visibility = Visibility.Collapsed;
                 MainNavigation.Visibility = Visibility.Visible;
             }
@@ -178,8 +136,7 @@ namespace projectHerbariumMgmtIS
             StaffName = "";
             btnClear_Click(btnClear, null);
 
-            tnvMainMenu.Items.Clear();
-            //navMainMenu.MenuItems.Clear();
+            pvtMainMenu.ItemsSource = null;
 
             MainNavigation.Visibility = Visibility.Collapsed;
             LoginScreen.Visibility = Visibility.Visible;

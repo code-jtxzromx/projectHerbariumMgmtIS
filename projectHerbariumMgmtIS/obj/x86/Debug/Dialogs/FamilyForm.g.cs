@@ -56,6 +56,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class FamilyForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IFamilyForm_Bindings
         {
@@ -70,11 +72,37 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.ComboBox obj4;
             private global::Windows.UI.Xaml.Controls.AutoSuggestBox obj5;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4SelectedItemDisabled = false;
+            private static bool isobj5TextDisabled = false;
+
             private FamilyForm_obj1_BindingsTracking bindingsTracking;
 
             public FamilyForm_obj1_Bindings()
             {
                 this.bindingsTracking = new FamilyForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 66 && columnNumber == 18)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 70 && columnNumber == 19)
+                {
+                    isobj4SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 73 && columnNumber == 25)
+                {
+                    isobj5TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -101,6 +129,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IFamilyForm_Bindings
@@ -164,9 +204,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\FamilyForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -187,7 +230,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\FamilyForm.xaml line 65
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    }
                 }
             }
             private void Update_FamilyData_OrderName(global::System.String obj, int phase)
@@ -195,7 +241,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\FamilyForm.xaml line 69
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    if (!isobj4SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_FamilyData_FamilyName(global::System.String obj, int phase)
@@ -203,28 +252,49 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\FamilyForm.xaml line 72
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_AutoSuggestBox_Text(this.obj5, obj, null);
+                    if (!isobj5TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_AutoSuggestBox_Text(this.obj5, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.FamilyData.FamilyID = this.obj3.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.FamilyData != null)
+                        {
+                            this.dataRoot.FamilyData.FamilyID = this.obj3.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.FamilyData.OrderName = (global::System.String)this.obj4.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.FamilyData != null)
+                        {
+                            this.dataRoot.FamilyData.OrderName = (global::System.String)this.obj4.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_5_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.FamilyData.FamilyName = this.obj5.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.FamilyData != null)
+                        {
+                            this.dataRoot.FamilyData.FamilyName = this.obj5.Text;
+                        }
+                    }
                 }
             }
 
@@ -404,6 +474,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

@@ -48,6 +48,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class HerbariumBoxForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IHerbariumBoxForm_Bindings
         {
@@ -65,11 +67,52 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBox obj8;
             private global::Windows.UI.Xaml.Controls.TextBox obj9;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4SelectedItemDisabled = false;
+            private static bool isobj6TextDisabled = false;
+            private static bool isobj7TextDisabled = false;
+            private static bool isobj8TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+
             private HerbariumBoxForm_obj1_BindingsTracking bindingsTracking;
 
             public HerbariumBoxForm_obj1_Bindings()
             {
                 this.bindingsTracking = new HerbariumBoxForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 69 && columnNumber == 18)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 72 && columnNumber == 19)
+                {
+                    isobj4SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 78 && columnNumber == 18)
+                {
+                    isobj6TextDisabled = true;
+                }
+                else if (lineNumber == 81 && columnNumber == 18)
+                {
+                    isobj7TextDisabled = true;
+                }
+                else if (lineNumber == 84 && columnNumber == 18)
+                {
+                    isobj8TextDisabled = true;
+                }
+                else if (lineNumber == 87 && columnNumber == 18)
+                {
+                    isobj9TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -108,6 +151,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IHerbariumBoxForm_Bindings
@@ -171,9 +226,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\HerbariumBoxForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -197,7 +255,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\HerbariumBoxForm.xaml line 68
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    }
                 }
             }
             private void Update_BoxData_Family(global::System.String obj, int phase)
@@ -205,7 +266,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\HerbariumBoxForm.xaml line 71
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    if (!isobj4SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_BoxData_BoxLimit(global::System.Int32 obj, int phase)
@@ -213,7 +277,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\HerbariumBoxForm.xaml line 77
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj6, obj.ToString(), null);
+                    if (!isobj6TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj6, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_BoxData_RackNumber(global::System.Int32 obj, int phase)
@@ -221,7 +288,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\HerbariumBoxForm.xaml line 80
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj7, obj.ToString(), null);
+                    if (!isobj7TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj7, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_BoxData_RackRow(global::System.Int32 obj, int phase)
@@ -229,7 +299,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\HerbariumBoxForm.xaml line 83
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj.ToString(), null);
+                    if (!isobj8TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_BoxData_RackColumn(global::System.Int32 obj, int phase)
@@ -237,49 +310,88 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\HerbariumBoxForm.xaml line 86
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj.ToString(), null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj.ToString(), null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BoxData.BoxNumber = this.obj3.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BoxData != null)
+                        {
+                            this.dataRoot.BoxData.BoxNumber = this.obj3.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BoxData.Family = (global::System.String)this.obj4.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BoxData != null)
+                        {
+                            this.dataRoot.BoxData.Family = (global::System.String)this.obj4.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_6_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BoxData.BoxLimit = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj6.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BoxData != null)
+                        {
+                            this.dataRoot.BoxData.BoxLimit = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj6.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_7_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BoxData.RackNumber = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj7.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BoxData != null)
+                        {
+                            this.dataRoot.BoxData.RackNumber = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj7.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_8_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BoxData.RackRow = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj8.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BoxData != null)
+                        {
+                            this.dataRoot.BoxData.RackRow = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj8.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_9_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.BoxData.RackColumn = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj9.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.BoxData != null)
+                        {
+                            this.dataRoot.BoxData.RackColumn = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj9.Text);
+                        }
+                    }
                 }
             }
 
@@ -521,6 +633,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

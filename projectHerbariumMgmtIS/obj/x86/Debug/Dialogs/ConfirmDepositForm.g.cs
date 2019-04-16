@@ -40,6 +40,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class ConfirmDepositForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IConfirmDepositForm_Bindings
         {
@@ -60,11 +62,67 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBlock obj11;
             private global::Windows.UI.Xaml.Controls.Image obj12;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4TextDisabled = false;
+            private static bool isobj5TextDisabled = false;
+            private static bool isobj6TextDisabled = false;
+            private static bool isobj7TextDisabled = false;
+            private static bool isobj8TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+            private static bool isobj10TextDisabled = false;
+            private static bool isobj11TextDisabled = false;
+            private static bool isobj12SourceDisabled = false;
+
             private ConfirmDepositForm_obj1_BindingsTracking bindingsTracking;
 
             public ConfirmDepositForm_obj1_Bindings()
             {
                 this.bindingsTracking = new ConfirmDepositForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 93 && columnNumber == 28)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 95 && columnNumber == 28)
+                {
+                    isobj4TextDisabled = true;
+                }
+                else if (lineNumber == 97 && columnNumber == 28)
+                {
+                    isobj5TextDisabled = true;
+                }
+                else if (lineNumber == 99 && columnNumber == 28)
+                {
+                    isobj6TextDisabled = true;
+                }
+                else if (lineNumber == 101 && columnNumber == 28)
+                {
+                    isobj7TextDisabled = true;
+                }
+                else if (lineNumber == 103 && columnNumber == 28)
+                {
+                    isobj8TextDisabled = true;
+                }
+                else if (lineNumber == 105 && columnNumber == 28)
+                {
+                    isobj9TextDisabled = true;
+                }
+                else if (lineNumber == 107 && columnNumber == 28)
+                {
+                    isobj10TextDisabled = true;
+                }
+                else if (lineNumber == 109 && columnNumber == 28)
+                {
+                    isobj11TextDisabled = true;
+                }
+                else if (lineNumber == 61 && columnNumber == 47)
+                {
+                    isobj12SourceDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -106,6 +164,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IConfirmDepositForm_Bindings
@@ -187,7 +257,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 92
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj3, obj, null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj3, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_PlantType(global::System.String obj, int phase)
@@ -195,7 +268,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 94
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj, null);
+                    if (!isobj4TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_Collector(global::System.String obj, int phase)
@@ -203,7 +279,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 96
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj5, obj, null);
+                    if (!isobj5TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_DateCollected(global::System.String obj, int phase)
@@ -211,7 +290,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 98
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj, null);
+                    if (!isobj6TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_DateDeposited(global::System.String obj, int phase)
@@ -219,7 +301,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 100
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    if (!isobj7TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_Locality(global::System.String obj, int phase)
@@ -227,7 +312,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 102
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj8, obj, null);
+                    if (!isobj8TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj8, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_Description(global::System.String obj, int phase)
@@ -235,7 +323,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 104
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_Staff(global::System.String obj, int phase)
@@ -243,7 +334,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 106
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj10, obj, null);
+                    if (!isobj10TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj10, obj, null);
+                    }
                 }
             }
             private void Update_ReceivedDepositData_Status(global::System.String obj, int phase)
@@ -251,7 +345,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 108
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj11, obj, null);
+                    if (!isobj11TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj11, obj, null);
+                    }
                 }
             }
             private void Update_HerbariumSheet(global::Windows.UI.Xaml.Media.Imaging.BitmapImage obj, int phase)
@@ -259,7 +356,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ConfirmDepositForm.xaml line 61
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Image_Source(this.obj12, obj, null);
+                    if (!isobj12SourceDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Image_Source(this.obj12, obj, null);
+                    }
                 }
             }
 
@@ -385,6 +485,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

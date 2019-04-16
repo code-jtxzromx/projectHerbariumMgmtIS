@@ -109,6 +109,8 @@ Transaction\PlantLoaningPage.xbf
 Transaction\PlantReceivingPage.xbf
 Transaction\PlantResubmissionPage.xbf
 Transaction\PlantVerificationPage.xbf
+Database\hbmis-definition.sql
+Database\hbmis-storedproc.sql
 Model\MainMenu.xml
 Model\SubMenu.xml
 Properties\Default.rd.xml

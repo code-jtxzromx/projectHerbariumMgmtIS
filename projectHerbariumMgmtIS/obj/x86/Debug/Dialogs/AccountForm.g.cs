@@ -60,6 +60,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class AccountForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IAccountForm_Bindings
         {
@@ -75,11 +77,47 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBox obj6;
             private global::Windows.UI.Xaml.Controls.PasswordBox obj7;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4IsEnabledDisabled = false;
+            private static bool isobj4SelectedItemDisabled = false;
+            private static bool isobj6TextDisabled = false;
+            private static bool isobj7PasswordDisabled = false;
+
             private AccountForm_obj1_BindingsTracking bindingsTracking;
 
             public AccountForm_obj1_Bindings()
             {
                 this.bindingsTracking = new AccountForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 67 && columnNumber == 18)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 70 && columnNumber == 19)
+                {
+                    isobj4IsEnabledDisabled = true;
+                }
+                else if (lineNumber == 71 && columnNumber == 19)
+                {
+                    isobj4SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 77 && columnNumber == 18)
+                {
+                    isobj6TextDisabled = true;
+                }
+                else if (lineNumber == 80 && columnNumber == 22)
+                {
+                    isobj7PasswordDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -110,6 +148,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IAccountForm_Bindings
@@ -174,9 +224,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\AccountForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -198,7 +251,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\AccountForm.xaml line 66
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_IsEditTrans(global::System.Boolean obj, int phase)
@@ -206,7 +262,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\AccountForm.xaml line 69
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Control_IsEnabled(this.obj4, obj);
+                    if (!isobj4IsEnabledDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Control_IsEnabled(this.obj4, obj);
+                    }
                 }
             }
             private void Update_AccountData_Staff(global::System.String obj, int phase)
@@ -214,7 +273,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\AccountForm.xaml line 69
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    if (!isobj4SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_AccountData_Username(global::System.String obj, int phase)
@@ -222,7 +284,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\AccountForm.xaml line 76
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj6, obj, null);
+                    if (!isobj6TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj6, obj, null);
+                    }
                 }
             }
             private void Update_AccountData_Password(global::System.String obj, int phase)
@@ -230,35 +295,62 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\AccountForm.xaml line 79
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_PasswordBox_Password(this.obj7, obj, null);
+                    if (!isobj7PasswordDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_PasswordBox_Password(this.obj7, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.AccountData.AccountID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.AccountData != null)
+                        {
+                            this.dataRoot.AccountData.AccountID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.AccountData.Staff = (global::System.String)this.obj4.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.AccountData != null)
+                        {
+                            this.dataRoot.AccountData.Staff = (global::System.String)this.obj4.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_6_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.AccountData.Username = this.obj6.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.AccountData != null)
+                        {
+                            this.dataRoot.AccountData.Username = this.obj6.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_7_Password()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.AccountData.Password = this.obj7.Password;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.AccountData != null)
+                        {
+                            this.dataRoot.AccountData.Password = this.obj7.Password;
+                        }
+                    }
                 }
             }
 
@@ -473,6 +565,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

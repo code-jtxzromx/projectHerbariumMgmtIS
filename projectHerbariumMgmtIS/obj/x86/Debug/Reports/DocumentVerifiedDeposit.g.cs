@@ -32,6 +32,8 @@ namespace projectHerbariumMgmtIS.Reports
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class DocumentVerifiedDeposit_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IDocumentVerifiedDeposit_Bindings
         {
@@ -44,8 +46,24 @@ namespace projectHerbariumMgmtIS.Reports
             private global::Windows.UI.Xaml.Controls.TextBlock obj3;
             private global::Windows.UI.Xaml.Controls.TextBlock obj4;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4TextDisabled = false;
+
             public DocumentVerifiedDeposit_obj1_Bindings()
             {
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 52 && columnNumber == 104)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 53 && columnNumber == 104)
+                {
+                    isobj4TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -63,6 +81,18 @@ namespace projectHerbariumMgmtIS.Reports
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IDocumentVerifiedDeposit_Bindings
@@ -122,7 +152,10 @@ namespace projectHerbariumMgmtIS.Reports
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Reports\DocumentVerifiedDeposit.xaml line 52
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj3, obj, null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj3, obj, null);
+                    }
                 }
             }
             private void Update_Year(global::System.Int32 obj, int phase)
@@ -130,7 +163,10 @@ namespace projectHerbariumMgmtIS.Reports
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Reports\DocumentVerifiedDeposit.xaml line 53
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj.ToString(), null);
+                    if (!isobj4TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj.ToString(), null);
+                    }
                 }
             }
         }
@@ -172,6 +208,7 @@ namespace projectHerbariumMgmtIS.Reports
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

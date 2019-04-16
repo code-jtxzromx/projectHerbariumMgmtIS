@@ -43,6 +43,7 @@ namespace projectHerbariumMgmtIS.Dialogs
 
         partial void UnloadObject(global::Windows.UI.Xaml.DependencyObject unloadableObject);
 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         private interface IResubmitDepositForm_Bindings
         {
             void Initialize();
@@ -51,6 +52,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             void DisconnectUnloadedObject(int connectionId);
         }
 #pragma warning disable 0169    //  Proactively suppress unused field warning in case Bindings is not used.
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         private IResubmitDepositForm_Bindings Bindings;
 #pragma warning restore 0169
     }

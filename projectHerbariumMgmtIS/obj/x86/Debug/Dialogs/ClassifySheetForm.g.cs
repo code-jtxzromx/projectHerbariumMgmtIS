@@ -44,6 +44,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class ClassifySheetForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IClassifySheetForm_Bindings
         {
@@ -68,11 +70,87 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBlock obj16;
             private global::Windows.UI.Xaml.Controls.Image obj17;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj3IsOnDisabled = false;
+            private static bool isobj4TextDisabled = false;
+            private static bool isobj5TextDisabled = false;
+            private static bool isobj6TextDisabled = false;
+            private static bool isobj7TextDisabled = false;
+            private static bool isobj8TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+            private static bool isobj10TextDisabled = false;
+            private static bool isobj11TextDisabled = false;
+            private static bool isobj12TextDisabled = false;
+            private static bool isobj13TextDisabled = false;
+            private static bool isobj14TextDisabled = false;
+            private static bool isobj16TextDisabled = false;
+            private static bool isobj17SourceDisabled = false;
+
             private ClassifySheetForm_obj1_BindingsTracking bindingsTracking;
 
             public ClassifySheetForm_obj1_Bindings()
             {
                 this.bindingsTracking = new ClassifySheetForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 105 && columnNumber == 31)
+                {
+                    isobj3IsOnDisabled = true;
+                }
+                else if (lineNumber == 107 && columnNumber == 28)
+                {
+                    isobj4TextDisabled = true;
+                }
+                else if (lineNumber == 109 && columnNumber == 28)
+                {
+                    isobj5TextDisabled = true;
+                }
+                else if (lineNumber == 111 && columnNumber == 28)
+                {
+                    isobj6TextDisabled = true;
+                }
+                else if (lineNumber == 113 && columnNumber == 28)
+                {
+                    isobj7TextDisabled = true;
+                }
+                else if (lineNumber == 115 && columnNumber == 28)
+                {
+                    isobj8TextDisabled = true;
+                }
+                else if (lineNumber == 117 && columnNumber == 28)
+                {
+                    isobj9TextDisabled = true;
+                }
+                else if (lineNumber == 119 && columnNumber == 28)
+                {
+                    isobj10TextDisabled = true;
+                }
+                else if (lineNumber == 121 && columnNumber == 28)
+                {
+                    isobj11TextDisabled = true;
+                }
+                else if (lineNumber == 123 && columnNumber == 28)
+                {
+                    isobj12TextDisabled = true;
+                }
+                else if (lineNumber == 125 && columnNumber == 28)
+                {
+                    isobj13TextDisabled = true;
+                }
+                else if (lineNumber == 127 && columnNumber == 28)
+                {
+                    isobj14TextDisabled = true;
+                }
+                else if (lineNumber == 100 && columnNumber == 62)
+                {
+                    isobj16TextDisabled = true;
+                }
+                else if (lineNumber == 60 && columnNumber == 47)
+                {
+                    isobj17SourceDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -127,6 +205,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IClassifySheetForm_Bindings
@@ -212,7 +302,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 103
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ToggleSwitch_IsOn(this.obj3, obj);
+                    if (!isobj3IsOnDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ToggleSwitch_IsOn(this.obj3, obj);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_AccessionNumber(global::System.String obj, int phase)
@@ -220,7 +313,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 106
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj, null);
+                    if (!isobj4TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_ReferenceNumber(global::System.String obj, int phase)
@@ -228,7 +324,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 108
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj5, obj, null);
+                    if (!isobj5TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_ScientificName(global::System.String obj, int phase)
@@ -236,7 +335,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 110
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj, null);
+                    if (!isobj6TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_TaxonNomenclature(global::System.String obj, int phase)
@@ -244,7 +346,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 112
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    if (!isobj7TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_DateCollected(global::System.String obj, int phase)
@@ -252,7 +357,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 114
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj8, obj, null);
+                    if (!isobj8TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj8, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_DateDeposited(global::System.String obj, int phase)
@@ -260,7 +368,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 116
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_DateValidated(global::System.String obj, int phase)
@@ -268,7 +379,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 118
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj10, obj, null);
+                    if (!isobj10TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj10, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_Locality(global::System.String obj, int phase)
@@ -276,7 +390,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 120
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj11, obj, null);
+                    if (!isobj11TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj11, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_Collector(global::System.String obj, int phase)
@@ -284,7 +401,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 122
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj12, obj, null);
+                    if (!isobj12TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj12, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_Validator(global::System.String obj, int phase)
@@ -292,7 +412,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 124
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj13, obj, null);
+                    if (!isobj13TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj13, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_Description(global::System.String obj, int phase)
@@ -300,7 +423,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 126
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj14, obj, null);
+                    if (!isobj14TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj14, obj, null);
+                    }
                 }
             }
             private void Update_VerifiedSheetData_FamilyName(global::System.String obj, int phase)
@@ -308,7 +434,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 100
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj16, obj, null);
+                    if (!isobj16TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj16, obj, null);
+                    }
                 }
             }
             private void Update_HerbariumSheet(global::Windows.UI.Xaml.Media.Imaging.BitmapImage obj, int phase)
@@ -316,14 +445,23 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ClassifySheetForm.xaml line 60
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Image_Source(this.obj17, obj, null);
+                    if (!isobj17SourceDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Image_Source(this.obj17, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_IsOn()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.VerifiedSheetData.IsAvailable = this.obj3.IsOn;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.VerifiedSheetData != null)
+                        {
+                            this.dataRoot.VerifiedSheetData.IsAvailable = this.obj3.IsOn;
+                        }
+                    }
                 }
             }
 
@@ -469,6 +607,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

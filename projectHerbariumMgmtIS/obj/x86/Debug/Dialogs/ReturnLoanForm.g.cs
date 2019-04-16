@@ -32,6 +32,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class ReturnLoanForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IReturnLoanForm_Bindings
         {
@@ -47,8 +49,39 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBlock obj9;
             private global::Windows.UI.Xaml.Controls.TextBlock obj10;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj6TextDisabled = false;
+            private static bool isobj7TextDisabled = false;
+            private static bool isobj8TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+            private static bool isobj10TextDisabled = false;
+
             public ReturnLoanForm_obj1_Bindings()
             {
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 82 && columnNumber == 94)
+                {
+                    isobj6TextDisabled = true;
+                }
+                else if (lineNumber == 83 && columnNumber == 94)
+                {
+                    isobj7TextDisabled = true;
+                }
+                else if (lineNumber == 84 && columnNumber == 94)
+                {
+                    isobj8TextDisabled = true;
+                }
+                else if (lineNumber == 85 && columnNumber == 94)
+                {
+                    isobj9TextDisabled = true;
+                }
+                else if (lineNumber == 87 && columnNumber == 24)
+                {
+                    isobj10TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -75,6 +108,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IReturnLoanForm_Bindings
@@ -147,7 +192,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Dialogs\ReturnLoanForm.xaml line 82
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj, null);
+                    if (!isobj6TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj6, obj, null);
+                    }
                 }
             }
             private void Update_PlantLoanData_Borrower(global::System.String obj, int phase)
@@ -155,7 +203,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Dialogs\ReturnLoanForm.xaml line 83
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    if (!isobj7TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj7, obj, null);
+                    }
                 }
             }
             private void Update_PlantLoanData_Duration(global::System.String obj, int phase)
@@ -163,7 +214,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Dialogs\ReturnLoanForm.xaml line 84
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj8, obj, null);
+                    if (!isobj8TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj8, obj, null);
+                    }
                 }
             }
             private void Update_PlantLoanData_Purpose(global::System.String obj, int phase)
@@ -171,7 +225,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Dialogs\ReturnLoanForm.xaml line 85
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void Update_PlantLoanData_Status(global::System.String obj, int phase)
@@ -179,7 +236,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     // Dialogs\ReturnLoanForm.xaml line 86
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj10, obj, null);
+                    if (!isobj10TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBlock_Text(this.obj10, obj, null);
+                    }
                 }
             }
         }
@@ -232,6 +292,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

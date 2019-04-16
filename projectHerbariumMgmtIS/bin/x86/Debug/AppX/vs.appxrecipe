@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>F771E2978D6DB36ADE09CAF5E858C687DE0FC1CC9BA986513A6C7ACE98D85465</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>F2EA9D8FD64664F046F00C4692D83153235D14C697D6DB6B2C6E558DC4A5C29E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>9e63dcab-a96d-404d-a890-81def48d6c2b_1.0.0.0_x86__jp5kr8zm1da4m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>9e63dcab-a96d-404d-a890-81def48d6c2b_jp5kr8zm1da4m!App</RegisteredUserModeAppID>
     <RegisteredPackageID>9e63dcab-a96d-404d-a890-81def48d6c2b</RegisteredPackageID>
@@ -30,21 +30,21 @@
     <AppXManifest Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-24T02:57:25.292</Modified>
+      <Modified>2019-04-16T04:53:36.112</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\projectHerbariumMgmtIS.exe">
       <PackagePath>entrypoint\projectHerbariumMgmtIS.exe</PackagePath>
-      <Modified>2019-02-24T02:56:27.332</Modified>
+      <Modified>2019-04-16T04:53:30.423</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\colorcode.core\2.0.6\lib\netstandard1.4\ColorCode.Core.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\colorcode.core\2.0.5\lib\netstandard1.4\ColorCode.Core.dll">
       <PackagePath>ColorCode.Core.dll</PackagePath>
-      <Modified>2018-10-05T15:30:08.000</Modified>
+      <Modified>2018-05-17T02:55:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\colorcode.uwp\2.0.6\lib\uap10.0\ColorCode.UWP.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\colorcode.uwp\2.0.5\lib\uap10.0\ColorCode.UWP.dll">
       <PackagePath>ColorCode.UWP.dll</PackagePath>
-      <Modified>2018-10-05T15:30:16.000</Modified>
+      <Modified>2018-05-17T02:55:18.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\documentformat.openxml\2.8.1\lib\netstandard1.3\DocumentFormat.OpenXml.dll">
       <PackagePath>DocumentFormat.OpenXml.dll</PackagePath>
@@ -54,33 +54,33 @@
       <PackagePath>Microsoft.Identity.Client.dll</PackagePath>
       <Modified>2018-02-02T10:02:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit\5.0.0\lib\netstandard2.0\Microsoft.Toolkit.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit\4.0.0\lib\netstandard1.4\Microsoft.Toolkit.dll">
       <PackagePath>Microsoft.Toolkit.dll</PackagePath>
-      <Modified>2018-10-30T19:08:42.000</Modified>
+      <Modified>2018-08-07T14:23:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.parsers\5.0.0\lib\netstandard2.0\Microsoft.Toolkit.Parsers.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.parsers\4.0.0\lib\netstandard1.4\Microsoft.Toolkit.Parsers.dll">
       <PackagePath>Microsoft.Toolkit.Parsers.dll</PackagePath>
-      <Modified>2018-10-30T19:08:50.000</Modified>
+      <Modified>2018-08-07T14:23:10.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.dll</PackagePath>
-      <Modified>2018-10-30T19:08:54.000</Modified>
+      <Modified>2018-08-07T14:23:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.dll</PackagePath>
-      <Modified>2018-10-30T19:09:10.000</Modified>
+      <Modified>2018-08-07T14:23:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.animations\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Animations.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.animations\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Animations.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Animations.dll</PackagePath>
-      <Modified>2018-10-30T19:09:12.000</Modified>
+      <Modified>2018-08-07T14:23:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.dll</PackagePath>
-      <Modified>2018-10-30T19:09:14.000</Modified>
+      <Modified>2018-08-07T14:23:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
-      <Modified>2018-10-30T19:09:16.000</Modified>
+      <Modified>2018-08-07T14:23:38.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.xaml.behaviors.uwp.managed\1.1.0\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -778,618 +778,674 @@
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
       <Modified>2017-06-25T19:01:44.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+      <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+      <Modified>2018-10-22T17:33:40.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\background-1.png">
       <PackagePath>Assets\background-1.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.234</Modified>
+      <Modified>2019-03-24T12:08:20.784</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\BadgeLogo.scale-200.png">
       <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.359</Modified>
+      <Modified>2019-03-24T12:08:20.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\herbarium_banner.png">
       <PackagePath>Assets\herbarium_banner.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.385</Modified>
+      <Modified>2019-03-24T12:08:20.879</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\herbarium_banner_white.png">
       <PackagePath>Assets\herbarium_banner_white.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.409</Modified>
+      <Modified>2019-03-24T12:08:20.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\herbarium_banner_white_padded.png">
       <PackagePath>Assets\herbarium_banner_white_padded.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.436</Modified>
+      <Modified>2019-03-24T12:08:20.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\herbarium_icon.png">
       <PackagePath>Assets\herbarium_icon.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.446</Modified>
+      <Modified>2019-03-24T12:08:20.922</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.462</Modified>
+      <Modified>2019-03-24T12:08:20.494</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.479</Modified>
+      <Modified>2019-03-24T12:08:20.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\pup_logo.png">
       <PackagePath>Assets\pup_logo.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.510</Modified>
+      <Modified>2019-03-24T12:08:20.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.520</Modified>
+      <Modified>2019-03-24T12:08:20.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.533</Modified>
+      <Modified>2019-03-24T12:08:20.689</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.592</Modified>
+      <Modified>2019-03-24T12:08:20.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.604</Modified>
+      <Modified>2019-03-24T12:08:20.696</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T09:30:49.277</Modified>
+      <Modified>2019-03-24T12:08:20.700</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.614</Modified>
+      <Modified>2019-03-24T12:08:20.704</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T09:30:49.320</Modified>
+      <Modified>2019-03-24T12:08:20.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T09:30:49.350</Modified>
+      <Modified>2019-03-24T12:08:20.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.645</Modified>
+      <Modified>2019-03-24T12:08:20.714</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\StoreLogo.backup.png">
       <PackagePath>Assets\StoreLogo.backup.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.657</Modified>
+      <Modified>2019-03-24T12:08:20.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.797</Modified>
+      <Modified>2019-03-24T12:08:20.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\wallp1.png">
       <PackagePath>Assets\wallp1.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.820</Modified>
+      <Modified>2019-03-24T12:08:20.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\wallp2.png">
       <PackagePath>Assets\wallp2.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.845</Modified>
+      <Modified>2019-03-24T12:08:20.966</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\wallp3.png">
       <PackagePath>Assets\wallp3.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.865</Modified>
+      <Modified>2019-03-24T12:08:20.982</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\wallp4.png">
       <PackagePath>Assets\wallp4.png</PackagePath>
-      <Modified>2019-02-10T08:55:59.887</Modified>
+      <Modified>2019-03-24T12:08:20.994</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-10T08:55:59.905</Modified>
+      <Modified>2019-03-24T12:08:20.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\background-2.jpg">
       <PackagePath>Assets\background-2.jpg</PackagePath>
-      <Modified>2019-02-10T08:55:59.256</Modified>
+      <Modified>2019-03-24T12:08:20.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\background-3.jpg">
       <PackagePath>Assets\background-3.jpg</PackagePath>
-      <Modified>2019-02-10T08:55:59.309</Modified>
+      <Modified>2019-03-24T12:08:20.806</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\background-4.jpg">
       <PackagePath>Assets\background-4.jpg</PackagePath>
-      <Modified>2019-02-10T08:55:59.320</Modified>
+      <Modified>2019-03-24T12:08:20.857</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\background-5.jpg">
       <PackagePath>Assets\background-5.jpg</PackagePath>
-      <Modified>2019-02-10T08:55:59.346</Modified>
+      <Modified>2019-03-24T12:08:20.866</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Assets\college_of_science_logo.jpg">
       <PackagePath>Assets\college_of_science_logo.jpg</PackagePath>
-      <Modified>2019-02-10T08:55:59.368</Modified>
+      <Modified>2019-03-24T12:08:20.872</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Database\hbmis-definition.sql">
+      <PackagePath>Database\hbmis-definition.sql</PackagePath>
+      <Modified>2019-03-28T11:32:53.146</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Database\hbmis-storedproc.sql">
+      <PackagePath>Database\hbmis-storedproc.sql</PackagePath>
+      <Modified>2019-03-28T11:32:53.277</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Model\MainMenu.xml">
       <PackagePath>Model\MainMenu.xml</PackagePath>
-      <Modified>2019-02-04T01:10:27.193</Modified>
+      <Modified>2019-03-24T12:08:21.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Model\SubMenu.xml">
       <PackagePath>Model\SubMenu.xml</PackagePath>
-      <Modified>2019-02-04T01:12:56.771</Modified>
+      <Modified>2019-03-24T12:08:21.775</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-09-28T06:23:45.128</Modified>
+      <Modified>2019-03-24T12:08:21.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\projectHerbariumMgmtIS.xr.xml">
       <PackagePath>projectHerbariumMgmtIS.xr.xml</PackagePath>
-      <Modified>2019-02-21T03:52:11.064</Modified>
+      <Modified>2019-03-28T11:53:25.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.631</Modified>
+      <Modified>2019-04-16T04:53:25.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\AccountForm.xbf">
       <PackagePath>Dialogs\AccountForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.633</Modified>
+      <Modified>2019-04-16T04:53:25.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ApproveLoanForm.xbf">
       <PackagePath>Dialogs\ApproveLoanForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.635</Modified>
+      <Modified>2019-04-16T04:53:25.631</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\BorrowerForm.xbf">
       <PackagePath>Dialogs\BorrowerForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.636</Modified>
+      <Modified>2019-04-16T04:53:24.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ClassForm.xbf">
       <PackagePath>Dialogs\ClassForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.639</Modified>
+      <Modified>2019-04-16T04:53:25.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ClassifySheetForm.xbf">
       <PackagePath>Dialogs\ClassifySheetForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.640</Modified>
+      <Modified>2019-04-16T04:53:24.810</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\CollectorForm.xbf">
       <PackagePath>Dialogs\CollectorForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.643</Modified>
+      <Modified>2019-04-16T04:53:24.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ConfirmDepositForm.xbf">
       <PackagePath>Dialogs\ConfirmDepositForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.645</Modified>
+      <Modified>2019-04-16T04:53:25.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\EditSheetForm.xbf">
       <PackagePath>Dialogs\EditSheetForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.646</Modified>
+      <Modified>2019-04-16T04:53:25.638</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\FamilyForm.xbf">
       <PackagePath>Dialogs\FamilyForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.648</Modified>
+      <Modified>2019-04-16T04:53:25.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\GenusForm.xbf">
       <PackagePath>Dialogs\GenusForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.650</Modified>
+      <Modified>2019-04-16T04:53:25.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\HerbariumBoxForm.xbf">
       <PackagePath>Dialogs\HerbariumBoxForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.651</Modified>
+      <Modified>2019-04-16T04:53:25.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\LocalityForm.xbf">
       <PackagePath>Dialogs\LocalityForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.655</Modified>
+      <Modified>2019-04-16T04:53:24.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\NomenclatureForm.xbf">
       <PackagePath>Dialogs\NomenclatureForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.657</Modified>
+      <Modified>2019-04-16T04:53:25.645</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\PhylumForm.xbf">
       <PackagePath>Dialogs\PhylumForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.660</Modified>
+      <Modified>2019-04-16T04:53:25.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\PlantTypeForm.xbf">
       <PackagePath>Dialogs\PlantTypeForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.661</Modified>
+      <Modified>2019-04-16T04:53:25.647</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\RequestLoanForm.xbf">
       <PackagePath>Dialogs\RequestLoanForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.662</Modified>
+      <Modified>2019-04-16T04:53:24.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ResubmitDepositForm.xbf">
       <PackagePath>Dialogs\ResubmitDepositForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.665</Modified>
+      <Modified>2019-04-16T04:53:25.650</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ResultDialog.xbf">
       <PackagePath>Dialogs\ResultDialog.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.668</Modified>
+      <Modified>2019-04-16T04:53:25.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ReturnLoanForm.xbf">
       <PackagePath>Dialogs\ReturnLoanForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.669</Modified>
+      <Modified>2019-04-16T04:53:25.030</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\SampleDialog.xbf">
       <PackagePath>Dialogs\SampleDialog.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.671</Modified>
+      <Modified>2019-04-16T04:53:25.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\SpeciesAuthorForm.xbf">
       <PackagePath>Dialogs\SpeciesAuthorForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.674</Modified>
+      <Modified>2019-04-16T04:53:25.655</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\SpeciesForm.xbf">
       <PackagePath>Dialogs\SpeciesForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.679</Modified>
+      <Modified>2019-04-16T04:53:25.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\StaffForm.xbf">
       <PackagePath>Dialogs\StaffForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.680</Modified>
+      <Modified>2019-04-16T04:53:25.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ValidatorForm.xbf">
       <PackagePath>Dialogs\ValidatorForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.682</Modified>
+      <Modified>2019-04-16T04:53:25.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\VerifyDepositForm.xbf">
       <PackagePath>Dialogs\VerifyDepositForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.685</Modified>
+      <Modified>2019-04-16T04:53:25.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewLoanForm.xbf">
       <PackagePath>Dialogs\ViewLoanForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.686</Modified>
+      <Modified>2019-04-16T04:53:25.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewSheetForm.xbf">
       <PackagePath>Dialogs\ViewSheetForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.689</Modified>
+      <Modified>2019-04-16T04:53:25.162</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\ViewTrackedSheetForm.xbf">
       <PackagePath>Dialogs\ViewTrackedSheetForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.690</Modified>
+      <Modified>2019-04-16T04:53:25.191</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.692</Modified>
+      <Modified>2019-04-16T04:53:25.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Dialogs\OrderForm.xbf">
       <PackagePath>Dialogs\OrderForm.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.693</Modified>
+      <Modified>2019-04-16T04:53:25.695</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\AccessAccountsPage.xbf">
       <PackagePath>Maintenance\AccessAccountsPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.695</Modified>
+      <Modified>2019-04-16T04:53:25.697</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\BorrowerPage.xbf">
       <PackagePath>Maintenance\BorrowerPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.696</Modified>
+      <Modified>2019-04-16T04:53:25.702</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\CollectorPage.xbf">
       <PackagePath>Maintenance\CollectorPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.698</Modified>
+      <Modified>2019-04-16T04:53:25.704</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\ExternalValidatorPage.xbf">
       <PackagePath>Maintenance\ExternalValidatorPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.700</Modified>
+      <Modified>2019-04-16T04:53:25.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\HerbariumBoxPage.xbf">
       <PackagePath>Maintenance\HerbariumBoxPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.701</Modified>
+      <Modified>2019-04-16T04:53:25.713</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\HerbariumStaffPage.xbf">
       <PackagePath>Maintenance\HerbariumStaffPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.703</Modified>
+      <Modified>2019-04-16T04:53:25.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\PlantLocalityPage.xbf">
       <PackagePath>Maintenance\PlantLocalityPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.704</Modified>
+      <Modified>2019-04-16T04:53:25.717</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\PlantTypePage.xbf">
       <PackagePath>Maintenance\PlantTypePage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.706</Modified>
+      <Modified>2019-04-16T04:53:25.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\SpeciesAuthorPage.xbf">
       <PackagePath>Maintenance\SpeciesAuthorPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.709</Modified>
+      <Modified>2019-04-16T04:53:25.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\SpeciesNomenclaturePage.xbf">
       <PackagePath>Maintenance\SpeciesNomenclaturePage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.710</Modified>
+      <Modified>2019-04-16T04:53:25.729</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonClassPage.xbf">
       <PackagePath>Maintenance\TaxonClassPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.712</Modified>
+      <Modified>2019-04-16T04:53:25.731</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonFamilyPage.xbf">
       <PackagePath>Maintenance\TaxonFamilyPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.713</Modified>
+      <Modified>2019-04-16T04:53:25.732</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonGenusPage.xbf">
       <PackagePath>Maintenance\TaxonGenusPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.715</Modified>
+      <Modified>2019-04-16T04:53:25.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonomicHierarchyPage.xbf">
       <PackagePath>Maintenance\TaxonomicHierarchyPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.726</Modified>
+      <Modified>2019-04-16T04:53:25.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonOrderPage.xbf">
       <PackagePath>Maintenance\TaxonOrderPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.731</Modified>
+      <Modified>2019-04-16T04:53:25.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonPhylumPage.xbf">
       <PackagePath>Maintenance\TaxonPhylumPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.735</Modified>
+      <Modified>2019-04-16T04:53:25.738</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Maintenance\TaxonSpeciesPage.xbf">
       <PackagePath>Maintenance\TaxonSpeciesPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.739</Modified>
+      <Modified>2019-04-16T04:53:25.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\ManagementTools\AuditTrailingPage.xbf">
       <PackagePath>ManagementTools\AuditTrailingPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.741</Modified>
+      <Modified>2019-04-16T04:53:25.741</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\ManagementTools\HerbariumInventoryPage.xbf">
       <PackagePath>ManagementTools\HerbariumInventoryPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.743</Modified>
+      <Modified>2019-04-16T04:53:25.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\ManagementTools\SheetTrackingPage.xbf">
       <PackagePath>ManagementTools\SheetTrackingPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.745</Modified>
+      <Modified>2019-04-16T04:53:25.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\HomePage.xbf">
       <PackagePath>MenuPages\HomePage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.749</Modified>
+      <Modified>2019-04-16T04:53:25.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\MaintenancePage.xbf">
       <PackagePath>MenuPages\MaintenancePage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.756</Modified>
+      <Modified>2019-04-16T04:53:25.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\QueriesPage.xbf">
       <PackagePath>MenuPages\QueriesPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.759</Modified>
+      <Modified>2019-04-16T04:53:25.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\ReportsPage.xbf">
       <PackagePath>MenuPages\ReportsPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.761</Modified>
+      <Modified>2019-04-16T04:53:25.750</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\TransactionPage.xbf">
       <PackagePath>MenuPages\TransactionPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.763</Modified>
+      <Modified>2019-04-16T04:53:25.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\MenuPages\UtilitiesPage.xbf">
       <PackagePath>MenuPages\UtilitiesPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.764</Modified>
+      <Modified>2019-04-16T04:53:25.753</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Queries\QueryHerbariumSheetPage.xbf">
       <PackagePath>Queries\QueryHerbariumSheetPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.769</Modified>
+      <Modified>2019-04-16T04:53:25.420</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Queries\QuerySpeciesPage.xbf">
       <PackagePath>Queries\QuerySpeciesPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.770</Modified>
+      <Modified>2019-04-16T04:53:25.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentDamageReturnsByBorrower.xbf">
       <PackagePath>Reports\DocumentDamageReturnsByBorrower.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.772</Modified>
+      <Modified>2019-04-16T04:53:25.455</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentDamageReturnsByLoan.xbf">
       <PackagePath>Reports\DocumentDamageReturnsByLoan.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.774</Modified>
+      <Modified>2019-04-16T04:53:25.470</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentDamageReturnsByMonth.xbf">
       <PackagePath>Reports\DocumentDamageReturnsByMonth.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.775</Modified>
+      <Modified>2019-04-16T04:53:25.482</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentExternalVerification.xbf">
       <PackagePath>Reports\DocumentExternalVerification.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.776</Modified>
+      <Modified>2019-04-16T04:53:25.493</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentNewDeposit.xbf">
       <PackagePath>Reports\DocumentNewDeposit.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.779</Modified>
+      <Modified>2019-04-16T04:53:25.505</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentRejectedDeposit.xbf">
       <PackagePath>Reports\DocumentRejectedDeposit.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.780</Modified>
+      <Modified>2019-04-16T04:53:25.516</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\DocumentVerifiedDeposit.xbf">
       <PackagePath>Reports\DocumentVerifiedDeposit.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.781</Modified>
+      <Modified>2019-04-16T04:53:25.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportDamagedReturns.xbf">
       <PackagePath>Reports\ReportDamagedReturns.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.783</Modified>
+      <Modified>2019-04-16T04:53:25.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportExternalVerificationPage.xbf">
       <PackagePath>Reports\ReportExternalVerificationPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.784</Modified>
+      <Modified>2019-04-16T04:53:25.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportNewDepositPage.xbf">
       <PackagePath>Reports\ReportNewDepositPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.786</Modified>
+      <Modified>2019-04-16T04:53:25.769</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportRejectedDepositPage.xbf">
       <PackagePath>Reports\ReportRejectedDepositPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.787</Modified>
+      <Modified>2019-04-16T04:53:25.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Reports\ReportVerifiedDepositPage.xbf">
       <PackagePath>Reports\ReportVerifiedDepositPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.789</Modified>
+      <Modified>2019-04-16T04:53:25.771</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\DepositTransactionPage.xbf">
       <PackagePath>Transaction\DepositTransactionPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.790</Modified>
+      <Modified>2019-04-16T04:53:25.601</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\ExcelDepositPage.xbf">
       <PackagePath>Transaction\ExcelDepositPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.792</Modified>
+      <Modified>2019-04-16T04:53:25.774</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantClassificationPage.xbf">
       <PackagePath>Transaction\PlantClassificationPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.794</Modified>
+      <Modified>2019-04-16T04:53:25.775</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantDepositPage.xbf">
       <PackagePath>Transaction\PlantDepositPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.795</Modified>
+      <Modified>2019-04-16T04:53:25.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantLoaningPage.xbf">
       <PackagePath>Transaction\PlantLoaningPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.796</Modified>
+      <Modified>2019-04-16T04:53:25.779</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantReceivingPage.xbf">
       <PackagePath>Transaction\PlantReceivingPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.799</Modified>
+      <Modified>2019-04-16T04:53:25.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantResubmissionPage.xbf">
       <PackagePath>Transaction\PlantResubmissionPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.800</Modified>
+      <Modified>2019-04-16T04:53:25.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Transaction\PlantVerificationPage.xbf">
       <PackagePath>Transaction\PlantVerificationPage.xbf</PackagePath>
-      <Modified>2019-02-24T02:56:19.801</Modified>
+      <Modified>2019-04-16T04:53:25.783</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2018-04-19T13:01:52.000</Modified>
+      <Modified>2018-10-22T16:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI\Microsoft.Toolkit.Uwp.UI.xr.xml">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI\Microsoft.Toolkit.Uwp.UI.xr.xml</PackagePath>
+      <Modified>2018-08-07T14:19:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI\Extensions\NavigationView\NavigationView.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI\Extensions\NavigationView\NavigationView.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI\Extensions\NavigationView\Styles\VSCodeActivityBarStyle.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI\Extensions\NavigationView\Styles\VSCodeActivityBarStyle.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Microsoft.Toolkit.Uwp.UI.Controls.xr.xml</PackagePath>
-      <Modified>2018-10-30T19:04:50.000</Modified>
+      <Modified>2018-08-07T14:19:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\BladeView\BladeView.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\CameraPreview\CameraPreview.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\CameraPreview\CameraPreview.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\CameraPreview\CameraPreview.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\CameraPreview\CameraPreview.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Carousel\Carousel.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\DropShadowPanel\DropShadowPanel.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Expander\Expander.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\GridSplitter\GridSplitter.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedContentControl\HeaderedContentControl.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedContentControl\HeaderedContentControl.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenu.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenu.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedItemsControl\HeaderedItemsControl.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedItemsControl\HeaderedItemsControl.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenuNavViewTemplate.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenuNavViewTemplate.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenuTemplate.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HamburgerMenu\HamburgerMenuTemplate.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedContentControl\HeaderedContentControl.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedContentControl\HeaderedContentControl.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedItemsControl\HeaderedItemsControl.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedItemsControl\HeaderedItemsControl.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\MSEdgeNotificationStyle.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\MSEdgeNotificationStyle.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\HeaderedTextBlock\HeaderedTextBlock.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\VSCodeNotificationStyle.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\VSCodeNotificationStyle.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\ImageEx.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\InfiniteCanvas\InfiniteCanvas.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InfiniteCanvas\InfiniteCanvas.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\RoundImageEx.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ImageEx\RoundImageEx.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\InAppNotification.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\MSEdgeNotificationStyle.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\MSEdgeNotificationStyle.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\VSCodeNotificationStyle.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InAppNotification\Styles\VSCodeNotificationStyle.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\InfiniteCanvas\InfiniteCanvas.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\InfiniteCanvas\InfiniteCanvas.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\LayoutTransformControl\LayoutTransformControl.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Loading\Loading.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\MarkdownTextBlock\MarkdownTextBlock.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\MasterDetailsView\MasterDetailsView.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Menu\Menu.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\OrbitView\OrbitView.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListView.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListView.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\TabView\TabView.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TabView\TabView.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListViewRefreshContainerTemplate.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListViewRefreshContainerTemplate.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListViewTemplate.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\PullToRefreshListView\PullToRefreshListViewTemplate.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RadialGauge\RadialGauge.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RadialProgressBar\RadialProgressBar.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RangeSelector\RangeSelector.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\RotatorTile\RotatorTile.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xaml</PackagePath>
-      <Modified>2018-10-30T19:06:16.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\ScrollHeader\ScrollHeader.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItem.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItem.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItemSwipeControlTemplate.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\SlidableListItem\SlidableListItemSwipeControlTemplate.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\TextToolbar.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\Symbols\Symbols.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarButton.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TextToolbar\ToolbarItems\ToolbarSeparator.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\Themes\Generic.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls\TileControl\TileControl.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
-      <Modified>2018-10-30T19:03:52.000</Modified>
+      <Modified>2018-08-07T14:19:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\DataGrid\DataGrid.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\DataGrid\DataGrid.xaml</PackagePath>
-      <Modified>2018-10-30T19:05:48.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\DataGrid\DataGrid.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\DataGrid\DataGrid.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:30.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\5.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Themes\Generic.xaml">
-      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Themes\Generic.xaml</PackagePath>
-      <Modified>2018-10-30T19:05:48.000</Modified>
+    <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\4.0.0\lib\uap10.0\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Themes\Generic.xbf">
+      <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Themes\Generic.xbf</PackagePath>
+      <Modified>2018-08-07T14:20:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\.nuget\packages\winrtxamltoolkit\2.3.0\lib\uap10.0\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml">
       <PackagePath>WinRTXamlToolkit\WinRTXamlToolkit.xr.xml</PackagePath>
@@ -1409,11 +1465,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-02-24T02:56:49.861</Modified>
+      <Modified>2019-03-28T13:41:18.560</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Jtxzromx Casingal\Documents\Visual Studio 2017\Projects\projectHerbariumMgmtIS\projectHerbariumMgmtIS\bin\x86\Debug\Core\projectHerbariumMgmtIS.exe">
       <PackagePath>projectHerbariumMgmtIS.exe</PackagePath>
-      <Modified>2019-02-24T02:57:25.265</Modified>
+      <Modified>2019-04-16T04:53:36.076</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

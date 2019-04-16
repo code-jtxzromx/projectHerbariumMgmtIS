@@ -48,6 +48,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class StaffForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IStaffForm_Bindings
         {
@@ -69,11 +71,72 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.ComboBox obj16;
             private global::Windows.UI.Xaml.Controls.TextBox obj17;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4TextDisabled = false;
+            private static bool isobj5TextDisabled = false;
+            private static bool isobj8TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+            private static bool isobj10TextDisabled = false;
+            private static bool isobj12TextDisabled = false;
+            private static bool isobj13TextDisabled = false;
+            private static bool isobj16SelectedItemDisabled = false;
+            private static bool isobj17TextDisabled = false;
+
             private StaffForm_obj1_BindingsTracking bindingsTracking;
 
             public StaffForm_obj1_Bindings()
             {
                 this.bindingsTracking = new StaffForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 76 && columnNumber == 22)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 80 && columnNumber == 22)
+                {
+                    isobj4TextDisabled = true;
+                }
+                else if (lineNumber == 83 && columnNumber == 22)
+                {
+                    isobj5TextDisabled = true;
+                }
+                else if (lineNumber == 91 && columnNumber == 18)
+                {
+                    isobj8TextDisabled = true;
+                }
+                else if (lineNumber == 94 && columnNumber == 18)
+                {
+                    isobj9TextDisabled = true;
+                }
+                else if (lineNumber == 97 && columnNumber == 18)
+                {
+                    isobj10TextDisabled = true;
+                }
+                else if (lineNumber == 103 && columnNumber == 22)
+                {
+                    isobj12TextDisabled = true;
+                }
+                else if (lineNumber == 106 && columnNumber == 22)
+                {
+                    isobj13TextDisabled = true;
+                }
+                else if (lineNumber == 114 && columnNumber == 19)
+                {
+                    isobj16SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 117 && columnNumber == 22)
+                {
+                    isobj17TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -128,6 +191,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IStaffForm_Bindings
@@ -191,9 +266,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -221,7 +299,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 75
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_StaffData_FirstName(global::System.String obj, int phase)
@@ -229,7 +310,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 79
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj4, obj, null);
+                    if (!isobj4TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_MiddleName(global::System.String obj, int phase)
@@ -237,7 +321,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 82
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    if (!isobj5TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_LastName(global::System.String obj, int phase)
@@ -245,7 +332,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 90
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj, null);
+                    if (!isobj8TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_MiddleInitial(global::System.String obj, int phase)
@@ -253,7 +343,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 93
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_NameSuffix(global::System.String obj, int phase)
@@ -261,7 +354,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 96
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    if (!isobj10TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_ContactNumber(global::System.String obj, int phase)
@@ -269,7 +365,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 102
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    if (!isobj12TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_Email(global::System.String obj, int phase)
@@ -277,7 +376,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 105
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj13, obj, null);
+                    if (!isobj13TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj13, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_Role(global::System.String obj, int phase)
@@ -285,7 +387,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 113
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj16, obj, null);
+                    if (!isobj16SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj16, obj, null);
+                    }
                 }
             }
             private void Update_StaffData_College(global::System.String obj, int phase)
@@ -293,77 +398,140 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\StaffForm.xaml line 116
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj17, obj, null);
+                    if (!isobj17TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj17, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.StaffID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.StaffID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.FirstName = this.obj4.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.FirstName = this.obj4.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_5_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.MiddleName = this.obj5.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.MiddleName = this.obj5.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_8_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.LastName = this.obj8.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.LastName = this.obj8.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_9_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.MiddleInitial = this.obj9.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.MiddleInitial = this.obj9.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_10_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.NameSuffix = this.obj10.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.NameSuffix = this.obj10.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_12_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.ContactNumber = this.obj12.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.ContactNumber = this.obj12.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_13_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.Email = this.obj13.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.Email = this.obj13.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_16_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.Role = (global::System.String)this.obj16.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.Role = (global::System.String)this.obj16.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_17_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.StaffData.College = this.obj17.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.StaffData != null)
+                        {
+                            this.dataRoot.StaffData.College = this.obj17.Text;
+                        }
+                    }
                 }
             }
 
@@ -679,6 +847,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

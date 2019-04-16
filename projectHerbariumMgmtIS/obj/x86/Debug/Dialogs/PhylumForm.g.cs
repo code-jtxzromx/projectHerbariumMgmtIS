@@ -48,6 +48,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class PhylumForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IPhylumForm_Bindings
         {
@@ -63,11 +65,42 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBox obj6;
             private global::Windows.UI.Xaml.Controls.AutoSuggestBox obj9;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj5TextDisabled = false;
+            private static bool isobj6TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+
             private PhylumForm_obj1_BindingsTracking bindingsTracking;
 
             public PhylumForm_obj1_Bindings()
             {
                 this.bindingsTracking = new PhylumForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 68 && columnNumber == 18)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 75 && columnNumber == 18)
+                {
+                    isobj5TextDisabled = true;
+                }
+                else if (lineNumber == 78 && columnNumber == 18)
+                {
+                    isobj6TextDisabled = true;
+                }
+                else if (lineNumber == 86 && columnNumber == 25)
+                {
+                    isobj9TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -98,6 +131,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IPhylumForm_Bindings
@@ -161,9 +206,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\PhylumForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -185,7 +233,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\PhylumForm.xaml line 67
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    }
                 }
             }
             private void Update_PhylumData_DomainName(global::System.String obj, int phase)
@@ -193,7 +244,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\PhylumForm.xaml line 74
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    if (!isobj5TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_PhylumData_KingdomName(global::System.String obj, int phase)
@@ -201,7 +255,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\PhylumForm.xaml line 77
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj6, obj, null);
+                    if (!isobj6TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj6, obj, null);
+                    }
                 }
             }
             private void Update_PhylumData_PhylumName(global::System.String obj, int phase)
@@ -209,35 +266,62 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\PhylumForm.xaml line 85
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_AutoSuggestBox_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_AutoSuggestBox_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.PhylumData.PhylumID = this.obj3.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.PhylumData != null)
+                        {
+                            this.dataRoot.PhylumData.PhylumID = this.obj3.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_5_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.PhylumData.DomainName = this.obj5.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.PhylumData != null)
+                        {
+                            this.dataRoot.PhylumData.DomainName = this.obj5.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_6_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.PhylumData.KingdomName = this.obj6.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.PhylumData != null)
+                        {
+                            this.dataRoot.PhylumData.KingdomName = this.obj6.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_9_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.PhylumData.PhylumName = this.obj9.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.PhylumData != null)
+                        {
+                            this.dataRoot.PhylumData.PhylumName = this.obj9.Text;
+                        }
+                    }
                 }
             }
 
@@ -445,6 +529,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

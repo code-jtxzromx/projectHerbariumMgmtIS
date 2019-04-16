@@ -48,6 +48,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class LocalityForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             ILocalityForm_Bindings
         {
@@ -68,11 +70,67 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBox obj15;
             private global::Windows.UI.Xaml.Controls.TextBox obj16;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4SelectedItemDisabled = false;
+            private static bool isobj6SelectedItemDisabled = false;
+            private static bool isobj7SelectedItemDisabled = false;
+            private static bool isobj10TextDisabled = false;
+            private static bool isobj12TextDisabled = false;
+            private static bool isobj14TextDisabled = false;
+            private static bool isobj15TextDisabled = false;
+            private static bool isobj16TextDisabled = false;
+
             private LocalityForm_obj1_BindingsTracking bindingsTracking;
 
             public LocalityForm_obj1_Bindings()
             {
                 this.bindingsTracking = new LocalityForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 11 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 83 && columnNumber == 22)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 86 && columnNumber == 23)
+                {
+                    isobj4SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 93 && columnNumber == 23)
+                {
+                    isobj6SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 97 && columnNumber == 23)
+                {
+                    isobj7SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 105 && columnNumber == 22)
+                {
+                    isobj10TextDisabled = true;
+                }
+                else if (lineNumber == 111 && columnNumber == 22)
+                {
+                    isobj12TextDisabled = true;
+                }
+                else if (lineNumber == 117 && columnNumber == 22)
+                {
+                    isobj14TextDisabled = true;
+                }
+                else if (lineNumber == 121 && columnNumber == 22)
+                {
+                    isobj15TextDisabled = true;
+                }
+                else if (lineNumber == 126 && columnNumber == 22)
+                {
+                    isobj16TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -123,6 +181,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // ILocalityForm_Bindings
@@ -186,9 +256,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -214,7 +287,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 82
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_LocalityData_Country(global::System.String obj, int phase)
@@ -222,7 +298,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 85
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    if (!isobj4SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_LocalityData_Province(global::System.String obj, int phase)
@@ -230,7 +309,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 92
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj6, obj, null);
+                    if (!isobj6SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj6, obj, null);
+                    }
                 }
             }
             private void Update_LocalityData_City(global::System.String obj, int phase)
@@ -238,7 +320,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 96
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj7, obj, null);
+                    if (!isobj7SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj7, obj, null);
+                    }
                 }
             }
             private void Update_LocalityData_SpecificLocation(global::System.String obj, int phase)
@@ -246,9 +331,15 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 104
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    if (!isobj10TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    }
                     // Dialogs\LocalityForm.xaml line 110
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    if (!isobj12TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    }
                 }
             }
             private void Update_LocalityData_Latitude(global::System.String obj, int phase)
@@ -256,7 +347,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 116
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj14, obj, null);
+                    if (!isobj14TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj14, obj, null);
+                    }
                 }
             }
             private void Update_LocalityData_Longtitude(global::System.String obj, int phase)
@@ -264,7 +358,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 120
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj15, obj, null);
+                    if (!isobj15TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj15, obj, null);
+                    }
                 }
             }
             private void Update_LocalityData_ShortLocation(global::System.String obj, int phase)
@@ -272,70 +369,127 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\LocalityForm.xaml line 125
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj16, obj, null);
+                    if (!isobj16TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj16, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.LocalityID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.LocalityID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.Country = (global::System.String)this.obj4.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.Country = (global::System.String)this.obj4.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_6_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.Province = (global::System.String)this.obj6.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.Province = (global::System.String)this.obj6.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_7_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.City = (global::System.String)this.obj7.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.City = (global::System.String)this.obj7.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_10_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.SpecificLocation = this.obj10.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.SpecificLocation = this.obj10.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_12_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.SpecificLocation = this.obj12.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.SpecificLocation = this.obj12.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_14_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.Latitude = this.obj14.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.Latitude = this.obj14.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_15_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.Longtitude = this.obj15.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.Longtitude = this.obj15.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_16_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.LocalityData.ShortLocation = this.obj16.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.LocalityData != null)
+                        {
+                            this.dataRoot.LocalityData.ShortLocation = this.obj16.Text;
+                        }
+                    }
                 }
             }
 
@@ -632,6 +786,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

@@ -20,7 +20,7 @@
         </Grid.Background>
 
         <Grid x:ConnectionId='2' x:Name="LoginScreen" Visibility="Visible">
-            <FlipView x:ConnectionId='10' x:Name="flvBackgrounds" BorderBrush="Transparent">
+            <FlipView x:ConnectionId='14' x:Name="flvBackgrounds" BorderBrush="Transparent">
                 <animations:Implicit.ShowAnimations>
                     <animations:TranslationAnimation Duration="0:0:1" From="200, 0, 0" To="0" ></animations:TranslationAnimation>
                     <animations:OpacityAnimation Duration="0:0:1" From="0" To="1.0"></animations:OpacityAnimation>
@@ -64,23 +64,22 @@
                             <media:BackdropBlurBrush Amount="10.0" />
                         </StackPanel.Background>
                         <Image Source="Assets/herbarium_banner_white.png" Height="75" Margin="10 50 10 10" />
-                        <TextBlock Margin="30 10 30 30" RequestedTheme="Dark" TextWrapping="WrapWholeWords" TextAlignment="Center" FontSize="14">
-                            HERBARIUM MANAGEMENT INFORMATION SYSTEM
-                        </TextBlock>
-
-                        <Border x:ConnectionId='11' x:Name="lblLoginError" Background="#BF800000" Margin="0 0 0 10" Visibility="Collapsed">
+                        <TextBlock Margin="30 10 30 30" RequestedTheme="Dark" TextWrapping="WrapWholeWords" TextAlignment="Center" FontSize="14" 
+                                   Text="HERBARIUM MANAGEMENT INFORMATION SYSTEM"/>
+                        
+                        <Border x:ConnectionId='15' x:Name="lblLoginError" Background="#BF800000" Margin="0 0 0 10" Visibility="Collapsed">
                             <TextBlock Margin="10 5" RequestedTheme="Dark" TextAlignment="Center" Text="Invalid Username or Password" />
                         </Border>
 
-                        <TextBox x:ConnectionId='12' x:Name="txfUsername"                                 Margin="20 5" RequestedTheme="Dark" Header="Username:" PlaceholderText="Enter Username"/>
-                        <PasswordBox x:ConnectionId='13' x:Name="txfPassword"                                 Margin="20 5" RequestedTheme="Dark" Header="Password:" PlaceholderText="Enter Password"/>
+                        <TextBox x:ConnectionId='16' x:Name="txfUsername"                                 Margin="20 5" RequestedTheme="Dark" Header="Username:" PlaceholderText="Enter Username"/>
+                        <PasswordBox x:ConnectionId='17' x:Name="txfPassword"                                 Margin="20 5" RequestedTheme="Dark" Header="Password:" PlaceholderText="Enter Password"/>
 
                         <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
-                            <Button x:ConnectionId='15' x:Name="btnLogin"                        Content="Login" Width="75" Margin="20 20 5 20" RequestedTheme="Dark" />
-                            <Button x:ConnectionId='16' x:Name="btnClear"                        Content="Clear" Width="75" Margin="5 20 20 20" RequestedTheme="Dark" />
+                            <Button x:ConnectionId='19' x:Name="btnLogin"                        Content="Login" Width="75" Margin="20 20 5 20" RequestedTheme="Dark" />
+                            <Button x:ConnectionId='20' x:Name="btnClear"                        Content="Clear" Width="75" Margin="5 20 20 20" RequestedTheme="Dark" />
                         </StackPanel>
 
-                        <ProgressRing x:ConnectionId='14' x:Name="pgrLogin" IsActive="False" Width="50" Height="50" />
+                        <ProgressRing x:ConnectionId='18' x:Name="pgrLogin" IsActive="False" Width="50" Height="50" />
                     </StackPanel>
                 </Grid>
 
@@ -118,26 +117,27 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Grid.Column="0" Source="Assets/herbarium_banner_white.png" Margin="10" />
-                    <TextBlock Grid.Column="1" VerticalAlignment="Center" Padding="5 10" FontWeight="Bold" Foreground="White"> HERBARIUM MANAGEMENT INFORMATION SYSTEM </TextBlock>
-
+                    <TextBlock Grid.Column="1" VerticalAlignment="Center" Padding="5 10" FontWeight="Bold" Foreground="White" 
+                               Text="HERBARIUM MANAGEMENT INFORMATION SYSTEM"/>
+                    
                     <Grid Grid.Column="3" RequestedTheme="Dark">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50" />
                             <ColumnDefinition />
                             <ColumnDefinition Width="50" />
                         </Grid.ColumnDefinitions>
-                        <PersonPicture x:ConnectionId='5' Grid.Column="0"                                               Height="30" />
+                        <PersonPicture x:ConnectionId='9' Grid.Column="0"                                               Height="30" />
                         <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                            <TextBlock x:ConnectionId='8'                                        FontWeight="Bold" />
-                            <TextBlock x:ConnectionId='9'                                          FontStyle="Italic" FontSize="10" />
+                            <TextBlock x:ConnectionId='12'                                        FontWeight="Bold" />
+                            <TextBlock x:ConnectionId='13'                                          FontStyle="Italic" FontSize="10" />
                         </StackPanel>
                         <CommandBar Grid.Column="2" Background="Transparent" VerticalAlignment="Center">
-                            <AppBarButton x:ConnectionId='6' x:Name="btnAbout"                        Label="About Us">
+                            <AppBarButton x:ConnectionId='10' x:Name="btnAbout"                        Label="About Us">
                                 <AppBarButton.Icon>
                                     <FontIcon Glyph="&#xE946;" />
                                 </AppBarButton.Icon>
                             </AppBarButton>
-                            <AppBarButton x:ConnectionId='7' x:Name="btnLogout"                         Label="Log-out">
+                            <AppBarButton x:ConnectionId='11' x:Name="btnLogout"                         Label="Log-out">
                                 <AppBarButton.Icon>
                                     <FontIcon Glyph="&#xE8D7;" />
                                 </AppBarButton.Icon>
@@ -145,11 +145,24 @@
                         </CommandBar>
                     </Grid>
                 </Grid>
-                <controls:TabView x:ConnectionId='4' x:Name="tnvMainMenu" RequestedTheme="Dark" Grid.Row="1" Margin="10">
-                    <controls:TabView.Background>
+                <Pivot x:ConnectionId='4' x:Name="pvtMainMenu" RequestedTheme="Dark" Grid.Row="1" Margin="5">
+                    <Pivot.Background>
                         <media:BackdropBlurBrush Amount="1.0" />
-                    </controls:TabView.Background>
-                </controls:TabView>
+                    </Pivot.Background>
+                    <Pivot.HeaderTemplate>
+                        <DataTemplate                            >
+                            <StackPanel x:ConnectionId='5' Orientation="Horizontal">
+                                <TextBlock x:ConnectionId='6' FontSize="18" FontFamily="Segoe MDL2 Assets"                           Margin="5 0" />
+                                <TextBlock x:ConnectionId='7' FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center"                      />
+                            </StackPanel>
+                        </DataTemplate>
+                    </Pivot.HeaderTemplate>
+                    <Pivot.ItemTemplate>
+                        <DataTemplate                            >
+                            <Frame x:ConnectionId='8'                                   Margin="-5 5" />
+                        </DataTemplate>
+                    </Pivot.ItemTemplate>
+                </Pivot>
             </Grid>
             
         </Grid>        

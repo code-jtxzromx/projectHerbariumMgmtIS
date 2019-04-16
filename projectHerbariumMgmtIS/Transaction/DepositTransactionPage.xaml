@@ -35,13 +35,7 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
-                        
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        <RowDefinition Height="auto" />
-                        
+
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
@@ -53,7 +47,13 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
-                        
+
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
@@ -107,7 +107,7 @@
                              Text="{x:Bind NewDepositData.DepositNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock x:Name="msgOrgAccessionNo" Grid.Row="6" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    
+
                     <ComboBox x:Name="cbxNewAccessionNo" Grid.Row="5" Grid.Column="2" Margin="5"
                               Header="Verified Accession Number: *" HorizontalAlignment="Stretch"
                               IsEnabled="{Binding ElementName=chkSameAccession, Path=IsChecked, Mode=OneWay}" 
@@ -115,11 +115,11 @@
                               SelectedItem="{x:Bind NewDepositData.NewAccesion, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock x:Name="msgNewAccessionNo" Grid.Row="6" Grid.Column="2" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    
+
                     <CheckBox x:Name="chkSameAccession" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
                               Content="This Herbarium Sheet is a Duplicate"
                               Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"/>
-                    
+
                     <ComboBox x:Name="cbxCollector" Grid.Row="10" Grid.Column="0" Margin="5"
                               Header="Collector's Name: *" HorizontalAlignment="Stretch" />
                     <Button x:Name="btnAddCollector" Click="btnAddCollector_Click"
@@ -133,7 +133,7 @@
                             Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
                     <TextBlock x:Name="msgCollector" Grid.Row="11" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    
+
                     <ComboBox x:Name="cbxValidator" Grid.Row="10" Grid.Column="2" Margin="5"
                               Header="Validator's Name: *" HorizontalAlignment="Stretch"
                               Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"/>
@@ -149,7 +149,7 @@
                             Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
                     <TextBlock x:Name="msgValidator" Grid.Row="11" Grid.Column="2" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    
+
                     <DatePicker x:Name="dpkDateCollected" Grid.Row="14" Grid.Column="0" Margin="5"
                                 Header="Date Collected: *" HorizontalAlignment="Stretch"
                                 DateChanged="dpkDateCollected_DateChanged"/>
@@ -161,7 +161,7 @@
                                 Header="Date Verified: *" HorizontalAlignment="Stretch"
                                 DateChanged="dpkDateVerified_DateChanged"
                                 Visibility="{Binding ElementName=btnIsVerifiedDeposit, Path=IsOn, Mode=OneWay}"/>
-                    
+
                     <ComboBox x:Name="cbxLocality" Grid.Row="17" Grid.Column="0" Margin="5" 
                               Header="Location: *" HorizontalAlignment="Stretch"/>
                     <Button x:Name="btnAddLocality" Click="btnAddLocality_Click"
@@ -169,19 +169,19 @@
                             Content="&#xE710;" FontSize="14" FontFamily="Segoe MDL2 Assets"  />
                     <TextBox x:Name="txfLocality" Grid.Row="17" Grid.Column="0" Margin="5" Visibility="Collapsed"
                              Header="Location: " HorizontalAlignment="Stretch" IsReadOnly="True" 
-                             Text="{x:Bind NewLocality.FullLocation, Mode=OneWay}"/>
+                             Text="{x:Bind NewLocality.ShortLocation, Mode=OneWay}"/>
                     <Button x:Name="btnDeleteLocality" Click="btnDeleteLocality_Click" Visibility="Collapsed"
                             Grid.Row="17" Grid.Column="1" Margin="5" VerticalAlignment="Bottom" Height="32"
                             Content="&#xE711;" FontSize="14" FontFamily="Segoe MDL2 Assets" />
                     <TextBlock x:Name="msgLocality" Grid.Row="18" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"                               
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    
+
                     <TextBox x:Name="txfDescription" Grid.Row="19" Grid.Column="0" Margin="5"
                              Header="Description:" Height="90" AcceptsReturn="True" TextWrapping="Wrap"
                              Text="{x:Bind NewDepositData.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock x:Name="msgDescription" Grid.Row="20" Grid.Column="0" Margin="5 -2" FlowDirection="RightToLeft"
                                Text="This Field is Required" FontSize="10" Foreground="Red" />
-                    
+
                     <CheckBox x:Name="chkIsGoodCondition" Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
                               Content="Plant Deposit is in Good Condtion" />
                 </Grid>

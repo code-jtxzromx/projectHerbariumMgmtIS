@@ -39,7 +39,7 @@ namespace projectHerbariumMgmtIS.Dialogs
             {
                 if (value == null && targetNullValue != null)
                 {
-                    value = (global::System.Nullable<global::System.Boolean>) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Nullable<global::System.Boolean>), targetNullValue);
+                    value = (global::System.Boolean) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Boolean), targetNullValue);
                 }
                 obj.IsChecked = value;
             }
@@ -64,6 +64,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class SpeciesForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             ISpeciesForm_Bindings
         {
@@ -81,11 +83,52 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBox obj9;
             private global::Windows.UI.Xaml.Controls.ComboBox obj10;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4IsCheckedDisabled = false;
+            private static bool isobj5SelectedItemDisabled = false;
+            private static bool isobj6TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+            private static bool isobj10SelectedItemDisabled = false;
+
             private SpeciesForm_obj1_BindingsTracking bindingsTracking;
 
             public SpeciesForm_obj1_Bindings()
             {
                 this.bindingsTracking = new SpeciesForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 68 && columnNumber == 18)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 70 && columnNumber == 46)
+                {
+                    isobj4IsCheckedDisabled = true;
+                }
+                else if (lineNumber == 75 && columnNumber == 19)
+                {
+                    isobj5SelectedItemDisabled = true;
+                }
+                else if (lineNumber == 78 && columnNumber == 25)
+                {
+                    isobj6TextDisabled = true;
+                }
+                else if (lineNumber == 90 && columnNumber == 18)
+                {
+                    isobj9TextDisabled = true;
+                }
+                else if (lineNumber == 93 && columnNumber == 19)
+                {
+                    isobj10SelectedItemDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -124,6 +167,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // ISpeciesForm_Bindings
@@ -187,9 +242,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\SpeciesForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -213,7 +271,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\SpeciesForm.xaml line 67
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj, null);
+                    }
                 }
             }
             private void Update_SpeciesData_IdentifiedStatus(global::System.Boolean obj, int phase)
@@ -221,7 +282,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\SpeciesForm.xaml line 70
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_ToggleButton_IsChecked(this.obj4, obj, null);
+                    if (!isobj4IsCheckedDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_ToggleButton_IsChecked(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_SpeciesData_GenusName(global::System.String obj, int phase)
@@ -229,7 +293,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\SpeciesForm.xaml line 74
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj5, obj, null);
+                    if (!isobj5SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_SpeciesData_SpeciesName(global::System.String obj, int phase)
@@ -237,7 +304,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\SpeciesForm.xaml line 77
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_AutoSuggestBox_Text(this.obj6, obj, null);
+                    if (!isobj6TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_AutoSuggestBox_Text(this.obj6, obj, null);
+                    }
                 }
             }
             private void Update_SpeciesData_CommonName(global::System.String obj, int phase)
@@ -245,7 +315,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\SpeciesForm.xaml line 89
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void Update_SpeciesData_SpeciesAuthor(global::System.String obj, int phase)
@@ -253,49 +326,88 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\SpeciesForm.xaml line 92
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj10, obj, null);
+                    if (!isobj10SelectedItemDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_Primitives_Selector_SelectedItem(this.obj10, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.SpeciesData.SpeciesID = this.obj3.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.SpeciesData != null)
+                        {
+                            this.dataRoot.SpeciesData.SpeciesID = this.obj3.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_IsChecked()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.SpeciesData.IdentifiedStatus = (global::System.Boolean)this.obj4.IsChecked;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.SpeciesData != null)
+                        {
+                            this.dataRoot.SpeciesData.IdentifiedStatus = (global::System.Boolean)this.obj4.IsChecked;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_5_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.SpeciesData.GenusName = (global::System.String)this.obj5.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.SpeciesData != null)
+                        {
+                            this.dataRoot.SpeciesData.GenusName = (global::System.String)this.obj5.SelectedItem;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_6_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.SpeciesData.SpeciesName = this.obj6.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.SpeciesData != null)
+                        {
+                            this.dataRoot.SpeciesData.SpeciesName = this.obj6.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_9_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.SpeciesData.CommonName = this.obj9.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.SpeciesData != null)
+                        {
+                            this.dataRoot.SpeciesData.CommonName = this.obj9.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_10_SelectedItem()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.SpeciesData.SpeciesAuthor = (global::System.String)this.obj10.SelectedItem;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.SpeciesData != null)
+                        {
+                            this.dataRoot.SpeciesData.SpeciesAuthor = (global::System.String)this.obj10.SelectedItem;
+                        }
+                    }
                 }
             }
 
@@ -535,6 +647,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

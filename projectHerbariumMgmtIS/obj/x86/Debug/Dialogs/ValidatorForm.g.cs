@@ -40,6 +40,8 @@ namespace projectHerbariumMgmtIS.Dialogs
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private class ValidatorForm_obj1_Bindings :
+            global::Windows.UI.Xaml.Markup.IDataTemplateComponent,
+            global::Windows.UI.Xaml.Markup.IXamlBindScopeDiagnostics,
             global::Windows.UI.Xaml.Markup.IComponentConnector,
             IValidatorForm_Bindings
         {
@@ -60,11 +62,67 @@ namespace projectHerbariumMgmtIS.Dialogs
             private global::Windows.UI.Xaml.Controls.TextBox obj13;
             private global::Windows.UI.Xaml.Controls.TextBox obj16;
 
+            // Static fields for each binding's enabled/disabled state
+            private static bool isobj1TitleDisabled = false;
+            private static bool isobj3TextDisabled = false;
+            private static bool isobj4TextDisabled = false;
+            private static bool isobj5TextDisabled = false;
+            private static bool isobj8TextDisabled = false;
+            private static bool isobj9TextDisabled = false;
+            private static bool isobj10TextDisabled = false;
+            private static bool isobj12TextDisabled = false;
+            private static bool isobj13TextDisabled = false;
+            private static bool isobj16TextDisabled = false;
+
             private ValidatorForm_obj1_BindingsTracking bindingsTracking;
 
             public ValidatorForm_obj1_Bindings()
             {
                 this.bindingsTracking = new ValidatorForm_obj1_BindingsTracking(this);
+            }
+
+            public void Disable(int lineNumber, int columnNumber)
+            {
+                if (lineNumber == 10 && columnNumber == 5)
+                {
+                    isobj1TitleDisabled = true;
+                }
+                else if (lineNumber == 74 && columnNumber == 22)
+                {
+                    isobj3TextDisabled = true;
+                }
+                else if (lineNumber == 78 && columnNumber == 22)
+                {
+                    isobj4TextDisabled = true;
+                }
+                else if (lineNumber == 81 && columnNumber == 22)
+                {
+                    isobj5TextDisabled = true;
+                }
+                else if (lineNumber == 89 && columnNumber == 18)
+                {
+                    isobj8TextDisabled = true;
+                }
+                else if (lineNumber == 92 && columnNumber == 18)
+                {
+                    isobj9TextDisabled = true;
+                }
+                else if (lineNumber == 95 && columnNumber == 18)
+                {
+                    isobj10TextDisabled = true;
+                }
+                else if (lineNumber == 101 && columnNumber == 22)
+                {
+                    isobj12TextDisabled = true;
+                }
+                else if (lineNumber == 104 && columnNumber == 22)
+                {
+                    isobj13TextDisabled = true;
+                }
+                else if (lineNumber == 112 && columnNumber == 22)
+                {
+                    isobj16TextDisabled = true;
+                }
             }
 
             // IComponentConnector
@@ -115,6 +173,18 @@ namespace projectHerbariumMgmtIS.Dialogs
                     default:
                         break;
                 }
+            }
+
+            // IDataTemplateComponent
+
+            public void ProcessBindings(global::System.Object item, int itemIndex, int phase, out int nextPhase)
+            {
+                throw new global::System.NotImplementedException();
+            }
+
+            public void Recycle()
+            {
+                throw new global::System.NotImplementedException();
             }
 
             // IValidatorForm_Bindings
@@ -178,9 +248,12 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 1
-                    if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                    if (!isobj1TitleDisabled)
                     {
-                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        if ((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog) != null)
+                        {
+                            XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ContentDialog_Title((this.obj1.Target as global::Windows.UI.Xaml.Controls.ContentDialog), obj, null);
+                        }
                     }
                 }
             }
@@ -207,7 +280,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 73
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    if (!isobj3TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj3, obj.ToString(), null);
+                    }
                 }
             }
             private void Update_ValidatorData_FirstName(global::System.String obj, int phase)
@@ -215,7 +291,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 77
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj4, obj, null);
+                    if (!isobj4TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj4, obj, null);
+                    }
                 }
             }
             private void Update_ValidatorData_MiddleName(global::System.String obj, int phase)
@@ -223,7 +302,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 80
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    if (!isobj5TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj5, obj, null);
+                    }
                 }
             }
             private void Update_ValidatorData_LastName(global::System.String obj, int phase)
@@ -231,7 +313,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 88
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj, null);
+                    if (!isobj8TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj8, obj, null);
+                    }
                 }
             }
             private void Update_ValidatorData_MiddleInitial(global::System.String obj, int phase)
@@ -239,7 +324,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 91
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    if (!isobj9TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj9, obj, null);
+                    }
                 }
             }
             private void Update_ValidatorData_NameSuffix(global::System.String obj, int phase)
@@ -247,7 +335,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 94
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    if (!isobj10TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj10, obj, null);
+                    }
                 }
             }
             private void Update_ValidatorData_ContactNumber(global::System.String obj, int phase)
@@ -255,7 +346,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 100
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    if (!isobj12TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj12, obj, null);
+                    }
                 }
             }
             private void Update_ValidatorData_Email(global::System.String obj, int phase)
@@ -263,7 +357,10 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 103
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj13, obj, null);
+                    if (!isobj13TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj13, obj, null);
+                    }
                 }
             }
             private void Update_ValidatorData_Institution(global::System.String obj, int phase)
@@ -271,70 +368,127 @@ namespace projectHerbariumMgmtIS.Dialogs
                 if ((phase & ((1 << 0) | NOT_PHASED | DATA_CHANGED)) != 0)
                 {
                     // Dialogs\ValidatorForm.xaml line 111
-                    XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj16, obj, null);
+                    if (!isobj16TextDisabled)
+                    {
+                        XamlBindingSetters.Set_Windows_UI_Xaml_Controls_TextBox_Text(this.obj16, obj, null);
+                    }
                 }
             }
             private void UpdateTwoWay_3_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.ValidatorID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.ValidatorID = (global::System.Int32) global::Windows.UI.Xaml.Markup.XamlBindingHelper.ConvertValue(typeof(global::System.Int32), this.obj3.Text);
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_4_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.FirstName = this.obj4.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.FirstName = this.obj4.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_5_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.MiddleName = this.obj5.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.MiddleName = this.obj5.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_8_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.LastName = this.obj8.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.LastName = this.obj8.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_9_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.MiddleInitial = this.obj9.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.MiddleInitial = this.obj9.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_10_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.NameSuffix = this.obj10.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.NameSuffix = this.obj10.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_12_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.ContactNumber = this.obj12.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.ContactNumber = this.obj12.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_13_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.Email = this.obj13.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.Email = this.obj13.Text;
+                        }
+                    }
                 }
             }
             private void UpdateTwoWay_16_Text()
             {
                 if (this.initialized)
                 {
-                    this.dataRoot.ValidatorData.Institution = this.obj16.Text;
+                    if (this.dataRoot != null)
+                    {
+                        if (this.dataRoot.ValidatorData != null)
+                        {
+                            this.dataRoot.ValidatorData.Institution = this.obj16.Text;
+                        }
+                    }
                 }
             }
 
@@ -629,6 +783,7 @@ namespace projectHerbariumMgmtIS.Dialogs
                     bindings.SetDataRoot(this);
                     this.Bindings = bindings;
                     element1.Loading += bindings.Loading;
+                    global::Windows.UI.Xaml.Markup.XamlBindingHelper.SetDataTemplateComponent(element1, bindings);
                 }
                 break;
             }

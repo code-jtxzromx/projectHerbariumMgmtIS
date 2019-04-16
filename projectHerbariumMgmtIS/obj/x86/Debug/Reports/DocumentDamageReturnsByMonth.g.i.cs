@@ -37,6 +37,7 @@ namespace projectHerbariumMgmtIS.Reports
 
         partial void UnloadObject(global::Windows.UI.Xaml.DependencyObject unloadableObject);
 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         private interface IDocumentDamageReturnsByMonth_Bindings
         {
             void Initialize();
@@ -45,6 +46,7 @@ namespace projectHerbariumMgmtIS.Reports
             void DisconnectUnloadedObject(int connectionId);
         }
 #pragma warning disable 0169    //  Proactively suppress unused field warning in case Bindings is not used.
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
         private IDocumentDamageReturnsByMonth_Bindings Bindings;
 #pragma warning restore 0169
     }
